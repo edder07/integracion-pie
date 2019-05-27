@@ -570,6 +570,7 @@ Public Class Menu_Principal
             MsgBox("Error Modificar PROFESIONAL", MsgBoxStyle.Critical, "Atencion")
             conector.Close()
         End Try
+
         conector.Close()
     End Sub
 

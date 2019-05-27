@@ -42,6 +42,7 @@ Partial Class Menu_Principal
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button42 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
@@ -65,6 +66,7 @@ Partial Class Menu_Principal
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button43 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
@@ -78,6 +80,7 @@ Partial Class Menu_Principal
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Button44 = New System.Windows.Forms.Button()
         Me.Button24 = New System.Windows.Forms.Button()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Button26 = New System.Windows.Forms.Button()
@@ -87,6 +90,7 @@ Partial Class Menu_Principal
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.Button23 = New System.Windows.Forms.Button()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Button45 = New System.Windows.Forms.Button()
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.Button30 = New System.Windows.Forms.Button()
@@ -98,6 +102,7 @@ Partial Class Menu_Principal
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Button46 = New System.Windows.Forms.Button()
         Me.Button32 = New System.Windows.Forms.Button()
         Me.Button33 = New System.Windows.Forms.Button()
         Me.Button34 = New System.Windows.Forms.Button()
@@ -190,11 +195,6 @@ Partial Class Menu_Principal
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button42 = New System.Windows.Forms.Button()
-        Me.Button43 = New System.Windows.Forms.Button()
-        Me.Button44 = New System.Windows.Forms.Button()
-        Me.Button45 = New System.Windows.Forms.Button()
-        Me.Button46 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -239,6 +239,7 @@ Partial Class Menu_Principal
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.MediumBlue
         Me.TabPage1.Controls.Add(Me.Button4)
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.Button2)
@@ -249,7 +250,6 @@ Partial Class Menu_Principal
         Me.TabPage1.Size = New System.Drawing.Size(1284, 708)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -393,7 +393,7 @@ Partial Class Menu_Principal
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.TabPage2.BackColor = System.Drawing.Color.MediumBlue
         Me.TabPage2.Controls.Add(Me.Button19)
         Me.TabPage2.Controls.Add(Me.Button13)
         Me.TabPage2.Controls.Add(Me.Button12)
@@ -448,7 +448,7 @@ Partial Class Menu_Principal
         Me.Button13.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.Button13.Location = New System.Drawing.Point(617, 413)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(516, 163)
+        Me.Button13.Size = New System.Drawing.Size(637, 163)
         Me.Button13.TabIndex = 21
         Me.Button13.Text = "MENU PRINCIPAL"
         Me.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -575,6 +575,19 @@ Partial Class Menu_Principal
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button42
+        '
+        Me.Button42.FlatAppearance.BorderSize = 0
+        Me.Button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button42.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button42.Image = CType(resources.GetObject("Button42.Image"), System.Drawing.Image)
+        Me.Button42.Location = New System.Drawing.Point(838, 542)
+        Me.Button42.Name = "Button42"
+        Me.Button42.Size = New System.Drawing.Size(143, 135)
+        Me.Button42.TabIndex = 154
+        Me.Button42.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
+        Me.Button42.UseVisualStyleBackColor = True
         '
         'Button15
         '
@@ -823,6 +836,19 @@ Partial Class Menu_Principal
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Button43
+        '
+        Me.Button43.FlatAppearance.BorderSize = 0
+        Me.Button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button43.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button43.Image = CType(resources.GetObject("Button43.Image"), System.Drawing.Image)
+        Me.Button43.Location = New System.Drawing.Point(807, 518)
+        Me.Button43.Name = "Button43"
+        Me.Button43.Size = New System.Drawing.Size(130, 145)
+        Me.Button43.TabIndex = 163
+        Me.Button43.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
+        Me.Button43.UseVisualStyleBackColor = True
+        '
         'Button20
         '
         Me.Button20.FlatAppearance.BorderSize = 0
@@ -970,6 +996,19 @@ Partial Class Menu_Principal
         Me.TabPage5.Text = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'Button44
+        '
+        Me.Button44.FlatAppearance.BorderSize = 0
+        Me.Button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button44.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button44.Image = CType(resources.GetObject("Button44.Image"), System.Drawing.Image)
+        Me.Button44.Location = New System.Drawing.Point(849, 527)
+        Me.Button44.Name = "Button44"
+        Me.Button44.Size = New System.Drawing.Size(130, 145)
+        Me.Button44.TabIndex = 166
+        Me.Button44.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
+        Me.Button44.UseVisualStyleBackColor = True
+        '
         'Button24
         '
         Me.Button24.FlatAppearance.BorderSize = 0
@@ -1082,6 +1121,19 @@ Partial Class Menu_Principal
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "TabPage6"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'Button45
+        '
+        Me.Button45.FlatAppearance.BorderSize = 0
+        Me.Button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button45.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button45.Image = CType(resources.GetObject("Button45.Image"), System.Drawing.Image)
+        Me.Button45.Location = New System.Drawing.Point(753, 519)
+        Me.Button45.Name = "Button45"
+        Me.Button45.Size = New System.Drawing.Size(130, 145)
+        Me.Button45.TabIndex = 169
+        Me.Button45.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
+        Me.Button45.UseVisualStyleBackColor = True
         '
         'Button28
         '
@@ -1212,6 +1264,19 @@ Partial Class Menu_Principal
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "TabPage7"
         Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Button46
+        '
+        Me.Button46.FlatAppearance.BorderSize = 0
+        Me.Button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button46.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button46.Image = CType(resources.GetObject("Button46.Image"), System.Drawing.Image)
+        Me.Button46.Location = New System.Drawing.Point(809, 510)
+        Me.Button46.Name = "Button46"
+        Me.Button46.Size = New System.Drawing.Size(130, 145)
+        Me.Button46.TabIndex = 172
+        Me.Button46.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
+        Me.Button46.UseVisualStyleBackColor = True
         '
         'Button32
         '
@@ -2156,8 +2221,8 @@ Partial Class Menu_Principal
         Me.Panel1.BackColor = System.Drawing.Color.Gold
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 707)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1292, 27)
         Me.Panel1.TabIndex = 2
@@ -2186,71 +2251,6 @@ Partial Class Menu_Principal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
-        '
-        'Button42
-        '
-        Me.Button42.FlatAppearance.BorderSize = 0
-        Me.Button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button42.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button42.Image = CType(resources.GetObject("Button42.Image"), System.Drawing.Image)
-        Me.Button42.Location = New System.Drawing.Point(838, 542)
-        Me.Button42.Name = "Button42"
-        Me.Button42.Size = New System.Drawing.Size(143, 135)
-        Me.Button42.TabIndex = 154
-        Me.Button42.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
-        Me.Button42.UseVisualStyleBackColor = True
-        '
-        'Button43
-        '
-        Me.Button43.FlatAppearance.BorderSize = 0
-        Me.Button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button43.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button43.Image = CType(resources.GetObject("Button43.Image"), System.Drawing.Image)
-        Me.Button43.Location = New System.Drawing.Point(807, 518)
-        Me.Button43.Name = "Button43"
-        Me.Button43.Size = New System.Drawing.Size(130, 145)
-        Me.Button43.TabIndex = 163
-        Me.Button43.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
-        Me.Button43.UseVisualStyleBackColor = True
-        '
-        'Button44
-        '
-        Me.Button44.FlatAppearance.BorderSize = 0
-        Me.Button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button44.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button44.Image = CType(resources.GetObject("Button44.Image"), System.Drawing.Image)
-        Me.Button44.Location = New System.Drawing.Point(849, 527)
-        Me.Button44.Name = "Button44"
-        Me.Button44.Size = New System.Drawing.Size(130, 145)
-        Me.Button44.TabIndex = 166
-        Me.Button44.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
-        Me.Button44.UseVisualStyleBackColor = True
-        '
-        'Button45
-        '
-        Me.Button45.FlatAppearance.BorderSize = 0
-        Me.Button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button45.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button45.Image = CType(resources.GetObject("Button45.Image"), System.Drawing.Image)
-        Me.Button45.Location = New System.Drawing.Point(753, 519)
-        Me.Button45.Name = "Button45"
-        Me.Button45.Size = New System.Drawing.Size(130, 145)
-        Me.Button45.TabIndex = 169
-        Me.Button45.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
-        Me.Button45.UseVisualStyleBackColor = True
-        '
-        'Button46
-        '
-        Me.Button46.FlatAppearance.BorderSize = 0
-        Me.Button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button46.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button46.Image = CType(resources.GetObject("Button46.Image"), System.Drawing.Image)
-        Me.Button46.Location = New System.Drawing.Point(809, 510)
-        Me.Button46.Name = "Button46"
-        Me.Button46.Size = New System.Drawing.Size(130, 145)
-        Me.Button46.TabIndex = 172
-        Me.Button46.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Limpiar"
-        Me.Button46.UseVisualStyleBackColor = True
         '
         'Menu_Principal
         '
