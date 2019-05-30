@@ -196,6 +196,14 @@ Partial Class Menu_Principal
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.TabPage12 = New System.Windows.Forms.TabPage()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Button51 = New System.Windows.Forms.Button()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Button50 = New System.Windows.Forms.Button()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Button49 = New System.Windows.Forms.Button()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Button48 = New System.Windows.Forms.Button()
         Me.TextBox47 = New System.Windows.Forms.TextBox()
         Me.TextBox46 = New System.Windows.Forms.TextBox()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
@@ -203,6 +211,7 @@ Partial Class Menu_Principal
         Me.Label100 = New System.Windows.Forms.Label()
         Me.Label101 = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.Label84 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
@@ -231,18 +240,11 @@ Partial Class Menu_Principal
         Me.Label57 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label88 = New System.Windows.Forms.Label()
+        Me.TabPage13 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.Button48 = New System.Windows.Forms.Button()
-        Me.Label79 = New System.Windows.Forms.Label()
-        Me.Label81 = New System.Windows.Forms.Label()
-        Me.Button49 = New System.Windows.Forms.Button()
-        Me.Label82 = New System.Windows.Forms.Label()
-        Me.Button50 = New System.Windows.Forms.Button()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.Button51 = New System.Windows.Forms.Button()
+        Me.Report1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -261,6 +263,7 @@ Partial Class Menu_Principal
         Me.TabPage11.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.TabPage12.SuspendLayout()
+        Me.TabPage13.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -280,6 +283,7 @@ Partial Class Menu_Principal
         Me.TabControl1.Controls.Add(Me.TabPage10)
         Me.TabControl1.Controls.Add(Me.TabPage11)
         Me.TabControl1.Controls.Add(Me.TabPage12)
+        Me.TabControl1.Controls.Add(Me.TabPage13)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -2354,6 +2358,134 @@ Partial Class Menu_Principal
         Me.TabPage12.Text = "TabPage12"
         Me.TabPage12.UseVisualStyleBackColor = True
         '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label83.Location = New System.Drawing.Point(1115, 204)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(128, 28)
+        Me.Label83.TabIndex = 80
+        Me.Label83.Text = "Nueva Ficha"
+        '
+        'Button51
+        '
+        Me.Button51.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button51.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button51.FlatAppearance.BorderSize = 5
+        Me.Button51.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button51.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button51.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button51.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button51.Image = CType(resources.GetObject("Button51.Image"), System.Drawing.Image)
+        Me.Button51.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button51.Location = New System.Drawing.Point(1115, 78)
+        Me.Button51.Name = "Button51"
+        Me.Button51.Size = New System.Drawing.Size(124, 122)
+        Me.Button51.TabIndex = 79
+        Me.Button51.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button51.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button51.UseVisualStyleBackColor = False
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label82.Location = New System.Drawing.Point(1120, 719)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(155, 28)
+        Me.Label82.TabIndex = 78
+        Me.Label82.Text = "Menu Principal"
+        '
+        'Button50
+        '
+        Me.Button50.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button50.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button50.FlatAppearance.BorderSize = 5
+        Me.Button50.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button50.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button50.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button50.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button50.Image = CType(resources.GetObject("Button50.Image"), System.Drawing.Image)
+        Me.Button50.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button50.Location = New System.Drawing.Point(1130, 594)
+        Me.Button50.Name = "Button50"
+        Me.Button50.Size = New System.Drawing.Size(124, 122)
+        Me.Button50.TabIndex = 77
+        Me.Button50.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button50.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button50.UseVisualStyleBackColor = False
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label81.Location = New System.Drawing.Point(1120, 547)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(134, 28)
+        Me.Label81.TabIndex = 76
+        Me.Label81.Text = "Ver Registros"
+        '
+        'Button49
+        '
+        Me.Button49.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button49.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button49.FlatAppearance.BorderSize = 5
+        Me.Button49.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button49.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button49.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button49.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button49.Image = CType(resources.GetObject("Button49.Image"), System.Drawing.Image)
+        Me.Button49.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button49.Location = New System.Drawing.Point(1130, 422)
+        Me.Button49.Name = "Button49"
+        Me.Button49.Size = New System.Drawing.Size(124, 122)
+        Me.Button49.TabIndex = 75
+        Me.Button49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button49.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button49.UseVisualStyleBackColor = False
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label79.Location = New System.Drawing.Point(1099, 381)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(164, 28)
+        Me.Label79.TabIndex = 74
+        Me.Label79.Text = "Generar Reporte"
+        '
+        'Button48
+        '
+        Me.Button48.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button48.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button48.FlatAppearance.BorderSize = 5
+        Me.Button48.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button48.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button48.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button48.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button48.Image = CType(resources.GetObject("Button48.Image"), System.Drawing.Image)
+        Me.Button48.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button48.Location = New System.Drawing.Point(1120, 256)
+        Me.Button48.Name = "Button48"
+        Me.Button48.Size = New System.Drawing.Size(124, 122)
+        Me.Button48.TabIndex = 73
+        Me.Button48.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button48.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button48.UseVisualStyleBackColor = False
+        '
         'TextBox47
         '
         Me.TextBox47.Enabled = False
@@ -2419,6 +2551,16 @@ Partial Class Menu_Principal
         Me.Label87.Size = New System.Drawing.Size(59, 19)
         Me.Label87.TabIndex = 45
         Me.Label87.Text = "Label87"
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label86.Location = New System.Drawing.Point(339, 519)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(59, 19)
+        Me.Label86.TabIndex = 44
+        Me.Label86.Text = "Label86"
         '
         'Label85
         '
@@ -2700,13 +2842,24 @@ Partial Class Menu_Principal
         Me.Label88.TabIndex = 0
         Me.Label88.Text = "Numero Estudiante"
         '
+        'TabPage13
+        '
+        Me.TabPage13.Controls.Add(Me.Report1)
+        Me.TabPage13.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage13.Name = "TabPage13"
+        Me.TabPage13.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage13.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage13.TabIndex = 12
+        Me.TabPage13.Text = "TabPage13"
+        Me.TabPage13.UseVisualStyleBackColor = True
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 761)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1292, 27)
         Me.Panel1.TabIndex = 2
@@ -2736,143 +2889,16 @@ Partial Class Menu_Principal
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'Label86
+        'Report1
         '
-        Me.Label86.AutoSize = True
-        Me.Label86.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label86.Location = New System.Drawing.Point(339, 519)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(59, 19)
-        Me.Label86.TabIndex = 44
-        Me.Label86.Text = "Label86"
-        '
-        'Button48
-        '
-        Me.Button48.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button48.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button48.FlatAppearance.BorderSize = 5
-        Me.Button48.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button48.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button48.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button48.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button48.Image = CType(resources.GetObject("Button48.Image"), System.Drawing.Image)
-        Me.Button48.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button48.Location = New System.Drawing.Point(1120, 256)
-        Me.Button48.Name = "Button48"
-        Me.Button48.Size = New System.Drawing.Size(124, 122)
-        Me.Button48.TabIndex = 73
-        Me.Button48.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button48.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button48.UseVisualStyleBackColor = False
-        '
-        'Label79
-        '
-        Me.Label79.AutoSize = True
-        Me.Label79.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label79.Location = New System.Drawing.Point(1099, 381)
-        Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(164, 28)
-        Me.Label79.TabIndex = 74
-        Me.Label79.Text = "Generar Reporte"
-        '
-        'Label81
-        '
-        Me.Label81.AutoSize = True
-        Me.Label81.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label81.Location = New System.Drawing.Point(1120, 547)
-        Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(134, 28)
-        Me.Label81.TabIndex = 76
-        Me.Label81.Text = "Ver Registros"
-        '
-        'Button49
-        '
-        Me.Button49.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button49.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button49.FlatAppearance.BorderSize = 5
-        Me.Button49.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button49.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button49.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button49.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button49.Image = CType(resources.GetObject("Button49.Image"), System.Drawing.Image)
-        Me.Button49.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button49.Location = New System.Drawing.Point(1130, 422)
-        Me.Button49.Name = "Button49"
-        Me.Button49.Size = New System.Drawing.Size(124, 122)
-        Me.Button49.TabIndex = 75
-        Me.Button49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button49.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button49.UseVisualStyleBackColor = False
-        '
-        'Label82
-        '
-        Me.Label82.AutoSize = True
-        Me.Label82.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label82.Location = New System.Drawing.Point(1120, 719)
-        Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(155, 28)
-        Me.Label82.TabIndex = 78
-        Me.Label82.Text = "Menu Principal"
-        '
-        'Button50
-        '
-        Me.Button50.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button50.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button50.FlatAppearance.BorderSize = 5
-        Me.Button50.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button50.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button50.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button50.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button50.Image = CType(resources.GetObject("Button50.Image"), System.Drawing.Image)
-        Me.Button50.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button50.Location = New System.Drawing.Point(1130, 594)
-        Me.Button50.Name = "Button50"
-        Me.Button50.Size = New System.Drawing.Size(124, 122)
-        Me.Button50.TabIndex = 77
-        Me.Button50.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button50.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button50.UseVisualStyleBackColor = False
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label83.Location = New System.Drawing.Point(1115, 204)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(128, 28)
-        Me.Label83.TabIndex = 80
-        Me.Label83.Text = "Nueva Ficha"
-        '
-        'Button51
-        '
-        Me.Button51.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button51.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button51.FlatAppearance.BorderSize = 5
-        Me.Button51.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button51.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button51.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button51.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button51.Image = CType(resources.GetObject("Button51.Image"), System.Drawing.Image)
-        Me.Button51.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button51.Location = New System.Drawing.Point(1115, 78)
-        Me.Button51.Name = "Button51"
-        Me.Button51.Size = New System.Drawing.Size(124, 122)
-        Me.Button51.TabIndex = 79
-        Me.Button51.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button51.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button51.UseVisualStyleBackColor = False
+        Me.Report1.ActiveViewIndex = -1
+        Me.Report1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Report1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Report1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Report1.Location = New System.Drawing.Point(3, 3)
+        Me.Report1.Name = "Report1"
+        Me.Report1.Size = New System.Drawing.Size(1278, 756)
+        Me.Report1.TabIndex = 0
         '
         'Menu_Principal
         '
@@ -2914,6 +2940,7 @@ Partial Class Menu_Principal
         Me.Panel5.PerformLayout()
         Me.TabPage12.ResumeLayout(False)
         Me.TabPage12.PerformLayout()
+        Me.TabPage13.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3140,4 +3167,6 @@ Partial Class Menu_Principal
     Friend WithEvents Button49 As Button
     Friend WithEvents Label79 As Label
     Friend WithEvents Button48 As Button
+    Friend WithEvents TabPage13 As TabPage
+    Friend WithEvents Report1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

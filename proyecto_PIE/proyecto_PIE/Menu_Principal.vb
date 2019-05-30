@@ -54,6 +54,7 @@ Public Class Menu_Principal
     Dim claveBD As String = datos_conn.getpass()
     Dim basededatos As String = datos_conn.getbd()
     Dim usuarioBD As String = datos_conn.getuser()
+    Dim servidorSQL As String
     Dim strcon As String
     Public dreader As SqlDataReader
     Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
@@ -1472,5 +1473,25 @@ Public Class Menu_Principal
 
         End Try
         conector.Close()
+    End Sub
+
+    Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
+
+        Dim CrystalReport1 As New CrystalReport1
+        Dim rut_para_crystal As New CrystalDecisions.Shared.ParameterDiscreteValue()
+        Dim fecha_para_crystal As New CrystalDecisions.Shared.ParameterDiscreteValue()
+        rut_para_crystal.Value = RutDelAlumno
+        rut_para_crystal.Value = MonthCalendar2.SelectionRange.Start
+        CrystalReport1.SetParameterValue("@rut_buscar", rut_para_crystal)
+        CrystalReport1.SetParameterValue("@fecha_buscar", fecha_para_crystal)
+        Report1.ReportSource = CrystalReport1
+        Report1.Zoom(70)
+
+
+
+
+        CrystalReport1.DataSourceConnections(0).SetConnection(servidorSQL, basededatos, usuarioBD, claveBD)
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(12)
+
     End Sub
 End Class
