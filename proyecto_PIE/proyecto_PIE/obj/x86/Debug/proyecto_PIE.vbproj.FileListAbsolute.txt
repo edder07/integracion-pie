@@ -18,7 +18,6 @@ C:\Users\Roy\Documents\Visual Studio 2010\Projects\proyecto_PIE\proyecto_PIE\obj
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.exe
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.pdb
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.xml
-C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbprojAssemblyReference.cache
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.Form1.resources

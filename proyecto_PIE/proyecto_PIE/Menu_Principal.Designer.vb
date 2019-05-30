@@ -113,6 +113,8 @@ Partial Class Menu_Principal
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.Label54 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -177,6 +179,7 @@ Partial Class Menu_Principal
         Me.TextBox28 = New System.Windows.Forms.TextBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.TabPage11 = New System.Windows.Forms.TabPage()
+        Me.Button47 = New System.Windows.Forms.Button()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.Button36 = New System.Windows.Forms.Button()
         Me.Button37 = New System.Windows.Forms.Button()
@@ -192,9 +195,54 @@ Partial Class Menu_Principal
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.Label53 = New System.Windows.Forms.Label()
+        Me.TabPage12 = New System.Windows.Forms.TabPage()
+        Me.TextBox47 = New System.Windows.Forms.TextBox()
+        Me.TextBox46 = New System.Windows.Forms.TextBox()
+        Me.TextBox44 = New System.Windows.Forms.TextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.Label100 = New System.Windows.Forms.Label()
+        Me.Label101 = New System.Windows.Forms.Label()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label88 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.Button48 = New System.Windows.Forms.Button()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.Button49 = New System.Windows.Forms.Button()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Button50 = New System.Windows.Forms.Button()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Button51 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -212,6 +260,7 @@ Partial Class Menu_Principal
         Me.Panel3.SuspendLayout()
         Me.TabPage11.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.TabPage12.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,11 +279,12 @@ Partial Class Menu_Principal
         Me.TabControl1.Controls.Add(Me.TabPage9)
         Me.TabControl1.Controls.Add(Me.TabPage10)
         Me.TabControl1.Controls.Add(Me.TabPage11)
+        Me.TabControl1.Controls.Add(Me.TabPage12)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1292, 734)
+        Me.TabControl1.Size = New System.Drawing.Size(1292, 788)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -247,7 +297,7 @@ Partial Class Menu_Principal
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage1.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         '
@@ -295,7 +345,7 @@ Partial Class Menu_Principal
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(155, 702)
+        Me.Panel2.Size = New System.Drawing.Size(155, 756)
         Me.Panel2.TabIndex = 0
         '
         'Button7
@@ -404,7 +454,7 @@ Partial Class Menu_Principal
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage2.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         '
@@ -424,7 +474,7 @@ Partial Class Menu_Principal
         Me.Button19.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.Button19.Location = New System.Drawing.Point(25, 370)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(586, 206)
+        Me.Button19.Size = New System.Drawing.Size(586, 260)
         Me.Button19.TabIndex = 22
         Me.Button19.Text = "INGRESAR NOMBRE DE FICHAS"
         Me.Button19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -448,7 +498,7 @@ Partial Class Menu_Principal
         Me.Button13.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.Button13.Location = New System.Drawing.Point(617, 413)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(637, 163)
+        Me.Button13.Size = New System.Drawing.Size(637, 217)
         Me.Button13.TabIndex = 21
         Me.Button13.Text = "MENU PRINCIPAL"
         Me.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -571,7 +621,7 @@ Partial Class Menu_Principal
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage3.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -831,7 +881,7 @@ Partial Class Menu_Principal
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage4.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -991,7 +1041,7 @@ Partial Class Menu_Principal
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage5.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1117,7 +1167,7 @@ Partial Class Menu_Principal
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage6.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "TabPage6"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -1260,7 +1310,7 @@ Partial Class Menu_Principal
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage7.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "TabPage7"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -1378,7 +1428,7 @@ Partial Class Menu_Principal
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage8.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "TabPage8"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -1388,6 +1438,8 @@ Partial Class Menu_Principal
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.TextBox33)
+        Me.Panel6.Controls.Add(Me.Label54)
         Me.Panel6.Controls.Add(Me.TextBox22)
         Me.Panel6.Controls.Add(Me.Label35)
         Me.Panel6.Controls.Add(Me.TextBox21)
@@ -1414,11 +1466,29 @@ Partial Class Menu_Principal
         Me.Panel6.Size = New System.Drawing.Size(1129, 390)
         Me.Panel6.TabIndex = 188
         '
+        'TextBox33
+        '
+        Me.TextBox33.Location = New System.Drawing.Point(250, 27)
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox33.TabIndex = 54
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.Location = New System.Drawing.Point(25, 27)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(205, 24)
+        Me.Label54.TabIndex = 53
+        Me.Label54.Text = "Numero del Estudiante"
+        '
         'TextBox22
         '
         Me.TextBox22.Location = New System.Drawing.Point(250, 301)
+        Me.TextBox22.Multiline = True
         Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(792, 20)
+        Me.TextBox22.Size = New System.Drawing.Size(792, 73)
         Me.TextBox22.TabIndex = 52
         '
         'Label35
@@ -1481,8 +1551,9 @@ Partial Class Menu_Principal
         'TextBox20
         '
         Me.TextBox20.Location = New System.Drawing.Point(199, 204)
+        Me.TextBox20.Multiline = True
         Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(843, 20)
+        Me.TextBox20.Size = New System.Drawing.Size(843, 47)
         Me.TextBox20.TabIndex = 45
         '
         'Label32
@@ -1544,9 +1615,10 @@ Partial Class Menu_Principal
         '
         'TextBox18
         '
-        Me.TextBox18.Location = New System.Drawing.Point(367, 115)
+        Me.TextBox18.Location = New System.Drawing.Point(366, 115)
+        Me.TextBox18.Multiline = True
         Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(675, 20)
+        Me.TextBox18.Size = New System.Drawing.Size(676, 38)
         Me.TextBox18.TabIndex = 38
         '
         'Label29
@@ -1638,7 +1710,7 @@ Partial Class Menu_Principal
         Me.TabPage9.Location = New System.Drawing.Point(4, 22)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage9.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "TabPage9"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -1802,7 +1874,7 @@ Partial Class Menu_Principal
         Me.TabPage10.Location = New System.Drawing.Point(4, 22)
         Me.TabPage10.Name = "TabPage10"
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage10.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage10.TabIndex = 9
         Me.TabPage10.Text = "TabPage10"
         Me.TabPage10.UseVisualStyleBackColor = True
@@ -1857,7 +1929,7 @@ Partial Class Menu_Principal
         Me.Panel3.Controls.Add(Me.Label40)
         Me.Panel3.Location = New System.Drawing.Point(175, 69)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(937, 291)
+        Me.Panel3.Size = New System.Drawing.Size(937, 380)
         Me.Panel3.TabIndex = 43
         '
         'Label46
@@ -1882,7 +1954,7 @@ Partial Class Menu_Principal
         '
         'TextBox31
         '
-        Me.TextBox31.Location = New System.Drawing.Point(846, 248)
+        Me.TextBox31.Location = New System.Drawing.Point(846, 294)
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.Size = New System.Drawing.Size(50, 20)
         Me.TextBox31.TabIndex = 40
@@ -1898,7 +1970,7 @@ Partial Class Menu_Principal
         '
         Me.Label44.AutoSize = True
         Me.Label44.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(747, 248)
+        Me.Label44.Location = New System.Drawing.Point(747, 294)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(77, 24)
         Me.Label44.TabIndex = 39
@@ -1916,7 +1988,7 @@ Partial Class Menu_Principal
         '
         'TextBox32
         '
-        Me.TextBox32.Location = New System.Drawing.Point(124, 248)
+        Me.TextBox32.Location = New System.Drawing.Point(124, 294)
         Me.TextBox32.Name = "TextBox32"
         Me.TextBox32.Size = New System.Drawing.Size(556, 20)
         Me.TextBox32.TabIndex = 38
@@ -1932,7 +2004,7 @@ Partial Class Menu_Principal
         '
         Me.Label45.AutoSize = True
         Me.Label45.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(25, 248)
+        Me.Label45.Location = New System.Drawing.Point(25, 294)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(87, 24)
         Me.Label45.TabIndex = 37
@@ -1942,7 +2014,7 @@ Partial Class Menu_Principal
         '
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(25, 134)
+        Me.Label39.Location = New System.Drawing.Point(25, 143)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(87, 24)
         Me.Label39.TabIndex = 25
@@ -1950,14 +2022,14 @@ Partial Class Menu_Principal
         '
         'TextBox29
         '
-        Me.TextBox29.Location = New System.Drawing.Point(846, 209)
+        Me.TextBox29.Location = New System.Drawing.Point(846, 244)
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.Size = New System.Drawing.Size(50, 20)
         Me.TextBox29.TabIndex = 36
         '
         'TextBox26
         '
-        Me.TextBox26.Location = New System.Drawing.Point(124, 134)
+        Me.TextBox26.Location = New System.Drawing.Point(124, 143)
         Me.TextBox26.Name = "TextBox26"
         Me.TextBox26.Size = New System.Drawing.Size(556, 20)
         Me.TextBox26.TabIndex = 26
@@ -1966,7 +2038,7 @@ Partial Class Menu_Principal
         '
         Me.Label42.AutoSize = True
         Me.Label42.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(747, 209)
+        Me.Label42.Location = New System.Drawing.Point(747, 244)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(77, 24)
         Me.Label42.TabIndex = 35
@@ -1976,7 +2048,7 @@ Partial Class Menu_Principal
         '
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(747, 134)
+        Me.Label38.Location = New System.Drawing.Point(747, 143)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(77, 24)
         Me.Label38.TabIndex = 27
@@ -1984,14 +2056,14 @@ Partial Class Menu_Principal
         '
         'TextBox30
         '
-        Me.TextBox30.Location = New System.Drawing.Point(124, 209)
+        Me.TextBox30.Location = New System.Drawing.Point(124, 244)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(556, 20)
         Me.TextBox30.TabIndex = 34
         '
         'TextBox25
         '
-        Me.TextBox25.Location = New System.Drawing.Point(846, 134)
+        Me.TextBox25.Location = New System.Drawing.Point(846, 143)
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(50, 20)
         Me.TextBox25.TabIndex = 28
@@ -2000,7 +2072,7 @@ Partial Class Menu_Principal
         '
         Me.Label43.AutoSize = True
         Me.Label43.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(25, 209)
+        Me.Label43.Location = New System.Drawing.Point(25, 244)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(87, 24)
         Me.Label43.TabIndex = 33
@@ -2010,7 +2082,7 @@ Partial Class Menu_Principal
         '
         Me.Label41.AutoSize = True
         Me.Label41.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(25, 174)
+        Me.Label41.Location = New System.Drawing.Point(25, 194)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(87, 24)
         Me.Label41.TabIndex = 29
@@ -2018,14 +2090,14 @@ Partial Class Menu_Principal
         '
         'TextBox27
         '
-        Me.TextBox27.Location = New System.Drawing.Point(846, 174)
+        Me.TextBox27.Location = New System.Drawing.Point(846, 194)
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(50, 20)
         Me.TextBox27.TabIndex = 32
         '
         'TextBox28
         '
-        Me.TextBox28.Location = New System.Drawing.Point(124, 174)
+        Me.TextBox28.Location = New System.Drawing.Point(124, 194)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(556, 20)
         Me.TextBox28.TabIndex = 30
@@ -2034,7 +2106,7 @@ Partial Class Menu_Principal
         '
         Me.Label40.AutoSize = True
         Me.Label40.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(747, 174)
+        Me.Label40.Location = New System.Drawing.Point(747, 194)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(77, 24)
         Me.Label40.TabIndex = 31
@@ -2042,6 +2114,7 @@ Partial Class Menu_Principal
         '
         'TabPage11
         '
+        Me.TabPage11.Controls.Add(Me.Button47)
         Me.TabPage11.Controls.Add(Me.Button35)
         Me.TabPage11.Controls.Add(Me.Button36)
         Me.TabPage11.Controls.Add(Me.Button37)
@@ -2051,10 +2124,21 @@ Partial Class Menu_Principal
         Me.TabPage11.Location = New System.Drawing.Point(4, 22)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(1284, 708)
+        Me.TabPage11.Size = New System.Drawing.Size(1284, 762)
         Me.TabPage11.TabIndex = 10
         Me.TabPage11.Text = "TabPage11"
         Me.TabPage11.UseVisualStyleBackColor = True
+        '
+        'Button47
+        '
+        Me.Button47.FlatAppearance.BorderSize = 0
+        Me.Button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button47.Image = CType(resources.GetObject("Button47.Image"), System.Drawing.Image)
+        Me.Button47.Location = New System.Drawing.Point(895, 541)
+        Me.Button47.Name = "Button47"
+        Me.Button47.Size = New System.Drawing.Size(193, 83)
+        Me.Button47.TabIndex = 190
+        Me.Button47.UseVisualStyleBackColor = True
         '
         'Button35
         '
@@ -2216,13 +2300,413 @@ Partial Class Menu_Principal
         Me.Label53.TabIndex = 21
         Me.Label53.Text = "Ingrese Profesional Apoyo 1"
         '
+        'TabPage12
+        '
+        Me.TabPage12.Controls.Add(Me.Label83)
+        Me.TabPage12.Controls.Add(Me.Button51)
+        Me.TabPage12.Controls.Add(Me.Label82)
+        Me.TabPage12.Controls.Add(Me.Button50)
+        Me.TabPage12.Controls.Add(Me.Label81)
+        Me.TabPage12.Controls.Add(Me.Button49)
+        Me.TabPage12.Controls.Add(Me.Label79)
+        Me.TabPage12.Controls.Add(Me.Button48)
+        Me.TabPage12.Controls.Add(Me.TextBox47)
+        Me.TabPage12.Controls.Add(Me.TextBox46)
+        Me.TabPage12.Controls.Add(Me.TextBox44)
+        Me.TabPage12.Controls.Add(Me.TextBox34)
+        Me.TabPage12.Controls.Add(Me.Label100)
+        Me.TabPage12.Controls.Add(Me.Label101)
+        Me.TabPage12.Controls.Add(Me.Label87)
+        Me.TabPage12.Controls.Add(Me.Label86)
+        Me.TabPage12.Controls.Add(Me.Label85)
+        Me.TabPage12.Controls.Add(Me.Label84)
+        Me.TabPage12.Controls.Add(Me.Label80)
+        Me.TabPage12.Controls.Add(Me.Label78)
+        Me.TabPage12.Controls.Add(Me.Label77)
+        Me.TabPage12.Controls.Add(Me.Label76)
+        Me.TabPage12.Controls.Add(Me.Label75)
+        Me.TabPage12.Controls.Add(Me.Label74)
+        Me.TabPage12.Controls.Add(Me.Label73)
+        Me.TabPage12.Controls.Add(Me.Label72)
+        Me.TabPage12.Controls.Add(Me.Label55)
+        Me.TabPage12.Controls.Add(Me.Label70)
+        Me.TabPage12.Controls.Add(Me.Label69)
+        Me.TabPage12.Controls.Add(Me.Label68)
+        Me.TabPage12.Controls.Add(Me.Label67)
+        Me.TabPage12.Controls.Add(Me.Label71)
+        Me.TabPage12.Controls.Add(Me.Label66)
+        Me.TabPage12.Controls.Add(Me.Label65)
+        Me.TabPage12.Controls.Add(Me.Label64)
+        Me.TabPage12.Controls.Add(Me.Label63)
+        Me.TabPage12.Controls.Add(Me.Label62)
+        Me.TabPage12.Controls.Add(Me.Label61)
+        Me.TabPage12.Controls.Add(Me.Label60)
+        Me.TabPage12.Controls.Add(Me.Label59)
+        Me.TabPage12.Controls.Add(Me.Label58)
+        Me.TabPage12.Controls.Add(Me.Label57)
+        Me.TabPage12.Controls.Add(Me.Label56)
+        Me.TabPage12.Controls.Add(Me.Label88)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage12.Name = "TabPage12"
+        Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage12.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage12.TabIndex = 11
+        Me.TabPage12.Text = "TabPage12"
+        Me.TabPage12.UseVisualStyleBackColor = True
+        '
+        'TextBox47
+        '
+        Me.TextBox47.Enabled = False
+        Me.TextBox47.Location = New System.Drawing.Point(330, 349)
+        Me.TextBox47.Multiline = True
+        Me.TextBox47.Name = "TextBox47"
+        Me.TextBox47.Size = New System.Drawing.Size(667, 43)
+        Me.TextBox47.TabIndex = 72
+        '
+        'TextBox46
+        '
+        Me.TextBox46.Enabled = False
+        Me.TextBox46.Location = New System.Drawing.Point(331, 301)
+        Me.TextBox46.Multiline = True
+        Me.TextBox46.Name = "TextBox46"
+        Me.TextBox46.Size = New System.Drawing.Size(666, 44)
+        Me.TextBox46.TabIndex = 71
+        '
+        'TextBox44
+        '
+        Me.TextBox44.Enabled = False
+        Me.TextBox44.Location = New System.Drawing.Point(325, 192)
+        Me.TextBox44.Multiline = True
+        Me.TextBox44.Name = "TextBox44"
+        Me.TextBox44.Size = New System.Drawing.Size(672, 40)
+        Me.TextBox44.TabIndex = 69
+        '
+        'TextBox34
+        '
+        Me.TextBox34.Enabled = False
+        Me.TextBox34.Location = New System.Drawing.Point(331, 257)
+        Me.TextBox34.Multiline = True
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(666, 40)
+        Me.TextBox34.TabIndex = 59
+        '
+        'Label100
+        '
+        Me.Label100.AutoSize = True
+        Me.Label100.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label100.Location = New System.Drawing.Point(321, 134)
+        Me.Label100.Name = "Label100"
+        Me.Label100.Size = New System.Drawing.Size(67, 19)
+        Me.Label100.TabIndex = 58
+        Me.Label100.Text = "Label100"
+        '
+        'Label101
+        '
+        Me.Label101.AutoSize = True
+        Me.Label101.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label101.Location = New System.Drawing.Point(51, 134)
+        Me.Label101.Name = "Label101"
+        Me.Label101.Size = New System.Drawing.Size(96, 19)
+        Me.Label101.TabIndex = 57
+        Me.Label101.Text = "Nacionalidad"
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label87.Location = New System.Drawing.Point(340, 628)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(59, 19)
+        Me.Label87.TabIndex = 45
+        Me.Label87.Text = "Label87"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label85.Location = New System.Drawing.Point(317, 422)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(59, 19)
+        Me.Label85.TabIndex = 43
+        Me.Label85.Text = "Label85"
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label84.Location = New System.Drawing.Point(321, 395)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(59, 19)
+        Me.Label84.TabIndex = 42
+        Me.Label84.Text = "Label84"
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label80.Location = New System.Drawing.Point(321, 237)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(59, 19)
+        Me.Label80.TabIndex = 38
+        Me.Label80.Text = "Label80"
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label78.Location = New System.Drawing.Point(321, 172)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(59, 19)
+        Me.Label78.TabIndex = 36
+        Me.Label78.Text = "Label78"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label77.Location = New System.Drawing.Point(321, 153)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(59, 19)
+        Me.Label77.TabIndex = 35
+        Me.Label77.Text = "Label77"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label76.Location = New System.Drawing.Point(321, 116)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(59, 19)
+        Me.Label76.TabIndex = 34
+        Me.Label76.Text = "Label76"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(321, 96)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(59, 19)
+        Me.Label75.TabIndex = 33
+        Me.Label75.Text = "Label75"
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Location = New System.Drawing.Point(321, 77)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(59, 19)
+        Me.Label74.TabIndex = 32
+        Me.Label74.Text = "Label74"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.Location = New System.Drawing.Point(321, 58)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(59, 19)
+        Me.Label73.TabIndex = 31
+        Me.Label73.Text = "Label73"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Location = New System.Drawing.Point(321, 39)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(59, 19)
+        Me.Label72.TabIndex = 30
+        Me.Label72.Text = "Label72"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(321, 20)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(59, 19)
+        Me.Label55.TabIndex = 29
+        Me.Label55.Text = "Label55"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(51, 628)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(278, 19)
+        Me.Label70.TabIndex = 28
+        Me.Label70.Text = "Profesionales que Impartiran los Apoyos"
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Location = New System.Drawing.Point(51, 519)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(267, 19)
+        Me.Label69.TabIndex = 27
+        Me.Label69.Text = "Puntaje En Prueba Segun Corresponda"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label68.Location = New System.Drawing.Point(51, 419)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(186, 19)
+        Me.Label68.TabIndex = 26
+        Me.Label68.Text = "Profesionales Evaluadores"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.Location = New System.Drawing.Point(48, 395)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(189, 19)
+        Me.Label67.TabIndex = 25
+        Me.Label67.Text = "Fecha Emision Diagnostico"
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(51, 344)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(134, 19)
+        Me.Label71.TabIndex = 24
+        Me.Label71.Text = "Observacion Salud"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.Location = New System.Drawing.Point(52, 300)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(273, 19)
+        Me.Label66.TabIndex = 24
+        Me.Label66.Text = "Sindrome Asociado Al Diagnostico P.I.E"
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.Location = New System.Drawing.Point(52, 256)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(88, 19)
+        Me.Label65.TabIndex = 23
+        Me.Label65.Text = "Diagnostico"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label64.Location = New System.Drawing.Point(51, 237)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(89, 19)
+        Me.Label64.TabIndex = 22
+        Me.Label64.Text = "Continuidad"
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label63.Location = New System.Drawing.Point(51, 191)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(108, 19)
+        Me.Label63.TabIndex = 21
+        Me.Label63.Text = "Nuevo Ingreso"
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Location = New System.Drawing.Point(51, 172)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(49, 19)
+        Me.Label62.TabIndex = 20
+        Me.Label62.Text = "Curso"
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.Location = New System.Drawing.Point(51, 153)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(42, 19)
+        Me.Label61.TabIndex = 19
+        Me.Label61.Text = "Sexo"
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Location = New System.Drawing.Point(51, 115)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(42, 19)
+        Me.Label60.TabIndex = 18
+        Me.Label60.Text = "RUT"
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.Location = New System.Drawing.Point(51, 96)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(129, 19)
+        Me.Label59.TabIndex = 17
+        Me.Label59.Text = "Fecha Nacimiento"
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.Location = New System.Drawing.Point(51, 77)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(70, 19)
+        Me.Label58.TabIndex = 16
+        Me.Label58.Text = "Nombres"
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label57.Location = New System.Drawing.Point(51, 58)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(127, 19)
+        Me.Label57.TabIndex = 1
+        Me.Label57.Text = "Apellido Materno"
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Location = New System.Drawing.Point(51, 39)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(120, 19)
+        Me.Label56.TabIndex = 1
+        Me.Label56.Text = "Apellido Paterno"
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label88.Location = New System.Drawing.Point(51, 20)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(138, 19)
+        Me.Label88.TabIndex = 0
+        Me.Label88.Text = "Numero Estudiante"
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 707)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1292, 27)
         Me.Panel1.TabIndex = 2
@@ -2252,11 +2736,149 @@ Partial Class Menu_Principal
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label86.Location = New System.Drawing.Point(339, 519)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(59, 19)
+        Me.Label86.TabIndex = 44
+        Me.Label86.Text = "Label86"
+        '
+        'Button48
+        '
+        Me.Button48.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button48.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button48.FlatAppearance.BorderSize = 5
+        Me.Button48.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button48.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button48.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button48.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button48.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button48.Image = CType(resources.GetObject("Button48.Image"), System.Drawing.Image)
+        Me.Button48.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button48.Location = New System.Drawing.Point(1120, 256)
+        Me.Button48.Name = "Button48"
+        Me.Button48.Size = New System.Drawing.Size(124, 122)
+        Me.Button48.TabIndex = 73
+        Me.Button48.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button48.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button48.UseVisualStyleBackColor = False
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label79.Location = New System.Drawing.Point(1099, 381)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(164, 28)
+        Me.Label79.TabIndex = 74
+        Me.Label79.Text = "Generar Reporte"
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label81.Location = New System.Drawing.Point(1120, 547)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(134, 28)
+        Me.Label81.TabIndex = 76
+        Me.Label81.Text = "Ver Registros"
+        '
+        'Button49
+        '
+        Me.Button49.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button49.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button49.FlatAppearance.BorderSize = 5
+        Me.Button49.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button49.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button49.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button49.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button49.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button49.Image = CType(resources.GetObject("Button49.Image"), System.Drawing.Image)
+        Me.Button49.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button49.Location = New System.Drawing.Point(1130, 422)
+        Me.Button49.Name = "Button49"
+        Me.Button49.Size = New System.Drawing.Size(124, 122)
+        Me.Button49.TabIndex = 75
+        Me.Button49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button49.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button49.UseVisualStyleBackColor = False
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label82.Location = New System.Drawing.Point(1120, 719)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(155, 28)
+        Me.Label82.TabIndex = 78
+        Me.Label82.Text = "Menu Principal"
+        '
+        'Button50
+        '
+        Me.Button50.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button50.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button50.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button50.FlatAppearance.BorderSize = 5
+        Me.Button50.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button50.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button50.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button50.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button50.Image = CType(resources.GetObject("Button50.Image"), System.Drawing.Image)
+        Me.Button50.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button50.Location = New System.Drawing.Point(1130, 594)
+        Me.Button50.Name = "Button50"
+        Me.Button50.Size = New System.Drawing.Size(124, 122)
+        Me.Button50.TabIndex = 77
+        Me.Button50.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button50.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button50.UseVisualStyleBackColor = False
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label83.Location = New System.Drawing.Point(1115, 204)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(128, 28)
+        Me.Label83.TabIndex = 80
+        Me.Label83.Text = "Nueva Ficha"
+        '
+        'Button51
+        '
+        Me.Button51.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button51.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button51.FlatAppearance.BorderSize = 5
+        Me.Button51.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button51.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button51.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button51.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button51.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button51.Image = CType(resources.GetObject("Button51.Image"), System.Drawing.Image)
+        Me.Button51.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button51.Location = New System.Drawing.Point(1115, 78)
+        Me.Button51.Name = "Button51"
+        Me.Button51.Size = New System.Drawing.Size(124, 122)
+        Me.Button51.TabIndex = 79
+        Me.Button51.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button51.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button51.UseVisualStyleBackColor = False
+        '
         'Menu_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1292, 734)
+        Me.ClientSize = New System.Drawing.Size(1292, 788)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -2290,6 +2912,8 @@ Partial Class Menu_Principal
         Me.TabPage11.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.TabPage12.ResumeLayout(False)
+        Me.TabPage12.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2468,4 +3092,52 @@ Partial Class Menu_Principal
     Friend WithEvents Button44 As Button
     Friend WithEvents Button45 As Button
     Friend WithEvents Button46 As Button
+    Friend WithEvents TextBox33 As TextBox
+    Friend WithEvents Label54 As Label
+    Friend WithEvents TabPage12 As TabPage
+    Friend WithEvents Label67 As Label
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label66 As Label
+    Friend WithEvents Label65 As Label
+    Friend WithEvents Label64 As Label
+    Friend WithEvents Label63 As Label
+    Friend WithEvents Label62 As Label
+    Friend WithEvents Label61 As Label
+    Friend WithEvents Label60 As Label
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label88 As Label
+    Friend WithEvents Label84 As Label
+    Friend WithEvents Label80 As Label
+    Friend WithEvents Label78 As Label
+    Friend WithEvents Label77 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Label74 As Label
+    Friend WithEvents Label73 As Label
+    Friend WithEvents Label72 As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Button47 As Button
+    Friend WithEvents Label100 As Label
+    Friend WithEvents Label101 As Label
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents Label70 As Label
+    Friend WithEvents Label69 As Label
+    Friend WithEvents Label68 As Label
+    Friend WithEvents TextBox34 As TextBox
+    Friend WithEvents TextBox47 As TextBox
+    Friend WithEvents TextBox46 As TextBox
+    Friend WithEvents TextBox44 As TextBox
+    Friend WithEvents Label86 As Label
+    Friend WithEvents Label83 As Label
+    Friend WithEvents Button51 As Button
+    Friend WithEvents Label82 As Label
+    Friend WithEvents Button50 As Button
+    Friend WithEvents Label81 As Label
+    Friend WithEvents Button49 As Button
+    Friend WithEvents Label79 As Label
+    Friend WithEvents Button48 As Button
 End Class

@@ -31,6 +31,24 @@ Public Class Menu_Principal
     Public idCurso As Integer
     Public IdUsuario As Integer
 
+    Public profesion_ev_1 As String
+    Public profesion_ev_2 As String
+    Public profesion_ev_3 As String
+    Public profesion_ev_4 As String
+    Public profesion_ev_5 As String
+
+    Public rut_ev_1 As String
+    Public rut_ev_2 As String
+    Public rut_ev_3 As String
+    Public rut_ev_4 As String
+    Public rut_ev_5 As String
+
+    Public rut_apoyo_1 As String
+    Public rut_apoyo_2 As String
+    Public rut_apoyo_3 As String
+    Public rut_apoyo_4 As String
+
+
     Dim ipServidor As String = datos_conn.getservidor()
     Dim puerto As String = datos_conn.getpuerto()
     Dim claveBD As String = datos_conn.getpass()
@@ -278,13 +296,14 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox3.Text & "'"
+            Dim qry As String = "select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox3.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_ev_1 = dr("rut_evaluador")
+                profesion_ev_1 = dr("profesion")
                 IdEvaluador1 = dr("id_evaluador")
 
 
@@ -302,13 +321,14 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox4.Text & "'"
+            Dim qry As String = "select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox4.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_ev_2 = dr("rut_evaluador")
+                profesion_ev_2 = dr("profesion")
                 IdEvaluador2 = dr("id_evaluador")
 
 
@@ -325,13 +345,15 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox5.Text & "'"
+            Dim qry As String = "select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox5.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
 
+                rut_ev_3 = dr("rut_evaluador")
+                profesion_ev_3 = dr("profesion")
                 IdEvaluador3 = dr("id_evaluador")
 
 
@@ -348,15 +370,16 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox6.Text & "'"
+            Dim qry As String = "select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox6.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
 
+                rut_ev_4 = dr("rut_evaluador")
+                profesion_ev_4 = dr("profesion")
                 IdEvaluador4 = dr("id_evaluador")
-
 
 
                 conector.Close()
@@ -371,15 +394,15 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox7.Text & "'"
+            Dim qry As String = "select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" & ComboBox7.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_ev_5 = dr("rut_evaluador")
+                profesion_ev_5 = dr("profesion")
                 IdEvaluador5 = dr("id_evaluador")
-
 
 
                 conector.Close()
@@ -398,13 +421,13 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox10.Text & "'"
+            Dim qry As String = "select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox10.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_apoyo_1 = dr("rut_apoyo")
                 IdApoyo1 = dr("id_profapoyo")
 
 
@@ -421,13 +444,13 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox11.Text & "'"
+            Dim qry As String = "select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox11.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_apoyo_2 = dr("rut_apoyo")
                 IdApoyo2 = dr("id_profapoyo")
 
 
@@ -444,13 +467,13 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox12.Text & "'"
+            Dim qry As String = "select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox12.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_apoyo_3 = dr("rut_apoyo")
                 IdApoyo3 = dr("id_profapoyo")
 
 
@@ -467,13 +490,13 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox13.Text & "'"
+            Dim qry As String = "select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" & ComboBox13.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
-
+                rut_apoyo_4 = dr("rut_apoyo")
                 IdApoyo4 = dr("id_profapoyo")
 
 
@@ -488,7 +511,7 @@ Public Class Menu_Principal
         conector.Close()
     End Sub
 
-   
+
     Sub funcion_insert_ficha_diagnostico()
         conector.Close()
         fecha_emision = MonthCalendar2.SelectionRange.Start
@@ -498,7 +521,7 @@ Public Class Menu_Principal
             conector.Close()
 
             Dim cadena As String
-            cadena = String.Format("INSERT INTO ficha_diagnostico (rut_alumno, id_evaluador_1, id_evaluador_2, id_evaluador_3, id_evaluador_4, id_evaluador_5, id_apoyo_1, id_apoyo_2, id_apoyo_3, id_apoyo_4, id_tipoficha, curso_alumno, nuevo_ingreso, continuidad, diagnostico, sindrome_asociado_diagnostico, observaciones_salud, fecha_emision, prueba_1, puntaje_1, prueba_2, puntaje_2, prueba_3, puntaje_3, prueba_4, puntaje_4, prueba_5, puntaje_5,usuario,nombre_apoyo_1,nombre_apoyo_2,nombre_apoyo_3,nombre_apoyo_4,nombre_evaluador_1,nombre_evaluador_2,nombre_evaluador_3,nombre_evaluador_4,nombre_evaluador_5) VALUES ('" & RutDelAlumno & "', " & IdEvaluador1 & ", " & IdEvaluador2 & ", " & IdEvaluador3 & ", " & IdEvaluador4 & ", " & IdEvaluador5 & ", " & IdApoyo1 & ", " & IdApoyo2 & ", " & IdApoyo3 & ", " & IdApoyo4 & ", " & IdTipoFicha & " , " & idCurso & ",'" & ConcatenoDeNuevoIngreso & "','" & ConcatenoDeAñoContinuidad & "','" & TextBox20.Text & "','" & ConcatenoDeSindromeAsociadoAlDiagnostico & "', '" & TextBox22.Text & "','" & fecha_emision & "','" & TextBox23.Text & "','" & TextBox24.Text & "','" & TextBox26.Text & "','" & TextBox25.Text & "','" & TextBox28.Text & "','" & TextBox27.Text & "','" & TextBox30.Text & "','" & TextBox29.Text & "','" & TextBox32.Text & "','" & TextBox31.Text & "'," & IdUsuario & ",'" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox13.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "')")
+            cadena = String.Format("INSERT INTO ficha_diagnostico (rut_alumno, id_evaluador_1, id_evaluador_2, id_evaluador_3, id_evaluador_4, id_evaluador_5, id_apoyo_1, id_apoyo_2, id_apoyo_3, id_apoyo_4, id_tipoficha, curso_alumno, nuevo_ingreso, continuidad, diagnostico, sindrome_asociado_diagnostico, observaciones_salud, fecha_emision, prueba_1, puntaje_1, prueba_2, puntaje_2, prueba_3, puntaje_3, prueba_4, puntaje_4, prueba_5, puntaje_5,usuario,nombre_apoyo_1,nombre_apoyo_2,nombre_apoyo_3,nombre_apoyo_4,nombre_evaluador_1,nombre_evaluador_2,nombre_evaluador_3,nombre_evaluador_4,nombre_evaluador_5, numero_estudiante,ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.rut_evaluador_3 , ficha_diagnostico.rut_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.profesion_evaluador_1 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.rut_apoyo_4) VALUES ('" & RutDelAlumno & "', " & IdEvaluador1 & ", " & IdEvaluador2 & ", " & IdEvaluador3 & ", " & IdEvaluador4 & ", " & IdEvaluador5 & ", " & IdApoyo1 & ", " & IdApoyo2 & ", " & IdApoyo3 & ", " & IdApoyo4 & ", " & IdTipoFicha & " , " & idCurso & ",'" & ConcatenoDeNuevoIngreso & "','" & ConcatenoDeAñoContinuidad & "','" & TextBox20.Text & "','" & ConcatenoDeSindromeAsociadoAlDiagnostico & "', '" & TextBox22.Text & "','" & fecha_emision & "','" & TextBox23.Text & "','" & TextBox24.Text & "','" & TextBox26.Text & "','" & TextBox25.Text & "','" & TextBox28.Text & "','" & TextBox27.Text & "','" & TextBox30.Text & "','" & TextBox29.Text & "','" & TextBox32.Text & "','" & TextBox31.Text & "'," & IdUsuario & ",'" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox13.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "', " & TextBox33.Text & " ,'" & rut_ev_1 & "','" & rut_ev_2 & "','" & rut_ev_3 & "','" & rut_ev_4 & "','" & rut_ev_5 & "','" & profesion_ev_1 & "','" & profesion_ev_2 & "','" & profesion_ev_3 & "','" & profesion_ev_4 & "','" & profesion_ev_5 & "','" & rut_apoyo_1 & "','" & rut_apoyo_2 & "','" & rut_apoyo_3 & "','" & rut_apoyo_4 & "')")
 
             Dim insertar As New SqlCommand(cadena, conector)
             conector.Open()
@@ -574,7 +597,7 @@ Public Class Menu_Principal
         conector.Close()
     End Sub
 
-  Sub funcion_update_alumno()
+    Sub funcion_update_alumno()
         conector.Close()
 
         fecha_nacimiento = MonthCalendar1.SelectionRange.End
@@ -723,7 +746,7 @@ Public Class Menu_Principal
         End Select
     End Sub
 
-    Private Sub TextBox8_KeyPress(ByVal sender As Object, _
+    Private Sub TextBox8_KeyPress(ByVal sender As Object,
                          ByVal e As System.Windows.Forms.KeyPressEventArgs) _
                          Handles TextBox8.KeyPress
 
@@ -738,7 +761,7 @@ Public Class Menu_Principal
         End If
     End Sub
 
-    Private Sub TextBox2_KeyPress(ByVal sender As Object, _
+    Private Sub TextBox2_KeyPress(ByVal sender As Object,
                          ByVal e As System.Windows.Forms.KeyPressEventArgs) _
                          Handles TextBox2.KeyPress
 
@@ -754,7 +777,7 @@ Public Class Menu_Principal
     End Sub
 
 
-    Private Sub TextBox3_KeyPress(ByVal sender As Object, _
+    Private Sub TextBox3_KeyPress(ByVal sender As Object,
                      ByVal e As System.Windows.Forms.KeyPressEventArgs) _
                      Handles TextBox3.KeyPress
 
@@ -769,7 +792,7 @@ Public Class Menu_Principal
         End If
     End Sub
 
-    Private Sub TextBox4_KeyPress(ByVal sender As Object, _
+    Private Sub TextBox4_KeyPress(ByVal sender As Object,
                      ByVal e As System.Windows.Forms.KeyPressEventArgs) _
                      Handles TextBox4.KeyPress
 
@@ -820,7 +843,7 @@ Public Class Menu_Principal
                 TextBox2.Text = dr("nombre_apoderado")
                 TextBox4.Text = dr("fono_apoderado")
                 TextBox3.Text = dr("direccion_apoderado")
-                
+
                 conector.Close()
                 conector.Close()
                 MsgBox("El Apoderado Ya Fue Ingresado", MsgBoxStyle.Information, "Operacion Exitosa")
@@ -960,10 +983,10 @@ Public Class Menu_Principal
     End Sub
 
     Private Sub Button65_Click(sender As System.Object, e As System.EventArgs) Handles Button65.Click
-      
+
         ObtenerIdCurso()
         ConcatenoDePalabra()
-       
+
         TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
     End Sub
 
@@ -1309,5 +1332,145 @@ Public Class Menu_Principal
 
     Private Sub Button46_Click(sender As Object, e As EventArgs) Handles Button46.Click
 
+    End Sub
+
+    Private Sub TabPage12_Click(sender As Object, e As EventArgs) Handles TabPage12.Click
+
+    End Sub
+
+    Private Sub Button47_Click(sender As Object, e As EventArgs) Handles Button47.Click
+        Dim nombre_evaluador_1 As String
+        Dim rut_evaluador_1 As String
+        Dim profesion_evaluador_1 As String
+
+        Dim nombre_evaluador_2 As String
+        Dim rut_evaluador_2 As String
+        Dim profesion_evaluador_2 As String
+
+        Dim nombre_evaluador_3 As String
+        Dim rut_evaluador_3 As String
+        Dim profesion_evaluador_3 As String
+
+        Dim nombre_evaluador_4 As String
+        Dim rut_evaluador_4 As String
+        Dim profesion_evaluador_4 As String
+
+        Dim nombre_evaluador_5 As String
+        Dim rut_evaluador_5 As String
+        Dim profesion_evaluador_5 As String
+
+        Dim nombre_apoyo_1 As String
+        Dim rut_apoyo_1 As String
+
+        Dim nombre_apoyo_2 As String
+        Dim rut_apoyo_2 As String
+
+        Dim nombre_apoyo_3 As String
+        Dim rut_apoyo_3 As String
+
+        Dim nombre_apoyo_4 As String
+        Dim rut_apoyo_4 As String
+
+        Dim pruebax_1 As String
+        Dim puntajex_1 As String
+
+        Dim pruebax_2 As String
+        Dim puntajex_2 As String
+
+        Dim pruebax_3 As String
+        Dim puntajex_3 As String
+
+        Dim pruebax_4 As String
+        Dim puntajex_4 As String
+
+        Dim pruebax_5 As String
+        Dim puntajex_5 As String
+
+        Try
+
+            conector.Close()
+            conector.Open()
+            Dim qry As String = "select ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" & RutDelAlumno & "'  and ficha_diagnostico.fecha_emision = '" & MonthCalendar2.SelectionRange.Start & "'
+  
+"
+            Dim sqlcmd As New SqlCommand(qry, conector)
+            Dim dr As SqlDataReader
+            dr = sqlcmd.ExecuteReader
+            If dr.Read() Then
+
+                Label55.Text = dr("numero_estudiante")
+                Label72.Text = dr("apellido_paterno")
+                Label73.Text = dr("apellido_materno")
+                Label74.Text = dr("nombres_alumno")
+                Label75.Text = dr("fecha_nacimiento")
+                Label76.Text = dr("rut_alumno")
+                Label77.Text = dr("sexo_alumno")
+                Label100.Text = dr("nacionalidad_alumno")
+                Label78.Text = dr("nombre")
+                TextBox44.Text = dr("nuevo_ingreso")
+                Label80.Text = dr("continuidad")
+                TextBox34.Text = dr("diagnostico")
+                TextBox46.Text = dr("sindrome_asociado_diagnostico")
+                TextBox47.Text = dr("observaciones_salud")
+                Label84.Text = dr("fecha_emision")
+                rut_evaluador_1 = dr("rut_evaluador_1")
+                nombre_evaluador_1 = dr("nombre_evaluador_1")
+                profesion_evaluador_1 = dr("profesion_evaluador_1")
+
+                rut_evaluador_2 = dr("rut_evaluador_2")
+                nombre_evaluador_2 = dr("nombre_evaluador_2")
+                profesion_evaluador_2 = dr("profesion_evaluador_2")
+
+                rut_evaluador_3 = dr("rut_evaluador_3")
+                nombre_evaluador_3 = dr("nombre_evaluador_3")
+                profesion_evaluador_3 = dr("profesion_evaluador_3")
+
+                rut_evaluador_4 = dr("rut_evaluador_4")
+                nombre_evaluador_4 = dr("nombre_evaluador_4")
+                profesion_evaluador_4 = dr("profesion_evaluador_4")
+
+                rut_evaluador_5 = dr("rut_evaluador_5")
+                nombre_evaluador_5 = dr("nombre_evaluador_5")
+                profesion_evaluador_5 = dr("profesion_evaluador_5")
+
+                Label85.Text = rut_evaluador_1 + " " + nombre_evaluador_1 + "  " + profesion_evaluador_1 + vbCr + rut_evaluador_2 + " " + nombre_evaluador_2 + "  " + profesion_evaluador_2 + vbCr + rut_evaluador_3 + " " + nombre_evaluador_3 + "  " + profesion_evaluador_3 + vbCr + rut_evaluador_4 + " " + nombre_evaluador_4 + "  " + profesion_evaluador_4 + vbCr + rut_evaluador_5 + " " + nombre_evaluador_5 + "  " + profesion_evaluador_5
+                pruebax_1 = dr("prueba_1")
+                puntajex_1 = dr("puntaje_1")
+
+                pruebax_2 = dr("prueba_2")
+                puntajex_2 = dr("puntaje_2")
+
+                pruebax_3 = dr("prueba_3")
+                puntajex_3 = dr("puntaje_3")
+
+                pruebax_4 = dr("prueba_4")
+                puntajex_4 = dr("puntaje_4")
+
+                pruebax_5 = dr("prueba_5")
+                puntajex_5 = dr("puntaje_5")
+
+                Label86.Text = "prueba 1   " + pruebax_1 + "  puntaje   " + puntajex_1 + vbCr + "prueba 2   " + pruebax_2 + "  puntaje   " + puntajex_2 + vbCr + "prueba 3   " + pruebax_3 + "  puntaje   " + puntajex_3 + vbCr + "prueba 4   " + pruebax_4 + "  puntaje   " + puntajex_4 + vbCr + "prueba 5     " + pruebax_5 + "  puntaje   " + puntajex_5
+                rut_apoyo_1 = dr("rut_apoyo_1")
+                nombre_apoyo_1 = dr("nombre_apoyo_1")
+
+                rut_apoyo_2 = dr("rut_apoyo_2")
+                nombre_apoyo_2 = dr("nombre_apoyo_2")
+
+                rut_apoyo_3 = dr("rut_apoyo_3")
+                nombre_apoyo_3 = dr("nombre_apoyo_3")
+
+                rut_apoyo_4 = dr("rut_apoyo_4")
+                nombre_apoyo_4 = dr("nombre_apoyo_4")
+
+                Label87.Text = rut_apoyo_1 + "   " + nombre_apoyo_1 + vbCr + rut_apoyo_2 + "   " + nombre_apoyo_2 + vbCr + rut_apoyo_3 + "   " + nombre_apoyo_3 + vbCr + rut_apoyo_4 + "   " + nombre_apoyo_4
+
+                conector.Close()
+                TabControl1.SelectedTab = TabControl1.TabPages.Item(11)
+            End If
+        Catch ex As Exception
+            MsgBox("error" & vbCrLf & ex.Message)
+
+        End Try
+        conector.Close()
     End Sub
 End Class
