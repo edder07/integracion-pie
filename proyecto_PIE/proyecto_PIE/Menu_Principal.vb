@@ -1482,7 +1482,7 @@ Public Class Menu_Principal
         Dim fecha_para_crystal As New CrystalDecisions.Shared.ParameterDiscreteValue()
         rut_para_crystal.Value = RutDelAlumno
         fecha_para_crystal.Value = MonthCalendar2.SelectionRange.Start.ToString("dd-MM-yyyy")
-        MsgBox(fecha_para_crystal.ToString)
+
         CrystalReport1.SetParameterValue("@rut_buscar", rut_para_crystal)
         CrystalReport1.SetParameterValue("@fecha_buscar", fecha_para_crystal)
         Report1.ReportSource = CrystalReport1

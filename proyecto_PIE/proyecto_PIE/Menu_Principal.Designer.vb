@@ -245,6 +245,8 @@ Partial Class Menu_Principal
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.Button52 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -2362,7 +2364,7 @@ Partial Class Menu_Principal
         '
         Me.Label83.AutoSize = True
         Me.Label83.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label83.Location = New System.Drawing.Point(1115, 204)
+        Me.Label83.Location = New System.Drawing.Point(1120, 142)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(128, 28)
         Me.Label83.TabIndex = 80
@@ -2382,7 +2384,7 @@ Partial Class Menu_Principal
         Me.Button51.ForeColor = System.Drawing.Color.DarkBlue
         Me.Button51.Image = CType(resources.GetObject("Button51.Image"), System.Drawing.Image)
         Me.Button51.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button51.Location = New System.Drawing.Point(1115, 78)
+        Me.Button51.Location = New System.Drawing.Point(1120, 16)
         Me.Button51.Name = "Button51"
         Me.Button51.Size = New System.Drawing.Size(124, 122)
         Me.Button51.TabIndex = 79
@@ -2394,7 +2396,7 @@ Partial Class Menu_Principal
         '
         Me.Label82.AutoSize = True
         Me.Label82.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label82.Location = New System.Drawing.Point(1120, 719)
+        Me.Label82.Location = New System.Drawing.Point(1115, 644)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(155, 28)
         Me.Label82.TabIndex = 78
@@ -2414,7 +2416,7 @@ Partial Class Menu_Principal
         Me.Button50.ForeColor = System.Drawing.Color.DarkBlue
         Me.Button50.Image = CType(resources.GetObject("Button50.Image"), System.Drawing.Image)
         Me.Button50.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button50.Location = New System.Drawing.Point(1130, 594)
+        Me.Button50.Location = New System.Drawing.Point(1125, 519)
         Me.Button50.Name = "Button50"
         Me.Button50.Size = New System.Drawing.Size(124, 122)
         Me.Button50.TabIndex = 77
@@ -2426,7 +2428,7 @@ Partial Class Menu_Principal
         '
         Me.Label81.AutoSize = True
         Me.Label81.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label81.Location = New System.Drawing.Point(1120, 547)
+        Me.Label81.Location = New System.Drawing.Point(1115, 474)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(134, 28)
         Me.Label81.TabIndex = 76
@@ -2446,7 +2448,7 @@ Partial Class Menu_Principal
         Me.Button49.ForeColor = System.Drawing.Color.DarkBlue
         Me.Button49.Image = CType(resources.GetObject("Button49.Image"), System.Drawing.Image)
         Me.Button49.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button49.Location = New System.Drawing.Point(1130, 422)
+        Me.Button49.Location = New System.Drawing.Point(1125, 349)
         Me.Button49.Name = "Button49"
         Me.Button49.Size = New System.Drawing.Size(124, 122)
         Me.Button49.TabIndex = 75
@@ -2458,7 +2460,7 @@ Partial Class Menu_Principal
         '
         Me.Label79.AutoSize = True
         Me.Label79.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label79.Location = New System.Drawing.Point(1099, 381)
+        Me.Label79.Location = New System.Drawing.Point(1104, 308)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(164, 28)
         Me.Label79.TabIndex = 74
@@ -2478,7 +2480,7 @@ Partial Class Menu_Principal
         Me.Button48.ForeColor = System.Drawing.Color.DarkBlue
         Me.Button48.Image = CType(resources.GetObject("Button48.Image"), System.Drawing.Image)
         Me.Button48.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button48.Location = New System.Drawing.Point(1120, 256)
+        Me.Button48.Location = New System.Drawing.Point(1125, 183)
         Me.Button48.Name = "Button48"
         Me.Button48.Size = New System.Drawing.Size(124, 122)
         Me.Button48.TabIndex = 73
@@ -2489,44 +2491,44 @@ Partial Class Menu_Principal
         'TextBox47
         '
         Me.TextBox47.Enabled = False
-        Me.TextBox47.Location = New System.Drawing.Point(330, 349)
+        Me.TextBox47.Location = New System.Drawing.Point(330, 334)
         Me.TextBox47.Multiline = True
         Me.TextBox47.Name = "TextBox47"
-        Me.TextBox47.Size = New System.Drawing.Size(667, 43)
+        Me.TextBox47.Size = New System.Drawing.Size(719, 43)
         Me.TextBox47.TabIndex = 72
         '
         'TextBox46
         '
         Me.TextBox46.Enabled = False
-        Me.TextBox46.Location = New System.Drawing.Point(331, 301)
+        Me.TextBox46.Location = New System.Drawing.Point(331, 286)
         Me.TextBox46.Multiline = True
         Me.TextBox46.Name = "TextBox46"
-        Me.TextBox46.Size = New System.Drawing.Size(666, 44)
+        Me.TextBox46.Size = New System.Drawing.Size(718, 44)
         Me.TextBox46.TabIndex = 71
         '
         'TextBox44
         '
         Me.TextBox44.Enabled = False
-        Me.TextBox44.Location = New System.Drawing.Point(325, 192)
+        Me.TextBox44.Location = New System.Drawing.Point(325, 177)
         Me.TextBox44.Multiline = True
         Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(672, 40)
+        Me.TextBox44.Size = New System.Drawing.Size(724, 40)
         Me.TextBox44.TabIndex = 69
         '
         'TextBox34
         '
         Me.TextBox34.Enabled = False
-        Me.TextBox34.Location = New System.Drawing.Point(331, 257)
+        Me.TextBox34.Location = New System.Drawing.Point(331, 242)
         Me.TextBox34.Multiline = True
         Me.TextBox34.Name = "TextBox34"
-        Me.TextBox34.Size = New System.Drawing.Size(666, 40)
+        Me.TextBox34.Size = New System.Drawing.Size(718, 40)
         Me.TextBox34.TabIndex = 59
         '
         'Label100
         '
         Me.Label100.AutoSize = True
         Me.Label100.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label100.Location = New System.Drawing.Point(321, 134)
+        Me.Label100.Location = New System.Drawing.Point(321, 119)
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(67, 19)
         Me.Label100.TabIndex = 58
@@ -2536,7 +2538,7 @@ Partial Class Menu_Principal
         '
         Me.Label101.AutoSize = True
         Me.Label101.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label101.Location = New System.Drawing.Point(51, 134)
+        Me.Label101.Location = New System.Drawing.Point(51, 119)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(96, 19)
         Me.Label101.TabIndex = 57
@@ -2546,7 +2548,7 @@ Partial Class Menu_Principal
         '
         Me.Label87.AutoSize = True
         Me.Label87.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label87.Location = New System.Drawing.Point(340, 628)
+        Me.Label87.Location = New System.Drawing.Point(339, 615)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(59, 19)
         Me.Label87.TabIndex = 45
@@ -2556,7 +2558,7 @@ Partial Class Menu_Principal
         '
         Me.Label86.AutoSize = True
         Me.Label86.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label86.Location = New System.Drawing.Point(339, 519)
+        Me.Label86.Location = New System.Drawing.Point(338, 506)
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(59, 19)
         Me.Label86.TabIndex = 44
@@ -2566,7 +2568,7 @@ Partial Class Menu_Principal
         '
         Me.Label85.AutoSize = True
         Me.Label85.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label85.Location = New System.Drawing.Point(317, 422)
+        Me.Label85.Location = New System.Drawing.Point(320, 406)
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(59, 19)
         Me.Label85.TabIndex = 43
@@ -2576,7 +2578,7 @@ Partial Class Menu_Principal
         '
         Me.Label84.AutoSize = True
         Me.Label84.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label84.Location = New System.Drawing.Point(321, 395)
+        Me.Label84.Location = New System.Drawing.Point(320, 382)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(59, 19)
         Me.Label84.TabIndex = 42
@@ -2586,7 +2588,7 @@ Partial Class Menu_Principal
         '
         Me.Label80.AutoSize = True
         Me.Label80.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label80.Location = New System.Drawing.Point(321, 237)
+        Me.Label80.Location = New System.Drawing.Point(321, 222)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(59, 19)
         Me.Label80.TabIndex = 38
@@ -2596,7 +2598,7 @@ Partial Class Menu_Principal
         '
         Me.Label78.AutoSize = True
         Me.Label78.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label78.Location = New System.Drawing.Point(321, 172)
+        Me.Label78.Location = New System.Drawing.Point(321, 157)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(59, 19)
         Me.Label78.TabIndex = 36
@@ -2606,7 +2608,7 @@ Partial Class Menu_Principal
         '
         Me.Label77.AutoSize = True
         Me.Label77.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label77.Location = New System.Drawing.Point(321, 153)
+        Me.Label77.Location = New System.Drawing.Point(321, 138)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(59, 19)
         Me.Label77.TabIndex = 35
@@ -2616,7 +2618,7 @@ Partial Class Menu_Principal
         '
         Me.Label76.AutoSize = True
         Me.Label76.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label76.Location = New System.Drawing.Point(321, 116)
+        Me.Label76.Location = New System.Drawing.Point(321, 101)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(59, 19)
         Me.Label76.TabIndex = 34
@@ -2626,7 +2628,7 @@ Partial Class Menu_Principal
         '
         Me.Label75.AutoSize = True
         Me.Label75.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(321, 96)
+        Me.Label75.Location = New System.Drawing.Point(321, 81)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(59, 19)
         Me.Label75.TabIndex = 33
@@ -2636,7 +2638,7 @@ Partial Class Menu_Principal
         '
         Me.Label74.AutoSize = True
         Me.Label74.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.Location = New System.Drawing.Point(321, 77)
+        Me.Label74.Location = New System.Drawing.Point(321, 62)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(59, 19)
         Me.Label74.TabIndex = 32
@@ -2646,7 +2648,7 @@ Partial Class Menu_Principal
         '
         Me.Label73.AutoSize = True
         Me.Label73.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.Location = New System.Drawing.Point(321, 58)
+        Me.Label73.Location = New System.Drawing.Point(321, 43)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(59, 19)
         Me.Label73.TabIndex = 31
@@ -2656,7 +2658,7 @@ Partial Class Menu_Principal
         '
         Me.Label72.AutoSize = True
         Me.Label72.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.Location = New System.Drawing.Point(321, 39)
+        Me.Label72.Location = New System.Drawing.Point(321, 24)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(59, 19)
         Me.Label72.TabIndex = 30
@@ -2666,7 +2668,7 @@ Partial Class Menu_Principal
         '
         Me.Label55.AutoSize = True
         Me.Label55.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(321, 20)
+        Me.Label55.Location = New System.Drawing.Point(321, 5)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(59, 19)
         Me.Label55.TabIndex = 29
@@ -2676,7 +2678,7 @@ Partial Class Menu_Principal
         '
         Me.Label70.AutoSize = True
         Me.Label70.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.Location = New System.Drawing.Point(51, 628)
+        Me.Label70.Location = New System.Drawing.Point(50, 615)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(278, 19)
         Me.Label70.TabIndex = 28
@@ -2686,7 +2688,7 @@ Partial Class Menu_Principal
         '
         Me.Label69.AutoSize = True
         Me.Label69.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(51, 519)
+        Me.Label69.Location = New System.Drawing.Point(50, 506)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(267, 19)
         Me.Label69.TabIndex = 27
@@ -2696,7 +2698,7 @@ Partial Class Menu_Principal
         '
         Me.Label68.AutoSize = True
         Me.Label68.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label68.Location = New System.Drawing.Point(51, 419)
+        Me.Label68.Location = New System.Drawing.Point(50, 406)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(186, 19)
         Me.Label68.TabIndex = 26
@@ -2706,7 +2708,7 @@ Partial Class Menu_Principal
         '
         Me.Label67.AutoSize = True
         Me.Label67.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.Location = New System.Drawing.Point(48, 395)
+        Me.Label67.Location = New System.Drawing.Point(51, 382)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(189, 19)
         Me.Label67.TabIndex = 25
@@ -2716,7 +2718,7 @@ Partial Class Menu_Principal
         '
         Me.Label71.AutoSize = True
         Me.Label71.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(51, 344)
+        Me.Label71.Location = New System.Drawing.Point(51, 329)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(134, 19)
         Me.Label71.TabIndex = 24
@@ -2726,7 +2728,7 @@ Partial Class Menu_Principal
         '
         Me.Label66.AutoSize = True
         Me.Label66.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label66.Location = New System.Drawing.Point(52, 300)
+        Me.Label66.Location = New System.Drawing.Point(52, 285)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(273, 19)
         Me.Label66.TabIndex = 24
@@ -2736,7 +2738,7 @@ Partial Class Menu_Principal
         '
         Me.Label65.AutoSize = True
         Me.Label65.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(52, 256)
+        Me.Label65.Location = New System.Drawing.Point(52, 241)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(88, 19)
         Me.Label65.TabIndex = 23
@@ -2746,7 +2748,7 @@ Partial Class Menu_Principal
         '
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.Location = New System.Drawing.Point(51, 237)
+        Me.Label64.Location = New System.Drawing.Point(51, 222)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(89, 19)
         Me.Label64.TabIndex = 22
@@ -2756,7 +2758,7 @@ Partial Class Menu_Principal
         '
         Me.Label63.AutoSize = True
         Me.Label63.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label63.Location = New System.Drawing.Point(51, 191)
+        Me.Label63.Location = New System.Drawing.Point(51, 176)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(108, 19)
         Me.Label63.TabIndex = 21
@@ -2766,7 +2768,7 @@ Partial Class Menu_Principal
         '
         Me.Label62.AutoSize = True
         Me.Label62.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(51, 172)
+        Me.Label62.Location = New System.Drawing.Point(51, 157)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(49, 19)
         Me.Label62.TabIndex = 20
@@ -2776,7 +2778,7 @@ Partial Class Menu_Principal
         '
         Me.Label61.AutoSize = True
         Me.Label61.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(51, 153)
+        Me.Label61.Location = New System.Drawing.Point(51, 138)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(42, 19)
         Me.Label61.TabIndex = 19
@@ -2786,7 +2788,7 @@ Partial Class Menu_Principal
         '
         Me.Label60.AutoSize = True
         Me.Label60.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.Location = New System.Drawing.Point(51, 115)
+        Me.Label60.Location = New System.Drawing.Point(51, 100)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(42, 19)
         Me.Label60.TabIndex = 18
@@ -2796,7 +2798,7 @@ Partial Class Menu_Principal
         '
         Me.Label59.AutoSize = True
         Me.Label59.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label59.Location = New System.Drawing.Point(51, 96)
+        Me.Label59.Location = New System.Drawing.Point(51, 81)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(129, 19)
         Me.Label59.TabIndex = 17
@@ -2806,7 +2808,7 @@ Partial Class Menu_Principal
         '
         Me.Label58.AutoSize = True
         Me.Label58.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(51, 77)
+        Me.Label58.Location = New System.Drawing.Point(51, 62)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(70, 19)
         Me.Label58.TabIndex = 16
@@ -2816,7 +2818,7 @@ Partial Class Menu_Principal
         '
         Me.Label57.AutoSize = True
         Me.Label57.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label57.Location = New System.Drawing.Point(51, 58)
+        Me.Label57.Location = New System.Drawing.Point(51, 43)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(127, 19)
         Me.Label57.TabIndex = 1
@@ -2826,7 +2828,7 @@ Partial Class Menu_Principal
         '
         Me.Label56.AutoSize = True
         Me.Label56.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(51, 39)
+        Me.Label56.Location = New System.Drawing.Point(51, 24)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(120, 19)
         Me.Label56.TabIndex = 1
@@ -2836,7 +2838,7 @@ Partial Class Menu_Principal
         '
         Me.Label88.AutoSize = True
         Me.Label88.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label88.Location = New System.Drawing.Point(51, 20)
+        Me.Label88.Location = New System.Drawing.Point(51, 5)
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(138, 19)
         Me.Label88.TabIndex = 0
@@ -2844,6 +2846,8 @@ Partial Class Menu_Principal
         '
         'TabPage13
         '
+        Me.TabPage13.Controls.Add(Me.Label89)
+        Me.TabPage13.Controls.Add(Me.Button52)
         Me.TabPage13.Controls.Add(Me.Report1)
         Me.TabPage13.Location = New System.Drawing.Point(4, 22)
         Me.TabPage13.Name = "TabPage13"
@@ -2858,10 +2862,10 @@ Partial Class Menu_Principal
         Me.Report1.ActiveViewIndex = -1
         Me.Report1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Report1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Report1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Report1.Location = New System.Drawing.Point(3, 3)
+        Me.Report1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Report1.Location = New System.Drawing.Point(169, 3)
         Me.Report1.Name = "Report1"
-        Me.Report1.Size = New System.Drawing.Size(1278, 756)
+        Me.Report1.Size = New System.Drawing.Size(1112, 756)
         Me.Report1.TabIndex = 0
         '
         'Panel1
@@ -2899,6 +2903,38 @@ Partial Class Menu_Principal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label89.Location = New System.Drawing.Point(8, 169)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(155, 28)
+        Me.Label89.TabIndex = 80
+        Me.Label89.Text = "Menu Principal"
+        '
+        'Button52
+        '
+        Me.Button52.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button52.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button52.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button52.FlatAppearance.BorderSize = 5
+        Me.Button52.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button52.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button52.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button52.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button52.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button52.Image = CType(resources.GetObject("Button52.Image"), System.Drawing.Image)
+        Me.Button52.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button52.Location = New System.Drawing.Point(18, 44)
+        Me.Button52.Name = "Button52"
+        Me.Button52.Size = New System.Drawing.Size(124, 122)
+        Me.Button52.TabIndex = 79
+        Me.Button52.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button52.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button52.UseVisualStyleBackColor = False
         '
         'Menu_Principal
         '
@@ -2941,6 +2977,7 @@ Partial Class Menu_Principal
         Me.TabPage12.ResumeLayout(False)
         Me.TabPage12.PerformLayout()
         Me.TabPage13.ResumeLayout(False)
+        Me.TabPage13.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3169,4 +3206,6 @@ Partial Class Menu_Principal
     Friend WithEvents Button48 As Button
     Friend WithEvents TabPage13 As TabPage
     Friend WithEvents Report1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents Label89 As Label
+    Friend WithEvents Button52 As Button
 End Class

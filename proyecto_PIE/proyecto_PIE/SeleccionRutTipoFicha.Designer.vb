@@ -30,6 +30,7 @@ Partial Class SeleccionRutTipoFicha
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -57,7 +58,7 @@ Partial Class SeleccionRutTipoFicha
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Gold
-        Me.Button1.Location = New System.Drawing.Point(227, 197)
+        Me.Button1.Location = New System.Drawing.Point(151, 201)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 33)
         Me.Button1.TabIndex = 2
@@ -108,12 +109,25 @@ Partial Class SeleccionRutTipoFicha
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "TIPO FICHA"
         '
+        'Button2
+        '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Gold
+        Me.Button2.Location = New System.Drawing.Point(275, 201)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(143, 33)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "REEVALUAR"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'SeleccionRutTipoFicha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkBlue
         Me.ClientSize = New System.Drawing.Size(545, 260)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -136,4 +150,5 @@ Partial Class SeleccionRutTipoFicha
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As Button
 End Class
