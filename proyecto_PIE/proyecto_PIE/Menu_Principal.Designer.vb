@@ -241,10 +241,10 @@ Partial Class Menu_Principal
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Label88 = New System.Windows.Forms.Label()
         Me.TabPage13 = New System.Windows.Forms.TabPage()
+        Me.Report1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Report1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -2853,13 +2853,24 @@ Partial Class Menu_Principal
         Me.TabPage13.Text = "TabPage13"
         Me.TabPage13.UseVisualStyleBackColor = True
         '
+        'Report1
+        '
+        Me.Report1.ActiveViewIndex = -1
+        Me.Report1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Report1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Report1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Report1.Location = New System.Drawing.Point(3, 3)
+        Me.Report1.Name = "Report1"
+        Me.Report1.Size = New System.Drawing.Size(1278, 756)
+        Me.Report1.TabIndex = 0
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 761)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1292, 27)
         Me.Panel1.TabIndex = 2
@@ -2888,17 +2899,6 @@ Partial Class Menu_Principal
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
-        '
-        'Report1
-        '
-        Me.Report1.ActiveViewIndex = -1
-        Me.Report1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Report1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Report1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Report1.Location = New System.Drawing.Point(3, 3)
-        Me.Report1.Name = "Report1"
-        Me.Report1.Size = New System.Drawing.Size(1278, 756)
-        Me.Report1.TabIndex = 0
         '
         'Menu_Principal
         '
