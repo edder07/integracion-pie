@@ -194,6 +194,21 @@ Public Class SeleccionRutTipoFicha
     End Sub
 
     Sub reevaluar_select()
+        Dim valor_curso As String
+        Dim valor_ev_1 As String
+        Dim valor_ev_2 As String
+        Dim valor_ev_3 As String
+        Dim valor_ev_4 As String
+        Dim valor_ev_5 As String
+
+        Dim valor_apo_1 As String
+        Dim valor_apo_2 As String
+        Dim valor_apo_3 As String
+        Dim valor_apo_4 As String
+
+
+
+
         Try
 
             conector.Close()
@@ -207,7 +222,10 @@ Public Class SeleccionRutTipoFicha
             If dr.Read() Then
 
                 Menu_Principal.TextBox33.Text = dr("numero_estudiante")
-                Menu_Principal.ComboBox8.Text = dr("nombre")
+                valor_curso = dr("nombre")
+
+                Menu_Principal.ComboBox8.Text = valor_curso
+
                 Menu_Principal.TextBox18.Text = dr("nuevo_ingreso")
                 Menu_Principal.TextBox19.Text = dr("continuidad")
                 Menu_Principal.TextBox20.Text = dr("diagnostico")
@@ -217,11 +235,20 @@ Public Class SeleccionRutTipoFicha
                 Fechaemi = dr("fecha_emision")
                 Menu_Principal.MonthCalendar2.SetDate(Fechaemi)
 
-                Menu_Principal.ComboBox3.Text = dr("nombre_evaluador_1")
-                Menu_Principal.ComboBox4.Text = dr("nombre_evaluador_2")
-                Menu_Principal.ComboBox5.Text = dr("nombre_evaluador_3")
-                Menu_Principal.ComboBox6.Text = dr("nombre_evaluador_4")
-                Menu_Principal.ComboBox7.Text = dr("nombre_evaluador_5")
+                valor_ev_1 = dr("nombre_evaluador_1")
+                Menu_Principal.ComboBox3.Text = valor_ev_1
+
+                valor_ev_2 = dr("nombre_evaluador_2")
+                Menu_Principal.ComboBox4.Text = valor_ev_2
+
+                valor_ev_3 = dr("nombre_evaluador_3")
+                Menu_Principal.ComboBox5.Text = valor_ev_3
+
+                valor_ev_4 = dr("nombre_evaluador_4")
+                Menu_Principal.ComboBox6.Text = valor_ev_4
+
+                valor_ev_5 = dr("nombre_evaluador_5")
+                Menu_Principal.ComboBox7.Text = valor_ev_5
 
                 Menu_Principal.TextBox23.Text = dr("prueba_1")
                 Menu_Principal.TextBox24.Text = dr("puntaje_1")
@@ -239,10 +266,17 @@ Public Class SeleccionRutTipoFicha
                 Menu_Principal.TextBox31.Text = dr("puntaje_5")
 
 
-                Menu_Principal.ComboBox10.Text = dr("nombre_apoyo_1")
-                Menu_Principal.ComboBox11.Text = dr("nombre_apoyo_2")
-                Menu_Principal.ComboBox12.Text = dr("nombre_apoyo_3")
-                Menu_Principal.ComboBox13.Text = dr("nombre_apoyo_4")
+                valor_apo_1 = dr("nombre_apoyo_1")
+                Menu_Principal.ComboBox10.Text = valor_apo_1
+
+                valor_apo_2 = dr("nombre_apoyo_2")
+                Menu_Principal.ComboBox11.Text = valor_apo_2
+
+                valor_apo_3 = dr("nombre_apoyo_3")
+                Menu_Principal.ComboBox12.Text = valor_apo_3
+
+                valor_apo_4 = dr("nombre_apoyo_4")
+                Menu_Principal.ComboBox13.Text = valor_apo_4
 
                 Menu_Principal.Show()
                 Menu_Principal.Enabled = True
@@ -262,9 +296,6 @@ Public Class SeleccionRutTipoFicha
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Menu_Principal.RutDelAlumno = ComboBox1.Text
-        obtener_datos_ficha()
-        obtener_datos_alumnos()
-        reevaluar_select()
         Menu_Principal.MostrarApoyo1()
         Menu_Principal.MostrarApoyo2()
         Menu_Principal.MostrarApoyo3()
@@ -275,5 +306,10 @@ Public Class SeleccionRutTipoFicha
         Menu_Principal.MostrarEvaluador3()
         Menu_Principal.MostrarEvaluador4()
         Menu_Principal.MostrarEvaluador5()
+
+        obtener_datos_ficha()
+        obtener_datos_alumnos()
+        reevaluar_select()
+
     End Sub
 End Class

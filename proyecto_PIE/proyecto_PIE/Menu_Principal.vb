@@ -72,6 +72,17 @@ Public Class Menu_Principal
     Private Sub Menu_Principal_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.Location = Screen.PrimaryScreen.WorkingArea.Location
         Me.Size = Screen.PrimaryScreen.WorkingArea.Size
+        MostrarApoyo1()
+        MostrarApoyo2()
+        MostrarApoyo3()
+        MostrarApoyo4()
+        MostrarCursos()
+        MostrarEvaluador1()
+        MostrarEvaluador2()
+        MostrarEvaluador3()
+        MostrarEvaluador4()
+        MostrarEvaluador5()
+
     End Sub
 
     Private Sub PictureBox3_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox3.Click
@@ -1011,7 +1022,7 @@ Public Class Menu_Principal
 
         ComboBox8.DataSource = ds.Tables(0)
         ComboBox8.DisplayMember = "nombre"
-        ComboBox8.SelectedIndex = -1
+        ComboBox8.SelectedIndex = 0
 
     End Sub
 
@@ -1494,5 +1505,29 @@ Public Class Menu_Principal
         CrystalReport1.DataSourceConnections(0).SetConnection(servidorSQL, basededatos, usuarioBD, claveBD)
         TabControl1.SelectedTab = TabControl1.TabPages.Item(12)
 
+    End Sub
+
+    Private Sub TabPage13_Click(sender As Object, e As EventArgs) Handles TabPage13.Click
+
+    End Sub
+
+    Private Sub Button52_Click(sender As Object, e As EventArgs) Handles Button52.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
+    End Sub
+
+    Private Sub Button54_Click(sender As Object, e As EventArgs) Handles Button54.Click
+
+        TipoEvaluacion.Show()
+        Me.Enabled = False
+    End Sub
+
+    Private Sub Button51_Click(sender As Object, e As EventArgs) Handles Button51.Click
+
+        TipoEvaluacion.Show()
+        Me.Enabled = False
+    End Sub
+
+    Private Sub Button50_Click(sender As Object, e As EventArgs) Handles Button50.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
     End Sub
 End Class
