@@ -281,11 +281,16 @@ Public Class SeleccionRutTipoFicha
                 Menu_Principal.Show()
                 Menu_Principal.Enabled = True
                 Menu_Principal.TabControl1.SelectedIndex = 7
+                Menu_Principal.Label21.Text = "COMPLETE LOS CAMPOS PARA LA FICHA " + ComboBox2.Text + vbCr + "PARA LA REEVALUACION DEL ALUMNO " + NombreCompletoAlumno
+
                 Me.Hide()
                 TipoEvaluacion.Hide()
                 TipoEvaluacion.Close()
                 conector.Close()
 
+            Else
+
+                MsgBox("Para realizar una Reevaluacion Primero debe haber una Evaluacion del Alumno", MsgBoxStyle.Critical, "Atencion")
             End If
         Catch ex As Exception
             MsgBox("error" & vbCrLf & ex.Message)
@@ -310,6 +315,13 @@ Public Class SeleccionRutTipoFicha
         obtener_datos_ficha()
         obtener_datos_alumnos()
         reevaluar_select()
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        TipoEvaluacion.Show()
+        Me.Close()
+        Me.Hide()
 
     End Sub
 End Class

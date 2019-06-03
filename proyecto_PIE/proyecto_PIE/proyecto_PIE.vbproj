@@ -85,6 +85,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargarDiagnostico.Designer.vb">
+      <DependentUpon>CargarDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarDiagnostico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +132,12 @@
     <Compile Include="SeleccionRutTipoFicha.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TipoBuscador.Designer.vb">
+      <DependentUpon>TipoBuscador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TipoBuscador.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TipoEvaluacion.Designer.vb">
       <DependentUpon>TipoEvaluacion.vb</DependentUpon>
     </Compile>
@@ -134,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CargarDiagnostico.resx">
+      <DependentUpon>CargarDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.vb</LastGenOutput>
@@ -152,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionRutTipoFicha.resx">
       <DependentUpon>SeleccionRutTipoFicha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoBuscador.resx">
+      <DependentUpon>TipoBuscador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipoEvaluacion.resx">
       <DependentUpon>TipoEvaluacion.vb</DependentUpon>

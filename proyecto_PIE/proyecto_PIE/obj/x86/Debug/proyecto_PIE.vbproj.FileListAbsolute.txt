@@ -51,3 +51,5 @@ C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debu
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\stdole.dll
+C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.TipoBuscador.resources
+C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarDiagnostico.resources

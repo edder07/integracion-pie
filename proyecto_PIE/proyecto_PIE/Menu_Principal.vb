@@ -31,6 +31,9 @@ Public Class Menu_Principal
     Public idCurso As Integer
     Public IdUsuario As Integer
 
+    Public id_tipo_ficha As Integer
+
+
     Public profesion_ev_1 As String
     Public profesion_ev_2 As String
     Public profesion_ev_3 As String
@@ -1402,14 +1405,13 @@ Public Class Menu_Principal
 
             conector.Close()
             conector.Open()
-            Dim qry As String = "select ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" & RutDelAlumno & "'  and ficha_diagnostico.fecha_emision = '" & MonthCalendar2.SelectionRange.Start & "'
-  
-"
+            Dim qry As String = "select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" & RutDelAlumno & "'  and ficha_diagnostico.fecha_emision = '" & MonthCalendar2.SelectionRange.Start & "' and ficha_diagnostico.id_tipoficha = " & IdTipoFicha & ""
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
             If dr.Read() Then
 
+                IdTipoFicha = dr("id_tipoficha")
                 Label55.Text = dr("numero_estudiante")
                 Label72.Text = dr("apellido_paterno")
                 Label73.Text = dr("apellido_materno")
@@ -1488,11 +1490,14 @@ Public Class Menu_Principal
 
     Private Sub Button48_Click(sender As Object, e As EventArgs) Handles Button48.Click
 
+        Dim fecha_aqui As Date
+        fecha_aqui = Label84.Text
+
         Dim CrystalReport1 As New CrystalReport1
         Dim rut_para_crystal As New CrystalDecisions.Shared.ParameterDiscreteValue()
         Dim fecha_para_crystal As New CrystalDecisions.Shared.ParameterDiscreteValue()
-        rut_para_crystal.Value = RutDelAlumno
-        fecha_para_crystal.Value = MonthCalendar2.SelectionRange.Start.ToString("dd-MM-yyyy")
+        rut_para_crystal.Value = Label76.Text
+        fecha_para_crystal.Value = fecha_aqui
 
         CrystalReport1.SetParameterValue("@rut_buscar", rut_para_crystal)
         CrystalReport1.SetParameterValue("@fecha_buscar", fecha_para_crystal)
@@ -1529,5 +1534,115 @@ Public Class Menu_Principal
 
     Private Sub Button50_Click(sender As Object, e As EventArgs) Handles Button50.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
+    End Sub
+    Sub ver_registro_select()
+        Dim valor_curso As String
+        Dim valor_ev_1 As String
+        Dim valor_ev_2 As String
+        Dim valor_ev_3 As String
+        Dim valor_ev_4 As String
+        Dim valor_ev_5 As String
+
+        Dim valor_apo_1 As String
+        Dim valor_apo_2 As String
+        Dim valor_apo_3 As String
+        Dim valor_apo_4 As String
+
+
+
+
+        Try
+
+            conector.Close()
+            conector.Open()
+            Dim qry As String = "select ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" & Label76.Text & "' and ficha_diagnostico.id_tipoficha = " & IdTipoFicha & " and ficha_diagnostico.fecha_Emision = '" & Label84.Text & "' 
+  
+"
+            Dim sqlcmd As New SqlCommand(qry, conector)
+            Dim dr As SqlDataReader
+            dr = sqlcmd.ExecuteReader
+            If dr.Read() Then
+
+                TextBox33.Text = dr("numero_estudiante")
+                valor_curso = dr("nombre")
+
+                ComboBox8.Text = valor_curso
+
+                TextBox18.Text = dr("nuevo_ingreso")
+                TextBox19.Text = dr("continuidad")
+                TextBox20.Text = dr("diagnostico")
+                TextBox21.Text = dr("sindrome_asociado_diagnostico")
+                TextBox22.Text = dr("observaciones_salud")
+
+
+                SeleccionRutTipoFicha.Fechaemi = dr("fecha_emision")
+                MonthCalendar2.SetDate(SeleccionRutTipoFicha.Fechaemi)
+
+                valor_ev_1 = dr("nombre_evaluador_1")
+                ComboBox3.Text = valor_ev_1
+
+                valor_ev_2 = dr("nombre_evaluador_2")
+                ComboBox4.Text = valor_ev_2
+
+                valor_ev_3 = dr("nombre_evaluador_3")
+                ComboBox5.Text = valor_ev_3
+
+                valor_ev_4 = dr("nombre_evaluador_4")
+                ComboBox6.Text = valor_ev_4
+
+                valor_ev_5 = dr("nombre_evaluador_5")
+                ComboBox7.Text = valor_ev_5
+
+                TextBox23.Text = dr("prueba_1")
+                TextBox24.Text = dr("puntaje_1")
+
+                TextBox26.Text = dr("prueba_2")
+                TextBox25.Text = dr("puntaje_2")
+
+                TextBox28.Text = dr("prueba_3")
+                TextBox27.Text = dr("puntaje_3")
+
+                TextBox30.Text = dr("prueba_4")
+                TextBox29.Text = dr("puntaje_4")
+
+                TextBox32.Text = dr("prueba_5")
+                TextBox31.Text = dr("puntaje_5")
+
+                valor_apo_1 = dr("nombre_apoyo_1")
+                ComboBox10.Text = valor_apo_1
+
+                valor_apo_2 = dr("nombre_apoyo_2")
+                ComboBox11.Text = valor_apo_2
+
+                valor_apo_3 = dr("nombre_apoyo_3")
+                ComboBox12.Text = valor_apo_3
+
+                valor_apo_4 = dr("nombre_apoyo_4")
+                ComboBox13.Text = valor_apo_4
+
+
+                TabControl1.SelectedTab = TabControl1.TabPages.Item(7)
+                Label21.Text = "REGISTRO DEL ALUMNO " + Label74.Text + " " + Label72.Text + " " + Label73.Text
+
+                conector.Close()
+
+            End If
+        Catch ex As Exception
+            MsgBox("error" & vbCrLf & ex.Message)
+
+        End Try
+        conector.Close()
+    End Sub
+    Private Sub Button49_Click(sender As Object, e As EventArgs) Handles Button49.Click
+        ver_registro_select()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        TipoBuscador.Show()
+        Me.Enabled = False
+    End Sub
+
+    Private Sub Button53_Click(sender As Object, e As EventArgs) Handles Button53.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(11)
     End Sub
 End Class
