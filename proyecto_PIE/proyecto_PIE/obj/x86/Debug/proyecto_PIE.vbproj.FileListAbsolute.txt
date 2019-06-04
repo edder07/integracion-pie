@@ -54,3 +54,4 @@ C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debu
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.TipoBuscador.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarDiagnostico.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarCurso.resources
+C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarPorRut.resources

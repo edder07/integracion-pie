@@ -26,6 +26,20 @@
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
         Me.Close()
+        Menu_Principal.Enabled = True
+        Menu_Principal.Hide()
+        Menu_Principal.Close()
+        CargarCurso.select_cargar_primero()
         CargarCurso.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        Me.Close()
+        CargarCurso.select_cargar_primero()
+        CargarCurso.select_cargar_segundo()
+        CargarCurso.select_cargar_tercero()
+        CargarCurso.select_cargar_cuarto()
+        CargarPorRut.Show()
     End Sub
 End Class

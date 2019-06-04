@@ -97,6 +97,12 @@
     <Compile Include="CargarDiagnostico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CargarPorRut.Designer.vb">
+      <DependentUpon>CargarPorRut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarPorRut.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargarDiagnostico.resx">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarPorRut.resx">
+      <DependentUpon>CargarPorRut.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
