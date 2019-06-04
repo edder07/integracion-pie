@@ -85,6 +85,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargarCurso.Designer.vb">
+      <DependentUpon>CargarCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CargarDiagnostico.Designer.vb">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CargarCurso.resx">
+      <DependentUpon>CargarCurso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CargarDiagnostico.resx">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
     </EmbeddedResource>
