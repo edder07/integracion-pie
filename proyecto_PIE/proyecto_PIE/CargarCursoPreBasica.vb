@@ -99,7 +99,7 @@ Public Class CargarCurso
         End Try
 
     End Sub
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class

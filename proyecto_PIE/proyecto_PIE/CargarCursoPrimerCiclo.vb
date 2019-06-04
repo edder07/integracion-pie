@@ -2,7 +2,7 @@
 Imports System.Data.SqlClient
 Imports System.Data.OleDb
 
-Public Class CargarCurso
+Public Class CargarCursoPrimerCiclo
     Dim ipServidor As String = datos_conn.getservidor()
     Dim puerto As String = datos_conn.getpuerto()
     Dim claveBD As String = datos_conn.getpass()
@@ -101,5 +101,13 @@ Public Class CargarCurso
     End Sub
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
 
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+        TipoBuscador.Show()
+
+        Me.Close()
+        Me.Hide()
     End Sub
 End Class

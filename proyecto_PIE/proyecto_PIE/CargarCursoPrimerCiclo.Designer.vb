@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CargarCurso
+Partial Class CargarCursoPrimerCiclo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class CargarCurso
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CargarCurso))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CargarCursoPrimerCiclo))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -55,6 +55,8 @@ Partial Class CargarCurso
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
@@ -407,12 +409,42 @@ Partial Class CargarCurso
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "3° Basico"
         '
-        'CargarCurso
+        'Button5
+        '
+        Me.Button5.FlatAppearance.BorderSize = 5
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Gold
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(715, 677)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(299, 80)
+        Me.Button5.TabIndex = 7
+        Me.Button5.Text = "Segundo Ciclo >"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.FlatAppearance.BorderSize = 5
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.Gold
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(360, 677)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(299, 80)
+        Me.Button6.TabIndex = 19
+        Me.Button6.Text = "< Volver"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'CargarCursoPrimerCiclo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Blue
         Me.ClientSize = New System.Drawing.Size(1360, 760)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel4)
@@ -420,7 +452,7 @@ Partial Class CargarCurso
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "CargarCurso"
+        Me.Name = "CargarCursoPrimerCiclo"
         Me.Text = "CargarCurso"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -462,4 +494,6 @@ Partial Class CargarCurso
     Friend WithEvents Button4 As Button
     Friend WithEvents DataGridView4 As DataGridView
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
