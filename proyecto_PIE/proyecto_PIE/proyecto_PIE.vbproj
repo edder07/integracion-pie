@@ -85,24 +85,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CargarCursoPreBasica.Designer.vb">
-      <DependentUpon>CargarCursoPreBasica.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CargarCursoPreBasica.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CargarCursoPrimerCiclo.Designer.vb">
-      <DependentUpon>CargarCursoPrimerCiclo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CargarCursoPrimerCiclo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CargarCursoSegundoCiclo.Designer.vb">
-      <DependentUpon>CargarCursoSegundoCiclo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CargarCursoSegundoCiclo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="CargarDiagnostico.Designer.vb">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
     </Compile>
@@ -170,15 +152,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CargarCursoPreBasica.resx">
-      <DependentUpon>CargarCursoPreBasica.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CargarCursoPrimerCiclo.resx">
-      <DependentUpon>CargarCursoPrimerCiclo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CargarCursoSegundoCiclo.resx">
-      <DependentUpon>CargarCursoSegundoCiclo.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CargarDiagnostico.resx">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
     </EmbeddedResource>

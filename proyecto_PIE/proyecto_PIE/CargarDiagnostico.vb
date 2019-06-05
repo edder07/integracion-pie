@@ -245,8 +245,7 @@ Public Class CargarDiagnostico
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Close()
         Me.Hide()
-        Menu_Principal.Show()
-        Menu_Principal.TabControl1.SelectedIndex = 0
+        TipoBuscador.Show()
 
     End Sub
 

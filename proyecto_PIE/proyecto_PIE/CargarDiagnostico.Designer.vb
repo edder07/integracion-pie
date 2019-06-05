@@ -46,7 +46,7 @@ Partial Class CargarDiagnostico
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(306, 86)
+        Me.ComboBox1.Location = New System.Drawing.Point(339, 91)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(145, 25)
         Me.ComboBox1.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class CargarDiagnostico
         Me.Button1.ForeColor = System.Drawing.Color.Gold
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(457, 68)
+        Me.Button1.Location = New System.Drawing.Point(490, 73)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(164, 56)
         Me.Button1.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class CargarDiagnostico
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gold
-        Me.Label1.Location = New System.Drawing.Point(69, 87)
+        Me.Label1.Location = New System.Drawing.Point(102, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(210, 21)
         Me.Label1.TabIndex = 2
@@ -82,7 +82,7 @@ Partial Class CargarDiagnostico
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gold
-        Me.Label2.Location = New System.Drawing.Point(210, 40)
+        Me.Label2.Location = New System.Drawing.Point(243, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(370, 25)
         Me.Label2.TabIndex = 3
@@ -96,7 +96,7 @@ Partial Class CargarDiagnostico
         Me.Button2.ForeColor = System.Drawing.Color.Gold
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(321, 335)
+        Me.Button2.Location = New System.Drawing.Point(362, 336)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(189, 80)
         Me.Button2.TabIndex = 5
@@ -111,7 +111,7 @@ Partial Class CargarDiagnostico
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(809, 27)
+        Me.Panel1.Size = New System.Drawing.Size(915, 27)
         Me.Panel1.TabIndex = 10
         '
         'PictureBox3
@@ -119,7 +119,7 @@ Partial Class CargarDiagnostico
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Right
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(748, 0)
+        Me.PictureBox3.Location = New System.Drawing.Point(854, 0)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(27, 27)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -132,7 +132,7 @@ Partial Class CargarDiagnostico
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(775, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(881, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(34, 27)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -142,9 +142,10 @@ Partial Class CargarDiagnostico
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.DarkBlue
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
@@ -172,7 +173,7 @@ Partial Class CargarDiagnostico
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Size = New System.Drawing.Size(785, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(891, 150)
         Me.DataGridView1.TabIndex = 11
         '
         'CargarDiagnostico
@@ -180,7 +181,7 @@ Partial Class CargarDiagnostico
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkBlue
-        Me.ClientSize = New System.Drawing.Size(809, 441)
+        Me.ClientSize = New System.Drawing.Size(915, 441)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)

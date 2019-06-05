@@ -1646,5 +1646,284 @@ Public Class Menu_Principal
         TabControl1.SelectedTab = TabControl1.TabPages.Item(11)
     End Sub
 
+    Private Sub Button66_Click(sender As Object, e As EventArgs) Handles Button66.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
+    End Sub
 
+    Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
+        select_cargar_primero()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(14)
+    End Sub
+
+    Private Sub Button56_Click(sender As Object, e As EventArgs) Handles Button56.Click
+        select_cargar_segundo()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(15)
+    End Sub
+
+    Private Sub Button57_Click(sender As Object, e As EventArgs) Handles Button57.Click
+        select_cargar_tercero()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(16)
+    End Sub
+
+    Private Sub Button58_Click(sender As Object, e As EventArgs) Handles Button58.Click
+        select_cargar_cuarto()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(17)
+    End Sub
+
+    Private Sub Button60_Click(sender As Object, e As EventArgs) Handles Button60.Click
+        select_cargar_pre_kimder()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(22)
+    End Sub
+
+    Private Sub Button59_Click(sender As Object, e As EventArgs) Handles Button59.Click
+        select_cargar_kinder()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(23)
+    End Sub
+
+    Private Sub Button61_Click(sender As Object, e As EventArgs) Handles Button61.Click
+        select_cargar_quinto()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(18)
+    End Sub
+
+    Private Sub Button62_Click(sender As Object, e As EventArgs) Handles Button62.Click
+        select_cargar_sexto()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(19)
+    End Sub
+
+    Private Sub Button63_Click(sender As Object, e As EventArgs) Handles Button63.Click
+        select_cargar_septimo()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(20)
+    End Sub
+
+    Private Sub Button64_Click(sender As Object, e As EventArgs) Handles Button64.Click
+        select_cargar_octavo()
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(21)
+    End Sub
+    Sub select_cargar_kinder()
+        conector.Close()
+        Try
+
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 9", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView9.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+    Sub select_cargar_pre_kimder()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 10", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView8.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+
+    Sub select_cargar_primero()
+        conector.Close()
+        Try
+
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 1", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView1.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+    Sub select_cargar_segundo()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 2", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView2.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+
+    Sub select_cargar_tercero()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 3", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView3.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+
+    Sub select_cargar_cuarto()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 4", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView4.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+    Sub select_cargar_quinto()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 5", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView5.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+
+    Sub select_cargar_sexto()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 6", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView11.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+    Sub select_cargar_septimo()
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 7", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView6.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+    Sub select_cargar_octavo()
+
+        conector.Close()
+        Try
+
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = 8", conector)
+            Dim ds As New DataSet
+            conector.Open()
+
+            da.Fill(ds)
+            DataGridView7.DataSource = ds.Tables(0)
+
+            conector.Close()
+            conector.Close()
+        Catch es As Exception
+            MsgBox(es)
+        End Try
+
+    End Sub
+
+    Private Sub Button68_Click(sender As Object, e As EventArgs) Handles Button68.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button71_Click(sender As Object, e As EventArgs) Handles Button71.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button74_Click(sender As Object, e As EventArgs) Handles Button74.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button77_Click(sender As Object, e As EventArgs) Handles Button77.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button80_Click(sender As Object, e As EventArgs) Handles Button80.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button83_Click(sender As Object, e As EventArgs) Handles Button83.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button86_Click(sender As Object, e As EventArgs) Handles Button86.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button89_Click(sender As Object, e As EventArgs) Handles Button89.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button92_Click(sender As Object, e As EventArgs) Handles Button92.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
+
+    Private Sub Button95_Click(sender As Object, e As EventArgs) Handles Button95.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(13)
+    End Sub
 End Class
