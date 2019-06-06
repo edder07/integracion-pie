@@ -37,6 +37,8 @@
         SeleccionRutTipoFicha.Show()
         SeleccionRutTipoFicha.Button1.Visible = True
         SeleccionRutTipoFicha.Button2.Visible = False
+        Menu_Principal.Button36.Enabled = True
+        Menu_Principal.Button35.Enabled = False
 
         Me.Close()
         Me.Hide()

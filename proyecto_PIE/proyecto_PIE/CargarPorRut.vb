@@ -13,8 +13,6 @@ Public Class CargarPorRut
     Public dreader As SqlDataReader
     Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
 
-
-
     Dim cmd As OleDbDataAdapter
     Dim cnn As OleDbConnection
 
@@ -23,6 +21,25 @@ Public Class CargarPorRut
     Dim tipo_ficha_para_data As String
 
     Private Sub CargarPorRut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarAlumno()
+    End Sub
+    Sub MostrarAlumno()
+
+        conector.Close()
+        conector.Open()
+        Dim qry As String = "select DISTINCT ficha_diagnostico.rut_alumno from ficha_diagnostico"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        'Dim drc As String
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
+        Dim ds As DataSet = New DataSet()
+
+        Dim drc = sqlcmd.ExecuteReader
+        conector.Close()
+        da.Fill(ds)
+
+        ComboBox1.DataSource = ds.Tables(0)
+        ComboBox1.DisplayMember = "rut_alumno"
+        ComboBox1.SelectedItem = 0
 
     End Sub
 
@@ -35,8 +52,7 @@ Public Class CargarPorRut
 
         Try
 
-
-            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" & TextBox1.Text & "'", conector)
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" & ComboBox1.Text & "'", conector)
             Dim ds As New DataSet
             conector.Open()
 
@@ -82,7 +98,7 @@ Public Class CargarPorRut
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-
+        conector.Close()
         funcion_id_tipo()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
@@ -216,6 +232,9 @@ Public Class CargarPorRut
                 Menu_Principal.TabControl1.SelectedIndex = 11
                 Me.Hide()
 
+                Menu_Principal.Button35.Visible = True
+                Menu_Principal.Button36.Visible = False
+
             Else
 
                 MsgBox("INTENTE NUEVAMENTE", MsgBoxStyle.Critical, "Atencion")
@@ -225,5 +244,15 @@ Public Class CargarPorRut
 
         End Try
         conector.Close()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+
+        TipoBuscador.Enabled = True
+        TipoBuscador.Show()
+        Menu_Principal.Enabled = False
+        Me.Close()
+
     End Sub
 End Class

@@ -22,37 +22,37 @@ Partial Class Menu_Principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle57 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Principal))
-        Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -278,72 +278,73 @@ Partial Class Menu_Principal
         Me.Label89 = New System.Windows.Forms.Label()
         Me.Button52 = New System.Windows.Forms.Button()
         Me.Report1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabPage14 = New System.Windows.Forms.TabPage()
-        Me.Button55 = New System.Windows.Forms.Button()
-        Me.Button56 = New System.Windows.Forms.Button()
-        Me.Button57 = New System.Windows.Forms.Button()
-        Me.Button58 = New System.Windows.Forms.Button()
-        Me.Button59 = New System.Windows.Forms.Button()
-        Me.Button60 = New System.Windows.Forms.Button()
-        Me.Button61 = New System.Windows.Forms.Button()
-        Me.Button62 = New System.Windows.Forms.Button()
-        Me.Button63 = New System.Windows.Forms.Button()
-        Me.Button64 = New System.Windows.Forms.Button()
         Me.Label92 = New System.Windows.Forms.Label()
         Me.Button66 = New System.Windows.Forms.Button()
+        Me.Button64 = New System.Windows.Forms.Button()
+        Me.Button63 = New System.Windows.Forms.Button()
+        Me.Button62 = New System.Windows.Forms.Button()
+        Me.Button61 = New System.Windows.Forms.Button()
+        Me.Button60 = New System.Windows.Forms.Button()
+        Me.Button59 = New System.Windows.Forms.Button()
+        Me.Button58 = New System.Windows.Forms.Button()
+        Me.Button57 = New System.Windows.Forms.Button()
+        Me.Button56 = New System.Windows.Forms.Button()
+        Me.Button55 = New System.Windows.Forms.Button()
         Me.TabPage15 = New System.Windows.Forms.TabPage()
-        Me.TabPage16 = New System.Windows.Forms.TabPage()
-        Me.TabPage17 = New System.Windows.Forms.TabPage()
-        Me.TabPage18 = New System.Windows.Forms.TabPage()
-        Me.TabPage19 = New System.Windows.Forms.TabPage()
-        Me.TabPage20 = New System.Windows.Forms.TabPage()
-        Me.TabPage21 = New System.Windows.Forms.TabPage()
-        Me.TabPage22 = New System.Windows.Forms.TabPage()
-        Me.TabPage23 = New System.Windows.Forms.TabPage()
-        Me.TabPage24 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button67 = New System.Windows.Forms.Button()
-        Me.Button68 = New System.Windows.Forms.Button()
         Me.Button69 = New System.Windows.Forms.Button()
+        Me.Button68 = New System.Windows.Forms.Button()
+        Me.Button67 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TabPage16 = New System.Windows.Forms.TabPage()
         Me.Button70 = New System.Windows.Forms.Button()
         Me.Button71 = New System.Windows.Forms.Button()
         Me.Button72 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.TabPage17 = New System.Windows.Forms.TabPage()
         Me.Button73 = New System.Windows.Forms.Button()
         Me.Button74 = New System.Windows.Forms.Button()
         Me.Button75 = New System.Windows.Forms.Button()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.TabPage18 = New System.Windows.Forms.TabPage()
         Me.Button76 = New System.Windows.Forms.Button()
         Me.Button77 = New System.Windows.Forms.Button()
         Me.Button78 = New System.Windows.Forms.Button()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.TabPage19 = New System.Windows.Forms.TabPage()
         Me.Button79 = New System.Windows.Forms.Button()
         Me.Button80 = New System.Windows.Forms.Button()
         Me.Button81 = New System.Windows.Forms.Button()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.TabPage20 = New System.Windows.Forms.TabPage()
         Me.Button82 = New System.Windows.Forms.Button()
         Me.Button83 = New System.Windows.Forms.Button()
         Me.Button84 = New System.Windows.Forms.Button()
         Me.DataGridView11 = New System.Windows.Forms.DataGridView()
+        Me.TabPage21 = New System.Windows.Forms.TabPage()
         Me.Button85 = New System.Windows.Forms.Button()
         Me.Button86 = New System.Windows.Forms.Button()
         Me.Button87 = New System.Windows.Forms.Button()
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
+        Me.TabPage22 = New System.Windows.Forms.TabPage()
         Me.Button88 = New System.Windows.Forms.Button()
         Me.Button89 = New System.Windows.Forms.Button()
         Me.Button90 = New System.Windows.Forms.Button()
         Me.DataGridView7 = New System.Windows.Forms.DataGridView()
+        Me.TabPage23 = New System.Windows.Forms.TabPage()
         Me.Button91 = New System.Windows.Forms.Button()
         Me.Button92 = New System.Windows.Forms.Button()
         Me.Button93 = New System.Windows.Forms.Button()
         Me.DataGridView8 = New System.Windows.Forms.DataGridView()
+        Me.TabPage24 = New System.Windows.Forms.TabPage()
         Me.Button94 = New System.Windows.Forms.Button()
         Me.Button95 = New System.Windows.Forms.Button()
         Me.Button96 = New System.Windows.Forms.Button()
         Me.DataGridView9 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button97 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -363,30 +364,30 @@ Partial Class Menu_Principal
         Me.Panel5.SuspendLayout()
         Me.TabPage12.SuspendLayout()
         Me.TabPage13.SuspendLayout()
+        Me.TabPage14.SuspendLayout()
+        Me.TabPage15.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage16.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage17.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage18.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage19.SuspendLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage20.SuspendLayout()
+        CType(Me.DataGridView11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage21.SuspendLayout()
+        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage22.SuspendLayout()
+        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage23.SuspendLayout()
+        CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage24.SuspendLayout()
+        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage14.SuspendLayout()
-        Me.TabPage15.SuspendLayout()
-        Me.TabPage16.SuspendLayout()
-        Me.TabPage17.SuspendLayout()
-        Me.TabPage18.SuspendLayout()
-        Me.TabPage19.SuspendLayout()
-        Me.TabPage20.SuspendLayout()
-        Me.TabPage21.SuspendLayout()
-        Me.TabPage22.SuspendLayout()
-        Me.TabPage23.SuspendLayout()
-        Me.TabPage24.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -1821,7 +1822,7 @@ Partial Class Menu_Principal
         Me.Button65.FlatAppearance.BorderSize = 0
         Me.Button65.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button65.Image = CType(resources.GetObject("Button65.Image"), System.Drawing.Image)
-        Me.Button65.Location = New System.Drawing.Point(717, 575)
+        Me.Button65.Location = New System.Drawing.Point(827, 567)
         Me.Button65.Name = "Button65"
         Me.Button65.Size = New System.Drawing.Size(190, 80)
         Me.Button65.TabIndex = 187
@@ -1855,7 +1856,7 @@ Partial Class Menu_Principal
         Me.Button41.FlatAppearance.BorderSize = 0
         Me.Button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button41.Image = CType(resources.GetObject("Button41.Image"), System.Drawing.Image)
-        Me.Button41.Location = New System.Drawing.Point(469, 584)
+        Me.Button41.Location = New System.Drawing.Point(263, 570)
         Me.Button41.Name = "Button41"
         Me.Button41.Size = New System.Drawing.Size(183, 80)
         Me.Button41.TabIndex = 191
@@ -1866,7 +1867,7 @@ Partial Class Menu_Principal
         Me.Button38.FlatAppearance.BorderSize = 0
         Me.Button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button38.Image = CType(resources.GetObject("Button38.Image"), System.Drawing.Image)
-        Me.Button38.Location = New System.Drawing.Point(796, 584)
+        Me.Button38.Location = New System.Drawing.Point(827, 570)
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(190, 80)
         Me.Button38.TabIndex = 188
@@ -2019,7 +2020,7 @@ Partial Class Menu_Principal
         Me.Button40.FlatAppearance.BorderSize = 0
         Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button40.Image = CType(resources.GetObject("Button40.Image"), System.Drawing.Image)
-        Me.Button40.Location = New System.Drawing.Point(458, 582)
+        Me.Button40.Location = New System.Drawing.Point(260, 565)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(183, 83)
         Me.Button40.TabIndex = 190
@@ -2030,7 +2031,7 @@ Partial Class Menu_Principal
         Me.Button39.FlatAppearance.BorderSize = 0
         Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button39.Image = CType(resources.GetObject("Button39.Image"), System.Drawing.Image)
-        Me.Button39.Location = New System.Drawing.Point(794, 582)
+        Me.Button39.Location = New System.Drawing.Point(830, 565)
         Me.Button39.Name = "Button39"
         Me.Button39.Size = New System.Drawing.Size(193, 83)
         Me.Button39.TabIndex = 189
@@ -2269,7 +2270,7 @@ Partial Class Menu_Principal
         Me.Button47.FlatAppearance.BorderSize = 0
         Me.Button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button47.Image = CType(resources.GetObject("Button47.Image"), System.Drawing.Image)
-        Me.Button47.Location = New System.Drawing.Point(895, 541)
+        Me.Button47.Location = New System.Drawing.Point(826, 573)
         Me.Button47.Name = "Button47"
         Me.Button47.Size = New System.Drawing.Size(193, 83)
         Me.Button47.TabIndex = 190
@@ -2281,7 +2282,7 @@ Partial Class Menu_Principal
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(707, 502)
+        Me.Button35.Location = New System.Drawing.Point(683, 546)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(104, 134)
         Me.Button35.TabIndex = 174
@@ -2294,7 +2295,7 @@ Partial Class Menu_Principal
         Me.Button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button36.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button36.Image = CType(resources.GetObject("Button36.Image"), System.Drawing.Image)
-        Me.Button36.Location = New System.Drawing.Point(539, 502)
+        Me.Button36.Location = New System.Drawing.Point(515, 546)
         Me.Button36.Name = "Button36"
         Me.Button36.Size = New System.Drawing.Size(109, 135)
         Me.Button36.TabIndex = 173
@@ -2306,7 +2307,7 @@ Partial Class Menu_Principal
         Me.Button37.FlatAppearance.BorderSize = 0
         Me.Button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button37.Image = CType(resources.GetObject("Button37.Image"), System.Drawing.Image)
-        Me.Button37.Location = New System.Drawing.Point(267, 541)
+        Me.Button37.Location = New System.Drawing.Point(263, 573)
         Me.Button37.Name = "Button37"
         Me.Button37.Size = New System.Drawing.Size(183, 83)
         Me.Button37.TabIndex = 172
@@ -3098,6 +3099,1245 @@ Partial Class Menu_Principal
         Me.Report1.Size = New System.Drawing.Size(1112, 756)
         Me.Report1.TabIndex = 0
         '
+        'TabPage14
+        '
+        Me.TabPage14.BackColor = System.Drawing.Color.Blue
+        Me.TabPage14.Controls.Add(Me.Button97)
+        Me.TabPage14.Controls.Add(Me.Label92)
+        Me.TabPage14.Controls.Add(Me.Button66)
+        Me.TabPage14.Controls.Add(Me.Button64)
+        Me.TabPage14.Controls.Add(Me.Button63)
+        Me.TabPage14.Controls.Add(Me.Button62)
+        Me.TabPage14.Controls.Add(Me.Button61)
+        Me.TabPage14.Controls.Add(Me.Button60)
+        Me.TabPage14.Controls.Add(Me.Button59)
+        Me.TabPage14.Controls.Add(Me.Button58)
+        Me.TabPage14.Controls.Add(Me.Button57)
+        Me.TabPage14.Controls.Add(Me.Button56)
+        Me.TabPage14.Controls.Add(Me.Button55)
+        Me.TabPage14.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage14.Name = "TabPage14"
+        Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage14.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage14.TabIndex = 13
+        Me.TabPage14.Text = "TabPage14"
+        '
+        'Label92
+        '
+        Me.Label92.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label92.AutoSize = True
+        Me.Label92.Font = New System.Drawing.Font("Palatino Linotype", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label92.ForeColor = System.Drawing.Color.Gold
+        Me.Label92.Location = New System.Drawing.Point(533, 613)
+        Me.Label92.Name = "Label92"
+        Me.Label92.Size = New System.Drawing.Size(214, 37)
+        Me.Label92.TabIndex = 82
+        Me.Label92.Text = "Menu Principal"
+        '
+        'Button66
+        '
+        Me.Button66.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button66.BackColor = System.Drawing.Color.Blue
+        Me.Button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button66.FlatAppearance.BorderSize = 5
+        Me.Button66.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button66.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button66.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button66.ForeColor = System.Drawing.Color.Gold
+        Me.Button66.Image = CType(resources.GetObject("Button66.Image"), System.Drawing.Image)
+        Me.Button66.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button66.Location = New System.Drawing.Point(574, 488)
+        Me.Button66.Name = "Button66"
+        Me.Button66.Size = New System.Drawing.Size(124, 122)
+        Me.Button66.TabIndex = 81
+        Me.Button66.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button66.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button66.UseVisualStyleBackColor = False
+        '
+        'Button64
+        '
+        Me.Button64.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button64.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button64.FlatAppearance.BorderSize = 5
+        Me.Button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button64.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button64.ForeColor = System.Drawing.Color.Gold
+        Me.Button64.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button64.Location = New System.Drawing.Point(934, 452)
+        Me.Button64.Name = "Button64"
+        Me.Button64.Size = New System.Drawing.Size(299, 80)
+        Me.Button64.TabIndex = 31
+        Me.Button64.Text = "8° BASICO"
+        Me.Button64.UseVisualStyleBackColor = False
+        '
+        'Button63
+        '
+        Me.Button63.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button63.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button63.FlatAppearance.BorderSize = 5
+        Me.Button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button63.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button63.ForeColor = System.Drawing.Color.Gold
+        Me.Button63.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button63.Location = New System.Drawing.Point(934, 319)
+        Me.Button63.Name = "Button63"
+        Me.Button63.Size = New System.Drawing.Size(299, 80)
+        Me.Button63.TabIndex = 30
+        Me.Button63.Text = "7° BASICO"
+        Me.Button63.UseVisualStyleBackColor = False
+        '
+        'Button62
+        '
+        Me.Button62.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button62.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button62.FlatAppearance.BorderSize = 5
+        Me.Button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button62.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button62.ForeColor = System.Drawing.Color.Gold
+        Me.Button62.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button62.Location = New System.Drawing.Point(934, 194)
+        Me.Button62.Name = "Button62"
+        Me.Button62.Size = New System.Drawing.Size(299, 80)
+        Me.Button62.TabIndex = 29
+        Me.Button62.Text = "6° BASICO"
+        Me.Button62.UseVisualStyleBackColor = False
+        '
+        'Button61
+        '
+        Me.Button61.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button61.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button61.FlatAppearance.BorderSize = 5
+        Me.Button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button61.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button61.ForeColor = System.Drawing.Color.Gold
+        Me.Button61.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button61.Location = New System.Drawing.Point(934, 78)
+        Me.Button61.Name = "Button61"
+        Me.Button61.Size = New System.Drawing.Size(299, 80)
+        Me.Button61.TabIndex = 28
+        Me.Button61.Text = "5° BASICO"
+        Me.Button61.UseVisualStyleBackColor = False
+        '
+        'Button60
+        '
+        Me.Button60.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button60.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button60.FlatAppearance.BorderSize = 5
+        Me.Button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button60.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button60.ForeColor = System.Drawing.Color.Gold
+        Me.Button60.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button60.Location = New System.Drawing.Point(483, 78)
+        Me.Button60.Name = "Button60"
+        Me.Button60.Size = New System.Drawing.Size(299, 80)
+        Me.Button60.TabIndex = 27
+        Me.Button60.Text = "PRE-KINDER"
+        Me.Button60.UseVisualStyleBackColor = False
+        '
+        'Button59
+        '
+        Me.Button59.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button59.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button59.FlatAppearance.BorderSize = 5
+        Me.Button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button59.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button59.ForeColor = System.Drawing.Color.Gold
+        Me.Button59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button59.Location = New System.Drawing.Point(483, 194)
+        Me.Button59.Name = "Button59"
+        Me.Button59.Size = New System.Drawing.Size(299, 80)
+        Me.Button59.TabIndex = 26
+        Me.Button59.Text = "KINDER"
+        Me.Button59.UseVisualStyleBackColor = False
+        '
+        'Button58
+        '
+        Me.Button58.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button58.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button58.FlatAppearance.BorderSize = 5
+        Me.Button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button58.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button58.ForeColor = System.Drawing.Color.Gold
+        Me.Button58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button58.Location = New System.Drawing.Point(45, 452)
+        Me.Button58.Name = "Button58"
+        Me.Button58.Size = New System.Drawing.Size(299, 80)
+        Me.Button58.TabIndex = 25
+        Me.Button58.Text = "4° BASICO"
+        Me.Button58.UseVisualStyleBackColor = False
+        '
+        'Button57
+        '
+        Me.Button57.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button57.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button57.FlatAppearance.BorderSize = 5
+        Me.Button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button57.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button57.ForeColor = System.Drawing.Color.Gold
+        Me.Button57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button57.Location = New System.Drawing.Point(45, 319)
+        Me.Button57.Name = "Button57"
+        Me.Button57.Size = New System.Drawing.Size(299, 80)
+        Me.Button57.TabIndex = 24
+        Me.Button57.Text = "3° BASICO"
+        Me.Button57.UseVisualStyleBackColor = False
+        '
+        'Button56
+        '
+        Me.Button56.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button56.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button56.FlatAppearance.BorderSize = 5
+        Me.Button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button56.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button56.ForeColor = System.Drawing.Color.Gold
+        Me.Button56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button56.Location = New System.Drawing.Point(45, 194)
+        Me.Button56.Name = "Button56"
+        Me.Button56.Size = New System.Drawing.Size(299, 80)
+        Me.Button56.TabIndex = 23
+        Me.Button56.Text = "2° BASICO"
+        Me.Button56.UseVisualStyleBackColor = False
+        '
+        'Button55
+        '
+        Me.Button55.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button55.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button55.FlatAppearance.BorderSize = 5
+        Me.Button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button55.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button55.ForeColor = System.Drawing.Color.Gold
+        Me.Button55.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button55.Location = New System.Drawing.Point(45, 78)
+        Me.Button55.Name = "Button55"
+        Me.Button55.Size = New System.Drawing.Size(299, 80)
+        Me.Button55.TabIndex = 22
+        Me.Button55.Text = "1° BASICO"
+        Me.Button55.UseVisualStyleBackColor = False
+        '
+        'TabPage15
+        '
+        Me.TabPage15.BackColor = System.Drawing.Color.Blue
+        Me.TabPage15.Controls.Add(Me.Button69)
+        Me.TabPage15.Controls.Add(Me.Button68)
+        Me.TabPage15.Controls.Add(Me.Button67)
+        Me.TabPage15.Controls.Add(Me.DataGridView1)
+        Me.TabPage15.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage15.Name = "TabPage15"
+        Me.TabPage15.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage15.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage15.TabIndex = 14
+        Me.TabPage15.Text = "TabPage15"
+        '
+        'Button69
+        '
+        Me.Button69.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button69.FlatAppearance.BorderSize = 5
+        Me.Button69.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button69.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button69.ForeColor = System.Drawing.Color.Gold
+        Me.Button69.Image = CType(resources.GetObject("Button69.Image"), System.Drawing.Image)
+        Me.Button69.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button69.Location = New System.Drawing.Point(700, 571)
+        Me.Button69.Name = "Button69"
+        Me.Button69.Size = New System.Drawing.Size(294, 89)
+        Me.Button69.TabIndex = 25
+        Me.Button69.Text = "              Cargar"
+        Me.Button69.UseVisualStyleBackColor = False
+        '
+        'Button68
+        '
+        Me.Button68.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button68.FlatAppearance.BorderSize = 5
+        Me.Button68.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button68.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button68.ForeColor = System.Drawing.Color.Gold
+        Me.Button68.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button68.Location = New System.Drawing.Point(335, 571)
+        Me.Button68.Name = "Button68"
+        Me.Button68.Size = New System.Drawing.Size(294, 89)
+        Me.Button68.TabIndex = 24
+        Me.Button68.Text = "< Volver"
+        Me.Button68.UseVisualStyleBackColor = False
+        '
+        'Button67
+        '
+        Me.Button67.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button67.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button67.FlatAppearance.BorderSize = 5
+        Me.Button67.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button67.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button67.ForeColor = System.Drawing.Color.Gold
+        Me.Button67.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button67.Location = New System.Drawing.Point(515, 48)
+        Me.Button67.Name = "Button67"
+        Me.Button67.Size = New System.Drawing.Size(299, 80)
+        Me.Button67.TabIndex = 23
+        Me.Button67.Text = "1° BASICO"
+        Me.Button67.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
+        Me.DataGridView1.ColumnHeadersHeight = 50
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView1.Location = New System.Drawing.Point(128, 169)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle33.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle33.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle33
+        Me.DataGridView1.Size = New System.Drawing.Size(1043, 198)
+        Me.DataGridView1.TabIndex = 5
+        '
+        'TabPage16
+        '
+        Me.TabPage16.BackColor = System.Drawing.Color.Blue
+        Me.TabPage16.Controls.Add(Me.Button70)
+        Me.TabPage16.Controls.Add(Me.Button71)
+        Me.TabPage16.Controls.Add(Me.Button72)
+        Me.TabPage16.Controls.Add(Me.DataGridView2)
+        Me.TabPage16.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage16.Name = "TabPage16"
+        Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage16.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage16.TabIndex = 15
+        Me.TabPage16.Text = "TabPage16"
+        '
+        'Button70
+        '
+        Me.Button70.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button70.FlatAppearance.BorderSize = 5
+        Me.Button70.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button70.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button70.ForeColor = System.Drawing.Color.Gold
+        Me.Button70.Image = CType(resources.GetObject("Button70.Image"), System.Drawing.Image)
+        Me.Button70.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button70.Location = New System.Drawing.Point(700, 577)
+        Me.Button70.Name = "Button70"
+        Me.Button70.Size = New System.Drawing.Size(294, 89)
+        Me.Button70.TabIndex = 29
+        Me.Button70.Text = "              Cargar"
+        Me.Button70.UseVisualStyleBackColor = False
+        '
+        'Button71
+        '
+        Me.Button71.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button71.FlatAppearance.BorderSize = 5
+        Me.Button71.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button71.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button71.ForeColor = System.Drawing.Color.Gold
+        Me.Button71.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button71.Location = New System.Drawing.Point(337, 577)
+        Me.Button71.Name = "Button71"
+        Me.Button71.Size = New System.Drawing.Size(294, 89)
+        Me.Button71.TabIndex = 28
+        Me.Button71.Text = "< Volver"
+        Me.Button71.UseVisualStyleBackColor = False
+        '
+        'Button72
+        '
+        Me.Button72.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button72.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button72.FlatAppearance.BorderSize = 5
+        Me.Button72.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button72.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button72.ForeColor = System.Drawing.Color.Gold
+        Me.Button72.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button72.Location = New System.Drawing.Point(515, 48)
+        Me.Button72.Name = "Button72"
+        Me.Button72.Size = New System.Drawing.Size(299, 80)
+        Me.Button72.TabIndex = 27
+        Me.Button72.Text = "2° BASICO"
+        Me.Button72.UseVisualStyleBackColor = False
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToOrderColumns = True
+        Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle34.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
+        Me.DataGridView2.ColumnHeadersHeight = 50
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView2.EnableHeadersVisualStyles = False
+        Me.DataGridView2.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView2.Location = New System.Drawing.Point(128, 166)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle36.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle36.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle36
+        Me.DataGridView2.Size = New System.Drawing.Size(1046, 202)
+        Me.DataGridView2.TabIndex = 26
+        '
+        'TabPage17
+        '
+        Me.TabPage17.BackColor = System.Drawing.Color.Blue
+        Me.TabPage17.Controls.Add(Me.Button73)
+        Me.TabPage17.Controls.Add(Me.Button74)
+        Me.TabPage17.Controls.Add(Me.Button75)
+        Me.TabPage17.Controls.Add(Me.DataGridView3)
+        Me.TabPage17.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage17.Name = "TabPage17"
+        Me.TabPage17.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage17.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage17.TabIndex = 16
+        Me.TabPage17.Text = "TabPage17"
+        '
+        'Button73
+        '
+        Me.Button73.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button73.FlatAppearance.BorderSize = 5
+        Me.Button73.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button73.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button73.ForeColor = System.Drawing.Color.Gold
+        Me.Button73.Image = CType(resources.GetObject("Button73.Image"), System.Drawing.Image)
+        Me.Button73.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button73.Location = New System.Drawing.Point(701, 577)
+        Me.Button73.Name = "Button73"
+        Me.Button73.Size = New System.Drawing.Size(294, 89)
+        Me.Button73.TabIndex = 29
+        Me.Button73.Text = "              Cargar"
+        Me.Button73.UseVisualStyleBackColor = False
+        '
+        'Button74
+        '
+        Me.Button74.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button74.FlatAppearance.BorderSize = 5
+        Me.Button74.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button74.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button74.ForeColor = System.Drawing.Color.Gold
+        Me.Button74.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button74.Location = New System.Drawing.Point(335, 577)
+        Me.Button74.Name = "Button74"
+        Me.Button74.Size = New System.Drawing.Size(294, 89)
+        Me.Button74.TabIndex = 28
+        Me.Button74.Text = "< Volver"
+        Me.Button74.UseVisualStyleBackColor = False
+        '
+        'Button75
+        '
+        Me.Button75.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button75.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button75.FlatAppearance.BorderSize = 5
+        Me.Button75.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button75.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button75.ForeColor = System.Drawing.Color.Gold
+        Me.Button75.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button75.Location = New System.Drawing.Point(517, 48)
+        Me.Button75.Name = "Button75"
+        Me.Button75.Size = New System.Drawing.Size(299, 80)
+        Me.Button75.TabIndex = 27
+        Me.Button75.Text = "3° BASICO"
+        Me.Button75.UseVisualStyleBackColor = False
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToOrderColumns = True
+        Me.DataGridView3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle37.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        Me.DataGridView3.ColumnHeadersHeight = 50
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView3.EnableHeadersVisualStyles = False
+        Me.DataGridView3.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView3.Location = New System.Drawing.Point(126, 169)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle38.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle39.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle39
+        Me.DataGridView3.Size = New System.Drawing.Size(1041, 197)
+        Me.DataGridView3.TabIndex = 26
+        '
+        'TabPage18
+        '
+        Me.TabPage18.BackColor = System.Drawing.Color.Blue
+        Me.TabPage18.Controls.Add(Me.Button76)
+        Me.TabPage18.Controls.Add(Me.Button77)
+        Me.TabPage18.Controls.Add(Me.Button78)
+        Me.TabPage18.Controls.Add(Me.DataGridView4)
+        Me.TabPage18.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage18.Name = "TabPage18"
+        Me.TabPage18.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage18.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage18.TabIndex = 17
+        Me.TabPage18.Text = "TabPage18"
+        '
+        'Button76
+        '
+        Me.Button76.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button76.FlatAppearance.BorderSize = 5
+        Me.Button76.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button76.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button76.ForeColor = System.Drawing.Color.Gold
+        Me.Button76.Image = CType(resources.GetObject("Button76.Image"), System.Drawing.Image)
+        Me.Button76.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button76.Location = New System.Drawing.Point(699, 574)
+        Me.Button76.Name = "Button76"
+        Me.Button76.Size = New System.Drawing.Size(294, 89)
+        Me.Button76.TabIndex = 29
+        Me.Button76.Text = "              Cargar"
+        Me.Button76.UseVisualStyleBackColor = False
+        '
+        'Button77
+        '
+        Me.Button77.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button77.FlatAppearance.BorderSize = 5
+        Me.Button77.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button77.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button77.ForeColor = System.Drawing.Color.Gold
+        Me.Button77.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button77.Location = New System.Drawing.Point(334, 574)
+        Me.Button77.Name = "Button77"
+        Me.Button77.Size = New System.Drawing.Size(294, 89)
+        Me.Button77.TabIndex = 28
+        Me.Button77.Text = "< Volver"
+        Me.Button77.UseVisualStyleBackColor = False
+        '
+        'Button78
+        '
+        Me.Button78.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button78.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button78.FlatAppearance.BorderSize = 5
+        Me.Button78.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button78.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button78.ForeColor = System.Drawing.Color.Gold
+        Me.Button78.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button78.Location = New System.Drawing.Point(516, 47)
+        Me.Button78.Name = "Button78"
+        Me.Button78.Size = New System.Drawing.Size(299, 80)
+        Me.Button78.TabIndex = 27
+        Me.Button78.Text = "4° BASICO"
+        Me.Button78.UseVisualStyleBackColor = False
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.AllowUserToOrderColumns = True
+        Me.DataGridView4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView4.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle40.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
+        Me.DataGridView4.ColumnHeadersHeight = 50
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView4.EnableHeadersVisualStyles = False
+        Me.DataGridView4.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView4.Location = New System.Drawing.Point(128, 170)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.ReadOnly = True
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle41.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle41
+        DataGridViewCellStyle42.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView4.RowsDefaultCellStyle = DataGridViewCellStyle42
+        Me.DataGridView4.Size = New System.Drawing.Size(1039, 203)
+        Me.DataGridView4.TabIndex = 26
+        '
+        'TabPage19
+        '
+        Me.TabPage19.BackColor = System.Drawing.Color.Blue
+        Me.TabPage19.Controls.Add(Me.Button79)
+        Me.TabPage19.Controls.Add(Me.Button80)
+        Me.TabPage19.Controls.Add(Me.Button81)
+        Me.TabPage19.Controls.Add(Me.DataGridView5)
+        Me.TabPage19.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage19.Name = "TabPage19"
+        Me.TabPage19.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage19.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage19.TabIndex = 18
+        Me.TabPage19.Text = "TabPage19"
+        '
+        'Button79
+        '
+        Me.Button79.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button79.FlatAppearance.BorderSize = 5
+        Me.Button79.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button79.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button79.ForeColor = System.Drawing.Color.Gold
+        Me.Button79.Image = CType(resources.GetObject("Button79.Image"), System.Drawing.Image)
+        Me.Button79.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button79.Location = New System.Drawing.Point(701, 577)
+        Me.Button79.Name = "Button79"
+        Me.Button79.Size = New System.Drawing.Size(294, 89)
+        Me.Button79.TabIndex = 29
+        Me.Button79.Text = "              Cargar"
+        Me.Button79.UseVisualStyleBackColor = False
+        '
+        'Button80
+        '
+        Me.Button80.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button80.FlatAppearance.BorderSize = 5
+        Me.Button80.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button80.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button80.ForeColor = System.Drawing.Color.Gold
+        Me.Button80.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button80.Location = New System.Drawing.Point(336, 577)
+        Me.Button80.Name = "Button80"
+        Me.Button80.Size = New System.Drawing.Size(294, 89)
+        Me.Button80.TabIndex = 28
+        Me.Button80.Text = "< Volver"
+        Me.Button80.UseVisualStyleBackColor = False
+        '
+        'Button81
+        '
+        Me.Button81.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button81.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button81.FlatAppearance.BorderSize = 5
+        Me.Button81.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button81.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button81.ForeColor = System.Drawing.Color.Gold
+        Me.Button81.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button81.Location = New System.Drawing.Point(517, 45)
+        Me.Button81.Name = "Button81"
+        Me.Button81.Size = New System.Drawing.Size(299, 80)
+        Me.Button81.TabIndex = 27
+        Me.Button81.Text = "5° BASICO"
+        Me.Button81.UseVisualStyleBackColor = False
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.AllowUserToOrderColumns = True
+        Me.DataGridView5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView5.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle43.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle43.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle43
+        Me.DataGridView5.ColumnHeadersHeight = 50
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView5.EnableHeadersVisualStyles = False
+        Me.DataGridView5.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView5.Location = New System.Drawing.Point(125, 169)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.ReadOnly = True
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle44
+        DataGridViewCellStyle45.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle45.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView5.RowsDefaultCellStyle = DataGridViewCellStyle45
+        Me.DataGridView5.Size = New System.Drawing.Size(1045, 204)
+        Me.DataGridView5.TabIndex = 26
+        '
+        'TabPage20
+        '
+        Me.TabPage20.BackColor = System.Drawing.Color.Blue
+        Me.TabPage20.Controls.Add(Me.Button82)
+        Me.TabPage20.Controls.Add(Me.Button83)
+        Me.TabPage20.Controls.Add(Me.Button84)
+        Me.TabPage20.Controls.Add(Me.DataGridView11)
+        Me.TabPage20.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage20.Name = "TabPage20"
+        Me.TabPage20.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage20.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage20.TabIndex = 19
+        Me.TabPage20.Text = "TabPage20"
+        '
+        'Button82
+        '
+        Me.Button82.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button82.FlatAppearance.BorderSize = 5
+        Me.Button82.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button82.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button82.ForeColor = System.Drawing.Color.Gold
+        Me.Button82.Image = CType(resources.GetObject("Button82.Image"), System.Drawing.Image)
+        Me.Button82.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button82.Location = New System.Drawing.Point(699, 577)
+        Me.Button82.Name = "Button82"
+        Me.Button82.Size = New System.Drawing.Size(294, 89)
+        Me.Button82.TabIndex = 29
+        Me.Button82.Text = "              Cargar"
+        Me.Button82.UseVisualStyleBackColor = False
+        '
+        'Button83
+        '
+        Me.Button83.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button83.FlatAppearance.BorderSize = 5
+        Me.Button83.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button83.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button83.ForeColor = System.Drawing.Color.Gold
+        Me.Button83.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button83.Location = New System.Drawing.Point(336, 577)
+        Me.Button83.Name = "Button83"
+        Me.Button83.Size = New System.Drawing.Size(294, 89)
+        Me.Button83.TabIndex = 28
+        Me.Button83.Text = "< Volver"
+        Me.Button83.UseVisualStyleBackColor = False
+        '
+        'Button84
+        '
+        Me.Button84.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button84.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button84.FlatAppearance.BorderSize = 5
+        Me.Button84.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button84.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button84.ForeColor = System.Drawing.Color.Gold
+        Me.Button84.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button84.Location = New System.Drawing.Point(519, 44)
+        Me.Button84.Name = "Button84"
+        Me.Button84.Size = New System.Drawing.Size(299, 80)
+        Me.Button84.TabIndex = 27
+        Me.Button84.Text = "6° BASICO"
+        Me.Button84.UseVisualStyleBackColor = False
+        '
+        'DataGridView11
+        '
+        Me.DataGridView11.AllowUserToOrderColumns = True
+        Me.DataGridView11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView11.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView11.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle46.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle46.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle46.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView11.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle46
+        Me.DataGridView11.ColumnHeadersHeight = 50
+        Me.DataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView11.EnableHeadersVisualStyles = False
+        Me.DataGridView11.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView11.Location = New System.Drawing.Point(129, 167)
+        Me.DataGridView11.Name = "DataGridView11"
+        Me.DataGridView11.ReadOnly = True
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle47.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle47.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView11.RowHeadersDefaultCellStyle = DataGridViewCellStyle47
+        DataGridViewCellStyle48.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle48.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle48.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView11.RowsDefaultCellStyle = DataGridViewCellStyle48
+        Me.DataGridView11.Size = New System.Drawing.Size(1037, 201)
+        Me.DataGridView11.TabIndex = 26
+        '
+        'TabPage21
+        '
+        Me.TabPage21.BackColor = System.Drawing.Color.Blue
+        Me.TabPage21.Controls.Add(Me.Button85)
+        Me.TabPage21.Controls.Add(Me.Button86)
+        Me.TabPage21.Controls.Add(Me.Button87)
+        Me.TabPage21.Controls.Add(Me.DataGridView6)
+        Me.TabPage21.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage21.Name = "TabPage21"
+        Me.TabPage21.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage21.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage21.TabIndex = 20
+        Me.TabPage21.Text = "TabPage21"
+        '
+        'Button85
+        '
+        Me.Button85.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button85.FlatAppearance.BorderSize = 5
+        Me.Button85.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button85.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button85.ForeColor = System.Drawing.Color.Gold
+        Me.Button85.Image = CType(resources.GetObject("Button85.Image"), System.Drawing.Image)
+        Me.Button85.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button85.Location = New System.Drawing.Point(701, 577)
+        Me.Button85.Name = "Button85"
+        Me.Button85.Size = New System.Drawing.Size(294, 89)
+        Me.Button85.TabIndex = 29
+        Me.Button85.Text = "              Cargar"
+        Me.Button85.UseVisualStyleBackColor = False
+        '
+        'Button86
+        '
+        Me.Button86.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button86.FlatAppearance.BorderSize = 5
+        Me.Button86.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button86.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button86.ForeColor = System.Drawing.Color.Gold
+        Me.Button86.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button86.Location = New System.Drawing.Point(336, 577)
+        Me.Button86.Name = "Button86"
+        Me.Button86.Size = New System.Drawing.Size(294, 89)
+        Me.Button86.TabIndex = 28
+        Me.Button86.Text = "< Volver"
+        Me.Button86.UseVisualStyleBackColor = False
+        '
+        'Button87
+        '
+        Me.Button87.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button87.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button87.FlatAppearance.BorderSize = 5
+        Me.Button87.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button87.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button87.ForeColor = System.Drawing.Color.Gold
+        Me.Button87.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button87.Location = New System.Drawing.Point(518, 43)
+        Me.Button87.Name = "Button87"
+        Me.Button87.Size = New System.Drawing.Size(299, 80)
+        Me.Button87.TabIndex = 27
+        Me.Button87.Text = "7° BASICO"
+        Me.Button87.UseVisualStyleBackColor = False
+        '
+        'DataGridView6
+        '
+        Me.DataGridView6.AllowUserToOrderColumns = True
+        Me.DataGridView6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView6.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle49.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle49.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle49.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle49
+        Me.DataGridView6.ColumnHeadersHeight = 50
+        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView6.EnableHeadersVisualStyles = False
+        Me.DataGridView6.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView6.Location = New System.Drawing.Point(127, 163)
+        Me.DataGridView6.Name = "DataGridView6"
+        Me.DataGridView6.ReadOnly = True
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle50.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle51.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView6.RowsDefaultCellStyle = DataGridViewCellStyle51
+        Me.DataGridView6.Size = New System.Drawing.Size(1045, 201)
+        Me.DataGridView6.TabIndex = 26
+        '
+        'TabPage22
+        '
+        Me.TabPage22.BackColor = System.Drawing.Color.Blue
+        Me.TabPage22.Controls.Add(Me.Button88)
+        Me.TabPage22.Controls.Add(Me.Button89)
+        Me.TabPage22.Controls.Add(Me.Button90)
+        Me.TabPage22.Controls.Add(Me.DataGridView7)
+        Me.TabPage22.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage22.Name = "TabPage22"
+        Me.TabPage22.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage22.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage22.TabIndex = 21
+        Me.TabPage22.Text = "TabPage22"
+        '
+        'Button88
+        '
+        Me.Button88.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button88.FlatAppearance.BorderSize = 5
+        Me.Button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button88.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button88.ForeColor = System.Drawing.Color.Gold
+        Me.Button88.Image = CType(resources.GetObject("Button88.Image"), System.Drawing.Image)
+        Me.Button88.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button88.Location = New System.Drawing.Point(696, 577)
+        Me.Button88.Name = "Button88"
+        Me.Button88.Size = New System.Drawing.Size(294, 89)
+        Me.Button88.TabIndex = 29
+        Me.Button88.Text = "              Cargar"
+        Me.Button88.UseVisualStyleBackColor = False
+        '
+        'Button89
+        '
+        Me.Button89.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button89.FlatAppearance.BorderSize = 5
+        Me.Button89.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button89.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button89.ForeColor = System.Drawing.Color.Gold
+        Me.Button89.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button89.Location = New System.Drawing.Point(337, 577)
+        Me.Button89.Name = "Button89"
+        Me.Button89.Size = New System.Drawing.Size(294, 89)
+        Me.Button89.TabIndex = 28
+        Me.Button89.Text = "< Volver"
+        Me.Button89.UseVisualStyleBackColor = False
+        '
+        'Button90
+        '
+        Me.Button90.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button90.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button90.FlatAppearance.BorderSize = 5
+        Me.Button90.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button90.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button90.ForeColor = System.Drawing.Color.Gold
+        Me.Button90.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button90.Location = New System.Drawing.Point(518, 45)
+        Me.Button90.Name = "Button90"
+        Me.Button90.Size = New System.Drawing.Size(299, 80)
+        Me.Button90.TabIndex = 27
+        Me.Button90.Text = "8° BASICO"
+        Me.Button90.UseVisualStyleBackColor = False
+        '
+        'DataGridView7
+        '
+        Me.DataGridView7.AllowUserToOrderColumns = True
+        Me.DataGridView7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView7.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle52.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle52
+        Me.DataGridView7.ColumnHeadersHeight = 50
+        Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView7.EnableHeadersVisualStyles = False
+        Me.DataGridView7.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView7.Location = New System.Drawing.Point(129, 169)
+        Me.DataGridView7.Name = "DataGridView7"
+        Me.DataGridView7.ReadOnly = True
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle53.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle53.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle54.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView7.RowsDefaultCellStyle = DataGridViewCellStyle54
+        Me.DataGridView7.Size = New System.Drawing.Size(1040, 196)
+        Me.DataGridView7.TabIndex = 26
+        '
+        'TabPage23
+        '
+        Me.TabPage23.BackColor = System.Drawing.Color.Blue
+        Me.TabPage23.Controls.Add(Me.Button91)
+        Me.TabPage23.Controls.Add(Me.Button92)
+        Me.TabPage23.Controls.Add(Me.Button93)
+        Me.TabPage23.Controls.Add(Me.DataGridView8)
+        Me.TabPage23.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage23.Name = "TabPage23"
+        Me.TabPage23.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage23.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage23.TabIndex = 22
+        Me.TabPage23.Text = "TabPage23"
+        '
+        'Button91
+        '
+        Me.Button91.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button91.FlatAppearance.BorderSize = 5
+        Me.Button91.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button91.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button91.ForeColor = System.Drawing.Color.Gold
+        Me.Button91.Image = CType(resources.GetObject("Button91.Image"), System.Drawing.Image)
+        Me.Button91.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button91.Location = New System.Drawing.Point(699, 578)
+        Me.Button91.Name = "Button91"
+        Me.Button91.Size = New System.Drawing.Size(294, 89)
+        Me.Button91.TabIndex = 29
+        Me.Button91.Text = "              Cargar"
+        Me.Button91.UseVisualStyleBackColor = False
+        '
+        'Button92
+        '
+        Me.Button92.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button92.FlatAppearance.BorderSize = 5
+        Me.Button92.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button92.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button92.ForeColor = System.Drawing.Color.Gold
+        Me.Button92.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button92.Location = New System.Drawing.Point(334, 578)
+        Me.Button92.Name = "Button92"
+        Me.Button92.Size = New System.Drawing.Size(294, 89)
+        Me.Button92.TabIndex = 28
+        Me.Button92.Text = "< Volver"
+        Me.Button92.UseVisualStyleBackColor = False
+        '
+        'Button93
+        '
+        Me.Button93.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button93.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button93.FlatAppearance.BorderSize = 5
+        Me.Button93.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button93.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button93.ForeColor = System.Drawing.Color.Gold
+        Me.Button93.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button93.Location = New System.Drawing.Point(518, 46)
+        Me.Button93.Name = "Button93"
+        Me.Button93.Size = New System.Drawing.Size(299, 80)
+        Me.Button93.TabIndex = 27
+        Me.Button93.Text = "PRE - KINDER"
+        Me.Button93.UseVisualStyleBackColor = False
+        '
+        'DataGridView8
+        '
+        Me.DataGridView8.AllowUserToOrderColumns = True
+        Me.DataGridView8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView8.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle55.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle55.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle55
+        Me.DataGridView8.ColumnHeadersHeight = 50
+        Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView8.EnableHeadersVisualStyles = False
+        Me.DataGridView8.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView8.Location = New System.Drawing.Point(126, 169)
+        Me.DataGridView8.Name = "DataGridView8"
+        Me.DataGridView8.ReadOnly = True
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle56.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle56.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle57.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle57.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle57.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle57.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle57.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView8.RowsDefaultCellStyle = DataGridViewCellStyle57
+        Me.DataGridView8.Size = New System.Drawing.Size(1045, 196)
+        Me.DataGridView8.TabIndex = 26
+        '
+        'TabPage24
+        '
+        Me.TabPage24.BackColor = System.Drawing.Color.Blue
+        Me.TabPage24.Controls.Add(Me.Button94)
+        Me.TabPage24.Controls.Add(Me.Button95)
+        Me.TabPage24.Controls.Add(Me.Button96)
+        Me.TabPage24.Controls.Add(Me.DataGridView9)
+        Me.TabPage24.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage24.Name = "TabPage24"
+        Me.TabPage24.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage24.Size = New System.Drawing.Size(1284, 762)
+        Me.TabPage24.TabIndex = 23
+        Me.TabPage24.Text = "TabPage24"
+        '
+        'Button94
+        '
+        Me.Button94.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button94.FlatAppearance.BorderSize = 5
+        Me.Button94.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button94.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button94.ForeColor = System.Drawing.Color.Gold
+        Me.Button94.Image = CType(resources.GetObject("Button94.Image"), System.Drawing.Image)
+        Me.Button94.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button94.Location = New System.Drawing.Point(698, 575)
+        Me.Button94.Name = "Button94"
+        Me.Button94.Size = New System.Drawing.Size(294, 89)
+        Me.Button94.TabIndex = 29
+        Me.Button94.Text = "              Cargar"
+        Me.Button94.UseVisualStyleBackColor = False
+        '
+        'Button95
+        '
+        Me.Button95.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button95.FlatAppearance.BorderSize = 5
+        Me.Button95.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button95.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button95.ForeColor = System.Drawing.Color.Gold
+        Me.Button95.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button95.Location = New System.Drawing.Point(331, 575)
+        Me.Button95.Name = "Button95"
+        Me.Button95.Size = New System.Drawing.Size(294, 89)
+        Me.Button95.TabIndex = 28
+        Me.Button95.Text = "< Volver"
+        Me.Button95.UseVisualStyleBackColor = False
+        '
+        'Button96
+        '
+        Me.Button96.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button96.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button96.FlatAppearance.BorderSize = 5
+        Me.Button96.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button96.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button96.ForeColor = System.Drawing.Color.Gold
+        Me.Button96.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button96.Location = New System.Drawing.Point(516, 49)
+        Me.Button96.Name = "Button96"
+        Me.Button96.Size = New System.Drawing.Size(299, 80)
+        Me.Button96.TabIndex = 27
+        Me.Button96.Text = "KINDER"
+        Me.Button96.UseVisualStyleBackColor = False
+        '
+        'DataGridView9
+        '
+        Me.DataGridView9.AllowUserToOrderColumns = True
+        Me.DataGridView9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView9.BackgroundColor = System.Drawing.Color.Blue
+        Me.DataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle58.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle58.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle58.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle58
+        Me.DataGridView9.ColumnHeadersHeight = 50
+        Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView9.EnableHeadersVisualStyles = False
+        Me.DataGridView9.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView9.Location = New System.Drawing.Point(125, 171)
+        Me.DataGridView9.Name = "DataGridView9"
+        Me.DataGridView9.ReadOnly = True
+        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle59.BackColor = System.Drawing.Color.DarkBlue
+        DataGridViewCellStyle59.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle60.BackColor = System.Drawing.Color.MediumBlue
+        DataGridViewCellStyle60.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle60.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle60.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle60.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView9.RowsDefaultCellStyle = DataGridViewCellStyle60
+        Me.DataGridView9.Size = New System.Drawing.Size(1043, 193)
+        Me.DataGridView9.TabIndex = 26
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
@@ -3134,1233 +4374,27 @@ Partial Class Menu_Principal
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'TabPage14
-        '
-        Me.TabPage14.BackColor = System.Drawing.Color.Blue
-        Me.TabPage14.Controls.Add(Me.Label92)
-        Me.TabPage14.Controls.Add(Me.Button66)
-        Me.TabPage14.Controls.Add(Me.Button64)
-        Me.TabPage14.Controls.Add(Me.Button63)
-        Me.TabPage14.Controls.Add(Me.Button62)
-        Me.TabPage14.Controls.Add(Me.Button61)
-        Me.TabPage14.Controls.Add(Me.Button60)
-        Me.TabPage14.Controls.Add(Me.Button59)
-        Me.TabPage14.Controls.Add(Me.Button58)
-        Me.TabPage14.Controls.Add(Me.Button57)
-        Me.TabPage14.Controls.Add(Me.Button56)
-        Me.TabPage14.Controls.Add(Me.Button55)
-        Me.TabPage14.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage14.Name = "TabPage14"
-        Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage14.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage14.TabIndex = 13
-        Me.TabPage14.Text = "TabPage14"
-        '
-        'Button55
-        '
-        Me.Button55.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button55.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button55.FlatAppearance.BorderSize = 5
-        Me.Button55.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button55.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button55.ForeColor = System.Drawing.Color.Gold
-        Me.Button55.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button55.Location = New System.Drawing.Point(45, 78)
-        Me.Button55.Name = "Button55"
-        Me.Button55.Size = New System.Drawing.Size(299, 80)
-        Me.Button55.TabIndex = 22
-        Me.Button55.Text = "1° BASICO"
-        Me.Button55.UseVisualStyleBackColor = False
-        '
-        'Button56
-        '
-        Me.Button56.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button56.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button56.FlatAppearance.BorderSize = 5
-        Me.Button56.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button56.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button56.ForeColor = System.Drawing.Color.Gold
-        Me.Button56.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button56.Location = New System.Drawing.Point(45, 194)
-        Me.Button56.Name = "Button56"
-        Me.Button56.Size = New System.Drawing.Size(299, 80)
-        Me.Button56.TabIndex = 23
-        Me.Button56.Text = "2° BASICO"
-        Me.Button56.UseVisualStyleBackColor = False
-        '
-        'Button57
-        '
-        Me.Button57.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button57.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button57.FlatAppearance.BorderSize = 5
-        Me.Button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button57.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button57.ForeColor = System.Drawing.Color.Gold
-        Me.Button57.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button57.Location = New System.Drawing.Point(45, 319)
-        Me.Button57.Name = "Button57"
-        Me.Button57.Size = New System.Drawing.Size(299, 80)
-        Me.Button57.TabIndex = 24
-        Me.Button57.Text = "3° BASICO"
-        Me.Button57.UseVisualStyleBackColor = False
-        '
-        'Button58
-        '
-        Me.Button58.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button58.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button58.FlatAppearance.BorderSize = 5
-        Me.Button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button58.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button58.ForeColor = System.Drawing.Color.Gold
-        Me.Button58.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button58.Location = New System.Drawing.Point(45, 452)
-        Me.Button58.Name = "Button58"
-        Me.Button58.Size = New System.Drawing.Size(299, 80)
-        Me.Button58.TabIndex = 25
-        Me.Button58.Text = "4° BASICO"
-        Me.Button58.UseVisualStyleBackColor = False
-        '
-        'Button59
-        '
-        Me.Button59.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button59.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button59.FlatAppearance.BorderSize = 5
-        Me.Button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button59.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button59.ForeColor = System.Drawing.Color.Gold
-        Me.Button59.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button59.Location = New System.Drawing.Point(483, 194)
-        Me.Button59.Name = "Button59"
-        Me.Button59.Size = New System.Drawing.Size(299, 80)
-        Me.Button59.TabIndex = 26
-        Me.Button59.Text = "KINDER"
-        Me.Button59.UseVisualStyleBackColor = False
-        '
-        'Button60
-        '
-        Me.Button60.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button60.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button60.FlatAppearance.BorderSize = 5
-        Me.Button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button60.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button60.ForeColor = System.Drawing.Color.Gold
-        Me.Button60.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button60.Location = New System.Drawing.Point(483, 78)
-        Me.Button60.Name = "Button60"
-        Me.Button60.Size = New System.Drawing.Size(299, 80)
-        Me.Button60.TabIndex = 27
-        Me.Button60.Text = "PRE-KINDER"
-        Me.Button60.UseVisualStyleBackColor = False
-        '
-        'Button61
-        '
-        Me.Button61.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button61.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button61.FlatAppearance.BorderSize = 5
-        Me.Button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button61.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button61.ForeColor = System.Drawing.Color.Gold
-        Me.Button61.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button61.Location = New System.Drawing.Point(934, 78)
-        Me.Button61.Name = "Button61"
-        Me.Button61.Size = New System.Drawing.Size(299, 80)
-        Me.Button61.TabIndex = 28
-        Me.Button61.Text = "5° BASICO"
-        Me.Button61.UseVisualStyleBackColor = False
-        '
-        'Button62
-        '
-        Me.Button62.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button62.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button62.FlatAppearance.BorderSize = 5
-        Me.Button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button62.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button62.ForeColor = System.Drawing.Color.Gold
-        Me.Button62.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button62.Location = New System.Drawing.Point(934, 194)
-        Me.Button62.Name = "Button62"
-        Me.Button62.Size = New System.Drawing.Size(299, 80)
-        Me.Button62.TabIndex = 29
-        Me.Button62.Text = "6° BASICO"
-        Me.Button62.UseVisualStyleBackColor = False
-        '
-        'Button63
-        '
-        Me.Button63.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button63.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button63.FlatAppearance.BorderSize = 5
-        Me.Button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button63.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button63.ForeColor = System.Drawing.Color.Gold
-        Me.Button63.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button63.Location = New System.Drawing.Point(934, 319)
-        Me.Button63.Name = "Button63"
-        Me.Button63.Size = New System.Drawing.Size(299, 80)
-        Me.Button63.TabIndex = 30
-        Me.Button63.Text = "7° BASICO"
-        Me.Button63.UseVisualStyleBackColor = False
-        '
-        'Button64
-        '
-        Me.Button64.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button64.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button64.FlatAppearance.BorderSize = 5
-        Me.Button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button64.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button64.ForeColor = System.Drawing.Color.Gold
-        Me.Button64.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button64.Location = New System.Drawing.Point(934, 452)
-        Me.Button64.Name = "Button64"
-        Me.Button64.Size = New System.Drawing.Size(299, 80)
-        Me.Button64.TabIndex = 31
-        Me.Button64.Text = "8° BASICO"
-        Me.Button64.UseVisualStyleBackColor = False
-        '
-        'Label92
-        '
-        Me.Label92.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label92.AutoSize = True
-        Me.Label92.Font = New System.Drawing.Font("Palatino Linotype", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label92.ForeColor = System.Drawing.Color.Gold
-        Me.Label92.Location = New System.Drawing.Point(533, 613)
-        Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(214, 37)
-        Me.Label92.TabIndex = 82
-        Me.Label92.Text = "Menu Principal"
-        '
-        'Button66
-        '
-        Me.Button66.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button66.BackColor = System.Drawing.Color.Blue
-        Me.Button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button66.FlatAppearance.BorderSize = 5
-        Me.Button66.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button66.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button66.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button66.ForeColor = System.Drawing.Color.Gold
-        Me.Button66.Image = CType(resources.GetObject("Button66.Image"), System.Drawing.Image)
-        Me.Button66.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button66.Location = New System.Drawing.Point(574, 488)
-        Me.Button66.Name = "Button66"
-        Me.Button66.Size = New System.Drawing.Size(124, 122)
-        Me.Button66.TabIndex = 81
-        Me.Button66.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button66.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button66.UseVisualStyleBackColor = False
-        '
-        'TabPage15
-        '
-        Me.TabPage15.BackColor = System.Drawing.Color.Blue
-        Me.TabPage15.Controls.Add(Me.Button69)
-        Me.TabPage15.Controls.Add(Me.Button68)
-        Me.TabPage15.Controls.Add(Me.Button67)
-        Me.TabPage15.Controls.Add(Me.DataGridView1)
-        Me.TabPage15.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage15.Name = "TabPage15"
-        Me.TabPage15.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage15.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage15.TabIndex = 14
-        Me.TabPage15.Text = "TabPage15"
-        '
-        'TabPage16
-        '
-        Me.TabPage16.BackColor = System.Drawing.Color.Blue
-        Me.TabPage16.Controls.Add(Me.Button70)
-        Me.TabPage16.Controls.Add(Me.Button71)
-        Me.TabPage16.Controls.Add(Me.Button72)
-        Me.TabPage16.Controls.Add(Me.DataGridView2)
-        Me.TabPage16.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage16.Name = "TabPage16"
-        Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage16.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage16.TabIndex = 15
-        Me.TabPage16.Text = "TabPage16"
-        '
-        'TabPage17
-        '
-        Me.TabPage17.BackColor = System.Drawing.Color.Blue
-        Me.TabPage17.Controls.Add(Me.Button73)
-        Me.TabPage17.Controls.Add(Me.Button74)
-        Me.TabPage17.Controls.Add(Me.Button75)
-        Me.TabPage17.Controls.Add(Me.DataGridView3)
-        Me.TabPage17.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage17.Name = "TabPage17"
-        Me.TabPage17.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage17.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage17.TabIndex = 16
-        Me.TabPage17.Text = "TabPage17"
-        '
-        'TabPage18
-        '
-        Me.TabPage18.BackColor = System.Drawing.Color.Blue
-        Me.TabPage18.Controls.Add(Me.Button76)
-        Me.TabPage18.Controls.Add(Me.Button77)
-        Me.TabPage18.Controls.Add(Me.Button78)
-        Me.TabPage18.Controls.Add(Me.DataGridView4)
-        Me.TabPage18.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage18.Name = "TabPage18"
-        Me.TabPage18.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage18.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage18.TabIndex = 17
-        Me.TabPage18.Text = "TabPage18"
-        '
-        'TabPage19
-        '
-        Me.TabPage19.BackColor = System.Drawing.Color.Blue
-        Me.TabPage19.Controls.Add(Me.Button79)
-        Me.TabPage19.Controls.Add(Me.Button80)
-        Me.TabPage19.Controls.Add(Me.Button81)
-        Me.TabPage19.Controls.Add(Me.DataGridView5)
-        Me.TabPage19.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage19.Name = "TabPage19"
-        Me.TabPage19.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage19.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage19.TabIndex = 18
-        Me.TabPage19.Text = "TabPage19"
-        '
-        'TabPage20
-        '
-        Me.TabPage20.BackColor = System.Drawing.Color.Blue
-        Me.TabPage20.Controls.Add(Me.Button82)
-        Me.TabPage20.Controls.Add(Me.Button83)
-        Me.TabPage20.Controls.Add(Me.Button84)
-        Me.TabPage20.Controls.Add(Me.DataGridView11)
-        Me.TabPage20.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage20.Name = "TabPage20"
-        Me.TabPage20.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage20.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage20.TabIndex = 19
-        Me.TabPage20.Text = "TabPage20"
-        '
-        'TabPage21
-        '
-        Me.TabPage21.BackColor = System.Drawing.Color.Blue
-        Me.TabPage21.Controls.Add(Me.Button85)
-        Me.TabPage21.Controls.Add(Me.Button86)
-        Me.TabPage21.Controls.Add(Me.Button87)
-        Me.TabPage21.Controls.Add(Me.DataGridView6)
-        Me.TabPage21.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage21.Name = "TabPage21"
-        Me.TabPage21.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage21.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage21.TabIndex = 20
-        Me.TabPage21.Text = "TabPage21"
-        '
-        'TabPage22
-        '
-        Me.TabPage22.BackColor = System.Drawing.Color.Blue
-        Me.TabPage22.Controls.Add(Me.Button88)
-        Me.TabPage22.Controls.Add(Me.Button89)
-        Me.TabPage22.Controls.Add(Me.Button90)
-        Me.TabPage22.Controls.Add(Me.DataGridView7)
-        Me.TabPage22.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage22.Name = "TabPage22"
-        Me.TabPage22.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage22.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage22.TabIndex = 21
-        Me.TabPage22.Text = "TabPage22"
-        '
-        'TabPage23
-        '
-        Me.TabPage23.BackColor = System.Drawing.Color.Blue
-        Me.TabPage23.Controls.Add(Me.Button91)
-        Me.TabPage23.Controls.Add(Me.Button92)
-        Me.TabPage23.Controls.Add(Me.Button93)
-        Me.TabPage23.Controls.Add(Me.DataGridView8)
-        Me.TabPage23.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage23.Name = "TabPage23"
-        Me.TabPage23.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage23.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage23.TabIndex = 22
-        Me.TabPage23.Text = "TabPage23"
-        '
-        'TabPage24
-        '
-        Me.TabPage24.BackColor = System.Drawing.Color.Blue
-        Me.TabPage24.Controls.Add(Me.Button94)
-        Me.TabPage24.Controls.Add(Me.Button95)
-        Me.TabPage24.Controls.Add(Me.Button96)
-        Me.TabPage24.Controls.Add(Me.DataGridView9)
-        Me.TabPage24.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage24.Name = "TabPage24"
-        Me.TabPage24.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage24.Size = New System.Drawing.Size(1284, 762)
-        Me.TabPage24.TabIndex = 23
-        Me.TabPage24.Text = "TabPage24"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle91.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle91.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle91.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle91.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle91.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle91.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle91
-        Me.DataGridView1.ColumnHeadersHeight = 50
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.EnableHeadersVisualStyles = False
-        Me.DataGridView1.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView1.Location = New System.Drawing.Point(128, 186)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle92.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle92.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle92.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle92.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle92.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle92.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle92
-        DataGridViewCellStyle93.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle93.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle93.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle93.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle93.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle93
-        Me.DataGridView1.Size = New System.Drawing.Size(1026, 168)
-        Me.DataGridView1.TabIndex = 5
-        '
-        'Button67
-        '
-        Me.Button67.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button67.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button67.FlatAppearance.BorderSize = 5
-        Me.Button67.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button67.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button67.ForeColor = System.Drawing.Color.Gold
-        Me.Button67.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button67.Location = New System.Drawing.Point(518, 31)
-        Me.Button67.Name = "Button67"
-        Me.Button67.Size = New System.Drawing.Size(299, 80)
-        Me.Button67.TabIndex = 23
-        Me.Button67.Text = "1° BASICO"
-        Me.Button67.UseVisualStyleBackColor = False
-        '
-        'Button68
-        '
-        Me.Button68.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button68.FlatAppearance.BorderSize = 5
-        Me.Button68.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button68.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button68.ForeColor = System.Drawing.Color.Gold
-        Me.Button68.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button68.Location = New System.Drawing.Point(359, 498)
-        Me.Button68.Name = "Button68"
-        Me.Button68.Size = New System.Drawing.Size(294, 89)
-        Me.Button68.TabIndex = 24
-        Me.Button68.Text = "< Volver"
-        Me.Button68.UseVisualStyleBackColor = False
-        '
-        'Button69
-        '
-        Me.Button69.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button69.FlatAppearance.BorderSize = 5
-        Me.Button69.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button69.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button69.ForeColor = System.Drawing.Color.Gold
-        Me.Button69.Image = CType(resources.GetObject("Button69.Image"), System.Drawing.Image)
-        Me.Button69.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button69.Location = New System.Drawing.Point(725, 498)
-        Me.Button69.Name = "Button69"
-        Me.Button69.Size = New System.Drawing.Size(244, 89)
-        Me.Button69.TabIndex = 25
-        Me.Button69.Text = "              Cargar"
-        Me.Button69.UseVisualStyleBackColor = False
-        '
-        'Button70
-        '
-        Me.Button70.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button70.FlatAppearance.BorderSize = 5
-        Me.Button70.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button70.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button70.ForeColor = System.Drawing.Color.Gold
-        Me.Button70.Image = CType(resources.GetObject("Button70.Image"), System.Drawing.Image)
-        Me.Button70.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button70.Location = New System.Drawing.Point(574, 580)
-        Me.Button70.Name = "Button70"
-        Me.Button70.Size = New System.Drawing.Size(244, 89)
-        Me.Button70.TabIndex = 29
-        Me.Button70.Text = "              Cargar"
-        Me.Button70.UseVisualStyleBackColor = False
-        '
-        'Button71
-        '
-        Me.Button71.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button71.FlatAppearance.BorderSize = 5
-        Me.Button71.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button71.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button71.ForeColor = System.Drawing.Color.Gold
-        Me.Button71.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button71.Location = New System.Drawing.Point(208, 580)
-        Me.Button71.Name = "Button71"
-        Me.Button71.Size = New System.Drawing.Size(294, 89)
-        Me.Button71.TabIndex = 28
-        Me.Button71.Text = "< Volver"
-        Me.Button71.UseVisualStyleBackColor = False
-        '
-        'Button72
-        '
-        Me.Button72.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button72.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button72.FlatAppearance.BorderSize = 5
-        Me.Button72.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button72.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button72.ForeColor = System.Drawing.Color.Gold
-        Me.Button72.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button72.Location = New System.Drawing.Point(519, 35)
-        Me.Button72.Name = "Button72"
-        Me.Button72.Size = New System.Drawing.Size(299, 80)
-        Me.Button72.TabIndex = 27
-        Me.Button72.Text = "2° BASICO"
-        Me.Button72.UseVisualStyleBackColor = False
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToOrderColumns = True
-        Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle94.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle94.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle94.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle94.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle94.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle94.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle94
-        Me.DataGridView2.ColumnHeadersHeight = 50
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView2.EnableHeadersVisualStyles = False
-        Me.DataGridView2.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView2.Location = New System.Drawing.Point(138, 199)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        DataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle95.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle95.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle95.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle95.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle95.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle95.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle95
-        DataGridViewCellStyle96.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle96.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle96.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle96.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle96.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle96
-        Me.DataGridView2.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView2.TabIndex = 26
-        '
-        'Button73
-        '
-        Me.Button73.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button73.FlatAppearance.BorderSize = 5
-        Me.Button73.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button73.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button73.ForeColor = System.Drawing.Color.Gold
-        Me.Button73.Image = CType(resources.GetObject("Button73.Image"), System.Drawing.Image)
-        Me.Button73.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button73.Location = New System.Drawing.Point(574, 580)
-        Me.Button73.Name = "Button73"
-        Me.Button73.Size = New System.Drawing.Size(244, 89)
-        Me.Button73.TabIndex = 29
-        Me.Button73.Text = "              Cargar"
-        Me.Button73.UseVisualStyleBackColor = False
-        '
-        'Button74
-        '
-        Me.Button74.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button74.FlatAppearance.BorderSize = 5
-        Me.Button74.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button74.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button74.ForeColor = System.Drawing.Color.Gold
-        Me.Button74.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button74.Location = New System.Drawing.Point(208, 580)
-        Me.Button74.Name = "Button74"
-        Me.Button74.Size = New System.Drawing.Size(294, 89)
-        Me.Button74.TabIndex = 28
-        Me.Button74.Text = "< Volver"
-        Me.Button74.UseVisualStyleBackColor = False
-        '
-        'Button75
-        '
-        Me.Button75.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button75.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button75.FlatAppearance.BorderSize = 5
-        Me.Button75.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button75.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button75.ForeColor = System.Drawing.Color.Gold
-        Me.Button75.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button75.Location = New System.Drawing.Point(519, 31)
-        Me.Button75.Name = "Button75"
-        Me.Button75.Size = New System.Drawing.Size(299, 80)
-        Me.Button75.TabIndex = 27
-        Me.Button75.Text = "3° BASICO"
-        Me.Button75.UseVisualStyleBackColor = False
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.AllowUserToOrderColumns = True
-        Me.DataGridView3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView3.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle97.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle97.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle97.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle97.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle97.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle97.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle97
-        Me.DataGridView3.ColumnHeadersHeight = 50
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView3.EnableHeadersVisualStyles = False
-        Me.DataGridView3.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView3.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
-        DataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle98.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle98.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle98.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle98.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle98.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle98.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.RowHeadersDefaultCellStyle = DataGridViewCellStyle98
-        DataGridViewCellStyle99.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle99.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle99.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle99.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle99.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle99
-        Me.DataGridView3.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView3.TabIndex = 26
-        '
-        'Button76
-        '
-        Me.Button76.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button76.FlatAppearance.BorderSize = 5
-        Me.Button76.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button76.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button76.ForeColor = System.Drawing.Color.Gold
-        Me.Button76.Image = CType(resources.GetObject("Button76.Image"), System.Drawing.Image)
-        Me.Button76.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button76.Location = New System.Drawing.Point(574, 580)
-        Me.Button76.Name = "Button76"
-        Me.Button76.Size = New System.Drawing.Size(244, 89)
-        Me.Button76.TabIndex = 29
-        Me.Button76.Text = "              Cargar"
-        Me.Button76.UseVisualStyleBackColor = False
-        '
-        'Button77
-        '
-        Me.Button77.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button77.FlatAppearance.BorderSize = 5
-        Me.Button77.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button77.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button77.ForeColor = System.Drawing.Color.Gold
-        Me.Button77.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button77.Location = New System.Drawing.Point(208, 580)
-        Me.Button77.Name = "Button77"
-        Me.Button77.Size = New System.Drawing.Size(294, 89)
-        Me.Button77.TabIndex = 28
-        Me.Button77.Text = "< Volver"
-        Me.Button77.UseVisualStyleBackColor = False
-        '
-        'Button78
-        '
-        Me.Button78.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button78.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button78.FlatAppearance.BorderSize = 5
-        Me.Button78.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button78.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button78.ForeColor = System.Drawing.Color.Gold
-        Me.Button78.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button78.Location = New System.Drawing.Point(519, 42)
-        Me.Button78.Name = "Button78"
-        Me.Button78.Size = New System.Drawing.Size(299, 80)
-        Me.Button78.TabIndex = 27
-        Me.Button78.Text = "4° BASICO"
-        Me.Button78.UseVisualStyleBackColor = False
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.AllowUserToOrderColumns = True
-        Me.DataGridView4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView4.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle100.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle100.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle100.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle100.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle100.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle100.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle100
-        Me.DataGridView4.ColumnHeadersHeight = 50
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView4.EnableHeadersVisualStyles = False
-        Me.DataGridView4.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView4.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.ReadOnly = True
-        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle101.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle101.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle101.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.RowHeadersDefaultCellStyle = DataGridViewCellStyle101
-        DataGridViewCellStyle102.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle102.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle102.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView4.RowsDefaultCellStyle = DataGridViewCellStyle102
-        Me.DataGridView4.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView4.TabIndex = 26
-        '
-        'Button79
-        '
-        Me.Button79.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button79.FlatAppearance.BorderSize = 5
-        Me.Button79.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button79.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button79.ForeColor = System.Drawing.Color.Gold
-        Me.Button79.Image = CType(resources.GetObject("Button79.Image"), System.Drawing.Image)
-        Me.Button79.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button79.Location = New System.Drawing.Point(574, 580)
-        Me.Button79.Name = "Button79"
-        Me.Button79.Size = New System.Drawing.Size(244, 89)
-        Me.Button79.TabIndex = 29
-        Me.Button79.Text = "              Cargar"
-        Me.Button79.UseVisualStyleBackColor = False
-        '
-        'Button80
-        '
-        Me.Button80.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button80.FlatAppearance.BorderSize = 5
-        Me.Button80.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button80.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button80.ForeColor = System.Drawing.Color.Gold
-        Me.Button80.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button80.Location = New System.Drawing.Point(208, 580)
-        Me.Button80.Name = "Button80"
-        Me.Button80.Size = New System.Drawing.Size(294, 89)
-        Me.Button80.TabIndex = 28
-        Me.Button80.Text = "< Volver"
-        Me.Button80.UseVisualStyleBackColor = False
-        '
-        'Button81
-        '
-        Me.Button81.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button81.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button81.FlatAppearance.BorderSize = 5
-        Me.Button81.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button81.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button81.ForeColor = System.Drawing.Color.Gold
-        Me.Button81.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button81.Location = New System.Drawing.Point(519, 41)
-        Me.Button81.Name = "Button81"
-        Me.Button81.Size = New System.Drawing.Size(299, 80)
-        Me.Button81.TabIndex = 27
-        Me.Button81.Text = "5° BASICO"
-        Me.Button81.UseVisualStyleBackColor = False
-        '
-        'DataGridView5
-        '
-        Me.DataGridView5.AllowUserToOrderColumns = True
-        Me.DataGridView5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView5.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle103.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle103.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle103.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle103.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle103
-        Me.DataGridView5.ColumnHeadersHeight = 50
-        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView5.EnableHeadersVisualStyles = False
-        Me.DataGridView5.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView5.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView5.Name = "DataGridView5"
-        Me.DataGridView5.ReadOnly = True
-        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle104.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle104.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle104.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView5.RowHeadersDefaultCellStyle = DataGridViewCellStyle104
-        DataGridViewCellStyle105.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle105.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle105.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle105.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView5.RowsDefaultCellStyle = DataGridViewCellStyle105
-        Me.DataGridView5.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView5.TabIndex = 26
-        '
-        'Button82
-        '
-        Me.Button82.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button82.FlatAppearance.BorderSize = 5
-        Me.Button82.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button82.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button82.ForeColor = System.Drawing.Color.Gold
-        Me.Button82.Image = CType(resources.GetObject("Button82.Image"), System.Drawing.Image)
-        Me.Button82.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button82.Location = New System.Drawing.Point(574, 580)
-        Me.Button82.Name = "Button82"
-        Me.Button82.Size = New System.Drawing.Size(244, 89)
-        Me.Button82.TabIndex = 29
-        Me.Button82.Text = "              Cargar"
-        Me.Button82.UseVisualStyleBackColor = False
-        '
-        'Button83
-        '
-        Me.Button83.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button83.FlatAppearance.BorderSize = 5
-        Me.Button83.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button83.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button83.ForeColor = System.Drawing.Color.Gold
-        Me.Button83.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button83.Location = New System.Drawing.Point(208, 580)
-        Me.Button83.Name = "Button83"
-        Me.Button83.Size = New System.Drawing.Size(294, 89)
-        Me.Button83.TabIndex = 28
-        Me.Button83.Text = "< Volver"
-        Me.Button83.UseVisualStyleBackColor = False
-        '
-        'Button84
-        '
-        Me.Button84.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button84.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button84.FlatAppearance.BorderSize = 5
-        Me.Button84.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button84.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button84.ForeColor = System.Drawing.Color.Gold
-        Me.Button84.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button84.Location = New System.Drawing.Point(519, 36)
-        Me.Button84.Name = "Button84"
-        Me.Button84.Size = New System.Drawing.Size(299, 80)
-        Me.Button84.TabIndex = 27
-        Me.Button84.Text = "6° BASICO"
-        Me.Button84.UseVisualStyleBackColor = False
-        '
-        'DataGridView11
-        '
-        Me.DataGridView11.AllowUserToOrderColumns = True
-        Me.DataGridView11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView11.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView11.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle106.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle106.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle106.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle106.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle106.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle106.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView11.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle106
-        Me.DataGridView11.ColumnHeadersHeight = 50
-        Me.DataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView11.EnableHeadersVisualStyles = False
-        Me.DataGridView11.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView11.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView11.Name = "DataGridView11"
-        Me.DataGridView11.ReadOnly = True
-        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle107.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle107.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle107.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView11.RowHeadersDefaultCellStyle = DataGridViewCellStyle107
-        DataGridViewCellStyle108.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle108.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle108.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle108.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle108.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView11.RowsDefaultCellStyle = DataGridViewCellStyle108
-        Me.DataGridView11.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView11.TabIndex = 26
-        '
-        'Button85
-        '
-        Me.Button85.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button85.FlatAppearance.BorderSize = 5
-        Me.Button85.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button85.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button85.ForeColor = System.Drawing.Color.Gold
-        Me.Button85.Image = CType(resources.GetObject("Button85.Image"), System.Drawing.Image)
-        Me.Button85.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button85.Location = New System.Drawing.Point(574, 580)
-        Me.Button85.Name = "Button85"
-        Me.Button85.Size = New System.Drawing.Size(244, 89)
-        Me.Button85.TabIndex = 29
-        Me.Button85.Text = "              Cargar"
-        Me.Button85.UseVisualStyleBackColor = False
-        '
-        'Button86
-        '
-        Me.Button86.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button86.FlatAppearance.BorderSize = 5
-        Me.Button86.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button86.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button86.ForeColor = System.Drawing.Color.Gold
-        Me.Button86.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button86.Location = New System.Drawing.Point(208, 580)
-        Me.Button86.Name = "Button86"
-        Me.Button86.Size = New System.Drawing.Size(294, 89)
-        Me.Button86.TabIndex = 28
-        Me.Button86.Text = "< Volver"
-        Me.Button86.UseVisualStyleBackColor = False
-        '
-        'Button87
-        '
-        Me.Button87.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button87.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button87.FlatAppearance.BorderSize = 5
-        Me.Button87.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button87.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button87.ForeColor = System.Drawing.Color.Gold
-        Me.Button87.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button87.Location = New System.Drawing.Point(519, 40)
-        Me.Button87.Name = "Button87"
-        Me.Button87.Size = New System.Drawing.Size(299, 80)
-        Me.Button87.TabIndex = 27
-        Me.Button87.Text = "7° BASICO"
-        Me.Button87.UseVisualStyleBackColor = False
-        '
-        'DataGridView6
-        '
-        Me.DataGridView6.AllowUserToOrderColumns = True
-        Me.DataGridView6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView6.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle109.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle109.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle109.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle109.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle109
-        Me.DataGridView6.ColumnHeadersHeight = 50
-        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView6.EnableHeadersVisualStyles = False
-        Me.DataGridView6.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView6.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView6.Name = "DataGridView6"
-        Me.DataGridView6.ReadOnly = True
-        DataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle110.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle110.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView6.RowHeadersDefaultCellStyle = DataGridViewCellStyle110
-        DataGridViewCellStyle111.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle111.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle111.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle111.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle111.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView6.RowsDefaultCellStyle = DataGridViewCellStyle111
-        Me.DataGridView6.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView6.TabIndex = 26
-        '
-        'Button88
-        '
-        Me.Button88.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button88.FlatAppearance.BorderSize = 5
-        Me.Button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button88.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button88.ForeColor = System.Drawing.Color.Gold
-        Me.Button88.Image = CType(resources.GetObject("Button88.Image"), System.Drawing.Image)
-        Me.Button88.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button88.Location = New System.Drawing.Point(574, 580)
-        Me.Button88.Name = "Button88"
-        Me.Button88.Size = New System.Drawing.Size(244, 89)
-        Me.Button88.TabIndex = 29
-        Me.Button88.Text = "              Cargar"
-        Me.Button88.UseVisualStyleBackColor = False
-        '
-        'Button89
-        '
-        Me.Button89.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button89.FlatAppearance.BorderSize = 5
-        Me.Button89.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button89.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button89.ForeColor = System.Drawing.Color.Gold
-        Me.Button89.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button89.Location = New System.Drawing.Point(208, 580)
-        Me.Button89.Name = "Button89"
-        Me.Button89.Size = New System.Drawing.Size(294, 89)
-        Me.Button89.TabIndex = 28
-        Me.Button89.Text = "< Volver"
-        Me.Button89.UseVisualStyleBackColor = False
-        '
-        'Button90
-        '
-        Me.Button90.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button90.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button90.FlatAppearance.BorderSize = 5
-        Me.Button90.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button90.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button90.ForeColor = System.Drawing.Color.Gold
-        Me.Button90.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button90.Location = New System.Drawing.Point(519, 40)
-        Me.Button90.Name = "Button90"
-        Me.Button90.Size = New System.Drawing.Size(299, 80)
-        Me.Button90.TabIndex = 27
-        Me.Button90.Text = "8° BASICO"
-        Me.Button90.UseVisualStyleBackColor = False
-        '
-        'DataGridView7
-        '
-        Me.DataGridView7.AllowUserToOrderColumns = True
-        Me.DataGridView7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView7.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle112.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle112.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle112.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle112.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle112.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle112
-        Me.DataGridView7.ColumnHeadersHeight = 50
-        Me.DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView7.EnableHeadersVisualStyles = False
-        Me.DataGridView7.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView7.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView7.Name = "DataGridView7"
-        Me.DataGridView7.ReadOnly = True
-        DataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle113.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle113.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle113.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle113.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle113.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView7.RowHeadersDefaultCellStyle = DataGridViewCellStyle113
-        DataGridViewCellStyle114.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle114.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle114.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle114.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle114.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView7.RowsDefaultCellStyle = DataGridViewCellStyle114
-        Me.DataGridView7.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView7.TabIndex = 26
-        '
-        'Button91
-        '
-        Me.Button91.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button91.FlatAppearance.BorderSize = 5
-        Me.Button91.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button91.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button91.ForeColor = System.Drawing.Color.Gold
-        Me.Button91.Image = CType(resources.GetObject("Button91.Image"), System.Drawing.Image)
-        Me.Button91.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button91.Location = New System.Drawing.Point(574, 580)
-        Me.Button91.Name = "Button91"
-        Me.Button91.Size = New System.Drawing.Size(244, 89)
-        Me.Button91.TabIndex = 29
-        Me.Button91.Text = "              Cargar"
-        Me.Button91.UseVisualStyleBackColor = False
-        '
-        'Button92
-        '
-        Me.Button92.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button92.FlatAppearance.BorderSize = 5
-        Me.Button92.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button92.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button92.ForeColor = System.Drawing.Color.Gold
-        Me.Button92.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button92.Location = New System.Drawing.Point(208, 580)
-        Me.Button92.Name = "Button92"
-        Me.Button92.Size = New System.Drawing.Size(294, 89)
-        Me.Button92.TabIndex = 28
-        Me.Button92.Text = "< Volver"
-        Me.Button92.UseVisualStyleBackColor = False
-        '
-        'Button93
-        '
-        Me.Button93.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button93.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button93.FlatAppearance.BorderSize = 5
-        Me.Button93.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button93.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button93.ForeColor = System.Drawing.Color.Gold
-        Me.Button93.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button93.Location = New System.Drawing.Point(519, 43)
-        Me.Button93.Name = "Button93"
-        Me.Button93.Size = New System.Drawing.Size(299, 80)
-        Me.Button93.TabIndex = 27
-        Me.Button93.Text = "PRE - KINDER"
-        Me.Button93.UseVisualStyleBackColor = False
-        '
-        'DataGridView8
-        '
-        Me.DataGridView8.AllowUserToOrderColumns = True
-        Me.DataGridView8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView8.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle115.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle115.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle115.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle115.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle115.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle115.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle115
-        Me.DataGridView8.ColumnHeadersHeight = 50
-        Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView8.EnableHeadersVisualStyles = False
-        Me.DataGridView8.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView8.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView8.Name = "DataGridView8"
-        Me.DataGridView8.ReadOnly = True
-        DataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle116.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle116.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle116.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle116.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle116.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle116.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView8.RowHeadersDefaultCellStyle = DataGridViewCellStyle116
-        DataGridViewCellStyle117.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle117.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle117.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle117.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle117.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView8.RowsDefaultCellStyle = DataGridViewCellStyle117
-        Me.DataGridView8.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView8.TabIndex = 26
-        '
-        'Button94
-        '
-        Me.Button94.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button94.FlatAppearance.BorderSize = 5
-        Me.Button94.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button94.Font = New System.Drawing.Font("Modern No. 20", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button94.ForeColor = System.Drawing.Color.Gold
-        Me.Button94.Image = CType(resources.GetObject("Button94.Image"), System.Drawing.Image)
-        Me.Button94.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button94.Location = New System.Drawing.Point(651, 548)
-        Me.Button94.Name = "Button94"
-        Me.Button94.Size = New System.Drawing.Size(244, 89)
-        Me.Button94.TabIndex = 29
-        Me.Button94.Text = "              Cargar"
-        Me.Button94.UseVisualStyleBackColor = False
-        '
-        'Button95
-        '
-        Me.Button95.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button95.FlatAppearance.BorderSize = 5
-        Me.Button95.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button95.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button95.ForeColor = System.Drawing.Color.Gold
-        Me.Button95.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button95.Location = New System.Drawing.Point(285, 548)
-        Me.Button95.Name = "Button95"
-        Me.Button95.Size = New System.Drawing.Size(294, 89)
-        Me.Button95.TabIndex = 28
-        Me.Button95.Text = "< Volver"
-        Me.Button95.UseVisualStyleBackColor = False
-        '
-        'Button96
-        '
-        Me.Button96.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button96.BackColor = System.Drawing.Color.DarkBlue
-        Me.Button96.FlatAppearance.BorderSize = 5
-        Me.Button96.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button96.Font = New System.Drawing.Font("Modern No. 20", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button96.ForeColor = System.Drawing.Color.Gold
-        Me.Button96.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button96.Location = New System.Drawing.Point(519, 49)
-        Me.Button96.Name = "Button96"
-        Me.Button96.Size = New System.Drawing.Size(299, 80)
-        Me.Button96.TabIndex = 27
-        Me.Button96.Text = "KINDER"
-        Me.Button96.UseVisualStyleBackColor = False
-        '
-        'DataGridView9
-        '
-        Me.DataGridView9.AllowUserToOrderColumns = True
-        Me.DataGridView9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView9.BackgroundColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle118.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle118.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle118.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle118.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle118.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle118.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle118
-        Me.DataGridView9.ColumnHeadersHeight = 50
-        Me.DataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView9.EnableHeadersVisualStyles = False
-        Me.DataGridView9.GridColor = System.Drawing.Color.DarkBlue
-        Me.DataGridView9.Location = New System.Drawing.Point(129, 248)
-        Me.DataGridView9.Name = "DataGridView9"
-        Me.DataGridView9.ReadOnly = True
-        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle119.BackColor = System.Drawing.Color.DarkBlue
-        DataGridViewCellStyle119.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle119.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle119.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle119.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView9.RowHeadersDefaultCellStyle = DataGridViewCellStyle119
-        DataGridViewCellStyle120.BackColor = System.Drawing.Color.MediumBlue
-        DataGridViewCellStyle120.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle120.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle120.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle120.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView9.RowsDefaultCellStyle = DataGridViewCellStyle120
-        Me.DataGridView9.Size = New System.Drawing.Size(1026, 147)
-        Me.DataGridView9.TabIndex = 26
+        'Button97
+        '
+        Me.Button97.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button97.BackColor = System.Drawing.Color.Blue
+        Me.Button97.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button97.FlatAppearance.BorderSize = 5
+        Me.Button97.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button97.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button97.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button97.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button97.ForeColor = System.Drawing.Color.Gold
+        Me.Button97.Image = CType(resources.GetObject("Button97.Image"), System.Drawing.Image)
+        Me.Button97.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button97.Location = New System.Drawing.Point(483, 319)
+        Me.Button97.Name = "Button97"
+        Me.Button97.Size = New System.Drawing.Size(299, 115)
+        Me.Button97.TabIndex = 83
+        Me.Button97.Text = "Volver"
+        Me.Button97.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button97.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button97.UseVisualStyleBackColor = False
         '
         'Menu_Principal
         '
@@ -4370,6 +4404,7 @@ Partial Class Menu_Principal
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Menu_Principal"
         Me.Text = "Menu_Principan"
         Me.TabControl1.ResumeLayout(False)
@@ -4404,31 +4439,31 @@ Partial Class Menu_Principal
         Me.TabPage12.PerformLayout()
         Me.TabPage13.ResumeLayout(False)
         Me.TabPage13.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage14.ResumeLayout(False)
         Me.TabPage14.PerformLayout()
         Me.TabPage15.ResumeLayout(False)
-        Me.TabPage16.ResumeLayout(False)
-        Me.TabPage17.ResumeLayout(False)
-        Me.TabPage18.ResumeLayout(False)
-        Me.TabPage19.ResumeLayout(False)
-        Me.TabPage20.ResumeLayout(False)
-        Me.TabPage21.ResumeLayout(False)
-        Me.TabPage22.ResumeLayout(False)
-        Me.TabPage23.ResumeLayout(False)
-        Me.TabPage24.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage16.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage17.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage18.ResumeLayout(False)
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage19.ResumeLayout(False)
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage20.ResumeLayout(False)
         CType(Me.DataGridView11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage21.ResumeLayout(False)
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage22.ResumeLayout(False)
         CType(Me.DataGridView7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage23.ResumeLayout(False)
         CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage24.ResumeLayout(False)
         CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4723,4 +4758,5 @@ Partial Class Menu_Principal
     Friend WithEvents Button95 As Button
     Friend WithEvents Button96 As Button
     Friend WithEvents DataGridView9 As DataGridView
+    Friend WithEvents Button97 As Button
 End Class

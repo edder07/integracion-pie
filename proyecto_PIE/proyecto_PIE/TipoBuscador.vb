@@ -8,22 +8,25 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
-        Me.Close()
-        Menu_Principal.Enabled = False
-        Menu_Principal.Show()
+
+
+
+        CargarDiagnostico.Enabled = True
         CargarDiagnostico.Show()
+        Menu_Principal.Enabled = False
+        Me.Enabled = False
+        Me.Hide()
+
 
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-        Me.Close()
 
 
         Menu_Principal.Enabled = True
-        Menu_Principal.TabControl1.SelectedIndex = 0
         Menu_Principal.Show()
+        Me.Close()
 
 
     End Sub
@@ -36,8 +39,11 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
-        Me.Close()
+
         CargarPorRut.Show()
+        Menu_Principal.Enabled = False
+        Me.Enabled = False
+        Me.Hide()
+
     End Sub
 End Class

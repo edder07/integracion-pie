@@ -37,7 +37,7 @@ Public Class CargarDiagnostico
         Dim ds As DataSet = New DataSet()
 
         Dim drc = sqlcmd.ExecuteReader
-        Dim gb
+
         conector.Close()
         da.Fill(ds)
 
@@ -230,6 +230,9 @@ Public Class CargarDiagnostico
 
                 Menu_Principal.TabControl1.SelectedIndex = 11
                 Me.Hide()
+                Menu_Principal.Button35.Visible = True
+                Menu_Principal.Button36.Visible = False
+
 
             Else
 
@@ -243,9 +246,17 @@ Public Class CargarDiagnostico
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Close()
-        Me.Hide()
+
+
+
+        TipoBuscador.Enabled = True
         TipoBuscador.Show()
+        Menu_Principal.Enabled = False
+        Me.Close()
+
+
+
+
 
     End Sub
 
@@ -256,7 +267,7 @@ Public Class CargarDiagnostico
 
         Catch
             rut_para_data = ""
-            fecha_emision_para_data = ""
+
         End Try
     End Sub
 End Class

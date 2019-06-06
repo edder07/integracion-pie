@@ -135,7 +135,7 @@ Public Class SeleccionRutTipoFicha
                 NombreCompletoAlumno = nombre_alumno + " " + apellido_paterno + " " + apellido_materno
 
                 Menu_Principal.Label21.Text = "COMPLETE LOS CAMPOS PARA LA FICHA " + ComboBox2.Text + vbCr + "PARA EL ALUMNO " + NombreCompletoAlumno
-
+                conector.Close()
 
 
             End If
@@ -189,6 +189,9 @@ Public Class SeleccionRutTipoFicha
         Menu_Principal.MostrarEvaluador3()
         Menu_Principal.MostrarEvaluador4()
         Menu_Principal.MostrarEvaluador5()
+
+        Menu_Principal.Button35.Visible = False
+        Menu_Principal.Button36.Visible = True
 
 
     End Sub
@@ -315,6 +318,10 @@ Public Class SeleccionRutTipoFicha
         obtener_datos_ficha()
         obtener_datos_alumnos()
         reevaluar_select()
+
+        Menu_Principal.Button35.Enabled = False
+        Menu_Principal.Button36.Enabled = True
+        conector.Close()
 
     End Sub
 
