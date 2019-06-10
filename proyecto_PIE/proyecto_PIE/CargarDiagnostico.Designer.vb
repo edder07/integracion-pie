@@ -32,11 +32,9 @@ Partial Class CargarDiagnostico
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -106,25 +104,12 @@ Partial Class CargarDiagnostico
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
-        Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(915, 27)
         Me.Panel1.TabIndex = 10
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(854, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(27, 27)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 13
-        Me.PictureBox3.TabStop = False
         '
         'PictureBox1
         '
@@ -195,7 +180,6 @@ Partial Class CargarDiagnostico
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CargarDiagnostico"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -209,7 +193,6 @@ Partial Class CargarDiagnostico
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridView1 As DataGridView
 End Class

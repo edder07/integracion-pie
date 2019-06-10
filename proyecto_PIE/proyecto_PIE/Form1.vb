@@ -94,23 +94,27 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-       conector.Close()
+        conector.Close()
+        Dim nombre_para_label As String
         Try
             conector.Open()
-            Dim qry As String = "select * from usuario where nombre_usuario = '" & txtuser.Text & "' and pass='" & txtpass.Text & "'"
+            Dim qry As String = "select usuario.nombre_usuario , usuario.nombre_completo_usuario  from usuario where nombre_usuario = '" & txtuser.Text & "' and pass='" & txtpass.Text & "'"
             Dim sqlcmd As New SqlCommand(qry, conector)
             Dim dr As SqlDataReader
             dr = sqlcmd.ExecuteReader
 
 
             If dr.Read() Then
+                nombre_para_label = dr("nombre_completo_usuario")
                 ObteneRIdUsuario()
                 Menu_Principal.Show()
                 Me.Hide()
                 nomUsuario = txtuser.Text
-                conector.Close()
+                Menu_Principal.Label93.Text = "Bienvenido " + nombre_para_label
 
                 conector.Close()
+                conector.Close()
+
 
             Else
                 MsgBox("Contraseña Incorrecta", MsgBoxStyle.Critical, "Atencion")
@@ -127,5 +131,12 @@ Public Class Form1
     Private Sub PictureBox2_Click(sender As System.Object, e As System.EventArgs) Handles PictureBox2.Click
         End
         Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Form2.txtpass.Text = "PASSWORD"
+        Form2.txtuser.Text = "NOMBRE DE USUARIO"
+        Form2.Show()
+        Me.Enabled = False
     End Sub
 End Class

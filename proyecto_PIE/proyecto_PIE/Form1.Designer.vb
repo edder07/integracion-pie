@@ -110,7 +110,7 @@ Partial Class Form1
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(493, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(27, 23)
@@ -130,13 +130,14 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.FlatAppearance.BorderSize = 2
+        Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button3.Location = New System.Drawing.Point(719, 292)
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button3.Location = New System.Drawing.Point(731, 244)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(102, 52)
+        Me.Button3.Size = New System.Drawing.Size(90, 100)
         Me.Button3.TabIndex = 95
         Me.Button3.UseVisualStyleBackColor = True
         '

@@ -32,41 +32,40 @@ Partial Class SeleccionRutTipoFicha
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Stencil", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(191, 120)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(168, 26)
+        Me.ComboBox1.Size = New System.Drawing.Size(183, 25)
         Me.ComboBox1.TabIndex = 0
         '
         'ComboBox2
         '
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Stencil", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.Font = New System.Drawing.Font("Modern No. 20", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(191, 161)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(168, 26)
+        Me.ComboBox2.Size = New System.Drawing.Size(183, 25)
         Me.ComboBox2.TabIndex = 1
         '
         'Button1
         '
+        Me.Button1.FlatAppearance.BorderSize = 3
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Gold
-        Me.Button1.Location = New System.Drawing.Point(118, 216)
+        Me.Button1.Location = New System.Drawing.Point(83, 216)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(95, 33)
+        Me.Button1.Size = New System.Drawing.Size(130, 33)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "EVALUAR"
         Me.Button1.UseVisualStyleBackColor = True
@@ -117,6 +116,7 @@ Partial Class SeleccionRutTipoFicha
         '
         'Button2
         '
+        Me.Button2.FlatAppearance.BorderSize = 3
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Gold
@@ -130,25 +130,12 @@ Partial Class SeleccionRutTipoFicha
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
-        Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(545, 27)
         Me.Panel1.TabIndex = 8
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(484, 0)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(27, 27)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 13
-        Me.PictureBox3.TabStop = False
         '
         'PictureBox1
         '
@@ -184,7 +171,6 @@ Partial Class SeleccionRutTipoFicha
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SeleccionRutTipoFicha"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -199,6 +185,5 @@ Partial Class SeleccionRutTipoFicha
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class

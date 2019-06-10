@@ -996,11 +996,18 @@ Public Class Menu_Principal
     End Sub
 
     Private Sub Button65_Click(sender As System.Object, e As System.EventArgs) Handles Button65.Click
+        If CheckBox1.Checked = False And CheckBox2.Checked = False Or CheckBox3.Checked = False And CheckBox4.Checked = False Or CheckBox5.Checked = False And CheckBox6.Checked = False Then
+            MsgBox("NO OLVIDE CHEQUEAR LOS CAMPOS", MsgBoxStyle.Critical, "Atencion")
 
-        ObtenerIdCurso()
-        ConcatenoDePalabra()
 
-        TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
+        Else
+            ObtenerIdCurso()
+            ConcatenoDePalabra()
+
+            TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
+
+        End If
+
     End Sub
 
     Private Sub Button37_Click(sender As System.Object, e As System.EventArgs)
@@ -1213,13 +1220,13 @@ Public Class Menu_Principal
             ConcatenoDeNuevoIngreso = "SI " + TextBox18.Text
         End If
         If CheckBox2.Checked = True Then
-            ConcatenoDeNuevoIngreso = "NO"
+            ConcatenoDeNuevoIngreso = "NO" + TextBox18.Text
         End If
         If CheckBox6.Checked = True Then
             ConcatenoDeSindromeAsociadoAlDiagnostico = "SI " + TextBox21.Text
         End If
         If CheckBox5.Checked = True Then
-            ConcatenoDeSindromeAsociadoAlDiagnostico = "NO"
+            ConcatenoDeSindromeAsociadoAlDiagnostico = "NO" + TextBox21.Text
         End If
         If CheckBox4.Checked = True Then
             ConcatenoDeAñoContinuidad = "SI " + TextBox19.Text
@@ -1968,6 +1975,7 @@ Public Class Menu_Principal
     End Sub
     Private Sub Button69_Click(sender As Object, e As EventArgs) Handles Button69.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2112,6 +2120,7 @@ Public Class Menu_Principal
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
         rut_para_data = ""
         tipo_ficha_para_data = ""
         Try
@@ -2212,6 +2221,7 @@ Public Class Menu_Principal
 
     Private Sub Button94_Click(sender As Object, e As EventArgs) Handles Button94.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2358,6 +2368,7 @@ Public Class Menu_Principal
 
     Private Sub Button91_Click(sender As Object, e As EventArgs) Handles Button91.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2505,6 +2516,7 @@ Public Class Menu_Principal
 
     Private Sub Button88_Click(sender As Object, e As EventArgs) Handles Button88.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2652,6 +2664,7 @@ Public Class Menu_Principal
 
     Private Sub Button85_Click(sender As Object, e As EventArgs) Handles Button85.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2799,6 +2812,7 @@ Public Class Menu_Principal
 
     Private Sub Button82_Click(sender As Object, e As EventArgs) Handles Button82.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -2946,6 +2960,7 @@ Public Class Menu_Principal
 
     Private Sub Button79_Click(sender As Object, e As EventArgs) Handles Button79.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -3093,6 +3108,7 @@ Public Class Menu_Principal
 
     Private Sub Button76_Click(sender As Object, e As EventArgs) Handles Button76.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -3239,6 +3255,7 @@ Public Class Menu_Principal
 
     Private Sub Button73_Click(sender As Object, e As EventArgs) Handles Button73.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -3386,6 +3403,7 @@ Public Class Menu_Principal
 
     Private Sub Button70_Click(sender As Object, e As EventArgs) Handles Button70.Click
         funcion_id_tipo()
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -3545,13 +3563,13 @@ Public Class Menu_Principal
         Try
 
             Dim cadena As String
-            cadena = String.Format("UPDATE ficha_diagnostico SET id_evaluador_1 = " & IdEvaluador1 & " , id_evaluador_2 = " & IdEvaluador2 & " , id_evaluador_3 = " & IdEvaluador3 & " ,id_evaluador_4 = " & IdEvaluador4 & " ,id_evaluador_5 = " & IdEvaluador5 & " , id_apoyo_1 = " & IdApoyo1 & " ,  id_apoyo_2 = " & IdApoyo2 & " ,  id_apoyo_3 = " & IdApoyo3 & " ,  id_apoyo_4 = " & IdApoyo4 & " , id_tipoficha = " & IdTipoFicha & " , curso_alumno = " & idCurso & " , nuevo_ingreso = '" & ConcatenoDeNuevoIngreso & "' , diagnostico = '" & TextBox20.Text & "' , sindrome_asociado_diagnostico = '" & ConcatenoDeSindromeAsociadoAlDiagnostico & "' , observaciones_salud = '" & TextBox22.Text & "' , prueba_1 = '" & TextBox23.Text & "' , puntaje_1 = '" & TextBox24.Text & "' , prueba_2 = '" & TextBox26.Text & "' , puntaje_2 = '" & TextBox25.Text & "' , prueba_3 = '" & TextBox28.Text & "' , puntaje_3 = '" & TextBox27.Text & "' , prueba_4 = '" & TextBox30.Text & "' , puntaje_4 = '" & TextBox29.Text & "' , prueba_5 = '" & TextBox32.Text & "' , puntaje_5 = '" & TextBox31.Text & "' , usuario = " & IdUsuario & "  , nombre_apoyo_1 = '" & ComboBox10.Text & "' , nombre_apoyo_2 = '" & ComboBox11.Text & "' , nombre_apoyo_3 = '" & ComboBox12.Text & "' , nombre_apoyo_4 = '" & ComboBox13.Text & "' , nombre_evaluador_1 = '" & ComboBox3.Text & "' , nombre_evaluador_2 = '" & ComboBox4.Text & "'  , nombre_evaluador_3 = '" & ComboBox5.Text & "' , nombre_evaluador_4 = '" & ComboBox6.Text & "' , nombre_evaluador_5 = '" & ComboBox7.Text & "' ,  numero_estuadiante = " & TextBox33.Text & " , rut_evaluador_1 = '" & rut_ev_1 & "' , rut_evaluador_2 = '" & rut_ev_2 & "' , rut_evaluador_3 = '" & rut_ev_3 & "' , rut_evaluador_4 = '" & rut_ev_4 & "' , rut_evaluador_5 = '" & rut_ev_5 & "' , profesion_evaluador_1 = '" & profesion_ev_1 & "' , profesion_evaluador_2 = '" & profesion_ev_2 & "' , profesion_evaluador_3 = '" & profesion_ev_3 & "' , profesion_evaluador_4 = '" & profesion_ev_4 & "' , profesion_evaluador_5 = '" & profesion_ev_5 & "' , rut_apoyo_1 = '" & rut_apoyo_1 & "' , rut_apoyo_2 = '" & rut_apoyo_2 & "' , rut_apoyo_3 = '" & rut_apoyo_3 & "' , rut_apoyo_4 = '" & rut_apoyo_4 & "'   fecha_nacimiento = '" & fecha & "' , <sexo = '" & ComboBox6.SelectedItem & "' WHERE alumno.rut_alumno = '" & rut_completo_buscar & "'")
+            cadena = String.Format("UPDATE ficha_diagnostico SET id_evaluador_1 = " & IdEvaluador1 & " , id_evaluador_2 = " & IdEvaluador2 & " , id_evaluador_3 = " & IdEvaluador3 & " ,id_evaluador_4 = " & IdEvaluador4 & " ,id_evaluador_5 = " & IdEvaluador5 & " , id_apoyo_1 = " & IdApoyo1 & " ,  id_apoyo_2 = " & IdApoyo2 & " ,  id_apoyo_3 = " & IdApoyo3 & " ,  id_apoyo_4 = " & IdApoyo4 & " , id_tipoficha = " & IdTipoFicha & " , curso_alumno = " & idCurso & " , nuevo_ingreso = '" & ConcatenoDeNuevoIngreso & "' , diagnostico = '" & TextBox20.Text & "' , sindrome_asociado_diagnostico = '" & ConcatenoDeSindromeAsociadoAlDiagnostico & "' , observaciones_salud = '" & TextBox22.Text & "' , prueba_1 = '" & TextBox23.Text & "' , puntaje_1 = '" & TextBox24.Text & "' , prueba_2 = '" & TextBox26.Text & "' , puntaje_2 = '" & TextBox25.Text & "' , prueba_3 = '" & TextBox28.Text & "' , puntaje_3 = '" & TextBox27.Text & "' , prueba_4 = '" & TextBox30.Text & "' , puntaje_4 = '" & TextBox29.Text & "' , prueba_5 = '" & TextBox32.Text & "' , puntaje_5 = '" & TextBox31.Text & "' , usuario = " & IdUsuario & "  , nombre_apoyo_1 = '" & ComboBox10.Text & "' , nombre_apoyo_2 = '" & ComboBox11.Text & "' , nombre_apoyo_3 = '" & ComboBox12.Text & "' , nombre_apoyo_4 = '" & ComboBox13.Text & "' , nombre_evaluador_1 = '" & ComboBox3.Text & "' , nombre_evaluador_2 = '" & ComboBox4.Text & "'  , nombre_evaluador_3 = '" & ComboBox5.Text & "' , nombre_evaluador_4 = '" & ComboBox6.Text & "' , nombre_evaluador_5 = '" & ComboBox7.Text & "' ,  numero_estudiante = " & TextBox33.Text & " , rut_evaluador_1 = '" & rut_ev_1 & "' , rut_evaluador_2 = '" & rut_ev_2 & "' , rut_evaluador_3 = '" & rut_ev_3 & "' , rut_evaluador_4 = '" & rut_ev_4 & "' , rut_evaluador_5 = '" & rut_ev_5 & "' , profesion_evaluador_1 = '" & profesion_ev_1 & "' , profesion_evaluador_2 = '" & profesion_ev_2 & "' , profesion_evaluador_3 = '" & profesion_ev_3 & "' , profesion_evaluador_4 = '" & profesion_ev_4 & "' , profesion_evaluador_5 = '" & profesion_ev_5 & "' , rut_apoyo_1 = '" & rut_apoyo_1 & "' , rut_apoyo_2 = '" & rut_apoyo_2 & "' , rut_apoyo_3 = '" & rut_apoyo_3 & "' , rut_apoyo_4 = '" & rut_apoyo_4 & "'  WHERE ficha_diagnostico.rut_alumno = '" & RutDelAlumno & "' and ficha_diagnostico.fecha_emision = '" & SeleccionRutTipoFicha.Fechaemi & "' and ficha_diagnostico.id_tipoficha = " & IdTipoFicha & "")
             Dim insertar As New SqlCommand(cadena, conector)
             conector.Open()
             insertar.ExecuteNonQuery()
             conector.Close()
 
-
+            MsgBox("FICHA MODIFICADA EXITOSAMENTE", MsgBoxStyle.Information, "Operacion Exitosa")
             conector.Close()
 
         Catch ex As Exception
@@ -3566,5 +3584,82 @@ Public Class Menu_Principal
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
         ObtenerIdApoyo()
         ObtenerIdEvaluador()
+        funcion_update_ficha_diagnostico()
     End Sub
+
+    Private Sub TextBox31_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox31.KeyPress
+        If e.KeyChar.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = "," And Not TextBox31.Text.IndexOf(",") Then
+            e.Handled = True
+        ElseIf e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+
+    End Sub
+
+    Private Sub TextBox29_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox29.KeyPress
+        If e.KeyChar.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = "," And Not TextBox29.Text.IndexOf(",") Then
+            e.Handled = True
+        ElseIf e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox27_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox27.KeyPress
+        If e.KeyChar.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = "," And Not TextBox27.Text.IndexOf(",") Then
+            e.Handled = True
+        ElseIf e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox25_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox25.KeyPress
+        If e.KeyChar.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = "," And Not TextBox25.Text.IndexOf(",") Then
+            e.Handled = True
+        ElseIf e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox24_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox24.KeyPress
+        If e.KeyChar.IsDigit(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar = "," And Not TextBox24.Text.IndexOf(",") Then
+            e.Handled = True
+        ElseIf e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub Button98_Click(sender As Object, e As EventArgs) Handles Button98.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
+    End Sub
+
 End Class
