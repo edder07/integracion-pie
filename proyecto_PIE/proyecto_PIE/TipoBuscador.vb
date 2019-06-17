@@ -46,4 +46,17 @@
         Me.Hide()
 
     End Sub
+
+    Private Sub TipoBuscador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+
+        CargarListaAlumno.Show()
+        Menu_Principal.Enabled = False
+        Me.Enabled = False
+        Me.Hide()
+
+    End Sub
 End Class

@@ -91,6 +91,12 @@
     <Compile Include="CargarDiagnostico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CargarListaAlumno.Designer.vb">
+      <DependentUpon>CargarListaAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarListaAlumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CargarPorRut.Designer.vb">
       <DependentUpon>CargarPorRut.vb</DependentUpon>
     </Compile>
@@ -115,6 +121,12 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarAlumno.Designer.vb">
+      <DependentUpon>FormEliminarAlumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminarAlumno.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuUsuario.Designer.vb">
@@ -167,6 +179,9 @@
     <EmbeddedResource Include="CargarDiagnostico.resx">
       <DependentUpon>CargarDiagnostico.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CargarListaAlumno.resx">
+      <DependentUpon>CargarListaAlumno.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CargarPorRut.resx">
       <DependentUpon>CargarPorRut.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminarAlumno.resx">
+      <DependentUpon>FormEliminarAlumno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUsuario.resx">
       <DependentUpon>FormMenuUsuario.vb</DependentUpon>

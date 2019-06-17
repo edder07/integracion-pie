@@ -2,57 +2,37 @@
 Imports System.IO
 Imports System.Data.SqlClient
 Imports System.Data.OleDb
+Public Class CargarListaAlumno
 
-Public Class CargarPorRut
     Dim ipServidor As String = datos_conn.getservidor()
     Dim puerto As String = datos_conn.getpuerto()
     Dim claveBD As String = datos_conn.getpass()
     Dim basededatos As String = datos_conn.getbd()
     Dim usuarioBD As String = datos_conn.getuser()
+
     Dim strcon As String
     Public dreader As SqlDataReader
+    Public nomUsuario As String
     Dim conector As New SqlConnection("server=" + ipServidor + "  ;user='" + usuarioBD + "';password= '" + claveBD + "' ; database=" + basededatos + "")
+
 
     Dim cmd As OleDbDataAdapter
     Dim cnn As OleDbConnection
+
 
     Dim rut_para_data As String
     Dim fecha_emision_para_data As Date
     Dim tipo_ficha_para_data As String
 
-    Private Sub CargarPorRut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MostrarAlumno()
-    End Sub
-    Sub MostrarAlumno()
-
-        conector.Close()
-        conector.Open()
-        Dim qry As String = "select DISTINCT alumno.rut_alumno from alumno , ficha_diagnostico where alumno.rut_alumno = ficha_diagnostico.rut_alumno and alumno.estado= 'activo'"
-        Dim sqlcmd As New SqlCommand(qry, conector)
-        'Dim drc As String
-        Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
-        Dim ds As DataSet = New DataSet()
-
-        Dim drc = sqlcmd.ExecuteReader
-        conector.Close()
-        da.Fill(ds)
-
-        ComboBox1.DataSource = ds.Tables(0)
-        ComboBox1.DisplayMember = "rut_alumno"
-        ComboBox1.SelectedItem = 0
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub CargarListaAlumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         select_cargar_data()
     End Sub
-
     Sub select_cargar_data()
         conector.Close()
 
         Try
 
-            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" & ComboBox1.Text & "'", conector)
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo  and alumno.estado= 'activo'", conector)
             Dim ds As New DataSet
             conector.Open()
 
@@ -66,7 +46,16 @@ Public Class CargarPorRut
         End Try
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        TipoBuscador.Enabled = True
+        TipoBuscador.Show()
+        Menu_Principal.Enabled = False
+        Me.Close()
+    End Sub
+
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        rut_para_data = ""
+        tipo_ficha_para_data = ""
         Try
             rut_para_data = DataGridView1.Rows(e.RowIndex).Cells("Rut del Alumno").Value.ToString()
             fecha_emision_para_data = DataGridView1.Rows(e.RowIndex).Cells("Fecha Diagnostico").Value.ToString()
@@ -97,7 +86,7 @@ Public Class CargarPorRut
 
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         conector.Close()
         funcion_id_tipo()
         Dim nombre_evaluador_1 As String
@@ -244,22 +233,5 @@ Public Class CargarPorRut
 
         End Try
         conector.Close()
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-        TipoBuscador.Enabled = True
-        TipoBuscador.Show()
-        Menu_Principal.Enabled = False
-        Me.Close()
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
 End Class

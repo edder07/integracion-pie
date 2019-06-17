@@ -75,7 +75,7 @@ Public Class CargarDiagnostico
     Sub select_cargar_data()
         conector.Close()
 
-        Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut Alumno' , alumno.nombres_alumno 'Nombres Alumno' , alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno' , curso.nombre  'Curso Alumno' , ficha_diagnostico.fecha_emision  'Fecha Diagnostico' from alumno, ficha_diagnostico , curso where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.id_tipoficha =" & Menu_Principal.IdTipoFicha & " order by ficha_diagnostico.rut_alumno asc", conector)
+        Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut Alumno' , alumno.nombres_alumno 'Nombres Alumno' , alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno' , curso.nombre  'Curso Alumno' , ficha_diagnostico.fecha_emision  'Fecha Diagnostico' from alumno, ficha_diagnostico , curso where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.id_tipoficha =" & Menu_Principal.IdTipoFicha & " and alumno.estado = 'activo' order by ficha_diagnostico.rut_alumno asc", conector)
         Dim ds As New DataSet
         conector.Open()
 

@@ -29,6 +29,7 @@ Partial Class TipoBuscador
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,9 +58,9 @@ Partial Class TipoBuscador
         Me.Button2.ForeColor = System.Drawing.Color.Gold
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(68, 109)
+        Me.Button2.Location = New System.Drawing.Point(73, 105)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(668, 125)
+        Me.Button2.Size = New System.Drawing.Size(666, 110)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "                DIAGNOSTICO"
         Me.Button2.UseVisualStyleBackColor = False
@@ -75,9 +76,9 @@ Partial Class TipoBuscador
         Me.Button3.ForeColor = System.Drawing.Color.Gold
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(68, 371)
+        Me.Button3.Location = New System.Drawing.Point(73, 326)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(668, 125)
+        Me.Button3.Size = New System.Drawing.Size(666, 97)
         Me.Button3.TabIndex = 7
         Me.Button3.Text = "                RUT DEL ALUMNO"
         Me.Button3.UseVisualStyleBackColor = False
@@ -93,9 +94,9 @@ Partial Class TipoBuscador
         Me.Button4.ForeColor = System.Drawing.Color.Gold
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(68, 240)
+        Me.Button4.Location = New System.Drawing.Point(73, 221)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(668, 125)
+        Me.Button4.Size = New System.Drawing.Size(666, 99)
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "                CURSO"
         Me.Button4.UseVisualStyleBackColor = False
@@ -107,7 +108,7 @@ Partial Class TipoBuscador
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(831, 27)
+        Me.Panel1.Size = New System.Drawing.Size(829, 27)
         Me.Panel1.TabIndex = 9
         '
         'PictureBox1
@@ -116,19 +117,38 @@ Partial Class TipoBuscador
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(797, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(795, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(34, 27)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button1.FlatAppearance.BorderSize = 5
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Modern No. 20", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(73, 429)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(666, 97)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "               LISTA ALUMNO"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'TipoBuscador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkBlue
-        Me.ClientSize = New System.Drawing.Size(831, 517)
+        Me.ClientSize = New System.Drawing.Size(829, 552)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -151,4 +171,5 @@ Partial Class TipoBuscador
     Friend WithEvents Button4 As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class
