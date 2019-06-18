@@ -759,6 +759,8 @@ Public Class Menu_Principal
         End Select
     End Sub
 
+
+
     Private Sub TextBox8_KeyPress(ByVal sender As Object,
                          ByVal e As System.Windows.Forms.KeyPressEventArgs) _
                          Handles TextBox8.KeyPress
@@ -996,17 +998,11 @@ Public Class Menu_Principal
     End Sub
 
     Private Sub Button65_Click(sender As System.Object, e As System.EventArgs) Handles Button65.Click
-        If CheckBox1.Checked = False And CheckBox2.Checked = False Or CheckBox3.Checked = False And CheckBox4.Checked = False Or CheckBox5.Checked = False And CheckBox6.Checked = False Then
-            MsgBox("NO OLVIDE CHEQUEAR LOS CAMPOS", MsgBoxStyle.Critical, "Atencion")
 
+        ObtenerIdCurso()
+        ConcatenoDePalabra()
 
-        Else
-            ObtenerIdCurso()
-            ConcatenoDePalabra()
-
-            TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
-
-        End If
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(8)
 
     End Sub
 
@@ -3594,6 +3590,9 @@ Public Class Menu_Principal
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
 
+        FormCitaciones.Show()
+        FormCitaciones.Enabled = True
+        Me.Enabled = False
     End Sub
 
     Private Sub Button99_Click(sender As Object, e As EventArgs) Handles Button99.Click

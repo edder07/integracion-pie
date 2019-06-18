@@ -58,3 +58,4 @@ C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.FormMenuUsuario.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarListaAlumno.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.FormEliminarAlumno.resources
+C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.FormCitaciones.resources

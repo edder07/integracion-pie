@@ -319,8 +319,8 @@ Public Class SeleccionRutTipoFicha
         obtener_datos_alumnos()
         reevaluar_select()
 
-        Menu_Principal.Button35.Enabled = False
-        Menu_Principal.Button36.Enabled = True
+        Menu_Principal.Button35.Visible = False
+        Menu_Principal.Button36.Visible = True
         conector.Close()
 
     End Sub
