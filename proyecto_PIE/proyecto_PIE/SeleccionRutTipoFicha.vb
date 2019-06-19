@@ -28,7 +28,7 @@ Public Class SeleccionRutTipoFicha
 
         conector.Close()
         conector.Open()
-        Dim qry As String = "select alumno.rut_alumno from alumno"
+        Dim qry As String = "select alumno.rut_alumno from alumno where alumno.estado = 'activo'"
         Dim sqlcmd As New SqlCommand(qry, conector)
         'Dim drc As String
         Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)

@@ -1644,6 +1644,8 @@ Public Class Menu_Principal
                 TabControl1.SelectedTab = TabControl1.TabPages.Item(7)
                 Label21.Text = "REGISTRO DEL ALUMNO " + Label74.Text + " " + Label72.Text + " " + Label73.Text
 
+                Button35.Visible = False
+                Button36.Visible = True
                 conector.Close()
 
             End If

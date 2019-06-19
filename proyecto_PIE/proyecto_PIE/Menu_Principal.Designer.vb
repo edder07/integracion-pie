@@ -22,6 +22,7 @@ Partial Class Menu_Principal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Principal))
         Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -52,7 +53,6 @@ Partial Class Menu_Principal
         Dim DataGridViewCellStyle58 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle59 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle60 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Principal))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button100 = New System.Windows.Forms.Button()
@@ -350,6 +350,9 @@ Partial Class Menu_Principal
         Me.Button96 = New System.Windows.Forms.Button()
         Me.DataGridView9 = New System.Windows.Forms.DataGridView()
         Me.TabPage25 = New System.Windows.Forms.TabPage()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button101 = New System.Windows.Forms.Button()
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
         Me.Label108 = New System.Windows.Forms.Label()
@@ -365,9 +368,6 @@ Partial Class Menu_Principal
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button101 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -409,11 +409,11 @@ Partial Class Menu_Principal
         Me.TabPage24.SuspendLayout()
         CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage25.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -4518,6 +4518,46 @@ Partial Class Menu_Principal
         Me.TabPage25.Text = "TabPage25"
         Me.TabPage25.UseVisualStyleBackColor = True
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(3, 11)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(104, 101)
+        Me.PictureBox4.TabIndex = 84
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1124, 11)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(154, 101)
+        Me.PictureBox2.TabIndex = 83
+        Me.PictureBox2.TabStop = False
+        '
+        'Button101
+        '
+        Me.Button101.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Button101.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button101.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button101.FlatAppearance.BorderSize = 5
+        Me.Button101.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button101.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.Button101.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button101.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button101.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Button101.Image = CType(resources.GetObject("Button101.Image"), System.Drawing.Image)
+        Me.Button101.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button101.Location = New System.Drawing.Point(646, 513)
+        Me.Button101.Name = "Button101"
+        Me.Button101.Size = New System.Drawing.Size(124, 122)
+        Me.Button101.TabIndex = 81
+        Me.Button101.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button101.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button101.UseVisualStyleBackColor = False
+        '
         'Label106
         '
         Me.Label106.AutoSize = True
@@ -4674,46 +4714,6 @@ Partial Class Menu_Principal
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'Button101
-        '
-        Me.Button101.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button101.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button101.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button101.FlatAppearance.BorderSize = 5
-        Me.Button101.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button101.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.Button101.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button101.Font = New System.Drawing.Font("Rockwell", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button101.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button101.Image = CType(resources.GetObject("Button101.Image"), System.Drawing.Image)
-        Me.Button101.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button101.Location = New System.Drawing.Point(646, 513)
-        Me.Button101.Name = "Button101"
-        Me.Button101.Size = New System.Drawing.Size(124, 122)
-        Me.Button101.TabIndex = 81
-        Me.Button101.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button101.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button101.UseVisualStyleBackColor = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(1124, 11)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(154, 101)
-        Me.PictureBox2.TabIndex = 83
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(3, 11)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(104, 101)
-        Me.PictureBox4.TabIndex = 84
-        Me.PictureBox4.TabStop = False
-        '
         'Menu_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4782,11 +4782,11 @@ Partial Class Menu_Principal
         CType(Me.DataGridView9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage25.ResumeLayout(False)
         Me.TabPage25.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
