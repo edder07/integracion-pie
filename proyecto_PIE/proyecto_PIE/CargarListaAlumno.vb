@@ -64,8 +64,6 @@ Public Class CargarListaAlumno
 
 
         Catch
-
-
         End Try
     End Sub
 
@@ -81,7 +79,10 @@ Public Class CargarListaAlumno
             Menu_Principal.IdTipoFicha = dr("id_tipo")
             conector.Close()
 
+
+        Else
             conector.Close()
+
         End If
 
     End Sub

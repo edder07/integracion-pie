@@ -31,6 +31,8 @@ Public Class Menu_Principal
     Public idCurso As Integer
     Public IdUsuario As Integer
 
+
+
     Public id_tipo_ficha As Integer
 
 
@@ -216,7 +218,7 @@ Public Class Menu_Principal
             conector.Close()
 
             Dim cadena As String
-            cadena = String.Format("INSERT INTO apoderado VALUES ('" & TextBox7.Text & "', '" & TextBox8.Text & "', '" & TextBox9.Text & "','" & TextBox10.Text & "')")
+            cadena = String.Format("INSERT INTO apoderado VALUES ('" & TextBox7.Text & "', '" & TextBox8.Text & "', '" & TextBox9.Text & "','" & TextBox10.Text & "' , '" & ComboBox9.Text & "')")
 
             Dim insertar As New SqlCommand(cadena, conector)
             conector.Open()
@@ -838,6 +840,25 @@ Public Class Menu_Principal
         TextBox6.SelectionStart = TextBox6.TextLength + 1
     End Sub
 
+    Sub MostrarRutAlumno()
+
+        conector.Close()
+        conector.Open()
+        Dim qry As String = "select alumno.rut_alumno from alumno where alumno.estado= 'activo'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        'Dim drc As String
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sqlcmd)
+        Dim ds As DataSet = New DataSet()
+
+        Dim drc = sqlcmd.ExecuteReader
+        conector.Close()
+        da.Fill(ds)
+
+        ComboBox9.DataSource = ds.Tables(0)
+        ComboBox9.DisplayMember = "rut_alumno"
+        ComboBox9.SelectedItem = 0
+
+    End Sub
     Private Sub Button21_Click(sender As System.Object, e As System.EventArgs) Handles Button21.Click
 
         If (TextBox7.Text = "" Or TextBox8.Text = "" Or TextBox9.Text = "") Then
@@ -880,6 +901,7 @@ Public Class Menu_Principal
     End Sub
 
 
+
     Private Sub Button20_Click(sender As System.Object, e As System.EventArgs) Handles Button20.Click
         funcion_update_apoderado()
     End Sub
@@ -890,6 +912,7 @@ Public Class Menu_Principal
 
     Private Sub Button12_Click(sender As System.Object, e As System.EventArgs) Handles Button12.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
+        MostrarRutAlumno()
     End Sub
 
     Private Sub TextBox7_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox7.TextChanged
@@ -3599,5 +3622,16 @@ Public Class Menu_Principal
         FormEliminarAlumno.Enabled = True
         FormEliminarAlumno.Show()
         Me.Enabled = False
+    End Sub
+
+    Private Sub Button100_Click(sender As Object, e As EventArgs) Handles Button100.Click
+
+        CargarRutNombreContacto.Show()
+        CargarRutNombreContacto.Enabled = True
+        Me.Enabled = False
+    End Sub
+
+    Private Sub Button101_Click(sender As Object, e As EventArgs) Handles Button101.Click
+        TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
     End Sub
 End Class

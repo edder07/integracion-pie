@@ -103,6 +103,12 @@
     <Compile Include="CargarPorRut.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CargarRutNombreContacto.Designer.vb">
+      <DependentUpon>CargarRutNombreContacto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarRutNombreContacto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargarPorRut.resx">
       <DependentUpon>CargarPorRut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarRutNombreContacto.resx">
+      <DependentUpon>CargarRutNombreContacto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

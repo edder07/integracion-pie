@@ -97,6 +97,7 @@ Public Class CargarDiagnostico
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        conector.Close()
         Dim nombre_evaluador_1 As String
         Dim rut_evaluador_1 As String
         Dim profesion_evaluador_1 As String
@@ -235,11 +236,13 @@ Public Class CargarDiagnostico
 
 
             Else
+                conector.Close()
 
                 MsgBox("INTENTE NUEVAMENTE", MsgBoxStyle.Critical, "Atencion")
             End If
         Catch ex As Exception
             MsgBox("error" & vbCrLf & ex.Message)
+            conector.Close()
 
         End Try
         conector.Close()

@@ -21,13 +21,9 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-
-
         Menu_Principal.Enabled = True
         Menu_Principal.Show()
         Me.Close()
-
 
     End Sub
 
