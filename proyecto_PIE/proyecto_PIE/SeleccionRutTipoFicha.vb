@@ -147,7 +147,7 @@ Public Class SeleccionRutTipoFicha
     End Sub
     Sub obtener_datos_ficha()
         conector.Close()
-       
+
         Try
 
             conector.Close()
@@ -175,23 +175,50 @@ Public Class SeleccionRutTipoFicha
     End Sub
 
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Menu_Principal.RutDelAlumno = ComboBox1.Text
-        obtener_datos_ficha()
-        obtener_datos_alumno()
-        Menu_Principal.MostrarApoyo1()
-        Menu_Principal.MostrarApoyo2()
-        Menu_Principal.MostrarApoyo3()
-        Menu_Principal.MostrarApoyo4()
-        Menu_Principal.MostrarCursos()
-        Menu_Principal.MostrarEvaluador1()
-        Menu_Principal.MostrarEvaluador2()
-        Menu_Principal.MostrarEvaluador3()
-        Menu_Principal.MostrarEvaluador4()
-        Menu_Principal.MostrarEvaluador5()
 
-        Menu_Principal.Button35.Visible = False
-        Menu_Principal.Button36.Visible = True
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        conector.Close()
+
+        Try
+
+            conector.Close()
+            conector.Open()
+            Dim qry As String = "select ficha_diagnostico.rut_alumno, ficha_diagnostico.id_fichadiagnostico from ficha_diagnostico where ficha_diagnostico.rut_alumno = '" & ComboBox1.Text & "'"
+            Dim sqlcmd As New SqlCommand(qry, conector)
+            Dim dr As SqlDataReader
+            dr = sqlcmd.ExecuteReader
+            If dr.Read() Then
+
+                MsgBox("el alumno ya tiene una primera evaluacion", MsgBoxStyle.Critical, "Alerta")
+
+
+                conector.Close()
+            Else
+                Menu_Principal.RutDelAlumno = ComboBox1.Text
+                obtener_datos_ficha()
+                obtener_datos_alumno()
+                Menu_Principal.MostrarApoyo1()
+                Menu_Principal.MostrarApoyo2()
+                Menu_Principal.MostrarApoyo3()
+                Menu_Principal.MostrarApoyo4()
+                Menu_Principal.MostrarCursos()
+                Menu_Principal.MostrarEvaluador1()
+                Menu_Principal.MostrarEvaluador2()
+                Menu_Principal.MostrarEvaluador3()
+                Menu_Principal.MostrarEvaluador4()
+                Menu_Principal.MostrarEvaluador5()
+
+                Menu_Principal.Button35.Visible = False
+                Menu_Principal.Button36.Visible = True
+
+
+            End If
+        Catch ex As Exception
+            MsgBox("error" & vbCrLf & ex.Message)
+
+        End Try
+        conector.Close()
 
 
     End Sub

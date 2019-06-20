@@ -26,7 +26,6 @@ Partial Class FormCitaciones
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Button36 = New System.Windows.Forms.Button()
-        Me.Button35 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button48 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -64,7 +63,6 @@ Partial Class FormCitaciones
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Button36)
-        Me.TabPage1.Controls.Add(Me.Button35)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.Button48)
         Me.TabPage1.Controls.Add(Me.TextBox2)
@@ -89,25 +87,12 @@ Partial Class FormCitaciones
         Me.Button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button36.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button36.Image = CType(resources.GetObject("Button36.Image"), System.Drawing.Image)
-        Me.Button36.Location = New System.Drawing.Point(773, 186)
+        Me.Button36.Location = New System.Drawing.Point(773, 261)
         Me.Button36.Name = "Button36"
         Me.Button36.Size = New System.Drawing.Size(109, 135)
         Me.Button36.TabIndex = 190
         Me.Button36.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Guardar"
         Me.Button36.UseVisualStyleBackColor = True
-        '
-        'Button35
-        '
-        Me.Button35.FlatAppearance.BorderSize = 0
-        Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button35.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(778, 319)
-        Me.Button35.Name = "Button35"
-        Me.Button35.Size = New System.Drawing.Size(104, 134)
-        Me.Button35.TabIndex = 189
-        Me.Button35.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Modificar"
-        Me.Button35.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -310,6 +295,7 @@ Partial Class FormCitaciones
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormCitaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormCitaciones"
@@ -328,7 +314,6 @@ Partial Class FormCitaciones
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Button36 As Button
-    Friend WithEvents Button35 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Button48 As Button
     Friend WithEvents TextBox2 As TextBox

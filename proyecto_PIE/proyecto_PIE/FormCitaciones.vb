@@ -52,6 +52,8 @@ Public Class FormCitaciones
             conector.Close()
             MsgBox("CITACION INGRESADA EXITOSAMENTE", MsgBoxStyle.Information, "Operacion Exitosa")
             conector.Close()
+            Button48.Visible = True
+            Label5.Visible = True
 
         Catch ex As Exception
             MsgBox("Error Ingreso" & vbCrLf & ex.Message, MsgBoxStyle.Critical, "Atencion")
@@ -85,12 +87,20 @@ Public Class FormCitaciones
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
-        If TextBox1.Text <= 21 And TextBox1.Text >= 0 And TextBox2.Text <= 59 And TextBox2.Text >= 0 Then
-            funcion_insert_citacion()
-        Else
-            MsgBox("Error Ingreso verifique hora", MsgBoxStyle.Critical, "Atencion")
-        End If
 
+        If TextBox1.Text = "" And TextBox2.Text = "" Then
+            MsgBox("Error Ingreso verifique hora", MsgBoxStyle.Critical, "Atencion")
+
+        Else
+            If TextBox1.Text >= 21 Or TextBox1.Text < 0 Or TextBox2.Text >= 59 Or TextBox2.Text < 0 Then
+                MsgBox("Error Ingreso verifique hora", MsgBoxStyle.Critical, "Atencion")
+
+
+            Else
+                funcion_insert_citacion()
+
+            End If
+        End If
     End Sub
 
     Private Sub Button53_Click(sender As Object, e As EventArgs) Handles Button53.Click

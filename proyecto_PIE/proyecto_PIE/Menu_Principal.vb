@@ -123,6 +123,13 @@ Public Class Menu_Principal
 
     Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(2)
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+
     End Sub
 
     Private Sub Button14_Click(sender As System.Object, e As System.EventArgs) Handles Button14.Click
@@ -888,13 +895,28 @@ Public Class Menu_Principal
                 conector.Close()
 
             Else
-                Try
-                    funcion_insert_apoderado()
+                conector.Close()
+                conector.Open()
+                Dim qry1 As String = "select apoderado.rut_fk_alumno from apoderado where apoderado.rut_fk_alumno='" & ComboBox9.Text & "'"
+                Dim sqlcmd1 As New SqlCommand(qry1, conector)
+                Dim dr1 As SqlDataReader
+                dr1 = sqlcmd1.ExecuteReader
+                If dr1.Read() Then
 
-                Catch ex As Exception
-                    MsgBox("error" & vbCrLf & ex.Message)
+
+                    MsgBox("No puede haber un alumnos con dos apoderados ", MsgBoxStyle.Information, "Operacion Exitosa")
+
+
                     conector.Close()
-                End Try
+                Else
+                    Try
+                        funcion_insert_apoderado()
+
+                    Catch ex As Exception
+                        MsgBox("error" & vbCrLf & ex.Message)
+                        conector.Close()
+                    End Try
+                End If
             End If
         End If
 
@@ -913,6 +935,11 @@ Public Class Menu_Principal
     Private Sub Button12_Click(sender As System.Object, e As System.EventArgs) Handles Button12.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(3)
         MostrarRutAlumno()
+        TextBox7.Text = ""
+        TextBox8.Text = ""
+        TextBox9.Text = ""
+        TextBox10.Text = ""
+
     End Sub
 
     Private Sub TextBox7_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox7.TextChanged
@@ -948,6 +975,8 @@ Public Class Menu_Principal
 
     Private Sub Button10_Click(sender As System.Object, e As System.EventArgs) Handles Button10.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(4)
+        TextBox11.Text = ""
+        TextBox12.Text = ""
     End Sub
 
     Private Sub Button29_Click(sender As System.Object, e As System.EventArgs) Handles Button29.Click
@@ -964,6 +993,9 @@ Public Class Menu_Principal
 
     Private Sub Button9_Click(sender As System.Object, e As System.EventArgs) Handles Button9.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(5)
+        TextBox13.Text = ""
+        TextBox14.Text = ""
+        TextBox15.Text = ""
     End Sub
 
     Private Sub Button33_Click(sender As System.Object, e As System.EventArgs) Handles Button33.Click
@@ -984,6 +1016,9 @@ Public Class Menu_Principal
 
     Private Sub Button19_Click(sender As System.Object, e As System.EventArgs) Handles Button19.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(6)
+        TextBox16.Text = ""
+        TextBox17.Text = ""
+
     End Sub
 
     Private Sub TextBox11_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox11.TextChanged
@@ -3618,6 +3653,8 @@ Public Class Menu_Principal
         FormCitaciones.Show()
         FormCitaciones.Enabled = True
         Me.Enabled = False
+        FormCitaciones.Button48.Visible = False
+        FormCitaciones.Label5.Visible = False
     End Sub
 
     Private Sub Button99_Click(sender As Object, e As EventArgs) Handles Button99.Click
@@ -3635,5 +3672,120 @@ Public Class Menu_Principal
 
     Private Sub Button101_Click(sender As Object, e As EventArgs) Handles Button101.Click
         TabControl1.SelectedTab = TabControl1.TabPages.Item(0)
+    End Sub
+
+    Private Sub Button102_Click(sender As Object, e As EventArgs) Handles Button102.Click
+        conector.Close()
+        Dim fechadenacimiento As Date
+        conector.Open()
+        Dim qry As String = "select alumno.nombres_alumno, alumno.apellido_paterno, alumno.apellido_materno,alumno.fono_alumno, alumno.direccion_alumno , alumno.sexo_alumno , alumno.fecha_nacimiento , alumno.nacionalidad_alumno from alumno where alumno.rut_alumno='" & TextBox1.Text & "'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        Dim dr As SqlDataReader
+        dr = sqlcmd.ExecuteReader
+        If dr.Read() Then
+
+            TextBox2.Text = dr("nombres_alumno")
+            TextBox4.Text = dr("apellido_paterno")
+            TextBox3.Text = dr("apellido_materno")
+            TextBox5.Text = dr("fono_alumno")
+            TextBox6.Text = dr("direccion_alumno")
+            ComboBox1.Text = dr("sexo_alumno")
+            fechadenacimiento = dr("fecha_nacimiento")
+            MonthCalendar1.SetDate(fechadenacimiento)
+
+            ComboBox2.Text = dr("nacionalidad_alumno")
+
+            conector.Close()
+            conector.Close()
+
+        Else
+
+            MsgBox("Rut NO existe", MsgBoxStyle.Critical, "Alerta")
+        End If
+    End Sub
+
+    Private Sub Button103_Click(sender As Object, e As EventArgs) Handles Button103.Click
+        conector.Close()
+        Dim fechadenacimiento As Date
+        conector.Open()
+        Dim qry As String = "select apoderado.nombre_apoderado, apoderado.fono_apoderado, apoderado.direccion_apoderado , apoderado.rut_fk_alumno from apoderado where apoderado.rut_apoderado='" & TextBox7.Text & "'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        Dim dr As SqlDataReader
+        dr = sqlcmd.ExecuteReader
+        If dr.Read() Then
+
+            TextBox8.Text = dr("nombre_apoderado")
+            TextBox9.Text = dr("fono_apoderado")
+            TextBox10.Text = dr("direccion_apoderado")
+            ComboBox9.Text = dr("rut_fk_alumno")
+
+
+            conector.Close()
+            conector.Close()
+
+        Else
+
+            MsgBox("Rut NO existe", MsgBoxStyle.Critical, "Alerta")
+        End If
+    End Sub
+
+    Private Sub Button104_Click(sender As Object, e As EventArgs) Handles Button104.Click
+        conector.Close()
+        Dim fechadenacimiento As Date
+        conector.Open()
+        Dim qry As String = "select profesional_apoyo.nombre_apoyo from profesional_apoyo where profesional_apoyo.rut_apoyo='" & TextBox12.Text & "'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        Dim dr As SqlDataReader
+        dr = sqlcmd.ExecuteReader
+        If dr.Read() Then
+
+            TextBox11.Text = dr("nombre_apoyo")
+
+            conector.Close()
+
+        Else
+
+            MsgBox("Rut NO existe", MsgBoxStyle.Critical, "Alerta")
+        End If
+    End Sub
+
+    Private Sub Button105_Click(sender As Object, e As EventArgs) Handles Button105.Click
+        conector.Close()
+        conector.Open()
+        Dim qry As String = "select profesional_evaluador.nombre_evaluador, profesional_evaluador.profesion from profesional_evaluador where profesional_evaluador.rut_evaluador= '" & TextBox14.Text & "'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        Dim dr As SqlDataReader
+        dr = sqlcmd.ExecuteReader
+        If dr.Read() Then
+
+            TextBox13.Text = dr("nombre_evaluador")
+            TextBox15.Text = dr("profesion")
+
+            conector.Close()
+
+        Else
+
+            MsgBox("Rut NO existe", MsgBoxStyle.Critical, "Alerta")
+        End If
+    End Sub
+
+    Private Sub Button106_Click(sender As Object, e As EventArgs) Handles Button106.Click
+        conector.Close()
+        Dim fechadenacimiento As Date
+        conector.Open()
+        Dim qry As String = "select tipo_ficha.descripcion_tipoficha from tipo_ficha where tipo_ficha.nombre_tipo ='" & TextBox17.Text & "'"
+        Dim sqlcmd As New SqlCommand(qry, conector)
+        Dim dr As SqlDataReader
+        dr = sqlcmd.ExecuteReader
+        If dr.Read() Then
+
+            TextBox16.Text = dr("descripcion_tipoficha")
+
+            conector.Close()
+
+        Else
+
+            MsgBox("No hay resultados con ese nombre", MsgBoxStyle.Critical, "Alerta")
+        End If
     End Sub
 End Class

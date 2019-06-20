@@ -1,4 +1,4 @@
-﻿Imports System.Runtime.InteropServices
+﻿
 Imports System.Data.SqlClient
 
 Public Class Form1
