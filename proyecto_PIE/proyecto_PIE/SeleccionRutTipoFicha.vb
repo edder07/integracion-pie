@@ -313,6 +313,9 @@ Public Class SeleccionRutTipoFicha
                 Menu_Principal.TabControl1.SelectedIndex = 7
                 Menu_Principal.Label21.Text = "COMPLETE LOS CAMPOS PARA LA FICHA " + ComboBox2.Text + vbCr + "PARA LA REEVALUACION DEL ALUMNO " + NombreCompletoAlumno
 
+                Menu_Principal.Button35.Visible = False
+                Menu_Principal.Button36.Visible = True
+
                 Me.Hide()
                 TipoEvaluacion.Hide()
                 TipoEvaluacion.Close()
@@ -346,8 +349,7 @@ Public Class SeleccionRutTipoFicha
         obtener_datos_alumnos()
         reevaluar_select()
 
-        Menu_Principal.Button35.Visible = False
-        Menu_Principal.Button36.Visible = True
+
         conector.Close()
 
     End Sub
