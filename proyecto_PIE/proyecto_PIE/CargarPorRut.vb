@@ -52,7 +52,7 @@ Public Class CargarPorRut
 
         Try
 
-            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" & ComboBox1.Text & "'", conector)
+            Dim da As New SqlDataAdapter("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" & ComboBox1.Text & "' order by ficha_diagnostico.fecha_emision  asc", conector)
             Dim ds As New DataSet
             conector.Open()
 
@@ -68,15 +68,18 @@ Public Class CargarPorRut
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         Try
+            rut_para_data = ""
+            tipo_ficha_para_data = ""
             rut_para_data = DataGridView1.Rows(e.RowIndex).Cells("Rut del Alumno").Value.ToString()
             fecha_emision_para_data = DataGridView1.Rows(e.RowIndex).Cells("Fecha Diagnostico").Value.ToString()
             tipo_ficha_para_data = DataGridView1.Rows(e.RowIndex).Cells("Nombre Diagnostico").Value.ToString()
 
-
-
         Catch
-
-
+            rut_para_data = ""
+            tipo_ficha_para_data = ""
+            rut_para_data = DataGridView1.Rows(e.RowIndex).Cells("Rut del Alumno").Value.ToString()
+            fecha_emision_para_data = DataGridView1.Rows(e.RowIndex).Cells("Fecha Diagnostico").Value.ToString()
+            tipo_ficha_para_data = DataGridView1.Rows(e.RowIndex).Cells("Nombre Diagnostico").Value.ToString()
         End Try
     End Sub
 
@@ -92,6 +95,8 @@ Public Class CargarPorRut
             Menu_Principal.IdTipoFicha = dr("id_tipo")
             conector.Close()
 
+            conector.Close()
+        Else
             conector.Close()
         End If
 
@@ -148,6 +153,7 @@ Public Class CargarPorRut
         Dim puntajex_5 As String
 
         Try
+            conector.Close()
             conector.Open()
             Dim qry As String = "select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" & rut_para_data & "'  and ficha_diagnostico.fecha_emision = '" & fecha_emision_para_data & "' and ficha_diagnostico.id_tipoficha = " & Menu_Principal.IdTipoFicha & "
   
@@ -236,12 +242,12 @@ Public Class CargarPorRut
                 Menu_Principal.Button36.Visible = False
 
             Else
-
+                conector.Close()
                 MsgBox("INTENTE NUEVAMENTE", MsgBoxStyle.Critical, "Atencion")
             End If
         Catch ex As Exception
             MsgBox("error" & vbCrLf & ex.Message)
-
+            conector.Close()
         End Try
         conector.Close()
     End Sub
@@ -252,6 +258,7 @@ Public Class CargarPorRut
         TipoBuscador.Show()
         Menu_Principal.Enabled = False
         Me.Close()
+        conector.Close()
 
     End Sub
 

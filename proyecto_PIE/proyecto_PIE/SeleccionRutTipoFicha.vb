@@ -195,6 +195,7 @@ Public Class SeleccionRutTipoFicha
 
                 conector.Close()
             Else
+                check_falso()
                 Menu_Principal.RutDelAlumno = ComboBox1.Text
                 obtener_datos_ficha()
                 obtener_datos_alumno()
@@ -209,7 +210,9 @@ Public Class SeleccionRutTipoFicha
                 Menu_Principal.MostrarEvaluador4()
                 Menu_Principal.MostrarEvaluador5()
 
+                Menu_Principal.Button35.Enabled = False
                 Menu_Principal.Button35.Visible = False
+                Menu_Principal.Button36.Enabled = True
                 Menu_Principal.Button36.Visible = True
 
 
@@ -221,6 +224,14 @@ Public Class SeleccionRutTipoFicha
         conector.Close()
 
 
+    End Sub
+    Sub check_falso()
+        Menu_Principal.CheckBox1.Checked = False
+        Menu_Principal.CheckBox2.Checked = False
+        Menu_Principal.CheckBox3.Checked = False
+        Menu_Principal.CheckBox4.Checked = False
+        Menu_Principal.CheckBox5.Checked = False
+        Menu_Principal.CheckBox6.Checked = False
     End Sub
 
     Sub reevaluar_select()
@@ -313,7 +324,9 @@ Public Class SeleccionRutTipoFicha
                 Menu_Principal.TabControl1.SelectedIndex = 7
                 Menu_Principal.Label21.Text = "COMPLETE LOS CAMPOS PARA LA FICHA " + ComboBox2.Text + vbCr + "PARA LA REEVALUACION DEL ALUMNO " + NombreCompletoAlumno
 
+                Menu_Principal.Button35.Enabled = False
                 Menu_Principal.Button35.Visible = False
+                Menu_Principal.Button36.Enabled = True
                 Menu_Principal.Button36.Visible = True
 
                 Me.Hide()
@@ -333,6 +346,7 @@ Public Class SeleccionRutTipoFicha
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        check_falso()
         Menu_Principal.RutDelAlumno = ComboBox1.Text
         Menu_Principal.MostrarApoyo1()
         Menu_Principal.MostrarApoyo2()

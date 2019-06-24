@@ -25,7 +25,7 @@ Public Class CargarRutNombreContacto
 
         Try
 
-            Dim da As New SqlDataAdapter("select alumno.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombre Alumno' , alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno' from alumno where alumno.estado =  'activo'", conector)
+            Dim da As New SqlDataAdapter("select alumno.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombre Alumno' , alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno' from apoderado, alumno where alumno.estado =  'activo' and apoderado.rut_fk_alumno = alumno.rut_alumno", conector)
             Dim ds As New DataSet
             conector.Open()
 
@@ -40,19 +40,19 @@ Public Class CargarRutNombreContacto
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        rut_alumno_contacto = "-"
+
         Try
             rut_alumno_contacto = "-"
             rut_alumno_contacto = DataGridView1.Rows(e.RowIndex).Cells("Rut del Alumno").Value.ToString()
 
         Catch
-
-
+            rut_alumno_contacto = "-"
+            rut_alumno_contacto = DataGridView1.Rows(e.RowIndex).Cells("Rut del Alumno").Value.ToString()
         End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        conector.Close()
         Dim rut_alumno As String
         Dim nombre_alumno As String
         Dim apellido_paterno As String
@@ -105,12 +105,12 @@ Public Class CargarRutNombreContacto
 
 
             Else
-
+                conector.Close()
                 MsgBox("INTENTE NUEVAMENTE", MsgBoxStyle.Critical, "Atencion")
             End If
         Catch ex As Exception
             MsgBox("error" & vbCrLf & ex.Message)
-
+            conector.Close()
         End Try
     End Sub
 
@@ -118,6 +118,7 @@ Public Class CargarRutNombreContacto
         Menu_Principal.Enabled = True
         Menu_Principal.Show()
         Me.Close()
+        conector.Close()
 
     End Sub
 End Class

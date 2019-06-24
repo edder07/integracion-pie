@@ -256,6 +256,7 @@ Public Class CargarDiagnostico
         TipoBuscador.Show()
         Menu_Principal.Enabled = False
         Me.Close()
+        conector.Close()
 
 
 
@@ -264,12 +265,17 @@ Public Class CargarDiagnostico
     End Sub
 
     Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        conector.Close()
         Try
+            rut_para_data = ""
             rut_para_data = DataGridView1.Rows(e.RowIndex).Cells("Rut Alumno").Value.ToString()
             fecha_emision_para_data = DataGridView1.Rows(e.RowIndex).Cells("Fecha Diagnostico").Value.ToString()
 
         Catch
             rut_para_data = ""
+            rut_para_data = DataGridView1.Rows(e.RowIndex).Cells("Rut Alumno").Value.ToString()
+            fecha_emision_para_data = DataGridView1.Rows(e.RowIndex).Cells("Fecha Diagnostico").Value.ToString()
+
 
         End Try
     End Sub
