@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "proyecto_PIE", "proyecto_PIE\proyecto_PIE.vbproj", "{98155049-9EAD-424F-ADF9-FF69150F29AA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "integracion", "integracion\integracion.vdproj", "{424B81EF-E536-4EEE-8913-F20D3B56C573}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,8 @@ Global
 		{98155049-9EAD-424F-ADF9-FF69150F29AA}.Debug|x86.Build.0 = Debug|x86
 		{98155049-9EAD-424F-ADF9-FF69150F29AA}.Release|x86.ActiveCfg = Release|x86
 		{98155049-9EAD-424F-ADF9-FF69150F29AA}.Release|x86.Build.0 = Release|x86
+		{424B81EF-E536-4EEE-8913-F20D3B56C573}.Debug|x86.ActiveCfg = Debug
+		{424B81EF-E536-4EEE-8913-F20D3B56C573}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
