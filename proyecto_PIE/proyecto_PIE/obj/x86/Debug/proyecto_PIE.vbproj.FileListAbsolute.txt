@@ -18,16 +18,12 @@ C:\Users\Roy\Documents\Visual Studio 2010\Projects\proyecto_PIE\proyecto_PIE\obj
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.exe
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.pdb
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\proyecto_PIE.xml
-C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
-C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbprojAssemblyReference.cache
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.Form1.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.Menu_Principal.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.Resources.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.SeleccionRutTipoFicha.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.TipoEvaluacion.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbproj.GenerateResource.cache
-C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbproj.CoreCompileInputs.cache
-C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbproj.CopyComplete
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.exe
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.xml
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.pdb
@@ -60,3 +56,4 @@ C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.FormEliminarAlumno.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.FormCitaciones.resources
 C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\Logeo_Inicio.CargarRutNombreContacto.resources
+C:\Users\Roy\Documents\GitHub\integracion-pie\proyecto_PIE\proyecto_PIE\obj\x86\Debug\proyecto_PIE.vbprojResolveAssemblyReference.cache

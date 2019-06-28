@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Module datos_conn
-    Public servidor = "HP_ROY\SQLEXPRESS"
+    Public servidor = "DESKTOP-ONN8J9K"
     Public puerto = "1433"
     Public bd = "integracion_pie"
     Public user = "sa"
