@@ -3,6 +3,7 @@ package proyectopie;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /*
@@ -375,11 +376,16 @@ public class FrameAlumno extends javax.swing.JFrame {
        String nombre_alumno = txtnombre.getText();
        String apellido_paterno = txtapellidop.getText();
        String apellido_materno = txtapellidom.getText();
-       String fono_string = txtfono.getText();      
-       Integer fono_alumno = Integer.parseInt(fono_string);
+       int fono_alumno = Integer.parseInt(txtfono.getText());   
        String direccion_alumno = txtdireccion.getText();
        String sexo_alumno = (String) combosexo.getSelectedItem();
        String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
+       
+         int año = calendarnacimiento.getCalendar().get(Calendar.YEAR);
+         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH);
+         int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
+
+          String fecha_nacimiento =(año+"-"+mes+"-"+dia);
        
  
         if(rut_alumno.isEmpty() ){
@@ -390,7 +396,8 @@ public class FrameAlumno extends javax.swing.JFrame {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-             st.executeUpdate("INSERT INTO alumno VALUES ('" + rut_alumno + "', '" + nombre_alumno + "', '" + apellido_paterno + "','" + apellido_materno + "','" + fono_alumno  +"','" + direccion_alumno + "','" + calendarnacimiento.getDate() +"','" + sexo_alumno +"','" + nacionalidad_alumno +"' , 'activo')");
+             st.executeUpdate("INSERT INTO alumno VALUES ('" + rut_alumno + "', '" + nombre_alumno + "', '" + apellido_paterno + "','" + apellido_materno + "','" + fono_alumno  +"','" + direccion_alumno + "','" + fecha_nacimiento +"','" + sexo_alumno +"','" + nacionalidad_alumno +"' , 'activo')");
+           JOptionPane.showMessageDialog(null, "Alumno ingresado correctamente");
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
