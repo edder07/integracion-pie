@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD:Java/ProyectoPIE/nbproject/private/private.xml
         <group>
             <file>file:/C:/Users/56962/Documents/NetBeansProjects/ProyectoPIE/src/proyectopie/FrameCargarLista.java</file>
             <file>file:/C:/Users/56962/Documents/NetBeansProjects/ProyectoPIE/src/proyectopie/FrameApoyo.java</file>
@@ -36,5 +37,8 @@
             <file>file:/C:/Users/56962/Documents/NetBeansProjects/ProyectoPIE/src/proyectopie/FrameAlumno.java</file>
             <file>file:/C:/Users/56962/Documents/NetBeansProjects/ProyectoPIE/src/proyectopie/FrameEliminarAlumno.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 89bf07d9396934a72a0051f20c2740b0e84fd1d7:Java/JavaApplication1/nbproject/private/private.xml
     </open-files>
 </project-private>
