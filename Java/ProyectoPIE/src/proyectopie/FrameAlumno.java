@@ -140,6 +140,11 @@ public class FrameAlumno extends javax.swing.JFrame {
         });
 
         jButton4.setText("Limpiar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -330,13 +335,21 @@ public class FrameAlumno extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       String rut_alumno = txtrut.getText();
+      String rut_alumno = txtrut.getText();
        String nombre_alumno = txtnombre.getText();
        String apellido_paterno = txtapellidop.getText();
        String apellido_materno = txtapellidom.getText();
-       String fono_string = txtfono.getText();      
-       Integer fono_alumno = Integer.parseInt(fono_string);
+       int fono_alumno = Integer.parseInt(txtfono.getText());   
        String direccion_alumno = txtdireccion.getText();
+       String sexo_alumno = (String) combosexo.getSelectedItem();
+       String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
+       
+         int año = calendarnacimiento.getCalendar().get(Calendar.YEAR);
+         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH);
+         int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
+
+          String fecha_nacimiento =(año+"-"+mes+"-"+dia);
+       
  
         if(rut_alumno.isEmpty() ){
           
@@ -346,24 +359,8 @@ public class FrameAlumno extends javax.swing.JFrame {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-            ResultSet rs = st.executeQuery("select alumno.nombres_alumno, alumno.apellido_paterno, alumno.apellido_materno,alumno.fono_alumno, alumno.direccion_alumno , alumno.sexo_alumno , alumno.fecha_nacimiento , alumno.nacionalidad_alumno from alumno where alumno.rut_alumno='" + rut_alumno +"'");
-            if (rs.next()){
-                
-                txtnombre.setText(rs.getString("nombres_Alumno")) ;
-                txtapellidop.setText(rs.getString("apellido_paterno"));
-                txtapellidom.setText(rs.getString("apellido_materno"));
-                txtfono.setText(rs.getString("fono_alumno"));
-                txtdireccion.setText(rs.getString("direccion_alumno"));
-                combosexo.setSelectedItem(rs.getString("sexo_alumno"));
-                combonacionalidad.setSelectedItem(rs.getString("nacionalidad_alumno"));
-                calendarnacimiento.setDate(rs.getDate("fecha_nacimiento"));
-                
-                   
-            } else{
-                txtrut.setText("");
-              
-                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
-            }
+             st.executeUpdate("UPDATE alumno SET nombres_alumno = '" + nombre_alumno +"' , apellido_paterno ='" + apellido_paterno + "',apellido_materno = '" + apellido_materno +"',fono_alumno = " + fono_alumno +", direccion_alumno = '" + direccion_alumno +"', fecha_nacimiento = '" + fecha_nacimiento +"' , sexo_alumno = '" + sexo_alumno +"', nacionalidad_alumno = '" + nacionalidad_alumno + "' WHERE alumno.rut_alumno = '" + rut_alumno +"'");
+           JOptionPane.showMessageDialog(null, "Alumno Actualizado correctamente");
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -404,6 +401,18 @@ public class FrameAlumno extends javax.swing.JFrame {
         } 
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        txtrut.setText("");
+          txtnombre.setText("");
+            txtfono.setText("");
+              txtdireccion.setText("");
+                txtapellidop.setText("");
+                  txtapellidom.setText("");
+                  combosexo.setSelectedIndex(0);
+                  combonacionalidad.setSelectedIndex(0);
+  
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
