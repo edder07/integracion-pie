@@ -382,7 +382,7 @@ public class FrameAlumno extends javax.swing.JFrame {
          int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH);
          int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
 
-          String fecha_nacimiento =(año+"-"+mes+"-"+dia);
+         String fecha_nacimiento =(año+"-"+mes+"-"+dia);
        
  
         if(rut_alumno.isEmpty() ){

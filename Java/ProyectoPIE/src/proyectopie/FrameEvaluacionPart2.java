@@ -1,5 +1,9 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,8 +22,110 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     public FrameEvaluacionPart2() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_ev1();
+         cargar_combo_ev2();
+         cargar_combo_ev3();
+         cargar_combo_ev4();
+         cargar_combo_ev5();
     }
-
+    
+        void cargar_combo_ev1() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador "); 
+            comboev1.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev1.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        
+        void cargar_combo_ev2() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador "); 
+            comboev2.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev2.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        
+        void cargar_combo_ev3() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador "); 
+            comboev3.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev3.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        void cargar_combo_ev4() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador "); 
+            comboev4.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev4.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        void cargar_combo_ev5() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador "); 
+            comboev5.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev5.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,11 +140,11 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        jComboBox3 = new javax.swing.JComboBox();
-        jComboBox4 = new javax.swing.JComboBox();
-        jComboBox5 = new javax.swing.JComboBox();
+        comboev1 = new javax.swing.JComboBox();
+        comboev2 = new javax.swing.JComboBox();
+        comboev3 = new javax.swing.JComboBox();
+        comboev4 = new javax.swing.JComboBox();
+        comboev5 = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
@@ -60,18 +166,18 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Ingrese Evaluador 5");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboev1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboev2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboev3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboev4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        comboev5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboev5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                comboev5ActionPerformed(evt);
             }
         });
 
@@ -79,6 +185,11 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -102,23 +213,23 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboev2, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboev3, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboev4, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboev5, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboev1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addComponent(jLabel7)))
@@ -138,23 +249,23 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboev1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboev2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboev3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboev4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboev5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,9 +276,9 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void comboev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboev5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_comboev5ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
   FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
@@ -180,6 +291,122 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionPart2.this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    void obtener_datos_evaluador_combobox(){
+        String cev1=  (String)comboev1.getSelectedItem().toString();
+        String cev2=  (String)comboev2.getSelectedItem().toString();
+        String cev3=  (String)comboev3.getSelectedItem().toString();
+        String cev4=  (String)comboev4.getSelectedItem().toString();
+        String cev5=  (String)comboev5.getSelectedItem().toString();
+    
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + cev1 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_ev = rs.getString("rut_evaluador");
+                String profesion_ev = rs.getString("profesion");
+                int id_ev = rs.getInt("id_evaluador") ;
+                FrameEvaluacionPart4.id_profesional_evaluador_1 = id_ev;
+                 FrameEvaluacionPart4.rut_profesional_evaluador_1 = rut_ev;
+                  FrameEvaluacionPart4.profesion_profesional_evaluador_1 = profesion_ev;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + cev2 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_ev = rs.getString("rut_evaluador");
+                String profesion_ev = rs.getString("profesion");
+                int id_ev = rs.getInt("id_evaluador") ;
+                FrameEvaluacionPart4.id_profesional_evaluador_2 = id_ev;
+                 FrameEvaluacionPart4.rut_profesional_evaluador_2 = rut_ev;
+                  FrameEvaluacionPart4.profesion_profesional_evaluador_2 = profesion_ev;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + cev3 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_ev = rs.getString("rut_evaluador");
+                String profesion_ev = rs.getString("profesion");
+                int id_ev = rs.getInt("id_evaluador") ;
+                FrameEvaluacionPart4.id_profesional_evaluador_3 = id_ev;
+                 FrameEvaluacionPart4.rut_profesional_evaluador_3 = rut_ev;
+                  FrameEvaluacionPart4.profesion_profesional_evaluador_3 = profesion_ev;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + cev4 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_ev = rs.getString("rut_evaluador");
+                String profesion_ev = rs.getString("profesion");
+                int id_ev = rs.getInt("id_evaluador") ;
+                FrameEvaluacionPart4.id_profesional_evaluador_4 = id_ev;
+                 FrameEvaluacionPart4.rut_profesional_evaluador_4 = rut_ev;
+                  FrameEvaluacionPart4.profesion_profesional_evaluador_4 = profesion_ev;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador, profesional_evaluador.profesion , profesional_evaluador.id_evaluador from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + cev5 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_ev = rs.getString("rut_evaluador");
+                String profesion_ev = rs.getString("profesion");
+                int id_ev = rs.getInt("id_evaluador") ;
+                FrameEvaluacionPart4.id_profesional_evaluador_5 = id_ev;
+                 FrameEvaluacionPart4.rut_profesional_evaluador_5 = rut_ev;
+                  FrameEvaluacionPart4.profesion_profesional_evaluador_5 = profesion_ev;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+    }
+    
+    void obtener_nombre_evaluador(){
+        String e1=  (String)comboev1.getSelectedItem().toString();
+        String e2=  (String)comboev2.getSelectedItem().toString();
+        String e3=  (String)comboev3.getSelectedItem().toString();
+        String e4=  (String)comboev4.getSelectedItem().toString();
+        String e5=  (String)comboev5.getSelectedItem().toString();
+        
+        FrameEvaluacionPart4.nombre_profesional_evaluador_1 = e1;
+        FrameEvaluacionPart4.nombre_profesional_evaluador_2 = e2;
+        FrameEvaluacionPart4.nombre_profesional_evaluador_3 = e3;
+        FrameEvaluacionPart4.nombre_profesional_evaluador_4 = e4;
+        FrameEvaluacionPart4.nombre_profesional_evaluador_5 = e5;
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      
+        obtener_nombre_evaluador();
+        obtener_datos_evaluador_combobox();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,13 +444,13 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox comboev1;
+    private javax.swing.JComboBox comboev2;
+    private javax.swing.JComboBox comboev3;
+    private javax.swing.JComboBox comboev4;
+    private javax.swing.JComboBox comboev5;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

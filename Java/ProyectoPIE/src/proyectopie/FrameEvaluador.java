@@ -1,5 +1,10 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -33,9 +38,9 @@ public class FrameEvaluador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtrutevaluador = new javax.swing.JTextField();
+        txtnombreevaluador = new javax.swing.JTextField();
+        txtprofesionevaluador = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -58,20 +63,40 @@ public class FrameEvaluador extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel4.setText("INGRESE PROFESION DEL EVALUADOR");
 
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtrutevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombreevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtprofesionevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Modificar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Limpiar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -91,7 +116,7 @@ public class FrameEvaluador extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtprofesionevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(62, 62, 62)
@@ -99,13 +124,13 @@ public class FrameEvaluador extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2)
                                     .addGap(30, 30, 30)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtrutevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(jButton1))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtnombreevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jLabel4)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(13, 13, 13)
@@ -131,18 +156,18 @@ public class FrameEvaluador extends javax.swing.JFrame {
                         .addGap(92, 92, 92)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtrutevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnombreevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtprofesionevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,6 +190,95 @@ public class FrameEvaluador extends javax.swing.JFrame {
     frame3.setVisible(true);                                                                                                                
     FrameEvaluador.this.dispose();
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String rut_evaluador = txtrutevaluador.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
+ 
+        if(rut_evaluador.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador, profesional_evaluador.profesion from profesional_evaluador where profesional_evaluador.rut_evaluador= '" + rut_evaluador +"'");
+            if (rs.next()){
+                
+                txtnombreevaluador.setText(rs.getString("nombre_evaluador")) ;
+                txtprofesionevaluador.setText(rs.getString("profesion")) ;
+               
+                
+                   
+            } else{
+                            
+                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     
+        String rut_evaluador = txtrutevaluador.getText();
+        String nombre_evaluador = txtnombreevaluador.getText();
+        String profesion_evaluador = txtprofesionevaluador.getText();
+      
+ 
+        if(rut_evaluador.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("INSERT INTO profesional_evaluador (rut_evaluador,nombre_evaluador,profesion,estado) VALUES ('" + rut_evaluador +"', '" + nombre_evaluador +"','" + profesion_evaluador +"','activo')");
+           JOptionPane.showMessageDialog(null, "Profesional ingresado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+     txtrutevaluador.setText("");
+     txtnombreevaluador.setText("");
+     txtprofesionevaluador.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      
+        String rut_evaluador = txtrutevaluador.getText();
+        String nombre_evaluador = txtnombreevaluador.getText();
+        String profesion_evaluador = txtprofesionevaluador.getText();
+ 
+        if(rut_evaluador.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("UPDATE profesional_evaluador SET nombre_evaluador = '" + nombre_evaluador +"' , profesion ='" + profesion_evaluador +"' , estado = 'activo'  WHERE rut_evaluador = '" + rut_evaluador +"'");
+           JOptionPane.showMessageDialog(null, "Profesional Actualizado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,8 +325,8 @@ public class FrameEvaluador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtnombreevaluador;
+    private javax.swing.JTextField txtprofesionevaluador;
+    private javax.swing.JTextField txtrutevaluador;
     // End of variables declaration//GEN-END:variables
 }

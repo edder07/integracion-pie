@@ -156,6 +156,21 @@ public class logeo extends javax.swing.JFrame {
    
     }//GEN-LAST:event_jButton1MouseClicked
 
+    void obtener_id_usuario(){
+        String usuario = txtusuario.getText();
+         ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select usuario.id_usuario from usuario where usuario.nombre_usuario = '" + usuario +"'");
+            if (rs.next()){
+                int id_u = rs.getInt("id_usuario") ;
+                 FrameEvaluacionPart4.id_usuario = id_u;      
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          String usuario = txtusuario.getText();
          String password=txtpass.getText();
@@ -169,6 +184,7 @@ public class logeo extends javax.swing.JFrame {
         try{
             ResultSet rs = st.executeQuery("select usuario.nombre_usuario , usuario.nombre_completo_usuario  from usuario where nombre_usuario = '" + usuario + "' and pass='" + password + "' and usuario.estado = 'activo'");
             if (rs.next()){
+                obtener_id_usuario();
                 MenuPrincipal frame = new MenuPrincipal(); 
                 frame.setVisible(true);                                                                                                                
                 logeo.this.dispose();        

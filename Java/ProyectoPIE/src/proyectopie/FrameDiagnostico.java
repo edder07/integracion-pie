@@ -1,5 +1,10 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -32,8 +37,8 @@ public class FrameDiagnostico extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtnombrediagnostico = new javax.swing.JTextField();
+        txtdescripciondiagnostico = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -53,18 +58,40 @@ public class FrameDiagnostico extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel3.setText("INGRESE DESCRIPCION DEL DIAGNOSTICO");
 
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombrediagnostico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtdescripciondiagnostico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Modificar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Limpiar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
@@ -88,13 +115,13 @@ public class FrameDiagnostico extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(30, 30, 30)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtnombrediagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtdescripciondiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(13, 13, 13)
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,13 +143,13 @@ public class FrameDiagnostico extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(79, 79, 79)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnombrediagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtdescripciondiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,6 +172,90 @@ public class FrameDiagnostico extends javax.swing.JFrame {
     frame3.setVisible(true);                                                                                                                
     FrameDiagnostico.this.dispose();
     }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String nombre_diagnostico = txtnombrediagnostico.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
+ 
+        if(nombre_diagnostico.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar Nombre del diagnostico","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select tipo_ficha.descripcion_tipoficha from tipo_ficha where tipo_ficha.nombre_tipo ='" + nombre_diagnostico +"'");
+            if (rs.next()){
+                
+                txtdescripciondiagnostico.setText(rs.getString("descripcion_tipoficha")) ;
+               
+                
+                   
+            } else{
+               
+              
+                JOptionPane.showMessageDialog(null,"Diagnostico no existe, No olvode ingresar con puntos","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String nombre_diagnostico = txtnombrediagnostico.getText();
+       String descripcion_diagnostico = txtdescripciondiagnostico.getText();
+      
+ 
+        if(nombre_diagnostico.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar Nombre del diagnostico","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("INSERT INTO tipo_ficha (nombre_tipo,descripcion_tipoficha) VALUES ('" + nombre_diagnostico +"', '" + descripcion_diagnostico +"')");
+           JOptionPane.showMessageDialog(null, "Diagnostico ingresado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+      
+          String nombre_diagnostico = txtnombrediagnostico.getText();
+          String descripcion_diagnostico = txtdescripciondiagnostico.getText();
+ 
+        if(nombre_diagnostico.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("UPDATE tipo_ficha SET nombre_tipo = '" + nombre_diagnostico +"' , descripcion_tipoficha ='" + descripcion_diagnostico +"'  WHERE nombre_tipo = '" + nombre_diagnostico +"'");
+           JOptionPane.showMessageDialog(null, "Diagnostico Actualizado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      txtnombrediagnostico.setText("");
+      txtdescripciondiagnostico.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,7 +301,7 @@ public class FrameDiagnostico extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField txtdescripciondiagnostico;
+    private javax.swing.JTextField txtnombrediagnostico;
     // End of variables declaration//GEN-END:variables
 }

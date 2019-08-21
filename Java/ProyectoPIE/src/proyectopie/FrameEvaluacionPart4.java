@@ -1,5 +1,11 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Calendar;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,13 +18,159 @@ package proyectopie;
  */
 public class FrameEvaluacionPart4 extends javax.swing.JFrame {
 
+public static int id_usuario;    
+public static String rut_del_alumno;    
+public static int id_tipodiagnostico;    
+public static int id_curso;
+public static String nuevo_ingreso;
+public static String sindrome_asociado_diagnostico;
+public static String año_continuidad;
+public static int numero_estudiante;
+public static String diagnostico;
+public static String observacion;
+
+public static String nombre_profesional_evaluador_1;
+public static String nombre_profesional_evaluador_2;
+public static String nombre_profesional_evaluador_3;
+public static String nombre_profesional_evaluador_4;
+public static String nombre_profesional_evaluador_5;
+public static String profesion_profesional_evaluador_1;
+public static String profesion_profesional_evaluador_2;
+public static String profesion_profesional_evaluador_3;
+public static String profesion_profesional_evaluador_4;
+public static String profesion_profesional_evaluador_5;
+public static String rut_profesional_evaluador_1;
+public static String rut_profesional_evaluador_2;
+public static String rut_profesional_evaluador_3;
+public static String rut_profesional_evaluador_4;
+public static String rut_profesional_evaluador_5;
+public static int id_profesional_evaluador_1;
+public static int id_profesional_evaluador_2;
+public static int id_profesional_evaluador_3;
+public static int id_profesional_evaluador_4;
+public static int id_profesional_evaluador_5;
+
+public static String nombre_profesional_apoyo_1;
+public static String nombre_profesional_apoyo_2;
+public static String nombre_profesional_apoyo_3;
+public static String nombre_profesional_apoyo_4;
+public static String rut_profesional_apoyo_1;
+public static String rut_profesional_apoyo_2;
+public static String rut_profesional_apoyo_3;
+public static String rut_profesional_apoyo_4;
+public static int id_profesional_apoyo_1;
+public static int id_profesional_apoyo_2;
+public static int id_profesional_apoyo_3;
+public static int id_profesional_apoyo_4;
+
+
+public static String prueba_1;
+public static String prueba_2;
+public static String prueba_3;
+public static String prueba_4;
+public static String prueba_5;
+
+public static String puntaje_1;
+public static String puntaje_2;
+public static String puntaje_3;
+public static String puntaje_4;
+public static String puntaje_5;
+
     /**
      * Creates new form FrameEvaluacionPart4
      */
     public FrameEvaluacionPart4() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_apoyo1();
+         cargar_combo_apoyo2();
+         cargar_combo_apoyo3();
+         cargar_combo_apoyo4();
+         
+                
     }
+    
+    void cargar_combo_apoyo1() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.nombre_apoyo from profesional_apoyo where estado = 'activo'"); 
+            comboapoyo1.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo1.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        
+        void cargar_combo_apoyo2() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.nombre_apoyo from profesional_apoyo where estado = 'activo'"); 
+            comboapoyo2.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo2.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        
+        void cargar_combo_apoyo3() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.nombre_apoyo from profesional_apoyo where estado = 'activo'"); 
+            comboapoyo3.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo3.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        void cargar_combo_apoyo4() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.nombre_apoyo from profesional_apoyo where estado = 'activo'"); 
+            comboapoyo4.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo4.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+       
+        
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,17 +183,17 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        comboapoyo1 = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox();
+        comboapoyo2 = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
+        comboapoyo3 = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox();
+        comboapoyo4 = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jCalendar1 = new com.toedter.calendar.JCalendar();
+        calendaremision = new com.toedter.calendar.JCalendar();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -54,26 +206,26 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Profesional Apoyo 1");
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboapoyo1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comboapoyo1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setText("Profesional Apoyo 2");
 
-        jComboBox2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboapoyo2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comboapoyo2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setText("Profesional Apoyo 3");
 
-        jComboBox3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboapoyo3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comboapoyo3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Profesional Apoyo 4");
 
-        jComboBox4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboapoyo4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comboapoyo4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setText("Profesionales de apoyo");
@@ -96,17 +248,17 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
                                 .addComponent(jLabel5))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(comboapoyo4, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(comboapoyo3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(comboapoyo1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(comboapoyo2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addContainerGap(74, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -120,19 +272,19 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
                     .addGap(60, 60, 60)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboapoyo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboapoyo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(comboapoyo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel4))
                     .addGap(18, 18, 18)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboapoyo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(88, Short.MAX_VALUE)))
         );
 
@@ -149,7 +301,7 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
                 .addContainerGap(212, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(184, 184, 184))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -161,7 +313,7 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(61, 61, 61)
-                .addComponent(jCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
@@ -173,6 +325,11 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
         });
 
         jButton2.setText("Guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Modificar");
 
@@ -244,6 +401,113 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
     FrameEvaluacionPart4.this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
 
+     void obtener_datos_evaluador_combobox(){
+        String capo1=  (String)comboapoyo1.getSelectedItem().toString();
+        String capo2=  (String)comboapoyo2.getSelectedItem().toString();
+        String capo3=  (String)comboapoyo3.getSelectedItem().toString();
+        String capo4=  (String)comboapoyo4.getSelectedItem().toString();
+        
+    
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" + capo1 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_apo = rs.getString("rut_apoyo");
+                int id_apo = rs.getInt("id_profapoyo") ;
+                id_profesional_apoyo_1 = id_apo;
+                rut_profesional_apoyo_1 = rut_apo;
+                 
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" + capo2 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_apo = rs.getString("rut_apoyo");
+                int id_apo = rs.getInt("id_profapoyo") ;
+                id_profesional_apoyo_2 = id_apo;
+                rut_profesional_apoyo_2 = rut_apo;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" + capo3 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                 String rut_apo = rs.getString("rut_apoyo");
+                int id_apo = rs.getInt("id_profapoyo") ;
+                id_profesional_apoyo_3 = id_apo;
+                rut_profesional_apoyo_3 = rut_apo;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+        try {
+            
+            ResultSet rs = st.executeQuery("select profesional_apoyo.rut_apoyo , profesional_apoyo.id_profapoyo from profesional_apoyo where profesional_apoyo.nombre_apoyo = '" + capo4 +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                String rut_apo = rs.getString("rut_apoyo");
+                int id_apo = rs.getInt("id_profapoyo") ;
+                id_profesional_apoyo_4 = id_apo;
+                rut_profesional_apoyo_4 = rut_apo;
+                
+                }
+                } catch (SQLException ex) {
+                    
+                    }
+   
+    }
+     void obtener_nombre_apoyo(){
+        String a1=  (String)comboapoyo1.getSelectedItem().toString();
+        String a2=  (String)comboapoyo2.getSelectedItem().toString();
+        String a3=  (String)comboapoyo3.getSelectedItem().toString();
+        String a4=  (String)comboapoyo4.getSelectedItem().toString();
+        
+        nombre_profesional_apoyo_1 = a1;
+        nombre_profesional_apoyo_2 = a2;
+        nombre_profesional_apoyo_3 = a3;
+        nombre_profesional_apoyo_4 = a4;
+
+     } 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        obtener_nombre_apoyo();
+        obtener_datos_evaluador_combobox();
+        
+        int año = calendaremision.getCalendar().get(Calendar.YEAR);
+        int mes = calendaremision.getCalendar().get(Calendar.MARCH);
+        int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
+
+        String fecha_emision =(año+"-"+mes+"-"+dia);
+     
+         ConexionSQL conectar = new ConexionSQL();
+         Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("INSERT INTO ficha_diagnostico (rut_alumno, id_evaluador_1, id_evaluador_2, id_evaluador_3, id_evaluador_4, id_evaluador_5, id_apoyo_1, id_apoyo_2, id_apoyo_3, id_apoyo_4, id_tipoficha, curso_alumno, nuevo_ingreso, continuidad, diagnostico, sindrome_asociado_diagnostico, observaciones_salud, fecha_emision, prueba_1, puntaje_1, prueba_2, puntaje_2, prueba_3, puntaje_3, prueba_4, puntaje_4, prueba_5, puntaje_5,usuario,nombre_apoyo_1,nombre_apoyo_2,nombre_apoyo_3,nombre_apoyo_4,nombre_evaluador_1,nombre_evaluador_2,nombre_evaluador_3,nombre_evaluador_4,nombre_evaluador_5, numero_estudiante,ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.rut_evaluador_3 , ficha_diagnostico.rut_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.profesion_evaluador_1 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.rut_apoyo_4) VALUES ('" + rut_del_alumno +"', " + id_profesional_evaluador_1 + ", " + id_profesional_evaluador_2 +", " + id_profesional_evaluador_3 +", " + id_profesional_evaluador_4 + ", " + id_profesional_evaluador_5 +", " + id_profesional_apoyo_1 +", " + id_profesional_apoyo_2 +", " + id_profesional_apoyo_3 +", " + id_profesional_apoyo_4 + ", " + id_tipodiagnostico +" , " + id_curso +",'" + nuevo_ingreso +"','" + año_continuidad +"','" + diagnostico +"','" + sindrome_asociado_diagnostico +"', '" + observacion + "','" + fecha_emision + "','" + prueba_1 + "','" + puntaje_1 + "','" + prueba_2 +"','" + puntaje_2 + "','" + prueba_3 +"','" + puntaje_3 +"','" + prueba_4 + "','" + puntaje_4 +"','" + prueba_5 +"','" + puntaje_5 +"'," + id_usuario +",'" + nombre_profesional_apoyo_1 + "','" + nombre_profesional_apoyo_2 +"','" + nombre_profesional_apoyo_3 + "','" + nombre_profesional_apoyo_4 +"','" + nombre_profesional_evaluador_1 +"','" + nombre_profesional_evaluador_2 +"','" + nombre_profesional_evaluador_3 +"','" + nombre_profesional_evaluador_4 +"','" + nombre_profesional_evaluador_5 +"', " + numero_estudiante +" ,'" + rut_profesional_evaluador_1 +"','" + rut_profesional_evaluador_2 +"','" + rut_profesional_evaluador_3 +"','" + rut_profesional_evaluador_4 +"','" + rut_profesional_evaluador_5 +"','" + profesion_profesional_evaluador_1 +"','" + profesion_profesional_evaluador_2 +"','" + profesion_profesional_evaluador_3 + "','" + profesion_profesional_evaluador_4 + "','" + profesion_profesional_evaluador_5 +"','" + rut_profesional_apoyo_1 +"','" + rut_profesional_apoyo_2 +"','" + rut_profesional_apoyo_3 +"','" + rut_profesional_apoyo_4 + "')");
+           JOptionPane.showMessageDialog(null, "Alumno ingresado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -280,15 +544,15 @@ public class FrameEvaluacionPart4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JCalendar calendaremision;
+    private javax.swing.JComboBox comboapoyo1;
+    private javax.swing.JComboBox comboapoyo2;
+    private javax.swing.JComboBox comboapoyo3;
+    private javax.swing.JComboBox comboapoyo4;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private com.toedter.calendar.JCalendar jCalendar1;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

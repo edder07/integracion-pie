@@ -1,5 +1,9 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,6 +22,7 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
     public FrameEvaluacionPart1() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_curso();
     }
 
     /**
@@ -36,24 +41,27 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jTextField2 = new javax.swing.JTextField();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        txtnumeroestudiante = new javax.swing.JTextField();
+        combocurso = new javax.swing.JComboBox();
+        check1 = new javax.swing.JCheckBox();
+        check2 = new javax.swing.JCheckBox();
+        check3 = new javax.swing.JCheckBox();
+        check4 = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtañocontinuidad = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jTextField5 = new javax.swing.JTextField();
+        check5 = new javax.swing.JCheckBox();
+        check6 = new javax.swing.JCheckBox();
+        txtsindromeasociadodiagnostico = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtmotivo = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txtdiagnostico = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtobservacion = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,15 +86,35 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel7.setText("Observacion de salud");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combocurso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jCheckBox1.setText("Si");
+        check1.setText("Si");
+        check1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check1ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox2.setText("No");
+        check2.setText("No");
+        check2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check2ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox3.setText("Si");
+        check3.setText("Si");
+        check3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check3ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox4.setText("No");
+        check4.setText("No");
+        check4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check4ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel8.setText("Motivo");
@@ -94,9 +122,19 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel9.setText("Año continuidad");
 
-        jCheckBox5.setText("Si");
+        check5.setText("Si");
+        check5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check5ActionPerformed(evt);
+            }
+        });
 
-        jCheckBox6.setText("No");
+        check6.setText("No");
+        check6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                check6ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel10.setText("Indique cual");
@@ -107,6 +145,11 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,63 +158,72 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
             }
         });
 
+        txtmotivo.setColumns(20);
+        txtmotivo.setRows(5);
+        jScrollPane2.setViewportView(txtmotivo);
+
+        txtdiagnostico.setColumns(20);
+        txtdiagnostico.setRows(5);
+        jScrollPane3.setViewportView(txtdiagnostico);
+
+        txtobservacion.setColumns(20);
+        txtobservacion.setRows(5);
+        jScrollPane4.setViewportView(txtobservacion);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox5)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField5))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(42, 42, 42)
-                                .addComponent(jCheckBox3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(167, Short.MAX_VALUE))
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(check5)
+                        .addGap(18, 18, 18)
+                        .addComponent(check6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtsindromeasociadodiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtnumeroestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(combocurso, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(42, 42, 42)
+                        .addComponent(check3)
+                        .addGap(18, 18, 18)
+                        .addComponent(check4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtañocontinuidad, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(32, 32, 32)
-                        .addComponent(jCheckBox1)
+                        .addComponent(check1)
                         .addGap(18, 18, 18)
-                        .addComponent(jCheckBox2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(check2)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(177, 177, 177))))
+                        .addGap(28, 28, 28)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(63, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -185,41 +237,48 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
                 .addGap(91, 91, 91)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnumeroestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGap(24, 24, 24)
+                    .addComponent(combocurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(check1)
+                            .addComponent(check2)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(check3)
+                            .addComponent(check4)
+                            .addComponent(txtañocontinuidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(check5)
+                    .addComponent(check6)
+                    .addComponent(txtsindromeasociadodiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -236,10 +295,143 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-  FrameEvaluacionPart2 frame = new FrameEvaluacionPart2(); 
+ 
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    
+    void cargar_combo_curso() {
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("Select curso.nombre from curso "); 
+            combocurso.removeAllItems();
+            combocurso.addItem("---Selecione Curso---");
+            while(rs.next()) {
+                
+                combocurso.addItem(rs.getString("nombre"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+    void obtener_id_curso() {
+        
+    String nombre_curso =  (String)combocurso.getSelectedItem().toString();
+    
+    
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        
+        try {
+            
+            ResultSet rs = st.executeQuery("select curso.id_curso from curso where curso.nombre = '" + nombre_curso +"'"); 
+           
+            if(rs.next()) {
+                //txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                 int id = rs.getInt("id_curso") ;
+                 FrameEvaluacionPart4.id_curso = id;
+                
+                }
+                } catch (SQLException ex) {
+                    }    
+        }
+    void concateno_palabras(){
+        if (check1.isSelected()){
+            String palabra = "Si "+ txtmotivo.getText();
+              FrameEvaluacionPart4.nuevo_ingreso = palabra;
+                        
+        }
+        if(check2.isSelected()){
+            String palabra = "No "+ txtmotivo.getText();
+              FrameEvaluacionPart4.nuevo_ingreso = palabra;
+            
+        }
+         if (check3.isSelected()){
+            String palabra = "Si "+ txtañocontinuidad.getText();
+              FrameEvaluacionPart4.año_continuidad = palabra;
+                        
+        }
+        if(check4.isSelected()){
+            String palabra = "No "+ txtañocontinuidad.getText();
+              FrameEvaluacionPart4.año_continuidad = palabra;
+            
+        }
+         if (check5.isSelected()){
+            String palabra = "Si "+ txtsindromeasociadodiagnostico.getText();
+              FrameEvaluacionPart4.sindrome_asociado_diagnostico = palabra;
+                        
+        }
+        if(check6.isSelected()){
+            String palabra = "No";
+              FrameEvaluacionPart4.sindrome_asociado_diagnostico = palabra;
+            
+        }
+        
+                
+    }
+    void obtener_datos_textfield(){
+       
+        int tnumeroestudiante = Integer.parseInt(txtnumeroestudiante.getText()); 
+        String tdiagnostico = txtdiagnostico.getText();
+        String tobservacion = txtobservacion.getText();
+        
+        FrameEvaluacionPart4.numero_estudiante = tnumeroestudiante;
+        FrameEvaluacionPart4.diagnostico = tdiagnostico;
+        FrameEvaluacionPart4.observacion = tobservacion;
+        
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    obtener_id_curso();   
+    concateno_palabras();
+    obtener_datos_textfield();
+    FrameEvaluacionPart2 frame = new FrameEvaluacionPart2(); 
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionPart1.this.dispose();
-    }//GEN-LAST:event_jButton1MouseClicked
+     
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void check1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check1ActionPerformed
+
+        if (check2.isSelected()){
+            check2.setSelected(false);
+            
+        }
+    }//GEN-LAST:event_check1ActionPerformed
+
+    private void check2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check2ActionPerformed
+          if (check1.isSelected()){
+            check1.setSelected(false);
+          }
+    }//GEN-LAST:event_check2ActionPerformed
+
+    private void check3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check3ActionPerformed
+       if (check4.isSelected()){
+            check4.setSelected(false);
+       }  
+    }//GEN-LAST:event_check3ActionPerformed
+
+    private void check4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check4ActionPerformed
+     if (check3.isSelected()){
+            check3.setSelected(false);
+       }  
+    }//GEN-LAST:event_check4ActionPerformed
+
+    private void check5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check5ActionPerformed
+    if (check6.isSelected()){
+            check6.setSelected(false);
+       }  
+    }//GEN-LAST:event_check5ActionPerformed
+
+    private void check6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check6ActionPerformed
+      if (check5.isSelected()){
+            check5.setSelected(false);
+       }  
+    }//GEN-LAST:event_check6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,15 +469,15 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox check1;
+    private javax.swing.JCheckBox check2;
+    private javax.swing.JCheckBox check3;
+    private javax.swing.JCheckBox check4;
+    private javax.swing.JCheckBox check5;
+    private javax.swing.JCheckBox check6;
+    private javax.swing.JComboBox combocurso;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -296,11 +488,14 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextField txtañocontinuidad;
+    private javax.swing.JTextArea txtdiagnostico;
+    private javax.swing.JTextArea txtmotivo;
+    private javax.swing.JTextField txtnumeroestudiante;
+    private javax.swing.JTextArea txtobservacion;
+    private javax.swing.JTextField txtsindromeasociadodiagnostico;
     // End of variables declaration//GEN-END:variables
 }

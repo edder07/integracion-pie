@@ -245,7 +245,7 @@ public class FrameApoyo extends javax.swing.JFrame {
              Statement st = conectar.Conectar();
         try{
              st.executeUpdate("UPDATE profesional_apoyo SET nombre_apoyo = '" + nombre_apoyo +"', estado = 'activo'  WHERE rut_apoyo = '" + rut_apoyo +"'");
-           JOptionPane.showMessageDialog(null, "Alumno Actualizado correctamente");
+           JOptionPane.showMessageDialog(null, "Profesional Actualizado correctamente");
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
