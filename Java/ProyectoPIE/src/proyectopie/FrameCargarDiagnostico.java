@@ -1,5 +1,11 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,14 +18,53 @@ package proyectopie;
  */
 public class FrameCargarDiagnostico extends javax.swing.JFrame {
 
+    public static int id_tipoficha;
+    DefaultTableModel model= new DefaultTableModel();
+     
     /**
      * Creates new form FrameCargarDiagnostico
      */
     public FrameCargarDiagnostico() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_diagnostico();
+         this.tabla_diagnostico.setModel(model);
+         model.setColumnCount(0);
+                  model.addColumn("Rut Alumno");
+                  model.addColumn("Nombres Alumno");
+                  model.addColumn("Apellido Paterno");
+                  model.addColumn("Apellido Materno");
+                  model.addColumn("Curso Alumno");
+                  model.addColumn("Fecha Diagnostico");
     }
+           
+    
+    void limpiar_tabla(){
+        DefaultTableModel tb = (DefaultTableModel) tabla_diagnostico.getModel();
+        int limpiar = tabla_diagnostico.getRowCount()-1;
+        for (int i = limpiar; i >= 0; i--) {           
+        tb.removeRow(tb.getRowCount()-1);
+        } 
+        //cargaTicket();
+    }
+    void cargar_combo_diagnostico() {
+        
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+            
+             try {
+                  ResultSet rs = st.executeQuery("select tipo_ficha.nombre_tipo from tipo_ficha"); 
+               combodiagnostico.removeAllItems();
+               combodiagnostico.addItem("---Pinche Aqui---");
+               while(rs.next()) {
+                     combodiagnostico.addItem(rs.getString("nombre_tipo"));
+               }
 
+                 } catch (SQLException ex) {
+                   
+                 }
+
+                  }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,10 +76,12 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        combodiagnostico = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_diagnostico = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,10 +91,21 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Seleccione un diagnostico");
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combodiagnostico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        combodiagnostico.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cargar");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -56,67 +114,151 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+        jButton4.setText("Volver");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
+
+        tabla_diagnostico.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        tabla_diagnostico.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_diagnostico);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(322, 322, 322)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(202, 202, 202)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(56, 56, 56)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(37, 37, 37)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(91, 91, 91))))
-                .addContainerGap(485, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jButton4)
+                        .addGap(239, 239, 239)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(56, 56, 56)
+                                .addComponent(combodiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))
+                            .addComponent(jLabel1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(506, 506, 506)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 147, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 828, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(303, 303, 303))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton4))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 334, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(combodiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-      FrameBuscadores frame = new FrameBuscadores(); 
-    frame.setVisible(true);                                                                                                                
-    FrameCargarDiagnostico.this.dispose();
-    }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
  FrameEvaluacionParte5 frame = new FrameEvaluacionParte5(); 
     frame.setVisible(true);                                                                                                                
     FrameCargarDiagnostico.this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
+
+    void obtener_id_tipo_diagnostico(){
+         String tipo_diagnostico = combodiagnostico.getSelectedItem().toString();
+         ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select tipo_ficha.id_tipo from tipo_ficha where tipo_ficha.nombre_tipo = '" + tipo_diagnostico +"'");
+            if (rs.next()){
+                
+                id_tipoficha =rs.getInt("id_tipo") ;
+               
+             
+                
+                   
+            } else{
+               
+              
+                JOptionPane.showMessageDialog(null,"Lo sentimos","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        
+        obtener_id_tipo_diagnostico();
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try{
+            limpiar_tabla();
+            
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.rut_alumno 'Rut Alumno' , alumno.nombres_alumno 'Nombres Alumno' , alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno' , curso.nombre  'Curso Alumno' , ficha_diagnostico.fecha_emision  'Fecha Diagnostico' from alumno, ficha_diagnostico , curso where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.id_tipoficha =" + id_tipoficha +" and alumno.estado = 'activo' order by ficha_diagnostico.rut_alumno asc");
+            //String sq="select * from visfunc"; 
+            String [] arregl = new String[7];
+            
+            while (rs.next()){
+                
+               
+                
+            arregl[0] = rs.getString(1);
+            arregl[1] = rs.getString(2);
+            arregl[2] = rs.getString(3);
+            arregl[3] = rs.getString(4);
+            arregl[4] = rs.getString(5); 
+            arregl[5] = rs.getString(6); 
+           
+        model.addRow(arregl);
+             
+            }
+            
+            
+        
+        }catch(Exception ex){
+            
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      
+         FrameBuscadores frame = new FrameBuscadores(); 
+    frame.setVisible(true);                                                                                                                
+    FrameCargarDiagnostico.this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,11 +296,13 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox combodiagnostico;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabla_diagnostico;
     // End of variables declaration//GEN-END:variables
 }

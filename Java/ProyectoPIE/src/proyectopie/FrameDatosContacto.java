@@ -1,5 +1,10 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,12 +17,49 @@ package proyectopie;
  */
 public class FrameDatosContacto extends javax.swing.JFrame {
 
+    public static String rut;
     /**
      * Creates new form FrameDatosContacto
      */
     public FrameDatosContacto() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_datos_contacto();
+        
+    }
+    void cargar_datos_contacto(){
+         
+  
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select alumno.rut_alumno , alumno.nombres_alumno , alumno.apellido_paterno , alumno.apellido_materno , alumno.fono_alumno , alumno.direccion_alumno , apoderado.rut_apoderado , apoderado.nombre_apoderado , apoderado.direccion_apoderado , apoderado.fono_apoderado   from alumno, apoderado where alumno.rut_alumno = apoderado.rut_fk_alumno and alumno.estado = 'activo' and alumno.rut_alumno = '" + rut +"'");
+            if (rs.next()){
+                
+                labelrutalumno.setText(rs.getString("rut_alumno")) ;
+                labelnombrealumno.setText(rs.getString("nombres_alumno")) ;
+                labelapellidopa.setText(rs.getString("apellido_paterno")) ;
+                labelapellidoma.setText(rs.getString("apellido_materno")) ;
+                labelfonoalumno.setText(rs.getString("fono_alumno")) ;
+                labeldireccionalumno.setText(rs.getString("direccion_alumno")) ;
+                labelrutapoderado.setText(rs.getString("rut_apoderado")) ;
+                labelnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                labeldireccionapoderado.setText(rs.getString("direccion_apoderado")) ;
+                labelfonoapoderado.setText(rs.getString("fono_apoderado")) ;
+                
+             
+                
+                   
+            } else{
+               
+              
+                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        
     }
 
     /**
@@ -29,12 +71,36 @@ public class FrameDatosContacto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel21 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        labelrutalumno = new javax.swing.JLabel();
+        labelnombrealumno = new javax.swing.JLabel();
+        labelapellidopa = new javax.swing.JLabel();
+        labelapellidoma = new javax.swing.JLabel();
+        labelfonoalumno = new javax.swing.JLabel();
+        labeldireccionalumno = new javax.swing.JLabel();
+        labelrutapoderado = new javax.swing.JLabel();
+        labelnombreapoderado = new javax.swing.JLabel();
+        labelfonoapoderado = new javax.swing.JLabel();
+        labeldireccionapoderado = new javax.swing.JLabel();
+
+        jLabel21.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel21.setText("dato");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,6 +114,7 @@ public class FrameDatosContacto extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/Logo Color (1).png"))); // NOI18N
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/Pr.png"))); // NOI18N
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -61,6 +128,66 @@ public class FrameDatosContacto extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel5.setText("Rut del Alumno");
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel6.setText("Apellido Paterno");
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel7.setText("Nombres del alumno");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel8.setText("Fono Alumno");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel9.setText("Apellido Materno");
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel10.setText("Direccion Alumno");
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel11.setText("Rut Apoderado");
+
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel12.setText("Fono Apoderado");
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel13.setText("Nombre Apoderado");
+
+        jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel14.setText("Direccion Apoderado");
+
+        labelrutalumno.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelrutalumno.setText("x");
+
+        labelnombrealumno.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelnombrealumno.setText("x");
+
+        labelapellidopa.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelapellidopa.setText("x");
+
+        labelapellidoma.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelapellidoma.setText("x");
+
+        labelfonoalumno.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelfonoalumno.setText("x");
+
+        labeldireccionalumno.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labeldireccionalumno.setText("x");
+
+        labelrutapoderado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelrutapoderado.setText("x");
+
+        labelnombreapoderado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelnombreapoderado.setText("x");
+
+        labelfonoapoderado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labelfonoapoderado.setText("x");
+
+        labeldireccionapoderado.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        labeldireccionapoderado.setText("x");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,38 +196,119 @@ public class FrameDatosContacto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(194, 194, 194)
-                        .addComponent(jLabel1)
-                        .addGap(189, 189, 189)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addGap(221, 221, 221)
+                        .addGap(381, 381, 381)
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jButton1))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel9))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelnombrealumno)
+                                    .addComponent(labelrutalumno))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1))
+                                .addGap(193, 193, 193)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelapellidopa)
+                                    .addComponent(labelapellidoma)
+                                    .addComponent(labelfonoalumno)
+                                    .addComponent(labeldireccionalumno)
+                                    .addComponent(labelrutapoderado)
+                                    .addComponent(labelnombreapoderado)
+                                    .addComponent(labelfonoapoderado)
+                                    .addComponent(labeldireccionapoderado))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(jLabel1)
+                                .addGap(7, 7, 7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(0, 59, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                    .addComponent(jLabel5)
+                                                    .addComponent(labelrutalumno)))
+                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel7)
+                                            .addComponent(labelnombrealumno))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel6)
+                                            .addComponent(labelapellidopa))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel9)
+                                            .addComponent(labelapellidoma))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel8)
+                                            .addComponent(labelfonoalumno))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel10)
+                                            .addComponent(labeldireccionalumno))
+                                        .addGap(41, 41, 41)))))
                         .addComponent(jLabel2)
-                        .addGap(118, 118, 118)
-                        .addComponent(jButton1))
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(labelrutapoderado))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel13)
+                                    .addComponent(labelnombreapoderado))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel12)
+                                    .addComponent(labelfonoapoderado))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel14)
+                                    .addComponent(labeldireccionapoderado)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(135, 135, 135)
+                                .addComponent(jButton1)))))
                 .addContainerGap())
         );
 
@@ -158,8 +366,29 @@ MenuPrincipal frame = new MenuPrincipal();
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel labelapellidoma;
+    private javax.swing.JLabel labelapellidopa;
+    private javax.swing.JLabel labeldireccionalumno;
+    private javax.swing.JLabel labeldireccionapoderado;
+    private javax.swing.JLabel labelfonoalumno;
+    private javax.swing.JLabel labelfonoapoderado;
+    private javax.swing.JLabel labelnombrealumno;
+    private javax.swing.JLabel labelnombreapoderado;
+    private javax.swing.JLabel labelrutalumno;
+    private javax.swing.JLabel labelrutapoderado;
     // End of variables declaration//GEN-END:variables
 }

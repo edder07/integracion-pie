@@ -339,6 +339,11 @@ public static String puntaje_5;
                 jButton4MouseClicked(evt);
             }
         });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -396,9 +401,7 @@ public static String puntaje_5;
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-  FrameEvaluacionParte5 frame = new FrameEvaluacionParte5(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionPart4.this.dispose();
+ 
     }//GEN-LAST:event_jButton4MouseClicked
 
      void obtener_datos_evaluador_combobox(){
@@ -507,6 +510,127 @@ public static String puntaje_5;
             JOptionPane.showMessageDialog(null, ex);
         } 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    
+        String rut_evaluador_1;
+        String rut_evaluador_2;
+        String rut_evaluador_3;
+        String rut_evaluador_4;
+        String rut_evaluador_5;
+        String nombre_evaluador_1;
+        String nombre_evaluador_2;
+        String nombre_evaluador_3;
+        String nombre_evaluador_4;
+        String nombre_evaluador_5;
+        String profesion_evaluador_1;
+        String profesion_evaluador_2;
+        String profesion_evaluador_3;
+        String profesion_evaluador_4;
+        String profesion_evaluador_5;
+        
+        String rut_apoyo_1;
+        String rut_apoyo_2;
+        String rut_apoyo_3;
+        String rut_apoyo_4;
+        String nombre_apoyo_1;
+        String nombre_apoyo_2;
+        String nombre_apoyo_3;
+        String nombre_apoyo_4;
+        
+        String pruebax_1;
+        String pruebax_2;
+        String pruebax_3;
+        String pruebax_4;
+        String pruebax_5;
+        
+        String puntajex_1;
+        String puntajex_2;
+        String puntajex_3;
+        String puntajex_4;
+        String puntajex_5;
+        
+        int año = calendaremision.getCalendar().get(Calendar.YEAR);
+        int mes = calendaremision.getCalendar().get(Calendar.MARCH);
+        int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
+
+        String fecha_emision =(año+"-"+mes+"-"+dia);
+          
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" + rut_del_alumno +"'  and ficha_diagnostico.fecha_emision = '" + fecha_emision +"' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
+            if (rs.next()){
+              
+                
+                id_tipodiagnostico = rs.getInt("id_tipoficha");
+                FrameEvaluacionParte5.numero_estudiante = rs.getInt("numero_estudiante");
+                FrameEvaluacionParte5.apellido_paterno = rs.getString("apellido_paterno");
+                FrameEvaluacionParte5.apellido_materno = rs.getString("apellido_materno");
+                FrameEvaluacionParte5.nombre_alumno = rs.getString("nombres_alumno");
+                FrameEvaluacionParte5.fecha_nacimiento = rs.getString("fecha_nacimiento");
+                FrameEvaluacionParte5.rut_alumno = rs.getString("rut_alumno");
+                FrameEvaluacionParte5.sexo = rs.getString("sexo_alumno");
+                FrameEvaluacionParte5.nacionalidad_alumno = rs.getString("nacionalidad_alumno");
+                FrameEvaluacionParte5.curso = rs.getString("nombre");
+                FrameEvaluacionParte5.nuevo_ingreso = rs.getString("nuevo_ingreso");
+                FrameEvaluacionParte5.continuidad = rs.getString("continuidad");
+                FrameEvaluacionParte5.diagnostico = rs.getString("diagnostico");
+                FrameEvaluacionParte5.sindrome_Asociado = rs.getString("sindrome_asociado_diagnostico");
+                FrameEvaluacionParte5.observacion_salud = rs.getString("observaciones_salud");
+                FrameEvaluacionParte5.fecha_emision = rs.getString("fecha_emision");
+                rut_evaluador_1 = rs.getString("rut_evaluador_1");
+                nombre_evaluador_1 = rs.getString("nombre_evaluador_1");
+                profesion_evaluador_1 = rs.getString("profesion_evaluador_1");
+                rut_evaluador_2 = rs.getString("rut_evaluador_2");
+                nombre_evaluador_2 = rs.getString("nombre_evaluador_2");
+                profesion_evaluador_2 = rs.getString("profesion_evaluador_2");
+                rut_evaluador_3 = rs.getString("rut_evaluador_3");
+                nombre_evaluador_3 = rs.getString("nombre_evaluador_3");
+                profesion_evaluador_3 = rs.getString("profesion_evaluador_3");
+                rut_evaluador_4 = rs.getString("rut_evaluador_4");
+                nombre_evaluador_4 = rs.getString("nombre_evaluador_4");
+                profesion_evaluador_4 = rs.getString("profesion_evaluador_4");
+                rut_evaluador_5 = rs.getString("rut_evaluador_5");
+                nombre_evaluador_5 = rs.getString("nombre_evaluador_5");
+                profesion_evaluador_5 = rs.getString("profesion_evaluador_5");
+                FrameEvaluacionParte5.profesionales_evaluadores = "<html><body>" +rut_evaluador_1+ "  -  "+nombre_evaluador_1+"  -  "+profesion_evaluador_1+" <br>"+rut_evaluador_2+"  -  "+nombre_evaluador_2+"  -  "+profesion_evaluador_2+"<br>"+rut_evaluador_3+"  -  "+nombre_evaluador_3+"  -  "+profesion_evaluador_3+" <br> "+rut_evaluador_4+"  -  "+nombre_evaluador_4+"  -  "+profesion_evaluador_4+" <br>"+rut_evaluador_5+"  -  "+nombre_evaluador_5+"  -  "+profesion_evaluador_5+"</body></html>" ;
+                pruebax_1 = rs.getString("prueba_1");
+                puntajex_1 = rs.getString("puntaje_1");
+                pruebax_2 = rs.getString("prueba_2");
+                puntajex_2 = rs.getString("puntaje_2");
+                pruebax_3 = rs.getString("prueba_3");
+                puntajex_3 = rs.getString("puntaje_3");
+                pruebax_4 = rs.getString("prueba_4");
+                puntajex_4 = rs.getString("puntaje_4");
+                pruebax_5 = rs.getString("prueba_5");
+                puntajex_5 = rs.getString("puntaje_5");
+                FrameEvaluacionParte5.puntaje_y_pruebas = "<html><body>Prueba 1:  "+pruebax_1+ "  Puntaje:  "+puntajex_1+"<br>Prueba 2:  "+pruebax_2+"  Puntaje 2:  "+puntajex_2+"<br> Prueba 3:  "+pruebax_3+"  Puntaje 3:  "+puntajex_3+"<br>Prueba 4:  "+pruebax_4+"  Puntaje 4:  "+puntajex_4+"<br> Prueba 5:  "+pruebax_5+"  Puntaje 5:  "+puntajex_5+"</body></html>" ;
+                rut_apoyo_1 = rs.getString("rut_apoyo_1");
+                nombre_apoyo_1 = rs.getString("nombre_apoyo_1");
+                rut_apoyo_2 = rs.getString("rut_apoyo_2");
+                nombre_apoyo_2 = rs.getString("nombre_apoyo_2");
+                rut_apoyo_3 = rs.getString("rut_apoyo_3");
+                nombre_apoyo_3 = rs.getString("nombre_apoyo_3");
+                rut_apoyo_4 = rs.getString("rut_apoyo_4");
+                nombre_apoyo_4 = rs.getString("nombre_apoyo_4");
+                FrameEvaluacionParte5.profesionales_apoyo = "<html><body> "+rut_apoyo_1+ "  -  "+nombre_apoyo_1+"<br>"+rut_apoyo_2+"  -  "+nombre_apoyo_2+"<br>"+rut_apoyo_3+"  -  "+nombre_apoyo_3+"<br>"+rut_apoyo_4+"  -  "+nombre_apoyo_4+"</body></html>" ;              
+                
+                FrameEvaluacionParte5 frame = new FrameEvaluacionParte5(); 
+                frame.setVisible(true);                                                                                                                
+                FrameEvaluacionPart4.this.dispose();     
+                   
+            } else{
+               
+              
+                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }      
+       
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

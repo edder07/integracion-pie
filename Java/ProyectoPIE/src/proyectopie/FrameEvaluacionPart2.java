@@ -3,6 +3,7 @@ package proyectopie;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,7 +28,13 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
          cargar_combo_ev3();
          cargar_combo_ev4();
          cargar_combo_ev5();
+         
+         
+            
+         
+         
     }
+    
     
         void cargar_combo_ev1() {
         

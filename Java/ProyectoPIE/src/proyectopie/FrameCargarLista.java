@@ -1,5 +1,10 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
+import static proyectopie.FrameCargarDiagnostico.id_tipoficha;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,14 +17,70 @@ package proyectopie;
  */
 public class FrameCargarLista extends javax.swing.JFrame {
 
+    DefaultTableModel model= new DefaultTableModel();
     /**
      * Creates new form FrameCargarLista
      */
     public FrameCargarLista() {
         initComponents();
          this.setLocationRelativeTo(null);
+          this.tabla_lista_completa.setModel(model);
+                  model.setColumnCount(0);
+                  model.addColumn("Rut Alumno");
+                  model.addColumn("Nombres Alumno");
+                  model.addColumn("Apellido Paterno");
+                  model.addColumn("Apellido Materno");
+                  model.addColumn("Curso Alumno");
+                  model.addColumn("Fecha Diagnostico");
+                  limpiar_tabla();
+                  cargar_tabla_lista_completa();
+    
+    }
+    void cargar_tabla_lista_completa(){
+        
+        
+      
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try{
+            //limpiar_tabla();
+            
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo  and alumno.estado= 'activo' order by ficha_diagnostico.rut_alumno asc");
+            //String sq="select * from visfunc"; 
+            String [] arregl = new String[7];
+            
+            while (rs.next()){
+                
+               
+                
+            arregl[0] = rs.getString(1);
+            arregl[1] = rs.getString(2);
+            arregl[2] = rs.getString(3);
+            arregl[3] = rs.getString(4);
+            arregl[4] = rs.getString(5); 
+            arregl[5] = rs.getString(6); 
+           
+        model.addRow(arregl);
+             
+            }
+            
+            
+        
+        }catch(Exception ex){
+            
+            
+        }
+    }
+      void limpiar_tabla(){
+        DefaultTableModel tb = (DefaultTableModel) tabla_lista_completa.getModel();
+        int limpiar = tabla_lista_completa.getRowCount()-1;
+        for (int i = limpiar; i >= 0; i--) {           
+        tb.removeRow(tb.getRowCount()-1);
+        } 
+      
     }
 
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,6 +93,8 @@ public class FrameCargarLista extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_lista_completa = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +115,24 @@ public class FrameCargarLista extends javax.swing.JFrame {
                 jButton2MouseClicked(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        tabla_lista_completa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_lista_completa);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,8 +147,11 @@ public class FrameCargarLista extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButton2)
                         .addGap(145, 145, 145)
-                        .addComponent(jLabel1)))
-                .addContainerGap(211, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,16 +160,18 @@ public class FrameCargarLista extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-FrameBuscadores frame = new FrameBuscadores(); 
+    FrameBuscadores frame = new FrameBuscadores(); 
     frame.setVisible(true);                                                                                                                
     FrameCargarLista.this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
@@ -95,6 +181,10 @@ FrameBuscadores frame = new FrameBuscadores();
     frame.setVisible(true);                                                                                                                
     FrameCargarLista.this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,5 +225,8 @@ FrameBuscadores frame = new FrameBuscadores();
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabla_lista_completa;
     // End of variables declaration//GEN-END:variables
+  
 }

@@ -1,5 +1,11 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
+import static proyectopie.FrameCargarDiagnostico.id_tipoficha;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,14 +18,43 @@ package proyectopie;
  */
 public class FrameCargarRut extends javax.swing.JFrame {
 
+      public static String rut_tabla;
+    DefaultTableModel model= new DefaultTableModel();
     /**
      * Creates new form FrameCargarRut
      */
     public FrameCargarRut() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_rut_alumno();
+          this.tabla_alumno.setModel(model);
+         model.setColumnCount(0);
+                  model.addColumn("Rut Alumno");
+                  model.addColumn("Nombres Alumno");
+                  model.addColumn("Apellido Paterno");
+                  model.addColumn("Apellido Materno");
+                  model.addColumn("Curso Alumno");
+                  model.addColumn("Fecha Diagnostico");
     }
 
+     void cargar_combo_rut_alumno() {
+        
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+            
+             try {
+              
+                 ResultSet rs = st.executeQuery("select DISTINCT alumno.rut_alumno from alumno , ficha_diagnostico where alumno.rut_alumno = ficha_diagnostico.rut_alumno and alumno.estado= 'activo'"); 
+               comborut.removeAllItems();
+               comborut.addItem("---Pinche Aqui---");
+               while(rs.next()) {
+                     comborut.addItem(rs.getString("rut_alumno"));
+               }
+
+                 } catch (SQLException ex) {
+                   
+                 }
+             }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,21 +65,31 @@ public class FrameCargarRut extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        comborut = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_alumno = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Seleccione Rut Alumno");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comborut.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comborut.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("Cargar");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -59,6 +104,19 @@ public class FrameCargarRut extends javax.swing.JFrame {
             }
         });
 
+        tabla_alumno.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla_alumno);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,31 +124,36 @@ public class FrameCargarRut extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel1)
-                        .addGap(37, 37, 37)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton3))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
-                        .addComponent(jButton2)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel1)
+                        .addGap(37, 37, 37)
+                        .addComponent(comborut, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(368, 368, 368)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 892, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton3)
-                .addGap(15, 15, 15)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comborut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
@@ -109,6 +172,50 @@ FrameBuscadores frame = new FrameBuscadores();
     frame.setVisible(true);                                                                                                                
     FrameCargarRut.this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
+
+     void limpiar_tabla(){
+        DefaultTableModel tb = (DefaultTableModel) tabla_alumno.getModel();
+        int limpiar = tabla_alumno.getRowCount()-1;
+        for (int i = limpiar; i >= 0; i--) {           
+        tb.removeRow(tb.getRowCount()-1);
+        } 
+        //cargaTicket();
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+         String rut = comborut.getSelectedItem().toString();
+        
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try{
+            limpiar_tabla();
+            
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.rut_alumno 'Rut del Alumno' , alumno.nombres_alumno 'Nombres del Alumno', alumno.apellido_paterno 'Apellido Paterno' , alumno.apellido_materno 'Apellido Materno', tipo_ficha.nombre_tipo 'Nombre Diagnostico' , ficha_diagnostico.fecha_emision 'Fecha Diagnostico' from ficha_diagnostico , alumno , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.rut_alumno = '" + rut +"' order by ficha_diagnostico.fecha_emision  asc");
+            //String sq="select * from visfunc"; 
+            String [] arregl = new String[7];
+            
+            while (rs.next()){
+                
+               
+                
+            arregl[0] = rs.getString(1);
+            arregl[1] = rs.getString(2);
+            arregl[2] = rs.getString(3);
+            arregl[3] = rs.getString(4);
+            arregl[4] = rs.getString(5); 
+            arregl[5] = rs.getString(6); 
+           
+        model.addRow(arregl);
+             
+            }
+            
+            
+        
+        }catch(Exception ex){
+            
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,10 +253,12 @@ FrameBuscadores frame = new FrameBuscadores();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox comborut;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabla_alumno;
     // End of variables declaration//GEN-END:variables
 }
