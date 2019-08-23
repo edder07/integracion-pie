@@ -3,7 +3,10 @@ package proyectopie;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /*
@@ -28,6 +31,7 @@ public static String año_continuidad;
 public static int numero_estudiante;
 public static String diagnostico;
 public static String observacion;
+public static Date frame4_fecha_emision;
 
 public static String nombre_profesional_evaluador_1;
 public static String nombre_profesional_evaluador_2;
@@ -86,8 +90,24 @@ public static String puntaje_5;
          cargar_combo_apoyo2();
          cargar_combo_apoyo3();
          cargar_combo_apoyo4();
+         cargar_datos_select ();
          
                 
+    }
+    
+    void cargar_datos_select (){
+        
+        comboapoyo1.setSelectedItem(nombre_profesional_apoyo_1);
+        comboapoyo2.setSelectedItem(nombre_profesional_apoyo_2);
+        comboapoyo3.setSelectedItem(nombre_profesional_apoyo_3);
+        comboapoyo4.setSelectedItem(nombre_profesional_apoyo_4);
+        
+        
+        calendaremision.setDate(frame4_fecha_emision); 
+        
+        
+       
+
     }
     
     void cargar_combo_apoyo1() {
@@ -504,7 +524,7 @@ public static String puntaje_5;
          Statement st = conectar.Conectar();
         try{
              st.executeUpdate("INSERT INTO ficha_diagnostico (rut_alumno, id_evaluador_1, id_evaluador_2, id_evaluador_3, id_evaluador_4, id_evaluador_5, id_apoyo_1, id_apoyo_2, id_apoyo_3, id_apoyo_4, id_tipoficha, curso_alumno, nuevo_ingreso, continuidad, diagnostico, sindrome_asociado_diagnostico, observaciones_salud, fecha_emision, prueba_1, puntaje_1, prueba_2, puntaje_2, prueba_3, puntaje_3, prueba_4, puntaje_4, prueba_5, puntaje_5,usuario,nombre_apoyo_1,nombre_apoyo_2,nombre_apoyo_3,nombre_apoyo_4,nombre_evaluador_1,nombre_evaluador_2,nombre_evaluador_3,nombre_evaluador_4,nombre_evaluador_5, numero_estudiante,ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.rut_evaluador_3 , ficha_diagnostico.rut_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.profesion_evaluador_1 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.rut_apoyo_4) VALUES ('" + rut_del_alumno +"', " + id_profesional_evaluador_1 + ", " + id_profesional_evaluador_2 +", " + id_profesional_evaluador_3 +", " + id_profesional_evaluador_4 + ", " + id_profesional_evaluador_5 +", " + id_profesional_apoyo_1 +", " + id_profesional_apoyo_2 +", " + id_profesional_apoyo_3 +", " + id_profesional_apoyo_4 + ", " + id_tipodiagnostico +" , " + id_curso +",'" + nuevo_ingreso +"','" + año_continuidad +"','" + diagnostico +"','" + sindrome_asociado_diagnostico +"', '" + observacion + "','" + fecha_emision + "','" + prueba_1 + "','" + puntaje_1 + "','" + prueba_2 +"','" + puntaje_2 + "','" + prueba_3 +"','" + puntaje_3 +"','" + prueba_4 + "','" + puntaje_4 +"','" + prueba_5 +"','" + puntaje_5 +"'," + id_usuario +",'" + nombre_profesional_apoyo_1 + "','" + nombre_profesional_apoyo_2 +"','" + nombre_profesional_apoyo_3 + "','" + nombre_profesional_apoyo_4 +"','" + nombre_profesional_evaluador_1 +"','" + nombre_profesional_evaluador_2 +"','" + nombre_profesional_evaluador_3 +"','" + nombre_profesional_evaluador_4 +"','" + nombre_profesional_evaluador_5 +"', " + numero_estudiante +" ,'" + rut_profesional_evaluador_1 +"','" + rut_profesional_evaluador_2 +"','" + rut_profesional_evaluador_3 +"','" + rut_profesional_evaluador_4 +"','" + rut_profesional_evaluador_5 +"','" + profesion_profesional_evaluador_1 +"','" + profesion_profesional_evaluador_2 +"','" + profesion_profesional_evaluador_3 + "','" + profesion_profesional_evaluador_4 + "','" + profesion_profesional_evaluador_5 +"','" + rut_profesional_apoyo_1 +"','" + rut_profesional_apoyo_2 +"','" + rut_profesional_apoyo_3 +"','" + rut_profesional_apoyo_4 + "')");
-           JOptionPane.showMessageDialog(null, "Alumno ingresado correctamente");
+           JOptionPane.showMessageDialog(null, "Ficha ingresada correctamente");
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -559,7 +579,7 @@ public static String puntaje_5;
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-            ResultSet rs = st.executeQuery("select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" + rut_del_alumno +"'  and ficha_diagnostico.fecha_emision = '" + fecha_emision +"' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" + rut_del_alumno +"'  and ficha_diagnostico.fecha_emision = '" + frame4_fecha_emision +"' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
             if (rs.next()){
               
                 

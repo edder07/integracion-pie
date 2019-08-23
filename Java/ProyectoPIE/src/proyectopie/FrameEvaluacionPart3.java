@@ -12,12 +12,38 @@ package proyectopie;
  */
 public class FrameEvaluacionPart3 extends javax.swing.JFrame {
 
+    public static String frame3_prueba_1;
+    public static String frame3_prueba_2;
+    public static String frame3_prueba_3;
+    public static String frame3_prueba_4;
+    public static String frame3_prueba_5;
+    
+    public static String frame3_puntaje_1;
+    public static String frame3_puntaje_2;
+    public static String frame3_puntaje_3;
+    public static String frame3_puntaje_4;
+    public static String frame3_puntaje_5;
     /**
      * Creates new form FrameEvaluacionPart3
      */
     public FrameEvaluacionPart3() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_textfiel_pruebas();
+    }
+    
+    void cargar_textfiel_pruebas(){
+        txtprueba1.setText(frame3_prueba_1);
+        txtprueba2.setText(frame3_prueba_2);
+        txtprueba3.setText(frame3_prueba_3);
+        txtprueba4.setText(frame3_prueba_4);
+        txtprueba5.setText(frame3_prueba_5);
+        
+        txtpuntaje1.setText(frame3_puntaje_1);
+        txtpuntaje2.setText(frame3_puntaje_2);
+        txtpuntaje3.setText(frame3_puntaje_3);
+        txtpuntaje4.setText(frame3_puntaje_4);
+        txtpuntaje5.setText(frame3_puntaje_5);
     }
 
     /**

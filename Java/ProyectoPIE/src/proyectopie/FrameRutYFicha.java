@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import static proyectopie.FrameEvaluacionPart4.frame4_fecha_emision;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -219,8 +220,41 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         obtener_id_diagnostico();
-      String crutal=  (String)combo_rut.getSelectedItem().toString();  
-       FrameEvaluacionPart4.rut_del_alumno = crutal;
+        String crutal=  (String)combo_rut.getSelectedItem().toString();  
+        FrameEvaluacionPart4.rut_del_alumno = crutal;
+     
+        FrameEvaluacionPart1.frame1_numero_estudiante = 0;
+        FrameEvaluacionPart1.frame1_diagnostico="";
+        FrameEvaluacionPart1.frame1_curso="";
+        FrameEvaluacionPart1.frame1_observacion="";
+        FrameEvaluacionPart1.frame1_sindrome_asociado="";
+        FrameEvaluacionPart1.frame1_nuevo_ingreso="";
+        FrameEvaluacionPart1.frame1_año_continuidad="";
+        
+        FrameEvaluacionPart2.frame2_evaluador_1="";
+        FrameEvaluacionPart2.frame2_evaluador_2="";
+        FrameEvaluacionPart2.frame2_evaluador_3="";
+        FrameEvaluacionPart2.frame2_evaluador_4="";
+        FrameEvaluacionPart2.frame2_evaluador_5="";
+        
+        FrameEvaluacionPart3.frame3_prueba_1="";
+        FrameEvaluacionPart3.frame3_prueba_2="";
+        FrameEvaluacionPart3.frame3_prueba_3="";
+        FrameEvaluacionPart3.frame3_prueba_4="";
+        FrameEvaluacionPart3.frame3_prueba_5="";
+        FrameEvaluacionPart3.frame3_puntaje_1="";
+        FrameEvaluacionPart3.frame3_puntaje_2="";
+        FrameEvaluacionPart3.frame3_puntaje_3="";
+        FrameEvaluacionPart3.frame3_puntaje_4="";
+        FrameEvaluacionPart3.frame3_puntaje_5="";
+        
+        FrameEvaluacionPart4.nombre_profesional_apoyo_1="";
+        FrameEvaluacionPart4.nombre_profesional_apoyo_2="";
+        FrameEvaluacionPart4.nombre_profesional_apoyo_3="";
+        FrameEvaluacionPart4.nombre_profesional_apoyo_4="";
+        
+      
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

@@ -17,6 +17,11 @@ import javax.swing.JOptionPane;
  */
 public class FrameEvaluacionPart2 extends javax.swing.JFrame {
 
+    public static String frame2_evaluador_1;
+    public static String frame2_evaluador_2;
+    public static String frame2_evaluador_3;
+    public static String frame2_evaluador_4;
+    public static String frame2_evaluador_5;
     /**
      * Creates new form FrameEvaluacionPart2
      */
@@ -28,11 +33,15 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
          cargar_combo_ev3();
          cargar_combo_ev4();
          cargar_combo_ev5();
-         
-         
-            
-         
-         
+         cargar_datos_combo_frame();
+                
+    }
+    void cargar_datos_combo_frame(){
+        comboev1.setSelectedItem(frame2_evaluador_1);
+        comboev2.setSelectedItem(frame2_evaluador_2);
+        comboev3.setSelectedItem(frame2_evaluador_3);
+        comboev4.setSelectedItem(frame2_evaluador_4);
+        comboev5.setSelectedItem(frame2_evaluador_5);
     }
     
     

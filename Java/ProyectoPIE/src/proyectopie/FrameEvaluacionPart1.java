@@ -16,6 +16,13 @@ import java.sql.Statement;
  */
 public class FrameEvaluacionPart1 extends javax.swing.JFrame {
 
+    public static int frame1_numero_estudiante;
+    public static String frame1_diagnostico;
+    public static String frame1_curso;
+    public static String frame1_observacion;
+    public static String frame1_sindrome_asociado;
+    public static String frame1_nuevo_ingreso;
+    public static String frame1_año_continuidad;
     /**
      * Creates new form FrameEvaluacionPart1
      */
@@ -23,6 +30,16 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         initComponents();
          this.setLocationRelativeTo(null);
          cargar_combo_curso();
+         cargar_textfield();
+    }
+    void cargar_textfield(){
+        txtnumeroestudiante.setText(Integer.toString(frame1_numero_estudiante));
+        txtobservacion.setText(frame1_observacion);
+        txtsindromeasociadodiagnostico.setText(frame1_sindrome_asociado);
+        txtmotivo.setText(frame1_nuevo_ingreso);
+        txtañocontinuidad.setText(frame1_año_continuidad);
+        txtdiagnostico.setText(frame1_diagnostico);
+        combocurso.setSelectedItem(frame1_curso);
     }
 
     /**
