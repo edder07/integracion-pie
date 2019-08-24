@@ -1,5 +1,10 @@
 package proyectopie;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,7 +23,29 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
     public FrameEliminarEvaluador() {
         initComponents();
          this.setLocationRelativeTo(null);
+         cargar_combo_evaluador();
     }
+    
+    
+    
+        void cargar_combo_evaluador() {
+        
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+            
+             try {
+                  ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador from profesional_evaluador where profesional_evaluador.estado = 'activo'"); 
+               comboevaluador.removeAllItems();
+              
+               while(rs.next()) {
+                   comboevaluador.addItem(rs.getString("nombre_evaluador"));
+               }
+
+                 } catch (SQLException ex) {
+                   
+                 }
+             }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,22 +57,29 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        comboevaluador = new javax.swing.JComboBox();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        txtrutevaluador = new javax.swing.JTextField();
+        txtprofesion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Nombre del Evaluador");
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        comboevaluador.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("RUT del Evaluador");
@@ -57,6 +91,11 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/cerra.png"))); // NOI18N
         jButton2.setText("            Eliminar Evaluador");
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Volver");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,6 +103,10 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
+
+        txtrutevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        txtprofesion.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,14 +117,18 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
                             .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(53, 53, 53)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(comboevaluador, 0, 294, Short.MAX_VALUE)
+                                    .addComponent(txtrutevaluador))
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1))))
+                                .addComponent(jButton1))
+                            .addComponent(txtprofesion)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(199, 199, 199)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -100,15 +147,19 @@ public class FrameEliminarEvaluador extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(comboevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(jButton1)))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtrutevaluador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtprofesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(19, 19, 19))
         );
@@ -121,6 +172,61 @@ FrameMenuEliminar frame = new FrameMenuEliminar();
     frame.setVisible(true);                                                                                                                
     FrameEliminarEvaluador.this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     
+         String rut_evaluador = txtrutevaluador.getText();
+        String profesional_evaluador = (String) comboevaluador.getSelectedItem();
+       
+ 
+        if(profesional_evaluador.isEmpty() || rut_evaluador.isEmpty()){
+          
+         JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("update profesional_evaluador set estado = 'inactivo' where nombre_evaluador = '" + profesional_evaluador +"'");
+           JOptionPane.showMessageDialog(null, "Profesional eliminado correctamente");
+             cargar_combo_evaluador();
+             txtrutevaluador.setText("");
+             txtprofesion.setText("");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+   
+        
+         String profesional_evaluador = (String) (String) comboevaluador.getSelectedItem();
+       
+        if(profesional_evaluador.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar el nombre del Evaluador","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select profesional_evaluador.rut_evaluador , profesional_evaluador.profesion from profesional_evaluador where profesional_evaluador.nombre_evaluador = '" + profesional_evaluador +"'");
+            if (rs.next()){
+                
+                txtrutevaluador.setText(rs.getString("rut_evaluador")) ;
+                 txtprofesion.setText(rs.getString("profesion")) ;
+             } else{
+                          
+                JOptionPane.showMessageDialog(null,"Profesional no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,12 +264,14 @@ FrameMenuEliminar frame = new FrameMenuEliminar();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox comboevaluador;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txtprofesion;
+    private javax.swing.JTextField txtrutevaluador;
     // End of variables declaration//GEN-END:variables
 }
