@@ -345,7 +345,7 @@ public class FrameAlumno extends javax.swing.JFrame {
        String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
        
          int año = calendarnacimiento.getCalendar().get(Calendar.YEAR);
-         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH);
+         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH)+1;
          int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
 
           String fecha_nacimiento =(año+"-"+mes+"-"+dia);
@@ -379,10 +379,11 @@ public class FrameAlumno extends javax.swing.JFrame {
        String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
        
          int año = calendarnacimiento.getCalendar().get(Calendar.YEAR);
-         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH);
+         int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH)+1;
          int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
 
          String fecha_nacimiento =(año+"-"+mes+"-"+dia);
+        
        
  
         if(rut_alumno.isEmpty() ){

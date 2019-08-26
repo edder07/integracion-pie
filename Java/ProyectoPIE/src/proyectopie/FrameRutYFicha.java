@@ -3,6 +3,12 @@ package proyectopie;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static proyectopie.FrameEvaluacionPart4.frame4_fecha_emision;
 
@@ -186,9 +192,7 @@ public class FrameRutYFicha extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
- FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
-    frame.setVisible(true);                                                                                                                
-    FrameRutYFicha.this.dispose();
+    
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -223,6 +227,7 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
         String crutal=  (String)combo_rut.getSelectedItem().toString();  
         FrameEvaluacionPart4.rut_del_alumno = crutal;
      
+        
         FrameEvaluacionPart1.frame1_numero_estudiante = 0;
         FrameEvaluacionPart1.frame1_diagnostico="";
         FrameEvaluacionPart1.frame1_curso="";
@@ -252,11 +257,37 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
         FrameEvaluacionPart4.nombre_profesional_apoyo_2="";
         FrameEvaluacionPart4.nombre_profesional_apoyo_3="";
         FrameEvaluacionPart4.nombre_profesional_apoyo_4="";
+        funcion_fecha();
+        
+        FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
+    frame.setVisible(true);                                                                                                                
+    FrameRutYFicha.this.dispose();
+       
+        
+     
         
       
        
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    void funcion_fecha(){
+         Calendar fechx = new GregorianCalendar();
+        int año = fechx.get(Calendar.YEAR);
+        int mes = fechx.get(Calendar.MONTH);
+        int dia = fechx.get(Calendar.DAY_OF_MONTH);
+        String fecha_actuall = año+"-"+ mes +"-"+ dia;
+   
+         try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            
+         
+            java.util.Date date = formatter.parse(fecha_actuall);
+             
+               FrameEvaluacionPart4.frame4_fecha_emision = date ;
+        } catch (ParseException ex) {
+            Logger.getLogger(FrameRutYFicha.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     /**
      * @param args the command line arguments
      */

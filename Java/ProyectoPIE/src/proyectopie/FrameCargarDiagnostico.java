@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.util.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -346,6 +347,7 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
                 FrameEvaluacionParte5.sindrome_Asociado = rs.getString("sindrome_asociado_diagnostico");
                 FrameEvaluacionParte5.observacion_salud = rs.getString("observaciones_salud");
                 FrameEvaluacionParte5.fecha_emision = rs.getString("fecha_emision");
+                FrameEvaluacionPart4.frame4_fecha_emision = rs.getDate("fecha_emision");
                 rut_evaluador_1 = rs.getString("rut_evaluador_1");
                 nombre_evaluador_1 = rs.getString("nombre_evaluador_1");
                 profesion_evaluador_1 = rs.getString("profesion_evaluador_1");
@@ -402,6 +404,8 @@ public class FrameCargarDiagnostico extends javax.swing.JFrame {
         int row = tabla_diagnostico.getSelectedRow();
         rut_table=tabla_diagnostico.getValueAt(row, 0).toString();
         fecha_table = (String) tabla_diagnostico.getModel().getValueAt(row, 5);
+        
+  
               
         //int filaSeleccionada = tabla_diagnostico.getSelectedRow();
         //int columnaSeleccionada = tabla_diagnostico.getSelectedColumn();

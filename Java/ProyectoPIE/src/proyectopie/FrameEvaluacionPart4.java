@@ -7,6 +7,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -108,6 +111,14 @@ public static String puntaje_5;
         
        
 
+    }
+     void cargar_datos_select_recuperar (){
+   
+         nombre_profesional_apoyo_1 = (String) comboapoyo1.getSelectedItem();
+         nombre_profesional_apoyo_2 = (String) comboapoyo2.getSelectedItem();
+         nombre_profesional_apoyo_3 = (String) comboapoyo3.getSelectedItem();
+         nombre_profesional_apoyo_4 = (String) comboapoyo4.getSelectedItem();
+         frame4_fecha_emision = calendaremision.getDate();
     }
     
     void cargar_combo_apoyo1() {
@@ -318,7 +329,7 @@ public static String puntaje_5;
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(212, Short.MAX_VALUE)
+                .addContainerGap(136, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -343,6 +354,11 @@ public static String puntaje_5;
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Guardar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -352,6 +368,11 @@ public static String puntaje_5;
         });
 
         jButton3.setText("Modificar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnsiguiente.png"))); // NOI18N
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -381,15 +402,11 @@ public static String puntaje_5;
                         .addComponent(jButton2)
                         .addGap(96, 96, 96)
                         .addComponent(jButton3)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(81, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25))))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -415,9 +432,7 @@ public static String puntaje_5;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-  FrameEvaluacionPart3 frame = new FrameEvaluacionPart3(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionPart4.this.dispose();
+    
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -515,7 +530,7 @@ public static String puntaje_5;
         obtener_datos_evaluador_combobox();
         
         int año = calendaremision.getCalendar().get(Calendar.YEAR);
-        int mes = calendaremision.getCalendar().get(Calendar.MARCH);
+        int mes = calendaremision.getCalendar().get(Calendar.MARCH)+1;
         int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
 
         String fecha_emision =(año+"-"+mes+"-"+dia);
@@ -531,6 +546,7 @@ public static String puntaje_5;
         } 
     }//GEN-LAST:event_jButton2ActionPerformed
 
+   
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
     
         String rut_evaluador_1;
@@ -575,11 +591,12 @@ public static String puntaje_5;
         int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
 
         String fecha_emision =(año+"-"+mes+"-"+dia);
-          
-             ConexionSQL conectar = new ConexionSQL();
-             Statement st = conectar.Conectar();
+       
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+           
         try{
-            ResultSet rs = st.executeQuery("select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" + rut_del_alumno +"'  and ficha_diagnostico.fecha_emision = '" + frame4_fecha_emision +"' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.id_tipoficha , ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" + rut_del_alumno +"'  and ficha_diagnostico.fecha_emision = '" + FrameEvaluacionPart4.frame4_fecha_emision +"' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
             if (rs.next()){
               
                 
@@ -651,6 +668,61 @@ public static String puntaje_5;
        
         
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     
+        
+        cargar_datos_select_recuperar();
+        FrameEvaluacionPart3 frame = new FrameEvaluacionPart3(); 
+        frame.setVisible(true);                                                                                                                
+        FrameEvaluacionPart4.this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+     void funcion_fecha(){
+         Calendar fechx = new GregorianCalendar();
+      int año = calendaremision.getCalendar().get(Calendar.YEAR);
+        int mes = calendaremision.getCalendar().get(Calendar.MARCH);
+        int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
+        String fecha_actuall = año+"-"+ mes +"-"+ dia;
+   
+         try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            
+         
+            java.util.Date date = formatter.parse(fecha_actuall);
+             
+               FrameEvaluacionPart4.frame4_fecha_emision = date ;
+        } catch (ParseException ex) {
+            Logger.getLogger(FrameRutYFicha.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        obtener_nombre_apoyo();
+        obtener_datos_evaluador_combobox();
+        
+        int año = calendaremision.getCalendar().get(Calendar.YEAR);
+        int mes = calendaremision.getCalendar().get(Calendar.MARCH)+1;
+        int dia = calendaremision.getCalendar().get(Calendar.DAY_OF_MONTH);
+
+        String fecha_emision =(año+"-"+mes+"-"+dia);
+     
+        //funcion_fecha();
+         // JOptionPane.showMessageDialog(null, frame4_fecha_emision);
+        
+         ConexionSQL conectar = new ConexionSQL();
+         Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("UPDATE ficha_diagnostico SET id_evaluador_1 = " + id_profesional_evaluador_1 +" , id_evaluador_2 = " + id_profesional_evaluador_2 +" , id_evaluador_3 = " + id_profesional_evaluador_3 +" ,id_evaluador_4 = " + id_profesional_evaluador_4 +" ,id_evaluador_5 = " + id_profesional_evaluador_5 +" , id_apoyo_1 = " + id_profesional_apoyo_1 +" ,  id_apoyo_2 = " + id_profesional_apoyo_2 +" ,  id_apoyo_3 = " + id_profesional_apoyo_3 +" ,  id_apoyo_4 = " + id_profesional_apoyo_4 +" , id_tipoficha = " + id_tipodiagnostico +" , curso_alumno = " + id_curso +" ,continuidad = '"+ año_continuidad +"', nuevo_ingreso = '" + nuevo_ingreso +"' , diagnostico = '" + diagnostico +"' , sindrome_asociado_diagnostico = '" + sindrome_asociado_diagnostico +"' , observaciones_salud = '" + observacion +"' , prueba_1 = '" + prueba_1 +"' , puntaje_1 = '" + puntaje_1 +"' , prueba_2 = '" + prueba_2 +"' , puntaje_2 = '" + puntaje_2 +"' , prueba_3 = '" + prueba_3 +"' , puntaje_3 = '" + puntaje_3 +"' , prueba_4 = '" + prueba_4 +"' , puntaje_4 = '" + puntaje_4 +"' , prueba_5 = '" + prueba_5 +"' , puntaje_5 = '" + puntaje_5 +"' , usuario = " + id_usuario +"  , nombre_apoyo_1 = '" + nombre_profesional_apoyo_1 +"' , nombre_apoyo_2 = '" + nombre_profesional_apoyo_2 +"' , nombre_apoyo_3 = '" + nombre_profesional_apoyo_3 +"' , nombre_apoyo_4 = '" + nombre_profesional_apoyo_4 +"' , nombre_evaluador_1 = '" + nombre_profesional_evaluador_1 +"' , nombre_evaluador_2 = '" + nombre_profesional_evaluador_2 +"'  , nombre_evaluador_3 = '" + nombre_profesional_evaluador_3 +"' , nombre_evaluador_4 = '" + nombre_profesional_evaluador_4 +"' , nombre_evaluador_5 = '" + nombre_profesional_evaluador_5 +"' ,  numero_estudiante = " + numero_estudiante +" , rut_evaluador_1 = '" + rut_profesional_evaluador_1 +"' , rut_evaluador_2 = '" + rut_profesional_evaluador_2 +"' , rut_evaluador_3 = '" + rut_profesional_evaluador_3 +"' , rut_evaluador_4 = '" + rut_profesional_evaluador_4 +"' , rut_evaluador_5 = '" + rut_profesional_evaluador_5 +"' , profesion_evaluador_1 = '"+  profesion_profesional_evaluador_1 +"' , profesion_evaluador_2 = '"  +profesion_profesional_evaluador_2  +"' , profesion_evaluador_3 = '" + profesion_profesional_evaluador_3 +"' , profesion_evaluador_4 = '" + profesion_profesional_evaluador_4 +"' , profesion_evaluador_5 = '" + profesion_profesional_evaluador_5 +"' , rut_apoyo_1 = '" + rut_profesional_apoyo_1 +"' , rut_apoyo_2 = '" + rut_profesional_apoyo_2 +"' , rut_apoyo_3 = '" + rut_profesional_apoyo_3 +"' , rut_apoyo_4 = '" + rut_profesional_apoyo_4 +"' , fecha_emision = '" + fecha_emision +"' WHERE ficha_diagnostico.rut_alumno = '"+ rut_del_alumno +"' and ficha_diagnostico.fecha_emision = '" +  FrameEvaluacionPart4.frame4_fecha_emision + "' and ficha_diagnostico.id_tipoficha = " + id_tipodiagnostico +"");
+           JOptionPane.showMessageDialog(null, "Ficha modificada correctamente");
+           JOptionPane.showMessageDialog(null, fecha_emision);
+           JOptionPane.showMessageDialog(null, FrameEvaluacionPart4.frame4_fecha_emision);
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,5 +1,7 @@
 package proyectopie;
 
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -44,6 +46,31 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         txtpuntaje3.setText(frame3_puntaje_3);
         txtpuntaje4.setText(frame3_puntaje_4);
         txtpuntaje5.setText(frame3_puntaje_5);
+    }
+    
+     
+    void cargar_textfiel_pruebas_recuperar(){
+        
+        frame3_prueba_1 = txtprueba1.getText();
+      
+        frame3_prueba_2 = txtprueba2.getText();
+     
+        frame3_prueba_3 = txtprueba3.getText();
+       
+        frame3_prueba_4 = txtprueba4.getText();
+       
+        frame3_prueba_5 = txtprueba5.getText();
+      
+      
+        frame3_puntaje_1 = txtpuntaje1.getText();
+        
+        frame3_puntaje_2 = txtpuntaje2.getText();
+       
+        frame3_puntaje_3 = txtpuntaje3.getText();
+ 
+        frame3_puntaje_4 = txtpuntaje4.getText();
+     
+        frame3_puntaje_5 = txtpuntaje5.getText();
     }
 
     /**
@@ -281,9 +308,7 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-  FrameEvaluacionPart4 frame = new FrameEvaluacionPart4(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionPart3.this.dispose();
+  
     }//GEN-LAST:event_jButton2MouseClicked
 
     void obtener_pruebas_y_puntajes(){
@@ -313,6 +338,10 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
       
         obtener_pruebas_y_puntajes();
+        cargar_textfiel_pruebas_recuperar();
+        FrameEvaluacionPart4 frame = new FrameEvaluacionPart4(); 
+        frame.setVisible(true);                                                                                                                
+        FrameEvaluacionPart3.this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

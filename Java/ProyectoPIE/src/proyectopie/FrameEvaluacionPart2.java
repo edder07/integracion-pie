@@ -45,6 +45,22 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     }
     
     
+    void cargar_datos_combo_frame_recuperar(){
+          
+        frame2_evaluador_1 = (String) comboev1.getSelectedItem();
+       
+        frame2_evaluador_2 = (String) comboev2.getSelectedItem();
+      
+        frame2_evaluador_3 = (String) comboev3.getSelectedItem();
+       
+        frame2_evaluador_4 = (String) comboev4.getSelectedItem();
+       
+        frame2_evaluador_5 = (String) comboev5.getSelectedItem();
+       
+    }
+    
+    
+    
         void cargar_combo_ev1() {
         
         ConexionSQL conectar = new ConexionSQL();
@@ -379,8 +395,8 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
                 String profesion_ev = rs.getString("profesion");
                 int id_ev = rs.getInt("id_evaluador") ;
                 FrameEvaluacionPart4.id_profesional_evaluador_4 = id_ev;
-                 FrameEvaluacionPart4.rut_profesional_evaluador_4 = rut_ev;
-                  FrameEvaluacionPart4.profesion_profesional_evaluador_4 = profesion_ev;
+                FrameEvaluacionPart4.rut_profesional_evaluador_4 = rut_ev;
+                FrameEvaluacionPart4.profesion_profesional_evaluador_4 = profesion_ev;
                 
                 }
                 } catch (SQLException ex) {
@@ -422,6 +438,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
       
         obtener_nombre_evaluador();
         obtener_datos_evaluador_combobox();
+        cargar_datos_combo_frame_recuperar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -41,6 +41,16 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         txtdiagnostico.setText(frame1_diagnostico);
         combocurso.setSelectedItem(frame1_curso);
     }
+    void cargar_textfield_recuperar(){
+        frame1_numero_estudiante= Integer.parseInt(txtnumeroestudiante.getText());
+        frame1_observacion = txtobservacion.getText();
+        frame1_sindrome_asociado = txtsindromeasociadodiagnostico.getText();
+        frame1_nuevo_ingreso =  txtmotivo.getText();
+        frame1_año_continuidad = txtañocontinuidad.getText();
+        frame1_diagnostico =   txtdiagnostico.getText();
+        frame1_curso = (String) combocurso.getSelectedItem();
+     
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -356,40 +366,46 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     }    
         }
+    
     void concateno_palabras(){
         if (check1.isSelected()){
             String palabra = "Si "+ txtmotivo.getText();
               FrameEvaluacionPart4.nuevo_ingreso = palabra;
-                        
         }
         if(check2.isSelected()){
             String palabra = "No "+ txtmotivo.getText();
               FrameEvaluacionPart4.nuevo_ingreso = palabra;
-            
         }
          if (check3.isSelected()){
             String palabra = "Si "+ txtañocontinuidad.getText();
               FrameEvaluacionPart4.año_continuidad = palabra;
-                        
         }
         if(check4.isSelected()){
             String palabra = "No "+ txtañocontinuidad.getText();
               FrameEvaluacionPart4.año_continuidad = palabra;
-            
         }
          if (check5.isSelected()){
             String palabra = "Si "+ txtsindromeasociadodiagnostico.getText();
               FrameEvaluacionPart4.sindrome_asociado_diagnostico = palabra;
-                        
         }
         if(check6.isSelected()){
             String palabra = "No";
               FrameEvaluacionPart4.sindrome_asociado_diagnostico = palabra;
-            
         }
-        
-                
+         if (!check1.isSelected() && !check2.isSelected() ){
+              String palabra = txtmotivo.getText();
+              FrameEvaluacionPart4.nuevo_ingreso = palabra;
+        }
+           if (!check3.isSelected() && !check4.isSelected() ){
+            String palabra = txtañocontinuidad.getText();
+              FrameEvaluacionPart4.año_continuidad = palabra;
+        }
+            if (!check5.isSelected() && !check6.isSelected() ){
+                String palabra = "Si "+ txtsindromeasociadodiagnostico.getText();
+                FrameEvaluacionPart4.sindrome_asociado_diagnostico = palabra;   
+        }       
     }
+   
     void obtener_datos_textfield(){
        
         int tnumeroestudiante = Integer.parseInt(txtnumeroestudiante.getText()); 
@@ -405,6 +421,7 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
     obtener_id_curso();   
     concateno_palabras();
     obtener_datos_textfield();
+    cargar_textfield_recuperar();
     FrameEvaluacionPart2 frame = new FrameEvaluacionPart2(); 
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionPart1.this.dispose();
