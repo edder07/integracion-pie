@@ -261,6 +261,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtrutKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtnombre">
       <Properties>
@@ -268,6 +271,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnombreKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtapellidop">
       <Properties>
@@ -275,6 +281,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtapellidopKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtapellidom">
       <Properties>
@@ -282,6 +291,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtapellidomKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtfono">
       <Properties>
@@ -289,6 +301,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtfonoKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtdireccion">
       <Properties>
@@ -296,6 +311,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtdireccionKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="combosexo">
       <Properties>

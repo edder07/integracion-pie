@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -95,16 +96,46 @@ public class FrameAlumno extends javax.swing.JFrame {
         jLabel10.setText("FECHA NACIMIENTO");
 
         txtrut.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtrut.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtrutKeyTyped(evt);
+            }
+        });
 
         txtnombre.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreKeyTyped(evt);
+            }
+        });
 
         txtapellidop.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtapellidop.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtapellidopKeyTyped(evt);
+            }
+        });
 
         txtapellidom.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtapellidom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtapellidomKeyTyped(evt);
+            }
+        });
 
         txtfono.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtfono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtfonoKeyTyped(evt);
+            }
+        });
 
         txtdireccion.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtdireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdireccionKeyTyped(evt);
+            }
+        });
 
         combosexo.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         combosexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "HOMBRE", "MUJER", "OTRO" }));
@@ -368,23 +399,87 @@ public class FrameAlumno extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       String rut_alumno = txtrut.getText();
-       String nombre_alumno = txtnombre.getText();
-       String apellido_paterno = txtapellidop.getText();
-       String apellido_materno = txtapellidom.getText();
-       int fono_alumno = Integer.parseInt(txtfono.getText());   
-       String direccion_alumno = txtdireccion.getText();
-       String sexo_alumno = (String) combosexo.getSelectedItem();
-       String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
+    void insertar_alumno(){
+               String rut_alumno = txtrut.getText();
+       
        
          int año = calendarnacimiento.getCalendar().get(Calendar.YEAR);
          int mes = calendarnacimiento.getCalendar().get(Calendar.MARCH)+1;
          int dia = calendarnacimiento.getCalendar().get(Calendar.DAY_OF_MONTH);
 
          String fecha_nacimiento =(año+"-"+mes+"-"+dia);
-        
+         boolean respuesta;
+         respuesta=validarRut(rut_alumno);
+         
+         if (respuesta==false){
+             JOptionPane.showMessageDialog(rootPane,"Rut Invalido","ERROR", JOptionPane.ERROR_MESSAGE);
+             txtrut.grabFocus();
+             
+             }else {
+             
+             if(rut_alumno.isEmpty() || txtnombre.getText().isEmpty() || txtapellidop.getText().isEmpty() || txtapellidom.getText().isEmpty() || txtfono.getText().isEmpty() || txtdireccion.getText().isEmpty() ){
+                 
+                 JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+                 
+                 }else {
+                 
+                 String nombre_alumno = txtnombre.getText();
+                 String apellido_paterno = txtapellidop.getText();
+                 String apellido_materno = txtapellidom.getText();
+                 int fono_alumno = Integer.parseInt(txtfono.getText());   
+                 String direccion_alumno = txtdireccion.getText();
+                 String sexo_alumno = (String) combosexo.getSelectedItem();
+                 String nacionalidad_alumno = (String) combonacionalidad.getSelectedItem();
+                 
+                 ConexionSQL conectar = new ConexionSQL();
+                 Statement st = conectar.Conectar();
+                 try{
+                     
+                    st.executeUpdate("INSERT INTO alumno VALUES ('" + rut_alumno + "', '" + nombre_alumno + "', '" + apellido_paterno + "','" + apellido_materno + "','" + fono_alumno  +"','" + direccion_alumno + "','" + fecha_nacimiento +"','" + sexo_alumno +"','" + nacionalidad_alumno +"' , 'activo')");
+                    JOptionPane.showMessageDialog(null, "Alumno ingresado correctamente");
+                    
+                    }
+                 
+                 catch (SQLException ex){
+                     
+                     JOptionPane.showMessageDialog(null, ex);
+                     
+                     }
+                 }
+             }
+    }
+          void update_estado_alumno(){
+               String rut_alumno = txtrut.getText();
        
+       
+        
+             
+             
+                 ConexionSQL conectar = new ConexionSQL();
+                 Statement st = conectar.Conectar();
+                 try{
+                     
+                    st.executeUpdate("update alumno set estado = 'activo' where alumno.rut_alumno = '"+ rut_alumno +"' " );
+                    JOptionPane.showMessageDialog(null, "Estado Alumno Activo","Informacion",JOptionPane.INFORMATION_MESSAGE);
+                    
+                    }
+                 
+                 catch (SQLException ex){
+                     
+                     JOptionPane.showMessageDialog(null, ex);
+                     
+                     }
+                 
+             
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       
+          String rut_alumno = txtrut.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
  
         if(rut_alumno.isEmpty() ){
           
@@ -394,13 +489,35 @@ public class FrameAlumno extends javax.swing.JFrame {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-             st.executeUpdate("INSERT INTO alumno VALUES ('" + rut_alumno + "', '" + nombre_alumno + "', '" + apellido_paterno + "','" + apellido_materno + "','" + fono_alumno  +"','" + direccion_alumno + "','" + fecha_nacimiento +"','" + sexo_alumno +"','" + nacionalidad_alumno +"' , 'activo')");
-           JOptionPane.showMessageDialog(null, "Alumno ingresado correctamente");
+            ResultSet rs = st.executeQuery("select alumno.nombres_alumno, alumno.apellido_paterno, alumno.apellido_materno,alumno.fono_alumno, alumno.direccion_alumno , alumno.sexo_alumno , alumno.fecha_nacimiento , alumno.nacionalidad_alumno from alumno where alumno.rut_alumno='" + rut_alumno +"'");
+            if (rs.next()){
+                
+                txtnombre.setText(rs.getString("nombres_Alumno")) ;
+                txtapellidop.setText(rs.getString("apellido_paterno"));
+                txtapellidom.setText(rs.getString("apellido_materno"));
+                txtfono.setText(rs.getString("fono_alumno"));
+                txtdireccion.setText(rs.getString("direccion_alumno"));
+                combosexo.setSelectedItem(rs.getString("sexo_alumno"));
+                combonacionalidad.setSelectedItem(rs.getString("nacionalidad_alumno"));
+                calendarnacimiento.setDate(rs.getDate("fecha_nacimiento"));
+                update_estado_alumno();
+                
+                   
+            } else{
+                 insertar_alumno();
+              
+            }
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         } 
         }
+        
+        
+        
+       
+ 
+         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -414,6 +531,114 @@ public class FrameAlumno extends javax.swing.JFrame {
                   combonacionalidad.setSelectedIndex(0);
   
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    public static boolean validarRut(String rut) {
+        
+
+        boolean validacion = false;
+        try {
+        rut =  rut.toUpperCase();
+        rut = rut.replace(".", "");
+        rut = rut.replace("-", "");
+        int rutAux = Integer.parseInt(rut.substring(0, rut.length() - 1));
+
+        char dv = rut.charAt(rut.length() - 1);
+
+        int m = 0, s = 1;
+        for (; rutAux != 0; rutAux /= 10) {
+        s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+        }
+        if (dv == (char) (s != 0 ? s + 47 : 75)) {
+        validacion = true;
+        }
+
+} catch (java.lang.NumberFormatException e) {
+} catch (Exception e) {
+}
+return validacion;
+}
+    private void txtrutKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtrutKeyTyped
+       
+        int n=10;
+        if(txtrut.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+             JOptionPane.showMessageDialog(null,"solo 10 dijitos sin puntos","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtrutKeyTyped
+
+    private void txtfonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtfonoKeyTyped
+    
+          int n=9;
+       if(txtfono.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Solo 9 digitos","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+       char c=evt.getKeyChar();
+               if(c<'0' || c>'9'){
+                   evt.consume();
+               }
+    }//GEN-LAST:event_txtfonoKeyTyped
+
+    private void txtnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyTyped
+      
+        int n=200;
+        if(txtnombre.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+       
+    }//GEN-LAST:event_txtnombreKeyTyped
+
+    private void txtapellidopKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidopKeyTyped
+      
+         int n=49;
+        if(txtapellidop.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtapellidopKeyTyped
+
+    private void txtapellidomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidomKeyTyped
+      
+         int n=49;
+        if(txtapellidom.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtapellidomKeyTyped
+
+    private void txtdireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdireccionKeyTyped
+    
+         int n=320;
+        if(txtdireccion.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtdireccionKeyTyped
 
     /**
      * @param args the command line arguments

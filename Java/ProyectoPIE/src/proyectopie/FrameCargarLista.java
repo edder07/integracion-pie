@@ -296,6 +296,7 @@ public class FrameCargarLista extends javax.swing.JFrame {
                 FrameEvaluacionParte5.observacion_salud = rs.getString("observaciones_salud");
                 FrameEvaluacionParte5.fecha_emision = rs.getString("fecha_emision");
                 FrameEvaluacionPart4.frame4_fecha_emision = rs.getDate("fecha_emision");
+                FrameEvaluacionPart4.frame4_fechax = rs.getString("fecha_emision");
                 rut_evaluador_1 = rs.getString("rut_evaluador_1");
                 nombre_evaluador_1 = rs.getString("nombre_evaluador_1");
                 profesion_evaluador_1 = rs.getString("profesion_evaluador_1");

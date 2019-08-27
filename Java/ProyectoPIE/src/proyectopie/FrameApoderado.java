@@ -75,6 +75,11 @@ public class FrameApoderado extends javax.swing.JFrame {
         jLabel8.setText("RUT ALUMNO");
 
         txtrutapoderado.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtrutapoderado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtrutapoderadoKeyTyped(evt);
+            }
+        });
 
         txtnombreapoderado.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
@@ -268,22 +273,32 @@ public class FrameApoderado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     
-           String rut_apoderado = txtrutapoderado.getText();
-           String nombre_apoderado = txtnombreapoderado.getText();
-            String direccion_apoderado = txtdireccionapoderado.getText();
-             String fono_apoderado = txtfonoapoderado.getText();
-              String rut_alumno = comborutalumno.getSelectedItem().toString();
+    void insert_apoderado(){
+        
+        String rut_apoderado = txtrutapoderado.getText();
+        
+        int rut_al = comborutalumno.getSelectedIndex();
       
  
-        if(rut_apoderado.isEmpty() ){
+        boolean respuesta;
+        respuesta=validarRut(rut_apoderado);
+        if (respuesta==false){
+             JOptionPane.showMessageDialog(rootPane,"Rut Invalido","ERROR", JOptionPane.ERROR_MESSAGE);
+             txtrutapoderado.grabFocus();
+             
+             }else {
+            
+        
+              if(rut_apoderado.isEmpty() || txtnombreapoderado.getText().isEmpty() || txtdireccionapoderado.getText().isEmpty() || txtfonoapoderado.getText().isEmpty() || rut_al == 0 ){
           
-         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
-        }else
-         {
-             ConexionSQL conectar = new ConexionSQL();
-             Statement st = conectar.Conectar();
+               JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+               }else {
+                  String nombre_apoderado = txtnombreapoderado.getText();
+                  String direccion_apoderado = txtdireccionapoderado.getText();
+                  String fono_apoderado = txtfonoapoderado.getText();
+                  String rut_alumno = comborutalumno.getSelectedItem().toString();
+                  ConexionSQL conectar = new ConexionSQL();
+                  Statement st = conectar.Conectar();
         try{
              st.executeUpdate("INSERT INTO apoderado VALUES ('" + rut_apoderado +"', '" + nombre_apoderado +"', '" + fono_apoderado +"','" + direccion_apoderado +"' , '" + rut_alumno + "')");
            JOptionPane.showMessageDialog(null, "Apoderado ingresado correctamente");
@@ -291,6 +306,56 @@ public class FrameApoderado extends javax.swing.JFrame {
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         } 
+        }
+        }
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+           String rut_apoderado = txtrutapoderado.getText();
+           String rut_alumno = (String)comborutalumno.getSelectedItem().toString();
+           int rut_fk_a = comborutalumno.getSelectedIndex();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
+ 
+        if(rut_apoderado.isEmpty() || txtnombreapoderado.getText().isEmpty() || txtdireccionapoderado.getText().isEmpty() || txtfonoapoderado.getText().isEmpty() || rut_fk_a == 0){
+          
+         JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select apoderado.nombre_apoderado, apoderado.fono_apoderado, apoderado.direccion_apoderado , apoderado.rut_fk_alumno from apoderado where apoderado.rut_apoderado='" + rut_apoderado +"'");
+            if (rs.next()){
+                
+                txtnombreapoderado.setText(rs.getString("nombre_apoderado")) ;
+                txtfonoapoderado.setText(rs.getString("fono_apoderado"));
+                txtdireccionapoderado.setText(rs.getString("direccion_apoderado"));
+                comborutalumno.setSelectedItem(rs.getString("rut_fk_alumno"));
+             
+                JOptionPane.showMessageDialog(null, "El apoderado ya existe","Informacion",JOptionPane.INFORMATION_MESSAGE);
+                
+                   
+            } else{
+                
+                ResultSet rsa = st.executeQuery("select apoderado.rut_fk_alumno from apoderado where apoderado.rut_fk_alumno='" + rut_alumno +"'");
+                if (rsa.next()){
+                
+                     JOptionPane.showMessageDialog(null, "No puede haber un alumnos con dos apoderados","Error",JOptionPane.ERROR_MESSAGE);
+                   
+            }else {
+                
+              insert_apoderado();
+                }
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -329,6 +394,43 @@ public class FrameApoderado extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+        public static boolean validarRut(String rut) {
+        
+
+        boolean validacion = false;
+        try {
+        rut =  rut.toUpperCase();
+        rut = rut.replace(".", "");
+        rut = rut.replace("-", "");
+        int rutAux = Integer.parseInt(rut.substring(0, rut.length() - 1));
+
+        char dv = rut.charAt(rut.length() - 1);
+
+        int m = 0, s = 1;
+        for (; rutAux != 0; rutAux /= 10) {
+        s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+        }
+        if (dv == (char) (s != 0 ? s + 47 : 75)) {
+        validacion = true;
+        }
+
+} catch (java.lang.NumberFormatException e) {
+} catch (Exception e) {
+}
+return validacion;
+}
+    private void txtrutapoderadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtrutapoderadoKeyTyped
+        
+        int n=10;
+        if(txtrutapoderado.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+             JOptionPane.showMessageDialog(null,"solo 10 dijitos sin puntos","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtrutapoderadoKeyTyped
 
     /**
      * @param args the command line arguments

@@ -130,6 +130,11 @@ public class FrameRutYFicha extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -270,10 +275,77 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
        
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    void select_reevaluar(){
+        
+        
+           
+        
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select top 1 ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , alumno.fecha_nacimiento , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , ficha_diagnostico.fecha_emision , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo from ficha_diagnostico , tipo_ficha , alumno , curso where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = '" +  FrameEvaluacionPart4.rut_del_alumno +"' and ficha_diagnostico.id_tipoficha = " +  FrameEvaluacionPart4.id_tipodiagnostico +"  ORDER BY ficha_diagnostico.fecha_emision DESC");
+            if (rs.next()){
+                
+               
+               
+                FrameEvaluacionPart1.frame1_numero_estudiante = rs.getInt("numero_estudiante");
+                FrameEvaluacionPart1.frame1_curso = rs.getString("nombre");
+                FrameEvaluacionPart1.frame1_nuevo_ingreso = rs.getString("nuevo_ingreso");
+                FrameEvaluacionPart1.frame1_año_continuidad = rs.getString("continuidad");
+                FrameEvaluacionPart1.frame1_diagnostico = rs.getString("diagnostico");
+                FrameEvaluacionPart1.frame1_sindrome_asociado = rs.getString("sindrome_asociado_diagnostico");
+                FrameEvaluacionPart1.frame1_observacion = rs.getString("observaciones_salud");
+                FrameEvaluacionPart4.frame4_fecha_emision = rs.getDate("fecha_emision");
+                FrameEvaluacionPart4.frame4_fechax = rs.getString("fecha_emision");
+                
+                FrameEvaluacionPart2.frame2_evaluador_1 = rs.getString("nombre_evaluador_1");
+                FrameEvaluacionPart2.frame2_evaluador_2 = rs.getString("nombre_evaluador_2");
+                FrameEvaluacionPart2.frame2_evaluador_3 = rs.getString("nombre_evaluador_3");
+                FrameEvaluacionPart2.frame2_evaluador_4 = rs.getString("nombre_evaluador_4");
+                FrameEvaluacionPart2.frame2_evaluador_5 = rs.getString("nombre_evaluador_5");
+                
+                FrameEvaluacionPart3.frame3_prueba_1 = rs.getString("prueba_1");
+                FrameEvaluacionPart3.frame3_puntaje_1 = rs.getString("puntaje_1");
+                FrameEvaluacionPart3.frame3_prueba_2 = rs.getString("prueba_2");
+                FrameEvaluacionPart3.frame3_puntaje_2 = rs.getString("puntaje_2");
+                FrameEvaluacionPart3.frame3_prueba_3 = rs.getString("prueba_3");
+                FrameEvaluacionPart3.frame3_puntaje_3 = rs.getString("puntaje_3");
+                FrameEvaluacionPart3.frame3_prueba_4 = rs.getString("prueba_4");
+                FrameEvaluacionPart3.frame3_puntaje_4 = rs.getString("puntaje_4");
+                FrameEvaluacionPart3.frame3_prueba_5 = rs.getString("prueba_5");
+                FrameEvaluacionPart3.frame3_puntaje_5 = rs.getString("puntaje_5");
+                FrameEvaluacionPart4.nombre_profesional_apoyo_1 = rs.getString("nombre_apoyo_1");
+                FrameEvaluacionPart4.nombre_profesional_apoyo_2 = rs.getString("nombre_apoyo_2");
+                FrameEvaluacionPart4.nombre_profesional_apoyo_3 = rs.getString("nombre_apoyo_3");
+                FrameEvaluacionPart4.nombre_profesional_apoyo_4 = rs.getString("nombre_apoyo_4");
+             
+                 JOptionPane.showMessageDialog(null,  FrameEvaluacionPart4.frame4_fecha_emision);
+          
+                
+                FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
+                frame.setVisible(true);                                                                                                                
+                FrameRutYFicha.this.dispose();
+                
+            
+        }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+    }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        obtener_id_diagnostico();
+        String crutal=  (String)combo_rut.getSelectedItem().toString();  
+        FrameEvaluacionPart4.rut_del_alumno = crutal;
+        select_reevaluar();
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     void funcion_fecha(){
          Calendar fechx = new GregorianCalendar();
         int año = fechx.get(Calendar.YEAR);
-        int mes = fechx.get(Calendar.MONTH);
+        int mes = fechx.get(Calendar.MONTH)+1;
         int dia = fechx.get(Calendar.DAY_OF_MONTH);
         String fecha_actuall = año+"-"+ mes +"-"+ dia;
    

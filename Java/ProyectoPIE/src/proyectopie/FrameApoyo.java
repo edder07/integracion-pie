@@ -208,11 +208,71 @@ public class FrameApoyo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+      public static boolean validarRut(String rut) {
+        
+
+        boolean validacion = false;
+        try {
+        rut =  rut.toUpperCase();
+        rut = rut.replace(".", "");
+        rut = rut.replace("-", "");
+        int rutAux = Integer.parseInt(rut.substring(0, rut.length() - 1));
+
+        char dv = rut.charAt(rut.length() - 1);
+
+        int m = 0, s = 1;
+        for (; rutAux != 0; rutAux /= 10) {
+        s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+        }
+        if (dv == (char) (s != 0 ? s + 47 : 75)) {
+        validacion = true;
+        }
+
+} catch (java.lang.NumberFormatException e) {
+} catch (Exception e) {
+}
+return validacion;
+}
+    void insert_apoyo (){
+        
+        
+       String rut_apoyo = txtrutapoyo.getText();
+       String nombre_apoyo = txtnombreapoyo.getText();
+       boolean respuesta;
+        respuesta=validarRut(rut_apoyo);
+        if (respuesta==false){
+             JOptionPane.showMessageDialog(rootPane,"Rut Invalido","ERROR", JOptionPane.ERROR_MESSAGE);
+             txtrutapoyo.grabFocus();
+             
+             }else {
+            
+        
+              if(rut_apoyo.isEmpty() || txtnombreapoyo.getText().isEmpty()){
+          
+               JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+               }else {
+                  
+              
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("INSERT INTO profesional_apoyo (rut_apoyo,nombre_apoyo,estado) VALUES ('" + rut_apoyo +"', '" + nombre_apoyo + "','activo')");
+           JOptionPane.showMessageDialog(null, "Profesional ingresado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }
+    }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-           String rut_apoyo = txtrutapoyo.getText();
-       String nombre_apoyo = txtnombreapoyo.getText();
-      
+          String rut_apoyo = txtrutapoyo.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
  
         if(rut_apoyo.isEmpty() ){
           
@@ -222,8 +282,17 @@ public class FrameApoyo extends javax.swing.JFrame {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-             st.executeUpdate("INSERT INTO profesional_apoyo (rut_apoyo,nombre_apoyo,estado) VALUES ('" + rut_apoyo +"', '" + nombre_apoyo + "','activo')");
-           JOptionPane.showMessageDialog(null, "Profesional ingresado correctamente");
+            ResultSet rs = st.executeQuery("select profesional_apoyo.nombre_apoyo from profesional_apoyo where profesional_apoyo.rut_apoyo= '" + rut_apoyo +"'");
+            if (rs.next()){
+                
+                txtnombreapoyo.setText(rs.getString("nombre_apoyo")) ;
+                JOptionPane.showMessageDialog(null,"El profesional ya existe","Informacion",JOptionPane.INFORMATION_MESSAGE);
+                
+                   
+            } else{
+                
+                insert_apoyo();
+            }
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
