@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -59,8 +60,18 @@ public class FrameDiagnostico extends javax.swing.JFrame {
         jLabel3.setText("INGRESE DESCRIPCION DEL DIAGNOSTICO");
 
         txtnombrediagnostico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombrediagnostico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombrediagnosticoKeyTyped(evt);
+            }
+        });
 
         txtdescripciondiagnostico.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtdescripciondiagnostico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdescripciondiagnosticoKeyTyped(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
@@ -208,10 +219,35 @@ public class FrameDiagnostico extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String nombre_diagnostico = txtnombrediagnostico.getText();
+    void insertar_diagnostico(){
+          String nombre_diagnostico = txtnombrediagnostico.getText();
        String descripcion_diagnostico = txtdescripciondiagnostico.getText();
       
+ 
+        if(nombre_diagnostico.isEmpty() || descripcion_diagnostico.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar nombre y descripcion del diagnostico","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+             st.executeUpdate("INSERT INTO tipo_ficha (nombre_tipo,descripcion_tipoficha) VALUES ('" + nombre_diagnostico +"', '" + descripcion_diagnostico +"')");
+           JOptionPane.showMessageDialog(null, "Diagnostico ingresado correctamente");
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+          String nombre_diagnostico = txtnombrediagnostico.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
  
         if(nombre_diagnostico.isEmpty() ){
           
@@ -221,8 +257,16 @@ public class FrameDiagnostico extends javax.swing.JFrame {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
-             st.executeUpdate("INSERT INTO tipo_ficha (nombre_tipo,descripcion_tipoficha) VALUES ('" + nombre_diagnostico +"', '" + descripcion_diagnostico +"')");
-           JOptionPane.showMessageDialog(null, "Diagnostico ingresado correctamente");
+            ResultSet rs = st.executeQuery("select tipo_ficha.descripcion_tipoficha from tipo_ficha where tipo_ficha.nombre_tipo ='" + nombre_diagnostico +"'");
+            if (rs.next()){
+                
+                txtdescripciondiagnostico.setText(rs.getString("descripcion_tipoficha")) ;
+                 JOptionPane.showMessageDialog(null,"El Diagnostico ya existe","Informacion",JOptionPane.INFORMATION_MESSAGE);
+                
+                   
+            } else{
+               insertar_diagnostico();
+            }
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -256,6 +300,46 @@ public class FrameDiagnostico extends javax.swing.JFrame {
       txtnombrediagnostico.setText("");
       txtdescripciondiagnostico.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void txtnombrediagnosticoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombrediagnosticoKeyTyped
+ 
+          int n=79;
+        if(txtnombrediagnostico.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ') &&(c!='.') )evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtnombrediagnosticoKeyTyped
+
+    private void txtdescripciondiagnosticoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdescripciondiagnosticoKeyTyped
+  
+          int n=148;
+        if(txtdescripciondiagnostico.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtdescripciondiagnosticoKeyTyped
 
     /**
      * @param args the command line arguments

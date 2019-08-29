@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -82,10 +83,25 @@ public class FrameApoderado extends javax.swing.JFrame {
         });
 
         txtnombreapoderado.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombreapoderado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreapoderadoKeyTyped(evt);
+            }
+        });
 
         txtfonoapoderado.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtfonoapoderado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtfonoapoderadoKeyTyped(evt);
+            }
+        });
 
         txtdireccionapoderado.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtdireccionapoderado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdireccionapoderadoKeyTyped(evt);
+            }
+        });
 
         comborutalumno.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         comborutalumno.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -431,6 +447,60 @@ return validacion;
                
        }
     }//GEN-LAST:event_txtrutapoderadoKeyTyped
+
+    private void txtnombreapoderadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreapoderadoKeyTyped
+      
+         int n=248;
+        if(txtnombreapoderado.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtnombreapoderadoKeyTyped
+
+    private void txtfonoapoderadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtfonoapoderadoKeyTyped
+     
+         int n=9;
+       if(txtfonoapoderado.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Solo 9 digitos","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+       char c=evt.getKeyChar();
+               if(c<'0' || c>'9'){
+                   evt.consume();
+               }
+    }//GEN-LAST:event_txtfonoapoderadoKeyTyped
+
+    private void txtdireccionapoderadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdireccionapoderadoKeyTyped
+    
+         int n=248;
+        if(txtdireccionapoderado.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')&&(c!='/')&&(c!='.')&&(c!=',')&&(c!='-')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtdireccionapoderadoKeyTyped
 
     /**
      * @param args the command line arguments

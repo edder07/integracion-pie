@@ -3,6 +3,7 @@ package proyectopie;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -113,6 +114,12 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel7.setText("Observacion de salud");
 
+        txtnumeroestudiante.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumeroestudianteKeyTyped(evt);
+            }
+        });
+
         combocurso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         check1.setText("Si");
@@ -146,6 +153,12 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel8.setText("Motivo");
 
+        txtañocontinuidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtañocontinuidadKeyTyped(evt);
+            }
+        });
+
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel9.setText("Año continuidad");
 
@@ -160,6 +173,12 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         check6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 check6ActionPerformed(evt);
+            }
+        });
+
+        txtsindromeasociadodiagnostico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtsindromeasociadodiagnosticoKeyTyped(evt);
             }
         });
 
@@ -187,14 +206,29 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
 
         txtmotivo.setColumns(20);
         txtmotivo.setRows(5);
+        txtmotivo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtmotivoKeyTyped(evt);
+            }
+        });
         jScrollPane2.setViewportView(txtmotivo);
 
         txtdiagnostico.setColumns(20);
         txtdiagnostico.setRows(5);
+        txtdiagnostico.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdiagnosticoKeyTyped(evt);
+            }
+        });
         jScrollPane3.setViewportView(txtdiagnostico);
 
         txtobservacion.setColumns(20);
         txtobservacion.setRows(5);
+        txtobservacion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtobservacionKeyTyped(evt);
+            }
+        });
         jScrollPane4.setViewportView(txtobservacion);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -418,15 +452,25 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
         
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    obtener_id_curso();   
-    concateno_palabras();
-    obtener_datos_textfield();
-    cargar_textfield_recuperar();
-    FrameEvaluacionPart2 frame = new FrameEvaluacionPart2(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionPart1.this.dispose();
+
+        
+        if (txtnumeroestudiante.getText().isEmpty()){
+            
+             JOptionPane.showMessageDialog(null,"Debe ingresar el numero del estudiante","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else{
+            
+        
+        
+        obtener_id_curso();   
+        concateno_palabras();
+        obtener_datos_textfield();
+        cargar_textfield_recuperar();
+        FrameEvaluacionPart2 frame = new FrameEvaluacionPart2(); 
+        frame.setVisible(true);                                                                                                                
+        FrameEvaluacionPart1.this.dispose();
      
-     
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void check1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check1ActionPerformed
@@ -466,6 +510,71 @@ public class FrameEvaluacionPart1 extends javax.swing.JFrame {
             check5.setSelected(false);
        }  
     }//GEN-LAST:event_check6ActionPerformed
+
+    private void txtnumeroestudianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumeroestudianteKeyTyped
+    
+            int n=3;
+       if(txtnumeroestudiante.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Solo 9 digitos","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+       char c=evt.getKeyChar();
+               if(c<'0' || c>'9'){
+                   evt.consume();
+               }
+    }//GEN-LAST:event_txtnumeroestudianteKeyTyped
+
+    private void txtmotivoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtmotivoKeyTyped
+    
+            int n=299;
+       if(txtmotivo.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+      
+    }//GEN-LAST:event_txtmotivoKeyTyped
+
+    private void txtañocontinuidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtañocontinuidadKeyTyped
+     
+         int n=19;
+       if(txtañocontinuidad.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtañocontinuidadKeyTyped
+
+    private void txtdiagnosticoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdiagnosticoKeyTyped
+     
+         int n=599;
+       if(txtdiagnostico.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtdiagnosticoKeyTyped
+
+    private void txtsindromeasociadodiagnosticoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsindromeasociadodiagnosticoKeyTyped
+   
+         int n=599;
+       if(txtsindromeasociadodiagnostico.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtsindromeasociadodiagnosticoKeyTyped
+
+    private void txtobservacionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtobservacionKeyTyped
+   
+         int n=899;
+         if(txtobservacion.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtobservacionKeyTyped
 
     /**
      * @param args the command line arguments

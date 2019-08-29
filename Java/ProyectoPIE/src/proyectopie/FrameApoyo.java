@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -59,8 +60,18 @@ public class FrameApoyo extends javax.swing.JFrame {
         jLabel3.setText("INGRESE NOMBRE DEL PROFESIONAL");
 
         txtrutapoyo.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtrutapoyo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtrutapoyoKeyTyped(evt);
+            }
+        });
 
         txtnombreapoyo.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombreapoyo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreapoyoKeyTyped(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
@@ -326,6 +337,38 @@ return validacion;
       txtrutapoyo.setText("");
       txtnombreapoyo.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void txtrutapoyoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtrutapoyoKeyTyped
+       
+          int n=10;
+        if(txtrutapoyo.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+             JOptionPane.showMessageDialog(null,"solo 10 dijitos sin puntos","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtrutapoyoKeyTyped
+
+    private void txtnombreapoyoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreapoyoKeyTyped
+      
+        int n=198;
+        if(txtnombreapoyo.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtnombreapoyoKeyTyped
 
     /**
      * @param args the command line arguments

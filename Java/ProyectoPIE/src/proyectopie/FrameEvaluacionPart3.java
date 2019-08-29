@@ -132,8 +132,18 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         jLabel3.setText("Prueba 1");
 
         txtprueba1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtprueba1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprueba1KeyTyped(evt);
+            }
+        });
 
         txtpuntaje1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtpuntaje1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpuntaje1KeyTyped(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setText("Puntaje");
@@ -142,8 +152,18 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         jLabel5.setText("Prueba 2");
 
         txtprueba2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtprueba2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprueba2KeyTyped(evt);
+            }
+        });
 
         txtpuntaje2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtpuntaje2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpuntaje2KeyTyped(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("Puntaje");
@@ -152,8 +172,18 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         jLabel7.setText("Prueba 3");
 
         txtprueba3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtprueba3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprueba3KeyTyped(evt);
+            }
+        });
 
         txtpuntaje3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtpuntaje3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpuntaje3KeyTyped(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel8.setText("Puntaje");
@@ -162,12 +192,32 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         jLabel9.setText("Prueba 4");
 
         txtprueba4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtprueba4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprueba4KeyTyped(evt);
+            }
+        });
 
         txtpuntaje4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtpuntaje4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpuntaje4KeyTyped(evt);
+            }
+        });
 
         txtprueba5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtprueba5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprueba5KeyTyped(evt);
+            }
+        });
 
         txtpuntaje5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        txtpuntaje5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpuntaje5KeyTyped(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel12.setText("Puntaje");
@@ -343,6 +393,106 @@ public class FrameEvaluacionPart3 extends javax.swing.JFrame {
         frame.setVisible(true);                                                                                                                
         FrameEvaluacionPart3.this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtprueba1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprueba1KeyTyped
+    
+         int n=199;
+         if(txtprueba1.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtprueba1KeyTyped
+
+    private void txtprueba2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprueba2KeyTyped
+   
+        int n=199;
+         if(txtprueba2.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtprueba2KeyTyped
+
+    private void txtprueba3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprueba3KeyTyped
+      
+        int n=199;
+         if(txtprueba3.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtprueba3KeyTyped
+
+    private void txtprueba4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprueba4KeyTyped
+      
+        int n=199;
+         if(txtprueba4.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtprueba4KeyTyped
+
+    private void txtprueba5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprueba5KeyTyped
+     
+        int n=199;
+         if(txtprueba5.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtprueba5KeyTyped
+
+    private void txtpuntaje1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpuntaje1KeyTyped
+      
+        int n=49;
+         if(txtpuntaje1.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtpuntaje1KeyTyped
+
+    private void txtpuntaje2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpuntaje2KeyTyped
+     
+          int n=49;
+         if(txtpuntaje2.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtpuntaje2KeyTyped
+
+    private void txtpuntaje3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpuntaje3KeyTyped
+     
+          int n=49;
+         if(txtpuntaje3.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtpuntaje3KeyTyped
+
+    private void txtpuntaje4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpuntaje4KeyTyped
+   
+          int n=49;
+         if(txtpuntaje4.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtpuntaje4KeyTyped
+
+    private void txtpuntaje5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpuntaje5KeyTyped
+   
+          int n=49;
+         if(txtpuntaje5.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+    }//GEN-LAST:event_txtpuntaje5KeyTyped
 
     /**
      * @param args the command line arguments

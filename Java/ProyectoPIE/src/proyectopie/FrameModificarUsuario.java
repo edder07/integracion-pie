@@ -236,7 +236,7 @@ FrameMenuAdmin frame = new FrameMenuAdmin();
              Statement st = conectar.Conectar();
         try{
              st.executeUpdate("UPDATE usuario SET nombre_usuario = '" + usuario +"' , pass ='" + pass +"', tipo_usuario = '" + tipo_usuario +"' , nombre_completo_usuario = '" + nombre_usuario +"'  WHERE nombre_usuario = '" + user +"'");
-           JOptionPane.showMessageDialog(null, "Alumno Actualizado correctamente");
+           JOptionPane.showMessageDialog(null, "Usuario Actualizado correctamente");
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);

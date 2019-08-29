@@ -169,7 +169,8 @@ public class logeo extends javax.swing.JFrame {
             ResultSet rs = st.executeQuery("select usuario.id_usuario from usuario where usuario.nombre_usuario = '" + usuario +"'");
             if (rs.next()){
                 int id_u = rs.getInt("id_usuario") ;
-                 FrameEvaluacionPart4.id_usuario = id_u;      
+                 FrameEvaluacionPart4.id_usuario = id_u;   
+                 MenuPrincipal.id_usuario_label = id_u;   
             }
         }
         catch (SQLException ex){

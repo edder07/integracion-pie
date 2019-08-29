@@ -110,6 +110,11 @@ public class FrameAlumno extends javax.swing.JFrame {
         });
 
         txtapellidop.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtapellidop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtapellidopActionPerformed(evt);
+            }
+        });
         txtapellidop.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtapellidopKeyTyped(evt);
@@ -606,39 +611,68 @@ return validacion;
 
     private void txtapellidopKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidopKeyTyped
       
-         int n=49;
+        int n=48;
         if(txtapellidop.getText().length()>=n){
             
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
-               
        }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ'))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
     }//GEN-LAST:event_txtapellidopKeyTyped
 
     private void txtapellidomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidomKeyTyped
       
-         int n=49;
+        int n=48;
         if(txtapellidom.getText().length()>=n){
             
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
-               
        }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ'))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
     }//GEN-LAST:event_txtapellidomKeyTyped
 
     private void txtdireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdireccionKeyTyped
     
-         int n=320;
+        
+        int n=320;
         if(txtdireccion.getText().length()>=n){
             
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
-               
        }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  &&(c!='/')&&(c!='.')&&(c!=',')&&(c!='-') && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){ 
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
     }//GEN-LAST:event_txtdireccionKeyTyped
+
+    private void txtapellidopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtapellidopActionPerformed
+     
+    }//GEN-LAST:event_txtapellidopActionPerformed
 
     /**
      * @param args the command line arguments

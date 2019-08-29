@@ -150,6 +150,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtrutevaluadorKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtnombreevaluador">
       <Properties>
@@ -157,6 +160,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnombreevaluadorKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtprofesionevaluador">
       <Properties>
@@ -164,6 +170,9 @@
           <Font name="Times New Roman" size="12" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtprofesionevaluadorKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

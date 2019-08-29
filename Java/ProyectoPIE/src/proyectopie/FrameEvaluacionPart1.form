@@ -218,6 +218,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtnumeroestudiante">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnumeroestudianteKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="combocurso">
       <Properties>
@@ -272,6 +275,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txta&#xf1;ocontinuidad">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txta&#xf1;ocontinuidadKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
@@ -298,6 +304,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtsindromeasociadodiagnostico">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtsindromeasociadodiagnosticoKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
@@ -340,6 +349,9 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtmotivoKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -355,6 +367,9 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtdiagnosticoKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -370,6 +385,9 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtobservacionKeyTyped"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

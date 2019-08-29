@@ -435,10 +435,27 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         FrameEvaluacionPart4.nombre_profesional_evaluador_5 = e5;
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+                    
+        String eva_1=  (String)comboev1.getSelectedItem().toString();
+        String eva_2=  (String)comboev2.getSelectedItem().toString();
+        String eva_3=  (String)comboev3.getSelectedItem().toString();
+        String eva_4=  (String)comboev4.getSelectedItem().toString();
+        String eva_5=  (String)comboev5.getSelectedItem().toString();
+
+
+
+        //if (eva_1 != "VACIO" && eva_1 == eva_2 || eva_1 != "VACIO" && eva_1 == eva_3 || eva_1 != "VACIO" && eva_1 == eva_4 || eva_1 != "VACIO" && eva_1 == eva_5 || eva_2 != "VACIO" && eva_2 == eva_1 || eva_2 != "VACIO" && eva_2 == eva_3 || eva_2 != "VACIO" && eva_2 == eva_4 || eva_2 != "VACIO" && eva_2 == eva_5 || eva_3 != "VACIO" && eva_3 == eva_2 || eva_3 != "VACIO" && eva_3 == eva_2 || eva_3 != "VACIO" && eva_3 == eva_4 || eva_3 != "VACIO" && eva_3 == eva_5 || eva_4 != "VACIO" && eva_4 == eva_1 || eva_4 != "VACIO" && eva_4 == eva_2 || eva_4 != "VACIO" && eva_4 == eva_3 || eva_4 != "VACIO" && eva_4 == eva_5 || eva_5 != "VACIO" && eva_5 == eva_1 || eva_5 != "VACIO" && eva_5 == eva_2 || eva_5 != "VACIO" && eva_5 == eva_3 || eva_5 != "VACIO" && eva_5 == eva_4){
+          //  JOptionPane.showMessageDialog(null,"No se deben repetir los profesionales","ERROR",JOptionPane.ERROR_MESSAGE);
+                    
+        //}else{
+            
+            obtener_nombre_evaluador();
+            obtener_datos_evaluador_combobox();
+            cargar_datos_combo_frame_recuperar();
+           
+        //}
       
-        obtener_nombre_evaluador();
-        obtener_datos_evaluador_combobox();
-        cargar_datos_combo_frame_recuperar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

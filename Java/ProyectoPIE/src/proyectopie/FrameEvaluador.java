@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.event.KeyEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -64,10 +65,25 @@ public class FrameEvaluador extends javax.swing.JFrame {
         jLabel4.setText("INGRESE PROFESION DEL EVALUADOR");
 
         txtrutevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtrutevaluador.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtrutevaluadorKeyTyped(evt);
+            }
+        });
 
         txtnombreevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtnombreevaluador.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreevaluadorKeyTyped(evt);
+            }
+        });
 
         txtprofesionevaluador.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtprofesionevaluador.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtprofesionevaluadorKeyTyped(evt);
+            }
+        });
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/lupa33.png"))); // NOI18N
         jButton1.setText("Buscar");
@@ -226,18 +242,54 @@ public class FrameEvaluador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     
+     public static boolean validarRut(String rut) {
+        
+
+        boolean validacion = false;
+        try {
+        rut =  rut.toUpperCase();
+        rut = rut.replace(".", "");
+        rut = rut.replace("-", "");
+        int rutAux = Integer.parseInt(rut.substring(0, rut.length() - 1));
+
+        char dv = rut.charAt(rut.length() - 1);
+
+        int m = 0, s = 1;
+        for (; rutAux != 0; rutAux /= 10) {
+        s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+        }
+        if (dv == (char) (s != 0 ? s + 47 : 75)) {
+        validacion = true;
+        }
+
+} catch (java.lang.NumberFormatException e) {
+} catch (Exception e) {
+}
+return validacion;
+}
+    void insert_profesional_evaluador(){
+        
+         
         String rut_evaluador = txtrutevaluador.getText();
         String nombre_evaluador = txtnombreevaluador.getText();
         String profesion_evaluador = txtprofesionevaluador.getText();
       
  
-        if(rut_evaluador.isEmpty() ){
+       
+            
+        boolean respuesta;
+        respuesta=validarRut(rut_evaluador);
+        if (respuesta==false){
+             JOptionPane.showMessageDialog(rootPane,"Rut Invalido","ERROR", JOptionPane.ERROR_MESSAGE);
+             txtrutevaluador.grabFocus();
+             
+             }else {
+            
+        
+              if(rut_evaluador.isEmpty() || txtnombreevaluador.getText().isEmpty() || txtprofesionevaluador.getText().isEmpty()){
           
-         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
-        }else
-         {
+               JOptionPane.showMessageDialog(null,"No deje campos en blanco","ERROR",JOptionPane.ERROR_MESSAGE);
+               }else {
              ConexionSQL conectar = new ConexionSQL();
              Statement st = conectar.Conectar();
         try{
@@ -248,6 +300,44 @@ public class FrameEvaluador extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         } 
         }
+        }
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+           String rut_evaluador = txtrutevaluador.getText();
+         //String nombre_alumno = txtnombre.getText();
+         //String apellido_paterno = txtapellidop.getText();
+         //String apellido_materno = txtapellidom.getText();
+         //Integer fono_alumno = Integer.parseInt(txtfono.getText());
+         //String direccion_alumno = txtdireccion.getText();
+ 
+        if(rut_evaluador.isEmpty() ){
+          
+         JOptionPane.showMessageDialog(null,"Debe inresar RUT","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select profesional_evaluador.nombre_evaluador, profesional_evaluador.profesion from profesional_evaluador where profesional_evaluador.rut_evaluador= '" + rut_evaluador +"'");
+            if (rs.next()){
+                
+                txtnombreevaluador.setText(rs.getString("nombre_evaluador")) ;
+                txtprofesionevaluador.setText(rs.getString("profesion")) ;
+                 JOptionPane.showMessageDialog(null, "El Profesional evaluador ya existe","Informacion",JOptionPane.INFORMATION_MESSAGE);
+               
+                
+                   
+            } else{
+                insert_profesional_evaluador();
+                
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -279,6 +369,58 @@ public class FrameEvaluador extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtrutevaluadorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtrutevaluadorKeyTyped
+     
+           int n=10;
+        if(txtrutevaluador.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+             JOptionPane.showMessageDialog(null,"solo 10 dijitos sin puntos","ERROR",JOptionPane.WARNING_MESSAGE);
+               
+       }
+    }//GEN-LAST:event_txtrutevaluadorKeyTyped
+
+    private void txtnombreevaluadorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreevaluadorKeyTyped
+     
+         int n=198;
+        if(txtnombreevaluador.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtnombreevaluadorKeyTyped
+
+    private void txtprofesionevaluadorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtprofesionevaluadorKeyTyped
+    
+         int n=99;
+        if(txtprofesionevaluador.getText().length()>=n){
+            
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Exceso de caracteres","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+         char c=evt.getKeyChar();
+        if(((c<'a' || c>'z')&&(c<'A')|c>'Z')  &&(c!='ñ')&&( c!='Ñ')  && (c!= KeyEvent.VK_SPACE))evt.consume(); 
+        
+         if(Character.isLowerCase(c)){
+            String cad=(""+c).toUpperCase();
+            c=cad.charAt(0);
+            evt.setKeyChar(c);
+            
+        }
+    }//GEN-LAST:event_txtprofesionevaluadorKeyTyped
 
     /**
      * @param args the command line arguments
