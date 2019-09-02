@@ -84,6 +84,11 @@ public static String puntaje_3;
 public static String puntaje_4;
 public static String puntaje_5;
 
+public static String modificar_activo;
+public static String ingresar_activo;
+
+
+
     /**
      * Creates new form FrameEvaluacionPart4
      */
@@ -95,8 +100,19 @@ public static String puntaje_5;
          cargar_combo_apoyo3();
          cargar_combo_apoyo4();
          cargar_datos_select ();
+         visible_invisible_botones();
          
                 
+    }
+    void visible_invisible_botones(){
+        if (ingresar_activo == "activo"){
+            jButton2.setVisible(true);
+            jButton3.setVisible(false);
+        }
+         if (modificar_activo == "activo"){
+            jButton3.setVisible(true);
+            jButton2.setVisible(false);
+        }
     }
     
     void cargar_datos_select (){
@@ -330,23 +346,23 @@ public static String puntaje_5;
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(136, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(184, 184, 184))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(174, 174, 174))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel1)))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(61, 61, 61)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(calendaremision, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(42, 42, 42))
         );
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopie/btnatras.png"))); // NOI18N
@@ -403,11 +419,14 @@ public static String puntaje_5;
                         .addComponent(jButton2)
                         .addGap(96, 96, 96)
                         .addComponent(jButton3)))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(282, 282, 282)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -720,6 +739,24 @@ public static String puntaje_5;
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
+        
+        
+          String eva_1=  (String)comboapoyo1.getSelectedItem().toString();
+        String eva_2=  (String)comboapoyo2.getSelectedItem().toString();
+        String eva_3=  (String)comboapoyo3.getSelectedItem().toString();
+        String eva_4=  (String)comboapoyo4.getSelectedItem().toString();
+     
+        String v = "VACIO";
+         //JOptionPane.showMessageDialog(null,eva_1 + eva_2,"ERROR",JOptionPane.ERROR_MESSAGE);
+
+
+
+        if ((! eva_1.equals(v) && eva_1.equals(eva_2) ) || (! eva_1.equals(v) && eva_1.equals(eva_3)) || (! eva_1.equals(v) && eva_1.equals(eva_4)) ||  (! eva_2.equals(v) && eva_2.equals(eva_1)) || (! eva_2.equals(v) && eva_2.equals(eva_3)) || (! eva_2.equals(v) && eva_2.equals(eva_4)) ||  (! eva_3.equals(v) && eva_3.equals(eva_1)) || (! eva_3.equals(v) && eva_3.equals(eva_2)) || (! eva_3.equals(v) && eva_3.equals(eva_4))  || (! eva_4.equals(v) && eva_4.equals(eva_1)) || (! eva_4.equals(v) && eva_4.equals(eva_2)) || (! eva_4.equals(v) && eva_4.equals(eva_3))){
+          JOptionPane.showMessageDialog(null,"no se puede repetir los datos","ERROR",JOptionPane.ERROR_MESSAGE);
+                    
+        }else{
+        
+        
         obtener_nombre_apoyo();
         obtener_datos_evaluador_combobox();
         
@@ -744,6 +781,7 @@ public static String puntaje_5;
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         } 
+        }
         
     }//GEN-LAST:event_jButton3ActionPerformed
 

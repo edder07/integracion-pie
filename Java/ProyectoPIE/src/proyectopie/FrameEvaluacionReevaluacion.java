@@ -18,6 +18,7 @@ public class FrameEvaluacionReevaluacion extends javax.swing.JFrame {
     public FrameEvaluacionReevaluacion() {
         initComponents();
          this.setLocationRelativeTo(null);
+         
     }
 
     /**
@@ -46,12 +47,22 @@ public class FrameEvaluacionReevaluacion extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("Reevaluacion");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -99,15 +110,11 @@ public class FrameEvaluacionReevaluacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-  FrameRutYFicha frame = new FrameRutYFicha(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionReevaluacion.this.dispose();
+   
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
- FrameRutYFicha frame = new FrameRutYFicha(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionReevaluacion.this.dispose();
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -115,6 +122,28 @@ public class FrameEvaluacionReevaluacion extends javax.swing.JFrame {
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionReevaluacion.this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     
+         
+        FrameRutYFicha.evaluar_activo = "activo";
+        FrameRutYFicha.reevaluar_activo = "-";
+        FrameRutYFicha frame = new FrameRutYFicha(); 
+        frame.setVisible(true);                                                                                                                
+        FrameEvaluacionReevaluacion.this.dispose();
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    
+        FrameRutYFicha.evaluar_activo = "-";
+        FrameRutYFicha.reevaluar_activo = "activo";
+        FrameRutYFicha frame = new FrameRutYFicha(); 
+        frame.setVisible(true);                                                                                                                
+        FrameEvaluacionReevaluacion.this.dispose();  
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

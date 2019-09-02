@@ -24,6 +24,9 @@ import static proyectopie.FrameEvaluacionPart4.frame4_fecha_emision;
  */
 public class FrameRutYFicha extends javax.swing.JFrame {
 
+    public static String evaluar_activo;
+    public static String reevaluar_activo;
+    
     /**
      * Creates new form FrameRutYFicha
      */
@@ -32,6 +35,22 @@ public class FrameRutYFicha extends javax.swing.JFrame {
          this.setLocationRelativeTo(null);
          cargar_combo_rut_alumno();
          cargar_combo_nombre_ficha();
+         visible_invisible_botones();
+         
+    }
+    void visible_invisible_botones(){
+        if (evaluar_activo == "activo"){
+           
+            jButton2.setVisible(true);
+            jButton3.setVisible(false);
+
+        }
+        if (reevaluar_activo == "activo"){
+            
+            jButton3.setVisible(true);
+            jButton2.setVisible(false);
+
+        }
     }
     
      void cargar_combo_rut_alumno() {
@@ -231,9 +250,20 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
         obtener_id_diagnostico();
         String crutal=  (String)combo_rut.getSelectedItem().toString();  
         FrameEvaluacionPart4.rut_del_alumno = crutal;
-     
         
-        FrameEvaluacionPart1.frame1_numero_estudiante = 0;
+        ConexionSQL conectar = new ConexionSQL();
+        Statement st = conectar.Conectar();
+        try {
+            
+            ResultSet rs = st.executeQuery("select ficha_diagnostico.rut_alumno, ficha_diagnostico.id_fichadiagnostico from ficha_diagnostico where ficha_diagnostico.rut_alumno = '" + crutal +"'"); 
+          
+        
+            if(rs.next()) {
+                 JOptionPane.showMessageDialog(null, "El alumno ya tiene una primera evaluacion","Error",JOptionPane.ERROR_MESSAGE);
+               
+                
+                }else{
+                 FrameEvaluacionPart1.frame1_numero_estudiante = 0;
         FrameEvaluacionPart1.frame1_diagnostico="";
         FrameEvaluacionPart1.frame1_curso="";
         FrameEvaluacionPart1.frame1_observacion="";
@@ -264,9 +294,18 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
         FrameEvaluacionPart4.nombre_profesional_apoyo_4="";
         funcion_fecha();
         
+        FrameEvaluacionPart4.ingresar_activo = "activo";
+        FrameEvaluacionPart4.modificar_activo = "_";
         FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
-    frame.setVisible(true);                                                                                                                
-    FrameRutYFicha.this.dispose();
+        frame.setVisible(true);                                                                                                                
+        FrameRutYFicha.this.dispose();
+       
+            }
+                } catch (SQLException ex) {
+                                   
+                 }
+     
+        
        
         
      
@@ -335,6 +374,8 @@ FrameEvaluacionPart1 frame = new FrameEvaluacionPart1();
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         
+        FrameEvaluacionPart4.ingresar_activo = "activo";
+        FrameEvaluacionPart4.modificar_activo = "_";
         obtener_id_diagnostico();
         String crutal=  (String)combo_rut.getSelectedItem().toString();  
         FrameEvaluacionPart4.rut_del_alumno = crutal;

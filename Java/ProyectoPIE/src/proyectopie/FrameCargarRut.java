@@ -371,6 +371,8 @@ FrameBuscadores frame = new FrameBuscadores();
                 nombre_apoyo_4 = rs.getString("nombre_apoyo_4");
                 FrameEvaluacionParte5.profesionales_apoyo = "<html><body> "+rut_apoyo_1+ "  -  "+nombre_apoyo_1+"<br>"+rut_apoyo_2+"  -  "+nombre_apoyo_2+"<br>"+rut_apoyo_3+"  -  "+nombre_apoyo_3+"<br>"+rut_apoyo_4+"  -  "+nombre_apoyo_4+"</body></html>" ;              
                 
+                FrameEvaluacionPart4.ingresar_activo = "-";
+                FrameEvaluacionPart4.modificar_activo = "activo";
                 FrameEvaluacionParte5 frame = new FrameEvaluacionParte5(); 
                 frame.setVisible(true);                                                                                                                
                 FrameCargarRut.this.dispose();
