@@ -319,9 +319,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    FrameEvaluacionPart3 frame = new FrameEvaluacionPart3(); 
-    frame.setVisible(true);                                                                                                                
-    FrameEvaluacionPart2.this.dispose();
+  
     }//GEN-LAST:event_jButton1MouseClicked
 
     void obtener_datos_evaluador_combobox(){
@@ -442,19 +440,24 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         String eva_3=  (String)comboev3.getSelectedItem().toString();
         String eva_4=  (String)comboev4.getSelectedItem().toString();
         String eva_5=  (String)comboev5.getSelectedItem().toString();
+        String v = "VACIO";
+         //JOptionPane.showMessageDialog(null,eva_1 + eva_2,"ERROR",JOptionPane.ERROR_MESSAGE);
 
 
 
-        //if (eva_1 != "VACIO" && eva_1 == eva_2 || eva_1 != "VACIO" && eva_1 == eva_3 || eva_1 != "VACIO" && eva_1 == eva_4 || eva_1 != "VACIO" && eva_1 == eva_5 || eva_2 != "VACIO" && eva_2 == eva_1 || eva_2 != "VACIO" && eva_2 == eva_3 || eva_2 != "VACIO" && eva_2 == eva_4 || eva_2 != "VACIO" && eva_2 == eva_5 || eva_3 != "VACIO" && eva_3 == eva_2 || eva_3 != "VACIO" && eva_3 == eva_2 || eva_3 != "VACIO" && eva_3 == eva_4 || eva_3 != "VACIO" && eva_3 == eva_5 || eva_4 != "VACIO" && eva_4 == eva_1 || eva_4 != "VACIO" && eva_4 == eva_2 || eva_4 != "VACIO" && eva_4 == eva_3 || eva_4 != "VACIO" && eva_4 == eva_5 || eva_5 != "VACIO" && eva_5 == eva_1 || eva_5 != "VACIO" && eva_5 == eva_2 || eva_5 != "VACIO" && eva_5 == eva_3 || eva_5 != "VACIO" && eva_5 == eva_4){
-          //  JOptionPane.showMessageDialog(null,"No se deben repetir los profesionales","ERROR",JOptionPane.ERROR_MESSAGE);
+        if ((! eva_1.equals(v) && eva_1.equals(eva_2) ) || (! eva_1.equals(v) && eva_1.equals(eva_3)) || (! eva_1.equals(v) && eva_1.equals(eva_4)) || (! eva_1.equals(v) && eva_1.equals(eva_5)) || (! eva_2.equals(v) && eva_2.equals(eva_1)) || (! eva_2.equals(v) && eva_2.equals(eva_3)) || (! eva_2.equals(v) && eva_2.equals(eva_4)) || (! eva_2.equals(v) && eva_2.equals(eva_5)) || (! eva_3.equals(v) && eva_3.equals(eva_1)) || (! eva_3.equals(v) && eva_3.equals(eva_2)) || (! eva_3.equals(v) && eva_3.equals(eva_4)) || (! eva_3.equals(v) && eva_3.equals(eva_5)) || (! eva_4.equals(v) && eva_4.equals(eva_1)) || (! eva_4.equals(v) && eva_4.equals(eva_2)) || (! eva_4.equals(v) && eva_4.equals(eva_3)) || (! eva_4.equals(v) && eva_4.equals(eva_5)) || (! eva_5.equals(v) && eva_5.equals(eva_1)) || (! eva_5.equals(v) && eva_5.equals(eva_2)) || (! eva_5.equals(v) && eva_5.equals(eva_3)) || (! eva_5.equals(v) && eva_5.equals(eva_4))){
+          JOptionPane.showMessageDialog(null,"no se puede repetir los datos","ERROR",JOptionPane.ERROR_MESSAGE);
                     
-        //}else{
-            
+        }else{
+           
             obtener_nombre_evaluador();
             obtener_datos_evaluador_combobox();
             cargar_datos_combo_frame_recuperar();
+            FrameEvaluacionPart3 frame = new FrameEvaluacionPart3(); 
+            frame.setVisible(true);                                                                                                                
+            FrameEvaluacionPart2.this.dispose();
            
-        //}
+        }
       
     }//GEN-LAST:event_jButton1ActionPerformed
 

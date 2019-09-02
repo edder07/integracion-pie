@@ -2,6 +2,7 @@ package proyectopie;
 
 
 import java.awt.Color;
+import java.awt.TextField;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -31,6 +32,7 @@ public class logeo extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.BLUE);
         this.setLocationRelativeTo(null);
+       
     }
 
     /**
@@ -60,6 +62,16 @@ public class logeo extends javax.swing.JFrame {
         jLabel2.setText("BIENVENIDO");
 
         txtpass.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassActionPerformed(evt);
+            }
+        });
+        txtpass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtpassKeyTyped(evt);
+            }
+        });
 
         txtusuario.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
@@ -182,7 +194,8 @@ public class logeo extends javax.swing.JFrame {
          String password=txtpass.getText();
  
         if((password.isEmpty() && usuario.isEmpty() )){
-             JOptionPane.showMessageDialog(null, "Ingrese su nombre de usuario y contraseÃ±a ");}
+             JOptionPane.showMessageDialog(null, "Ingrese su nombre de usuario y contraseÃ±a ");
+        }
          else
          {
              ConexionSQL conectar = new ConexionSQL();
@@ -216,6 +229,14 @@ public class logeo extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
+       
+    }//GEN-LAST:event_txtpassActionPerformed
+
+    private void txtpassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtpassKeyTyped
+     
+    }//GEN-LAST:event_txtpassKeyTyped
 
     /**
      * @param args the command line arguments

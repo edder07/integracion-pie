@@ -527,8 +527,24 @@ public static String puntaje_5;
      } 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        obtener_nombre_apoyo();
-        obtener_datos_evaluador_combobox();
+        
+        
+        String eva_1=  (String)comboapoyo1.getSelectedItem().toString();
+        String eva_2=  (String)comboapoyo2.getSelectedItem().toString();
+        String eva_3=  (String)comboapoyo3.getSelectedItem().toString();
+        String eva_4=  (String)comboapoyo4.getSelectedItem().toString();
+     
+        String v = "VACIO";
+         //JOptionPane.showMessageDialog(null,eva_1 + eva_2,"ERROR",JOptionPane.ERROR_MESSAGE);
+
+
+
+        if ((! eva_1.equals(v) && eva_1.equals(eva_2) ) || (! eva_1.equals(v) && eva_1.equals(eva_3)) || (! eva_1.equals(v) && eva_1.equals(eva_4)) ||  (! eva_2.equals(v) && eva_2.equals(eva_1)) || (! eva_2.equals(v) && eva_2.equals(eva_3)) || (! eva_2.equals(v) && eva_2.equals(eva_4)) ||  (! eva_3.equals(v) && eva_3.equals(eva_1)) || (! eva_3.equals(v) && eva_3.equals(eva_2)) || (! eva_3.equals(v) && eva_3.equals(eva_4))  || (! eva_4.equals(v) && eva_4.equals(eva_1)) || (! eva_4.equals(v) && eva_4.equals(eva_2)) || (! eva_4.equals(v) && eva_4.equals(eva_3))){
+          JOptionPane.showMessageDialog(null,"no se puede repetir los datos","ERROR",JOptionPane.ERROR_MESSAGE);
+                    
+        }else{
+             obtener_nombre_apoyo();
+              obtener_datos_evaluador_combobox();
         
         int año = calendaremision.getCalendar().get(Calendar.YEAR);
         int mes = calendaremision.getCalendar().get(Calendar.MARCH)+1;
@@ -550,6 +566,9 @@ public static String puntaje_5;
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         } 
+        }
+        
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
    
