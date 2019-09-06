@@ -1,13 +1,18 @@
 package proyectopie;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import static proyectopie.FrameCargarDiagnostico.fecha_table;
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.*;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import proyectopie.ConexionSQL;
 
 /*
@@ -22,7 +27,7 @@ import proyectopie.ConexionSQL;
  */
 public class FrameEvaluacionParte5 extends javax.swing.JFrame {
 
-    ConexionSQL con = new ConexionSQL();
+   
     public static int numero_estudiante;
     public static String apellido_paterno;
     public static String apellido_materno;
@@ -48,6 +53,12 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
         initComponents();
          this.setLocationRelativeTo(null);
           this.setExtendedState(MAXIMIZED_BOTH);
+          
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+        }
          
          jLabel19.setText(Integer.toString(numero_estudiante));
          jLabel20.setText(apellido_paterno);
@@ -510,21 +521,24 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
-        //ConexionSQL conectar = new ConexionSQL();
-        //Statement st = conectar.Conectar();
-        //try{
-            
-            //String urlreporte = "src/proyectopie/Reporte_Ficha.jasper";
-            //Map parametro1 = new HashMap();
-            //Map parametro2 = new HashMap();
-            //parametro1.put ("RutAlumnoReporte",jLabel24.getText());
-            //parametro2.put ("FechaEmisionReporte",jLabel33.getText());
-            
-            //JasperPrint reporte = JasperFillManager.fillReport(urlreporte,parametro1,parametro2,st.getConnection().);
-            
-        //}catch{
-            
-        //}     
+        try {
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName = integracion_pie","sa","1234321");
+            JOptionPane.showMessageDialog(null, "1");
+            JasperReport jr = JasperCompileManager.compileReport("src/proyectopie/Reporte_Ficha.jrxml");
+            JOptionPane.showMessageDialog(null, "2");
+            JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
+            JOptionPane.showMessageDialog(null, "3");
+            JasperViewer jv = new JasperViewer(jp,false);
+            JOptionPane.showMessageDialog(null, "4");
+            jv.setTitle("Reporte Ficha");
+            JOptionPane.showMessageDialog(null, "5");
+            jv.setVisible(true);
+            JOptionPane.showMessageDialog(null, "6");
+        } catch (SQLException ex) {
+            Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (JRException ex) {
+            Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+        }
              
     }//GEN-LAST:event_jButton2ActionPerformed
 

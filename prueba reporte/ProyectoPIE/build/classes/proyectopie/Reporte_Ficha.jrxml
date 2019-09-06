@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17952b58-c63c-4601-8d78-d3f173428937">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="359"/>
-	<parameter name="RutAlumnoReporte" class="java.lang.String"/>
-	<parameter name="FechaEmisionReporte" class="java.lang.String"/>
+	<property name="ireport.y" value="0"/>
 	<queryString>
 		<![CDATA[SELECT
      ficha_diagnostico."rut_alumno" AS ficha_diagnostico_rut_alumno,
@@ -61,8 +60,7 @@ FROM
      INNER JOIN "dbo"."curso" curso ON ficha_diagnostico."curso_alumno" = curso."id_curso"
      INNER JOIN "dbo"."tipo_ficha" tipo_ficha ON ficha_diagnostico."id_tipoficha" = tipo_ficha."id_tipo"
      INNER JOIN "dbo"."usuario" usuario ON ficha_diagnostico."usuario" = usuario."id_usuario"
-WHERE
-     ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = $P{RutAlumnoReporte}   and ficha_diagnostico.fecha_emision = $P{FechaEmisionReporte}]]>
+]]>
 	</queryString>
 	<field name="ficha_diagnostico_rut_alumno" class="java.lang.String"/>
 	<field name="ficha_diagnostico_nuevo_ingreso" class="java.lang.String"/>
