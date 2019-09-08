@@ -132,10 +132,6 @@ WHERE
 				</textElement>
 				<text><![CDATA[DE DEPARTAMENTO DE EDUCACION]]></text>
 			</staticText>
-			<image>
-				<reportElement x="249" y="0" width="104" height="27" uuid="9f9486d7-0987-4be2-ae67-65cbc99cadaf"/>
-				<imageExpression><![CDATA["C:\\Users\\56962\\Pictures\\Resourses\\Logo Color.png"]]></imageExpression>
-			</image>
 			<staticText>
 				<reportElement x="0" y="53" width="555" height="11" uuid="bcec5ca1-c6b8-49ac-a0a2-8654ca326391"/>
 				<textElement textAlignment="Center">

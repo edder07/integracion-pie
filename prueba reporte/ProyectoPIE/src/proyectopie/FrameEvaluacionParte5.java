@@ -519,25 +519,28 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.43.72:1433;databaseName = integracion_pie","charles","199314");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName = integracion_pie","sa","1234321");
            
             JasperReport jr = JasperCompileManager.compileReport("src/proyectopie/Reporte_Ficha.jrxml");
-            
+            JOptionPane.showMessageDialog(null, "1");
             Map Parametros = new HashMap();
            
             Parametros.put("ParametroRutAlumno",jLabel24.getText());
             Parametros.put("ParametroFechaEmision",jLabel33.getText());
+            JOptionPane.showMessageDialog(null, "2");
             JasperPrint jp = JasperFillManager.fillReport(jr,Parametros,con);
-            
+            JOptionPane.showMessageDialog(null, "3");
             JasperViewer jv = new JasperViewer(jp,false);
-            
+            JOptionPane.showMessageDialog(null, "4");
             jv.setTitle("Reporte Ficha");
             
             jv.setVisible(true);
             } catch (SQLException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "1");
         } catch (JRException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "1");
         }
              
     }//GEN-LAST:event_jButton2ActionPerformed
