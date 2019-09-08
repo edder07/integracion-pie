@@ -6,9 +6,9 @@ import javax.swing.JOptionPane;
 
 public class ConexionSQL {
     
-    public String usuario = "sa";
-    public String password = "1234321";
-    public String url = "jdbc:sqlserver://192.168.50.106:1433;databaseName=integracion_pie;";
+    public String usuario = "charles";
+    public String password = "199314";
+    public String url = "jdbc:sqlserver://192.168.43.72:1433;databaseName=integracion_pie;";
    
   public Connection cn = null;
   public Statement st = null;
