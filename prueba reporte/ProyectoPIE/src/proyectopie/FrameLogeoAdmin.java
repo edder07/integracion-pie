@@ -37,10 +37,10 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtusuario = new javax.swing.JTextField();
-        txtpass = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        txtpass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,8 +51,6 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         jLabel2.setText("Contraseña");
 
         txtusuario.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-
-        txtpass.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Ingresar");
@@ -85,11 +83,11 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtpass))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(44, 44, 44)
@@ -215,7 +213,7 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtpass;
+    private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 }
