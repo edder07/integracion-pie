@@ -54,11 +54,6 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Ingresar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -66,9 +61,9 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         });
 
         jButton2.setText("Volver");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -127,18 +122,6 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
- logeo frame = new logeo(); 
-    frame.setVisible(true);                                                                                                                
-    FrameLogeoAdmin.this.dispose();
-    }//GEN-LAST:event_jButton2MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
- FrameMenuAdmin frame = new FrameMenuAdmin(); 
-    frame.setVisible(true);                                                                                                                
-    FrameLogeoAdmin.this.dispose();
-    }//GEN-LAST:event_jButton1MouseClicked
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        String usuario = txtusuario.getText();
          String password=txtpass.getText();
@@ -157,9 +140,9 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         try{
             ResultSet rs = st.executeQuery("select * from usuario where nombre_usuario = '" + usuario +"' and pass='" + password +"' and tipo_usuario = 'admin' and usuario.estado = 'activo'");
             if (rs.next()){
-                FrameMenuAdmin frame = new FrameMenuAdmin(); 
-                frame.setVisible(true);                                                                                                                
-                FrameLogeoAdmin.this.dispose();        
+                 FrameMenuAdmin frame = new FrameMenuAdmin(); 
+                 frame.setVisible(true);                                                                                                                
+                 FrameLogeoAdmin.this.dispose();   
             } else{
                 txtusuario.setText("");
                 txtpass.setText("");
@@ -171,6 +154,12 @@ public class FrameLogeoAdmin extends javax.swing.JFrame {
         } 
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    logeo frame = new logeo(); 
+    frame.setVisible(true);                                                                                                                
+    FrameLogeoAdmin.this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

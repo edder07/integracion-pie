@@ -62,7 +62,7 @@ FROM
      INNER JOIN "dbo"."tipo_ficha" tipo_ficha ON ficha_diagnostico."id_tipoficha" = tipo_ficha."id_tipo"
      INNER JOIN "dbo"."usuario" usuario ON ficha_diagnostico."usuario" = usuario."id_usuario"
 WHERE
-     ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = $P{ParametroRutAlumno}   and ficha_diagnostico.fecha_emision = $P{ParametroFechaEmision} ]]>
+     ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = $P{ParametroRutAlumno}   and ficha_diagnostico.fecha_emision = $P{ParametroFechaEmision}]]>
 	</queryString>
 	<field name="ficha_diagnostico_rut_alumno" class="java.lang.String"/>
 	<field name="ficha_diagnostico_nuevo_ingreso" class="java.lang.String"/>
