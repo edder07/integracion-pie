@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17952b58-c63c-4601-8d78-d3f173428937">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.3310000000000004"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="ParametroRutAlumno" class="java.lang.String"/>
+	<parameter name="ParametroFechaEmision" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      ficha_diagnostico."rut_alumno" AS ficha_diagnostico_rut_alumno,
@@ -60,7 +61,8 @@ FROM
      INNER JOIN "dbo"."curso" curso ON ficha_diagnostico."curso_alumno" = curso."id_curso"
      INNER JOIN "dbo"."tipo_ficha" tipo_ficha ON ficha_diagnostico."id_tipoficha" = tipo_ficha."id_tipo"
      INNER JOIN "dbo"."usuario" usuario ON ficha_diagnostico."usuario" = usuario."id_usuario"
-]]>
+WHERE
+     ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = $P{ParametroRutAlumno}   and ficha_diagnostico.fecha_emision = $P{ParametroFechaEmision} ]]>
 	</queryString>
 	<field name="ficha_diagnostico_rut_alumno" class="java.lang.String"/>
 	<field name="ficha_diagnostico_nuevo_ingreso" class="java.lang.String"/>
@@ -124,23 +126,23 @@ FROM
 				<text><![CDATA[MUNICIPALIDAD DE LINARES]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="42" width="555" height="20" uuid="9b0d7f55-910a-4672-96a6-1ba2f9fac221"/>
+				<reportElement x="0" y="42" width="555" height="11" uuid="a73a3253-a877-4470-bbc3-0a2703e98bd6"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[DE DEPARTAMENTO DE EDUCACION]]></text>
 			</staticText>
+			<image>
+				<reportElement x="249" y="0" width="104" height="27" uuid="9f9486d7-0987-4be2-ae67-65cbc99cadaf"/>
+				<imageExpression><![CDATA["C:\\Users\\56962\\Pictures\\Resourses\\Logo Color.png"]]></imageExpression>
+			</image>
 			<staticText>
-				<reportElement x="0" y="51" width="555" height="11" uuid="a73a3253-a877-4470-bbc3-0a2703e98bd6"/>
+				<reportElement x="0" y="53" width="555" height="11" uuid="bcec5ca1-c6b8-49ac-a0a2-8654ca326391"/>
 				<textElement textAlignment="Center">
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[PROGRAMA DE INTEGRACION ESCOLAR]]></text>
 			</staticText>
-			<image>
-				<reportElement x="249" y="0" width="104" height="27" uuid="9f9486d7-0987-4be2-ae67-65cbc99cadaf"/>
-				<imageExpression><![CDATA["C:\\Users\\56962\\Pictures\\Resourses\\Logo Color.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -159,7 +161,7 @@ FROM
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="698" splitType="Stretch">
+		<band height="641" splitType="Stretch">
 			<textField>
 				<reportElement x="170" y="10" width="132" height="20" uuid="1e43cc57-5326-484a-b64d-6f033bdfb2a3"/>
 				<textElement>
@@ -172,10 +174,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_numero_estudiante]]></text>
+				<text><![CDATA[Numero del Estudiante]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="30" width="100" height="20" uuid="597100a4-ecf6-46b3-ab08-075477e681e5"/>
+				<reportElement x="170" y="30" width="132" height="20" uuid="597100a4-ecf6-46b3-ab08-075477e681e5"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -186,10 +188,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_apellido_paterno]]></text>
+				<text><![CDATA[Apellido Paterno]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="50" width="100" height="20" uuid="483f1d86-cad8-4aa0-b525-486a9a6af41e"/>
+				<reportElement x="170" y="50" width="132" height="20" uuid="483f1d86-cad8-4aa0-b525-486a9a6af41e"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -200,10 +202,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_apellido_materno]]></text>
+				<text><![CDATA[Apellido Materno]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="70" width="100" height="20" uuid="9a4ff880-c42e-4f61-93ba-38057de2caba"/>
+				<reportElement x="170" y="70" width="370" height="20" uuid="9a4ff880-c42e-4f61-93ba-38057de2caba"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -214,7 +216,7 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_nombres_alumno]]></text>
+				<text><![CDATA[Nombres Alumno]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="170" y="90" width="100" height="20" uuid="cbe8fe52-c204-43d2-ba1b-eaafd3846f38"/>
@@ -228,7 +230,7 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_fecha_nacimiento]]></text>
+				<text><![CDATA[Fecha de nacimiento]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="170" y="110" width="100" height="20" uuid="edc89acc-503c-4143-9c0f-b6d3b230a89b"/>
@@ -242,10 +244,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_rut_alumno]]></text>
+				<text><![CDATA[Rut del Alumno]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="130" width="100" height="20" uuid="2efc5134-cd77-4220-b4ed-e6c2c30739cc"/>
+				<reportElement x="170" y="130" width="121" height="20" uuid="2efc5134-cd77-4220-b4ed-e6c2c30739cc"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -256,10 +258,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_sexo_alumno]]></text>
+				<text><![CDATA[Sexo]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="150" width="100" height="20" uuid="b976cafd-d45c-4ff4-892a-07d9f1dbec68"/>
+				<reportElement x="170" y="150" width="121" height="20" uuid="b976cafd-d45c-4ff4-892a-07d9f1dbec68"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -270,10 +272,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[curso_nombre]]></text>
+				<text><![CDATA[Curso]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="440" y="110" width="100" height="20" uuid="b5ca44e7-d8a3-4573-bef8-c6d3bced688a"/>
+				<reportElement x="417" y="110" width="123" height="20" uuid="b5ca44e7-d8a3-4573-bef8-c6d3bced688a"/>
 				<textFieldExpression><![CDATA[$F{alumno_nacionalidad_alumno}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -281,10 +283,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[alumno_nacionalidad_alumno]]></text>
+				<text><![CDATA[Nacionalidad Alumno]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="170" width="136" height="20" uuid="2f3b4981-2403-4018-b83d-2d62c1a2a83c"/>
+				<reportElement x="170" y="170" width="370" height="20" uuid="2f3b4981-2403-4018-b83d-2d62c1a2a83c"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -295,10 +297,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_nuevo_ingreso]]></text>
+				<text><![CDATA[Nuevo ingreso]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="190" width="100" height="20" uuid="b03f8cbc-6a4d-4441-80bc-ad29a8e02ea5"/>
+				<reportElement x="170" y="190" width="370" height="20" uuid="b03f8cbc-6a4d-4441-80bc-ad29a8e02ea5"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -309,10 +311,10 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_continuidad]]></text>
+				<text><![CDATA[Continuidad]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="210" width="100" height="20" uuid="dbf3601f-3606-4ba7-b998-c127b49e5d18"/>
+				<reportElement x="170" y="210" width="370" height="40" uuid="dbf3601f-3606-4ba7-b998-c127b49e5d18"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -323,273 +325,273 @@ FROM
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_diagnostico]]></text>
+				<text><![CDATA[Diagnostico]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="230" width="100" height="20" uuid="6c6780fa-b24f-4d5c-9278-5b8798bed07f"/>
+				<reportElement x="170" y="250" width="370" height="20" uuid="6c6780fa-b24f-4d5c-9278-5b8798bed07f"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_sindrome_asociado_diagnostico}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="230" width="100" height="20" uuid="c6e3bc0d-a4c0-4900-9f03-d6576411c40e"/>
+				<reportElement x="12" y="250" width="145" height="20" uuid="c6e3bc0d-a4c0-4900-9f03-d6576411c40e"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_sindrome_asociado_diagnostico]]></text>
+				<text><![CDATA[Sindrome asociado al diagnostico P.I.E]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="250" width="100" height="20" uuid="0098e37d-1a71-4523-a0b8-a056dcd9ee9e"/>
+				<reportElement x="170" y="270" width="370" height="39" uuid="0098e37d-1a71-4523-a0b8-a056dcd9ee9e"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_observaciones_salud}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="250" width="100" height="20" uuid="bae06904-55e2-40ad-9d39-584f9bbc8b16"/>
+				<reportElement x="12" y="270" width="100" height="20" uuid="bae06904-55e2-40ad-9d39-584f9bbc8b16"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_observaciones_salud]]></text>
+				<text><![CDATA[Observacion salud]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="270" width="100" height="20" uuid="d722bc89-5c7e-4317-b838-aa52d6893d94"/>
+				<reportElement x="170" y="309" width="100" height="20" uuid="d722bc89-5c7e-4317-b838-aa52d6893d94"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_fecha_emision}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="270" width="100" height="20" uuid="b01b12fc-393c-42bd-8b13-8288ab9e3318"/>
+				<reportElement x="12" y="309" width="100" height="20" uuid="b01b12fc-393c-42bd-8b13-8288ab9e3318"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[ficha_diagnostico_fecha_emision]]></text>
+				<text><![CDATA[Fecha emision diagnostico]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="290" width="79" height="20" uuid="e5a1e428-77e8-41f9-944f-0171ced34390"/>
+				<reportElement x="170" y="329" width="79" height="20" uuid="e5a1e428-77e8-41f9-944f-0171ced34390"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_evaluador_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="260" y="290" width="169" height="20" uuid="63c1ce41-cda8-4e5a-a4f8-90adf2d2dd34"/>
+				<reportElement x="260" y="329" width="169" height="20" uuid="63c1ce41-cda8-4e5a-a4f8-90adf2d2dd34"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_evaluador_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="440" y="290" width="100" height="20" uuid="a0a37325-d7fd-48ca-b917-bbf9de25ae37"/>
+				<reportElement x="440" y="329" width="100" height="20" uuid="a0a37325-d7fd-48ca-b917-bbf9de25ae37"/>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_profesion_evaluador_1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="290" width="100" height="31" uuid="31b24692-bc26-4b23-9fbb-6e99be40f76e"/>
+				<reportElement x="12" y="329" width="100" height="31" uuid="31b24692-bc26-4b23-9fbb-6e99be40f76e"/>
 				<text><![CDATA[Profesionales Evaluadores]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="310" width="100" height="20" uuid="f6153069-2b05-43a5-97c6-2c783772bfa9"/>
+				<reportElement x="170" y="349" width="79" height="20" uuid="f6153069-2b05-43a5-97c6-2c783772bfa9"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_evaluador_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="282" y="310" width="147" height="20" uuid="03efe152-da48-4ebc-93ac-790033a25482"/>
+				<reportElement x="260" y="349" width="169" height="20" uuid="03efe152-da48-4ebc-93ac-790033a25482"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_evaluador_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="440" y="310" width="100" height="20" uuid="cb20566c-d86a-4214-85ad-20723636c1b2"/>
+				<reportElement x="440" y="349" width="100" height="20" uuid="cb20566c-d86a-4214-85ad-20723636c1b2"/>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_profesion_evaluador_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="330" width="100" height="20" uuid="55daa6fc-f375-49ee-b37c-98621ce582d7"/>
+				<reportElement x="170" y="369" width="79" height="20" uuid="55daa6fc-f375-49ee-b37c-98621ce582d7"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_evaluador_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="282" y="330" width="147" height="20" uuid="203508db-9251-4713-bf6e-720a45125ec0"/>
+				<reportElement x="260" y="369" width="169" height="20" uuid="203508db-9251-4713-bf6e-720a45125ec0"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_evaluador_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="440" y="330" width="100" height="20" uuid="52acdc11-a324-4a37-af92-6dd64ce3c8e3"/>
+				<reportElement x="440" y="369" width="100" height="20" uuid="52acdc11-a324-4a37-af92-6dd64ce3c8e3"/>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_profesion_evaluador_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="350" width="100" height="20" uuid="8c4488fa-1aa3-4af8-a0d2-0d7b67fd7c99"/>
+				<reportElement x="170" y="389" width="79" height="20" uuid="8c4488fa-1aa3-4af8-a0d2-0d7b67fd7c99"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_evaluador_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="282" y="350" width="147" height="20" uuid="76dc2552-e84f-4de9-bde8-f6405003ca47"/>
+				<reportElement x="260" y="389" width="169" height="20" uuid="76dc2552-e84f-4de9-bde8-f6405003ca47"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_evaluador_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="440" y="350" width="100" height="20" uuid="c6a74cae-6eec-405c-8cd0-1071b3c87dbd"/>
+				<reportElement x="440" y="389" width="100" height="20" uuid="c6a74cae-6eec-405c-8cd0-1071b3c87dbd"/>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_profesion_evaluador_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="370" width="100" height="20" uuid="71caa152-ae1f-4bd0-9f29-4491550cec28"/>
+				<reportElement x="170" y="409" width="79" height="20" uuid="71caa152-ae1f-4bd0-9f29-4491550cec28"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_evaluador_5}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="282" y="370" width="147" height="20" uuid="1b568db3-829c-47d2-bd1a-7093ba6145ef"/>
+				<reportElement x="260" y="409" width="169" height="20" uuid="1b568db3-829c-47d2-bd1a-7093ba6145ef"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_evaluador_5}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="440" y="370" width="100" height="20" uuid="518ef8a5-058c-427f-a2ee-64bc3079159d"/>
+				<reportElement x="440" y="409" width="100" height="20" uuid="518ef8a5-058c-427f-a2ee-64bc3079159d"/>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_profesion_evaluador_5}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="390" width="100" height="34" uuid="c33dbc1b-e44a-4940-8b69-9d8baee505bd"/>
+				<reportElement x="12" y="441" width="100" height="34" uuid="c33dbc1b-e44a-4940-8b69-9d8baee505bd"/>
 				<text><![CDATA[Puntajes y pruebas segun corresponda]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="390" width="100" height="20" uuid="46f423c5-3ab2-421f-a9e4-44e08c5a81a5"/>
+				<reportElement x="170" y="441" width="259" height="20" uuid="46f423c5-3ab2-421f-a9e4-44e08c5a81a5"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_prueba_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="386" y="390" width="100" height="20" uuid="8ea11041-09fb-43bd-ad73-573ecbc467f8"/>
+				<reportElement x="440" y="441" width="100" height="20" uuid="8ea11041-09fb-43bd-ad73-573ecbc467f8"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_puntaje_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="410" width="100" height="20" uuid="d76b1e41-846a-4083-9d23-8341a5853dc3"/>
+				<reportElement x="170" y="461" width="259" height="20" uuid="d76b1e41-846a-4083-9d23-8341a5853dc3"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_prueba_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="386" y="410" width="100" height="20" uuid="2e2496e2-7295-4bcb-ad65-db5c0f940f74"/>
+				<reportElement x="440" y="461" width="100" height="20" uuid="2e2496e2-7295-4bcb-ad65-db5c0f940f74"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_puntaje_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="430" width="100" height="20" uuid="d922b6d3-4216-4639-8e2f-6ec0eb0926bc"/>
+				<reportElement x="170" y="481" width="259" height="20" uuid="d922b6d3-4216-4639-8e2f-6ec0eb0926bc"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_prueba_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="386" y="430" width="100" height="20" uuid="c6949b73-c4bc-40f5-8ba7-bbbada9ade63"/>
+				<reportElement x="440" y="481" width="100" height="20" uuid="c6949b73-c4bc-40f5-8ba7-bbbada9ade63"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_puntaje_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="450" width="100" height="20" uuid="3b4d4d8e-4956-4840-ad7d-ca2c237140c3"/>
+				<reportElement x="170" y="501" width="259" height="20" uuid="3b4d4d8e-4956-4840-ad7d-ca2c237140c3"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_prueba_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="386" y="450" width="100" height="20" uuid="a086a34f-166d-4669-acb5-e5a00af476ec"/>
+				<reportElement x="440" y="501" width="100" height="20" uuid="a086a34f-166d-4669-acb5-e5a00af476ec"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_puntaje_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="470" width="100" height="20" uuid="f4d3ac26-c4a6-4eba-9a75-75754284ef8a"/>
+				<reportElement x="170" y="521" width="259" height="20" uuid="f4d3ac26-c4a6-4eba-9a75-75754284ef8a"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_prueba_5}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="386" y="470" width="100" height="20" uuid="cc999858-f833-44ce-bb3b-e171049be189"/>
+				<reportElement x="440" y="521" width="100" height="20" uuid="cc999858-f833-44ce-bb3b-e171049be189"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_puntaje_5}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="12" y="503" width="100" height="36" uuid="7ad298b3-7fbc-4b47-bf38-208d3eded492"/>
+				<reportElement x="12" y="551" width="100" height="36" uuid="7ad298b3-7fbc-4b47-bf38-208d3eded492"/>
 				<text><![CDATA[Profesionales de apoyo]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="170" y="503" width="100" height="20" uuid="14816bcd-196f-4884-9924-ce3be5b56bd2"/>
+				<reportElement x="170" y="551" width="79" height="20" uuid="14816bcd-196f-4884-9924-ce3be5b56bd2"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_apoyo_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="523" width="100" height="20" uuid="b9a17eef-b51a-40c3-93f3-ec9787044b78"/>
+				<reportElement x="170" y="571" width="79" height="20" uuid="b9a17eef-b51a-40c3-93f3-ec9787044b78"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_apoyo_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="543" width="100" height="20" uuid="c09c23f7-68b5-4fe3-9cda-e57821b4a925"/>
+				<reportElement x="170" y="591" width="79" height="20" uuid="c09c23f7-68b5-4fe3-9cda-e57821b4a925"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_apoyo_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="563" width="100" height="20" uuid="b66deaba-cbae-4325-8ece-151df9eff58d"/>
+				<reportElement x="170" y="611" width="79" height="20" uuid="b66deaba-cbae-4325-8ece-151df9eff58d"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_rut_apoyo_4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="308" y="503" width="100" height="20" uuid="b6c067be-ac96-4176-a448-cc762841b655"/>
+				<reportElement x="260" y="551" width="280" height="20" uuid="b6c067be-ac96-4176-a448-cc762841b655"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_apoyo_1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="308" y="523" width="100" height="20" uuid="c2af82c7-83cc-48ac-83bd-3f6dc84edcd9"/>
+				<reportElement x="260" y="571" width="280" height="20" uuid="c2af82c7-83cc-48ac-83bd-3f6dc84edcd9"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_apoyo_2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="308" y="543" width="100" height="20" uuid="6ff00b75-eeb8-407f-86ef-ecd6c44cfe13"/>
+				<reportElement x="260" y="591" width="280" height="20" uuid="6ff00b75-eeb8-407f-86ef-ecd6c44cfe13"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ficha_diagnostico_nombre_apoyo_3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="308" y="563" width="100" height="20" uuid="fd0a0325-02c7-4120-b92e-1c766c8ae9ba"/>
+				<reportElement x="260" y="611" width="280" height="20" uuid="fd0a0325-02c7-4120-b92e-1c766c8ae9ba"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>

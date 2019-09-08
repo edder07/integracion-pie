@@ -443,19 +443,19 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-  FrameEvaluacionReevaluacion frame = new FrameEvaluacionReevaluacion(); 
+    FrameEvaluacionReevaluacion frame = new FrameEvaluacionReevaluacion(); 
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionParte5.this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-  FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
+    FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionParte5.this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-  MenuPrincipal frame = new MenuPrincipal(); 
+    MenuPrincipal frame = new MenuPrincipal(); 
     frame.setVisible(true);                                                                                                                
     FrameEvaluacionParte5.this.dispose();
     }//GEN-LAST:event_jButton4MouseClicked
@@ -502,9 +502,6 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
                 FrameEvaluacionPart4.nombre_profesional_apoyo_2 = rs.getString("nombre_apoyo_2");
                 FrameEvaluacionPart4.nombre_profesional_apoyo_3 = rs.getString("nombre_apoyo_3");
                 FrameEvaluacionPart4.nombre_profesional_apoyo_4 = rs.getString("nombre_apoyo_4");
-             
-                 JOptionPane.showMessageDialog(null,  FrameEvaluacionPart4.frame4_fecha_emision);
-          
                 
                 FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
                 frame.setVisible(true);                                                                                                                
@@ -523,18 +520,21 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
      
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName = integracion_pie","sa","1234321");
-            JOptionPane.showMessageDialog(null, "1");
+           
             JasperReport jr = JasperCompileManager.compileReport("src/proyectopie/Reporte_Ficha.jrxml");
-            JOptionPane.showMessageDialog(null, "2");
-            JasperPrint jp = JasperFillManager.fillReport(jr,null,con);
-            JOptionPane.showMessageDialog(null, "3");
+            
+            Map Parametros = new HashMap();
+           
+            Parametros.put("ParametroRutAlumno",jLabel24.getText());
+            Parametros.put("ParametroFechaEmision",jLabel33.getText());
+            JasperPrint jp = JasperFillManager.fillReport(jr,Parametros,con);
+            
             JasperViewer jv = new JasperViewer(jp,false);
-            JOptionPane.showMessageDialog(null, "4");
+            
             jv.setTitle("Reporte Ficha");
-            JOptionPane.showMessageDialog(null, "5");
+            
             jv.setVisible(true);
-            JOptionPane.showMessageDialog(null, "6");
-        } catch (SQLException ex) {
+            } catch (SQLException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
         } catch (JRException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
