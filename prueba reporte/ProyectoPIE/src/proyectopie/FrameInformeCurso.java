@@ -228,7 +228,7 @@ public class FrameInformeCurso extends javax.swing.JFrame {
        try {
             Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.107:1433;databaseName = integracion_pie","sa","1234321");
            
-            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Desktop/ProyectoPIE/src/proyectopie/Reporte_Curso.jrxml");
+            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Documents/GitHub/integracion-pie/prueba reporte/ProyectoPIE/src/proyectopie/Reporte_Curso.jrxml");
          
             Map Parametros = new HashMap();
            
