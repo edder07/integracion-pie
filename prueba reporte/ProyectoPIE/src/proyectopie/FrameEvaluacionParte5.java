@@ -519,9 +519,10 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.106:1433;databaseName = integracion_pie","sa","1234321");
            
-            JasperReport jr = JasperCompileManager.compileReport("src/proyectopie/Reporte_Ficha.jrxml");
+            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Desktop/ProyectoPIE/src/proyectopie/Reporte_Ficha.jrxml");
+            //"C:\Users\56962\Desktop\ProyectoPIE\src\proyectopie\Reporte_Ficha.jrxml"
             JOptionPane.showMessageDialog(null, "1");
             Map Parametros = new HashMap();
            
@@ -537,10 +538,10 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
             jv.setVisible(true);
             } catch (SQLException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "1");
+            JOptionPane.showMessageDialog(null, ex);
         } catch (JRException ex) {
             Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "1");
+            JOptionPane.showMessageDialog(null, ex);
         }
              
     }//GEN-LAST:event_jButton2ActionPerformed
