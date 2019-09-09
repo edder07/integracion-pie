@@ -1,11 +1,23 @@
 package proyectopie;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,12 +31,21 @@ import javax.swing.JOptionPane;
  */
 public class FrameCitacion extends javax.swing.JFrame {
 
+    public static String fecha_actual_glo; 
+    public static String fecha_reunion_glo; 
+
     /**
      * Creates new form FrameCitacion
      */
     public FrameCitacion() {
         initComponents();
          this.setLocationRelativeTo(null);
+         try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FrameEvaluacionParte5.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         jButton2.setVisible(false);
            
          
     }
@@ -64,8 +85,18 @@ public class FrameCitacion extends javax.swing.JFrame {
         comboautoridad.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Equipo P.I.E", "Profesora Diferencial", "Psocologo", "Asistente Social", "Fonoaudiologo", "Terapeuta Ocupacional", "Director del Establecimiento" }));
 
         txthora.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txthora.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txthoraKeyTyped(evt);
+            }
+        });
 
         txtminutos.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtminutos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtminutosKeyTyped(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText(":");
@@ -80,6 +111,11 @@ public class FrameCitacion extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton2.setText("Generar Citacion");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Volver");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -197,6 +233,12 @@ public class FrameCitacion extends javax.swing.JFrame {
    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
   
+        int ho= Integer.parseInt(txthora.getText());
+        int mi= Integer.parseInt(txtminutos.getText());
+        
+        if (ho >22 || ho<0 || mi>59 || mi<0 ){
+             JOptionPane.showMessageDialog(null,"Hora invalida","ERROR",JOptionPane.ERROR_MESSAGE);
+        }else{
          int año = calendarcitacion.getCalendar().get(Calendar.YEAR);
          int mes = calendarcitacion.getCalendar().get(Calendar.MARCH);
          int dia = calendarcitacion.getCalendar().get(Calendar.DAY_OF_MONTH);
@@ -221,12 +263,71 @@ public class FrameCitacion extends javax.swing.JFrame {
         try{
              st.executeUpdate("INSERT INTO citaciones (fecha_citacion , fecha_reunion , hora , autoridad , descripcion_fecha) values ('" + fecha_actual +"', '" + fecha_reunion +"', '" + hora_minuto +"', '" + autoridad +"' , '" + descripcion_fecha +"')");
            JOptionPane.showMessageDialog(null, "Citacion ingresado correctamente");
+           fecha_actual_glo = fecha_actual;
+           fecha_reunion_glo = fecha_reunion;
+            jButton2.setVisible(true);
         }
         catch (SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         } 
         }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       try {
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.107:1433;databaseName = integracion_pie","sa","1234321");
+           
+            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Desktop/ProyectoPIE/src/proyectopie/Reporte_Citacion.jrxml");
+         
+            Map Parametros = new HashMap();
+           
+            Parametros.put("ParametroFechaActual",fecha_actual_glo);
+            Parametros.put("ParametroFechaReunion",fecha_reunion_glo);
+            
+            
+            JasperPrint jp = JasperFillManager.fillReport(jr,Parametros,con);
+          
+            JasperViewer jv = new JasperViewer(jp,false);
+          
+            jv.setTitle("Reporte Lista Completa");
+            
+            jv.setVisible(true);
+            jButton2.setVisible(false);
+            } catch (SQLException ex) {
+            Logger.getLogger(FrameCitacion.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        } catch (JRException ex) {
+            Logger.getLogger(FrameCitacion.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txthoraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txthoraKeyTyped
+        int n=2;
+       if(txthora.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Trate de ingresar hora valida","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+       char c=evt.getKeyChar();
+               if(c<'0' || c>'9'){
+                   evt.consume();
+               }
+    }//GEN-LAST:event_txthoraKeyTyped
+
+    private void txtminutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtminutosKeyTyped
+      int n=2;
+       if(txtminutos.getText().length()>=n){
+            getToolkit().beep();
+           evt.consume();
+            JOptionPane.showMessageDialog(null,"Trate de ingresar hora valida","ERROR",JOptionPane.WARNING_MESSAGE);
+       }
+       char c=evt.getKeyChar();
+               if(c<'0' || c>'9'){
+                   evt.consume();
+               }
+    }//GEN-LAST:event_txtminutosKeyTyped
 
     /**
      * @param args the command line arguments

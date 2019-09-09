@@ -139,6 +139,10 @@ WHERE
 				</textElement>
 				<text><![CDATA[PROGRAMA DE INTEGRACION ESCOLAR]]></text>
 			</staticText>
+			<image>
+				<reportElement x="249" y="0" width="57" height="22" uuid="021bf0ed-cdc5-45db-a359-86a2694b3c10"/>
+				<imageExpression><![CDATA["C:\\Users\\56962\\Desktop\\ProyectoPIE\\src\\proyectopie\\Logo Color jp.jpg"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

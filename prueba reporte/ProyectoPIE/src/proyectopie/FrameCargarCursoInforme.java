@@ -52,51 +52,101 @@ public class FrameCargarCursoInforme extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 204, 0));
         jButton1.setText("1° BASICO");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(51, 0, 153));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 204, 0));
         jButton2.setText("2° BASICO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(51, 0, 153));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 204, 0));
         jButton3.setText("3° BASICO");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(51, 0, 153));
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 204, 0));
         jButton4.setText("4° BASICO");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(51, 0, 153));
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 204, 0));
         jButton5.setText("KINDER");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(51, 0, 153));
         jButton6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 204, 0));
         jButton6.setText("PRE-KINDER");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(51, 0, 153));
         jButton7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 204, 0));
         jButton7.setText("5° BASICO");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(51, 0, 153));
         jButton8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 204, 0));
         jButton8.setText("6° BASICO");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setBackground(new java.awt.Color(51, 0, 153));
         jButton9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 204, 0));
         jButton9.setText("7° BASICO");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(51, 0, 153));
         jButton10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 204, 0));
         jButton10.setText("8° BASICO");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
@@ -182,6 +232,83 @@ FrameInformes frame = new FrameInformes();
     frame.setVisible(true);                                                                                                                
     FrameCargarCursoInforme.this.dispose();
     }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      FrameInformeCurso.id_curso_informe = 1;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     FrameInformeCurso.id_curso_informe = 2;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+     
+         FrameInformeCurso.id_curso_informe = 3;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    
+         FrameInformeCurso.id_curso_informe = 4;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+     
+         FrameInformeCurso.id_curso_informe = 5;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+      
+         FrameInformeCurso.id_curso_informe = 6;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+     
+        FrameInformeCurso.id_curso_informe = 7;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+       FrameInformeCurso.id_curso_informe = 8;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+   
+         FrameInformeCurso.id_curso_informe = 9;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+      
+         FrameInformeCurso.id_curso_informe = 10;
+      FrameInformeCurso frame = new FrameInformeCurso(); 
+      frame.setVisible(true);                                                                                                                
+      FrameCargarCursoInforme.this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

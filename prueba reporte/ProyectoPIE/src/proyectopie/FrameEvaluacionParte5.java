@@ -519,20 +519,19 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.106:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.107:1433;databaseName = integracion_pie","sa","1234321");
            
             JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Desktop/ProyectoPIE/src/proyectopie/Reporte_Ficha.jrxml");
-            //"C:\Users\56962\Desktop\ProyectoPIE\src\proyectopie\Reporte_Ficha.jrxml"
-            JOptionPane.showMessageDialog(null, "1");
+         
             Map Parametros = new HashMap();
            
             Parametros.put("ParametroRutAlumno",jLabel24.getText());
             Parametros.put("ParametroFechaEmision",jLabel33.getText());
-            JOptionPane.showMessageDialog(null, "2");
+            
             JasperPrint jp = JasperFillManager.fillReport(jr,Parametros,con);
-            JOptionPane.showMessageDialog(null, "3");
+          
             JasperViewer jv = new JasperViewer(jp,false);
-            JOptionPane.showMessageDialog(null, "4");
+          
             jv.setTitle("Reporte Ficha");
             
             jv.setVisible(true);
