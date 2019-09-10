@@ -5,6 +5,7 @@
  */
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -30,13 +31,23 @@ import net.sf.jasperreports.view.JasperViewer;
  */
 public class FrameInformeCurso extends javax.swing.JFrame {
 
-    DefaultTableModel model= new DefaultTableModel();
+    DefaultTableModel model= new DefaultTableModel(){
+        @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+    };
     public static int id_curso_informe;
     /**
      * Creates new form FrameInformeCurso
      */
     public FrameInformeCurso() {
         initComponents();
+         this.getContentPane().setBackground(Color.BLUE);
          this.setLocationRelativeTo(null);
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -149,6 +160,7 @@ public class FrameInformeCurso extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblnombre.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
+        lblnombre.setForeground(new java.awt.Color(255, 204, 0));
         lblnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblnombre.setText("jLabel1");
         lblnombre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -160,6 +172,8 @@ public class FrameInformeCurso extends javax.swing.JFrame {
             }
         });
 
+        TablaInformeCurso.setBackground(java.awt.Color.blue);
+        TablaInformeCurso.setForeground(new java.awt.Color(255, 255, 255));
         TablaInformeCurso.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -171,6 +185,7 @@ public class FrameInformeCurso extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        TablaInformeCurso.setSelectionBackground(java.awt.Color.red);
         jScrollPane1.setViewportView(TablaInformeCurso);
 
         jButton2.setText("Generar Reporte");
@@ -226,7 +241,7 @@ public class FrameInformeCurso extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.107:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.108:1433;databaseName = integracion_pie","sa","1234321");
            
             JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Documents/GitHub/integracion-pie/prueba reporte/ProyectoPIE/src/proyectopie/Reporte_Curso.jrxml");
          

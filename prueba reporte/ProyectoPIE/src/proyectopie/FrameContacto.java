@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -18,12 +19,22 @@ import javax.swing.table.DefaultTableModel;
 public class FrameContacto extends javax.swing.JFrame {
 
     static String rut_previo;
-     DefaultTableModel model= new DefaultTableModel();
+     DefaultTableModel model= new DefaultTableModel(){
+         @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+     };
     /**
      * Creates new form FrameContacto
      */
     public FrameContacto() {
         initComponents();
+        this.getContentPane().setBackground(Color.BLUE);
          this.setLocationRelativeTo(null);
          this.tabla_contacto.setModel(model);
                   model.setColumnCount(0);
@@ -96,15 +107,11 @@ public class FrameContacto extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Seleccione un alumno");
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jButton1.setText("Cargar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -118,6 +125,8 @@ public class FrameContacto extends javax.swing.JFrame {
             }
         });
 
+        tabla_contacto.setBackground(java.awt.Color.blue);
+        tabla_contacto.setForeground(new java.awt.Color(255, 255, 255));
         tabla_contacto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -129,6 +138,7 @@ public class FrameContacto extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla_contacto.setSelectionBackground(java.awt.Color.red);
         tabla_contacto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabla_contactoMouseClicked(evt);
@@ -178,9 +188,6 @@ MenuPrincipal frame = new MenuPrincipal();
     frame.setVisible(true);                                                                                                                
     FrameContacto.this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void tabla_contactoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabla_contactoMouseClicked
      

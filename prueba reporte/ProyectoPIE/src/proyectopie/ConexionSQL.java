@@ -8,7 +8,7 @@ public class ConexionSQL {
     
     public String usuario = "sa";
     public String password = "1234321";
-    public String url = "jdbc:sqlserver://192.168.50.107:1433;databaseName=integracion_pie;";
+    public String url = "jdbc:sqlserver://192.168.50.108:1433;databaseName=integracion_pie;";
    
   public Connection cn = null;
   public Statement st = null;

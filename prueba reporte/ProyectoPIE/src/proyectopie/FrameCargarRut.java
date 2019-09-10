@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,12 +26,22 @@ import static proyectopie.FrameEvaluacionPart4.rut_del_alumno;
 public class FrameCargarRut extends javax.swing.JFrame {
 
       public static String rut_tabla;
-    DefaultTableModel model= new DefaultTableModel();
+    DefaultTableModel model= new DefaultTableModel(){
+         @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+    };
     /**
      * Creates new form FrameCargarRut
      */
     public FrameCargarRut() {
         initComponents();
+        this.getContentPane().setBackground(Color.BLUE);
          this.setLocationRelativeTo(null);
          cargar_combo_rut_alumno();
           this.tabla_alumno.setModel(model);
@@ -81,9 +92,11 @@ public class FrameCargarRut extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Seleccione Rut Alumno");
 
         comborut.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        comborut.setForeground(new java.awt.Color(255, 204, 0));
         comborut.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -97,11 +110,6 @@ public class FrameCargarRut extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("Cargar");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -115,6 +123,8 @@ public class FrameCargarRut extends javax.swing.JFrame {
             }
         });
 
+        tabla_alumno.setBackground(java.awt.Color.blue);
+        tabla_alumno.setForeground(new java.awt.Color(255, 255, 255));
         tabla_alumno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -126,6 +136,7 @@ public class FrameCargarRut extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla_alumno.setSelectionBackground(java.awt.Color.red);
         tabla_alumno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabla_alumnoMouseClicked(evt);
@@ -182,10 +193,6 @@ FrameBuscadores frame = new FrameBuscadores();
     frame.setVisible(true);                                                                                                                
     FrameCargarRut.this.dispose();
     }//GEN-LAST:event_jButton3MouseClicked
-
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-
-    }//GEN-LAST:event_jButton2MouseClicked
 
      void limpiar_tabla(){
         DefaultTableModel tb = (DefaultTableModel) tabla_alumno.getModel();
@@ -380,10 +387,10 @@ FrameBuscadores frame = new FrameBuscadores();
             } else{
                
               
-                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Intente nuevamente","ERROR",JOptionPane.ERROR_MESSAGE);
             }
         }catch (SQLException ex){
-            JOptionPane.showMessageDialog(null, ex);
+            //JOptionPane.showMessageDialog(null, ex);
         }      
     }//GEN-LAST:event_jButton2ActionPerformed
 

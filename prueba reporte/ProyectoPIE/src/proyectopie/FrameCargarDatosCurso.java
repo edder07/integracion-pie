@@ -5,6 +5,7 @@
  */
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,13 +25,27 @@ import static proyectopie.FrameEvaluacionPart4.rut_del_alumno;
 public class FrameCargarDatosCurso extends javax.swing.JFrame {
 
     public static int id_de_curso;
-    DefaultTableModel model= new DefaultTableModel();
+    DefaultTableModel model= new DefaultTableModel(){
+
+        @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+        
+    };
     /**
      * Creates new form FrameCargarDatosCurso
      */
     public FrameCargarDatosCurso() {
         initComponents();
+   
+        this.getContentPane().setBackground(Color.BLUE);
         this.tabla_curso.setModel(model);
+        
          this.setLocationRelativeTo(null);
         nombre_curso_label();
                   model.setColumnCount(0);
@@ -139,6 +154,8 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        tabla_curso.setBackground(new java.awt.Color(0, 51, 255));
+        tabla_curso.setForeground(new java.awt.Color(255, 255, 255));
         tabla_curso.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -150,6 +167,8 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla_curso.setGridColor(java.awt.Color.blue);
+        tabla_curso.setSelectionBackground(new java.awt.Color(255, 204, 0));
         tabla_curso.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabla_cursoMouseClicked(evt);
@@ -158,6 +177,8 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tabla_curso);
 
         lblnombre.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
+        lblnombre.setForeground(new java.awt.Color(255, 204, 0));
+        lblnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblnombre.setText("jLabel1");
 
         jButton1.setText("Volver");
@@ -180,30 +201,32 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(266, 266, 266))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(429, 429, 429))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1))
                     .addComponent(lblnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(20, 20, 20))
         );
@@ -359,10 +382,10 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
             } else{
                
               
-                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Intente nuevamente","ERROR",JOptionPane.ERROR_MESSAGE);
             }
         }catch (SQLException ex){
-            JOptionPane.showMessageDialog(null, ex);
+            //JOptionPane.showMessageDialog(null, ex);
         }      
     }//GEN-LAST:event_jButton2ActionPerformed
 

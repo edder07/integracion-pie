@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,12 +19,22 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FrameEliminarAlumno extends javax.swing.JFrame {
 
-       DefaultTableModel model= new DefaultTableModel();
+       DefaultTableModel model= new DefaultTableModel(){
+            @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+       };
     /**
      * Creates new form FrameEliminarAlumno
      */
     public FrameEliminarAlumno() {
         initComponents();
+        this.getContentPane().setBackground(Color.BLUE);
          this.setLocationRelativeTo(null);
          cargar_combo_alumno();
          this.table_alumno.setModel(model);
@@ -80,8 +91,10 @@ public class FrameEliminarAlumno extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Seleccione RUT del alumno");
 
+        comboalumno.setForeground(new java.awt.Color(255, 204, 0));
         comboalumno.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -109,6 +122,8 @@ public class FrameEliminarAlumno extends javax.swing.JFrame {
             }
         });
 
+        table_alumno.setBackground(java.awt.Color.blue);
+        table_alumno.setForeground(new java.awt.Color(255, 255, 255));
         table_alumno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -120,6 +135,7 @@ public class FrameEliminarAlumno extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        table_alumno.setSelectionBackground(java.awt.Color.red);
         jScrollPane1.setViewportView(table_alumno);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,8 +173,8 @@ public class FrameEliminarAlumno extends javax.swing.JFrame {
                     .addComponent(comboalumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );

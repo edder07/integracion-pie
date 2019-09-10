@@ -519,7 +519,7 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.107:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.108:1433;databaseName = integracion_pie","sa","1234321");
            
             JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Documents/GitHub/integracion-pie/prueba reporte/ProyectoPIE/src/proyectopie/Reporte_Ficha.jrxml");
          //"C:\Users\56962\Documents\GitHub\integracion-pie\prueba reporte\ProyectoPIE\src\proyectopie\Reporte_Ficha.jrxml"

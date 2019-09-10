@@ -1,5 +1,6 @@
 package proyectopie;
 
+import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,12 +25,22 @@ import static proyectopie.FrameEvaluacionPart4.rut_del_alumno;
 public class FrameCargarLista extends javax.swing.JFrame {
 
     public static String diagnostico;
-    DefaultTableModel model= new DefaultTableModel();
+    DefaultTableModel model= new DefaultTableModel(){
+         @Override
+        public boolean isCellEditable(int filas, int columnas) {
+          if (columnas==6){
+              return true;
+          }else{
+              return false;
+          }
+        }
+    };
     /**
      * Creates new form FrameCargarLista
      */
     public FrameCargarLista() {
         initComponents();
+        this.getContentPane().setBackground(Color.BLUE);
          this.setLocationRelativeTo(null);
           this.tabla_lista_completa.setModel(model);
                   model.setColumnCount(0);
@@ -107,11 +118,6 @@ public class FrameCargarLista extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Cargar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -119,6 +125,7 @@ public class FrameCargarLista extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("Lista completa de alumnos P.I.E");
 
         jButton2.setText("Volver");
@@ -133,6 +140,8 @@ public class FrameCargarLista extends javax.swing.JFrame {
             }
         });
 
+        tabla_lista_completa.setBackground(java.awt.Color.blue);
+        tabla_lista_completa.setForeground(new java.awt.Color(255, 255, 255));
         tabla_lista_completa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -144,6 +153,7 @@ public class FrameCargarLista extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla_lista_completa.setSelectionBackground(java.awt.Color.red);
         tabla_lista_completa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabla_lista_completaMouseClicked(evt);
@@ -192,10 +202,6 @@ public class FrameCargarLista extends javax.swing.JFrame {
     frame.setVisible(true);                                                                                                                
     FrameCargarLista.this.dispose();
     }//GEN-LAST:event_jButton2MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-    
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -343,10 +349,10 @@ public class FrameCargarLista extends javax.swing.JFrame {
             } else{
                
               
-                JOptionPane.showMessageDialog(null,"RUT no existe","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Intente nuevamente","ERROR",JOptionPane.ERROR_MESSAGE);
             }
         }catch (SQLException ex){
-            JOptionPane.showMessageDialog(null, ex);
+            //JOptionPane.showMessageDialog(null, ex);
         }      
     }//GEN-LAST:event_jButton1ActionPerformed
 
