@@ -83,6 +83,11 @@ public class logeo extends javax.swing.JFrame {
         jLabel3.setText("Contraseña");
 
         jButton1.setText("Ingresar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -204,6 +209,38 @@ public class logeo extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+     
+           
+        String usuario = txtusuario.getText();
+        String password=txtpass.getText();
+ 
+        if((password.isEmpty() && usuario.isEmpty() )){
+             JOptionPane.showMessageDialog(null, "Ingrese su nombre de usuario y contraseÃ±a ");
+        }
+         else
+         {
+             ConexionSQL conectar = new ConexionSQL();
+             Statement st = conectar.Conectar();
+        try{
+            ResultSet rs = st.executeQuery("select usuario.nombre_usuario , usuario.nombre_completo_usuario  from usuario where nombre_usuario = '" + usuario + "' and pass='" + password + "' and usuario.estado = 'activo'");
+            if (rs.next()){
+                obtener_id_usuario();
+                MenuPrincipal frame = new MenuPrincipal(); 
+                frame.setVisible(true);                                                                                                                
+                logeo.this.dispose();        
+            } else{
+                txtusuario.setText("");
+                 txtpass.setText("");
+                 JOptionPane.showMessageDialog(null, "Usuario o contrasena Incorrecta","Usuario o contrasena Incorrecta",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+        catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+        } 
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments

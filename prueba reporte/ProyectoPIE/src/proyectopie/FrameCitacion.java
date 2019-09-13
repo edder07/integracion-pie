@@ -17,6 +17,7 @@ import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
 /*
@@ -276,10 +277,10 @@ public class FrameCitacion extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.108:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.104:1433;databaseName = integracion_pie","sa","1234321");
            
-            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Documents/GitHub/integracion-pie/prueba reporte/ProyectoPIE/src/proyectopie/Reporte_Citacion.jrxml");
-         
+            //JasperReport jr = JasperCompileManager.compileReport("C:/reportes para PIE/Reporte_Citacion.jrxml");
+         JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("Reportew_Citacion.jasper"));
             Map Parametros = new HashMap();
            
             Parametros.put("ParametroFechaActual",fecha_actual_glo);

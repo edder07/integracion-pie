@@ -13,6 +13,7 @@ import net.sf.jasperreports.view.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import net.sf.jasperreports.engine.util.JRLoader;
 import proyectopie.ConexionSQL;
 
 /*
@@ -519,9 +520,10 @@ public class FrameEvaluacionParte5 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      
         try {
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.108:1433;databaseName = integracion_pie","sa","1234321");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://192.168.50.104:1433;databaseName = integracion_pie","sa","1234321");
            
-            JasperReport jr = JasperCompileManager.compileReport("C:/Users/56962/Documents/GitHub/integracion-pie/prueba reporte/ProyectoPIE/src/proyectopie/Reporte_Ficha.jrxml");
+            //JasperReport jr = JasperCompileManager.compileReport("C:/reportes para PIE/Reporte_Ficha.jrxml");
+            JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("Reportew_Ficha.jasper"));
          //"C:\Users\56962\Documents\GitHub\integracion-pie\prueba reporte\ProyectoPIE\src\proyectopie\Reporte_Ficha.jrxml"
             Map Parametros = new HashMap();
            
