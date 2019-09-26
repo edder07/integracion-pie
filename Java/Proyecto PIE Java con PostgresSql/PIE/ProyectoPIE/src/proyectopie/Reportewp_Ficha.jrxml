@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17952b58-c63c-4601-8d78-d3f173428937">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ParametroRutAlumno" class="java.lang.String"/>
+	<parameter name="ParametroId" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select ficha_diagnostico.numero_estudiante, alumno.apellido_paterno , alumno.apellido_materno , alumno.nombres_alumno , to_char(fecha_nacimiento , 'DD-MM-YYYY' ) as "fecha_nacimiento" , ficha_diagnostico.rut_alumno , alumno.sexo_alumno , alumno.nacionalidad_alumno , curso.nombre , ficha_diagnostico.nuevo_ingreso , ficha_diagnostico.continuidad , ficha_diagnostico.diagnostico , ficha_diagnostico.sindrome_asociado_diagnostico , ficha_diagnostico.observaciones_salud , to_char(fecha_emision , 'DD-MM-YYYY' ) as "fecha_emision" , ficha_diagnostico.rut_evaluador_1 , ficha_diagnostico.nombre_evaluador_1 , ficha_diagnostico.profesion_evaluador_1  , ficha_diagnostico.rut_evaluador_2 , ficha_diagnostico.nombre_evaluador_2 , ficha_diagnostico.profesion_evaluador_2 , ficha_diagnostico.rut_evaluador_3  , ficha_diagnostico.nombre_evaluador_3 , ficha_diagnostico.profesion_evaluador_3 , ficha_diagnostico.rut_evaluador_4, ficha_diagnostico.nombre_evaluador_4 , ficha_diagnostico.profesion_evaluador_4 , ficha_diagnostico.rut_evaluador_5 , ficha_diagnostico.nombre_evaluador_5 , ficha_diagnostico.profesion_evaluador_5 , ficha_diagnostico.prueba_1 , ficha_diagnostico.puntaje_1 , ficha_diagnostico.prueba_2 , ficha_diagnostico.puntaje_2 , ficha_diagnostico.prueba_3 , ficha_diagnostico.puntaje_3 , ficha_diagnostico.prueba_4 , ficha_diagnostico.puntaje_4 , ficha_diagnostico.prueba_5 , ficha_diagnostico.puntaje_5 , ficha_diagnostico.rut_apoyo_1 , ficha_diagnostico.nombre_apoyo_1 , ficha_diagnostico.rut_apoyo_2 , ficha_diagnostico.nombre_apoyo_2 , ficha_diagnostico.rut_apoyo_3 , ficha_diagnostico.nombre_apoyo_3 , ficha_diagnostico.rut_apoyo_4  , ficha_diagnostico.nombre_apoyo_4 , tipo_ficha.nombre_tipo  
+from ficha_diagnostico , tipo_ficha , alumno , curso
+where ficha_diagnostico.curso_alumno = curso.id_curso and ficha_diagnostico.rut_alumno = alumno.rut_alumno and tipo_ficha. id_tipo = ficha_diagnostico.id_tipoficha and ficha_diagnostico.rut_alumno = $P{ParametroRutAlumno} and ficha_diagnostico.id_fichadiagnostico = $P{ParametroId}]]>
+	</queryString>
+	<field name="numero_estudiante" class="java.lang.Integer"/>
+	<field name="apellido_paterno" class="java.lang.String"/>
+	<field name="apellido_materno" class="java.lang.String"/>
+	<field name="nombres_alumno" class="java.lang.String"/>
+	<field name="fecha_nacimiento" class="java.lang.String"/>
+	<field name="rut_alumno" class="java.lang.String"/>
+	<field name="sexo_alumno" class="java.lang.String"/>
+	<field name="nacionalidad_alumno" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="nuevo_ingreso" class="java.lang.String"/>
+	<field name="continuidad" class="java.lang.String"/>
+	<field name="diagnostico" class="java.lang.String"/>
+	<field name="sindrome_asociado_diagnostico" class="java.lang.String"/>
+	<field name="observaciones_salud" class="java.lang.String"/>
+	<field name="fecha_emision" class="java.lang.String"/>
+	<field name="rut_evaluador_1" class="java.lang.String"/>
+	<field name="nombre_evaluador_1" class="java.lang.String"/>
+	<field name="profesion_evaluador_1" class="java.lang.String"/>
+	<field name="rut_evaluador_2" class="java.lang.String"/>
+	<field name="nombre_evaluador_2" class="java.lang.String"/>
+	<field name="profesion_evaluador_2" class="java.lang.String"/>
+	<field name="rut_evaluador_3" class="java.lang.String"/>
+	<field name="nombre_evaluador_3" class="java.lang.String"/>
+	<field name="profesion_evaluador_3" class="java.lang.String"/>
+	<field name="rut_evaluador_4" class="java.lang.String"/>
+	<field name="nombre_evaluador_4" class="java.lang.String"/>
+	<field name="profesion_evaluador_4" class="java.lang.String"/>
+	<field name="rut_evaluador_5" class="java.lang.String"/>
+	<field name="nombre_evaluador_5" class="java.lang.String"/>
+	<field name="profesion_evaluador_5" class="java.lang.String"/>
+	<field name="prueba_1" class="java.lang.String"/>
+	<field name="puntaje_1" class="java.lang.String"/>
+	<field name="prueba_2" class="java.lang.String"/>
+	<field name="puntaje_2" class="java.lang.String"/>
+	<field name="prueba_3" class="java.lang.String"/>
+	<field name="puntaje_3" class="java.lang.String"/>
+	<field name="prueba_4" class="java.lang.String"/>
+	<field name="puntaje_4" class="java.lang.String"/>
+	<field name="prueba_5" class="java.lang.String"/>
+	<field name="puntaje_5" class="java.lang.String"/>
+	<field name="rut_apoyo_1" class="java.lang.String"/>
+	<field name="nombre_apoyo_1" class="java.lang.String"/>
+	<field name="rut_apoyo_2" class="java.lang.String"/>
+	<field name="nombre_apoyo_2" class="java.lang.String"/>
+	<field name="rut_apoyo_3" class="java.lang.String"/>
+	<field name="nombre_apoyo_3" class="java.lang.String"/>
+	<field name="rut_apoyo_4" class="java.lang.String"/>
+	<field name="nombre_apoyo_4" class="java.lang.String"/>
+	<field name="nombre_tipo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="34" width="555" height="15" uuid="07214203-ba8e-4e9b-bdc6-e43504e38440"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MUNICIPALIDAD DE LINARES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="555" height="11" uuid="a73a3253-a877-4470-bbc3-0a2703e98bd6"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DE DEPARTAMENTO DE EDUCACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="555" height="11" uuid="bcec5ca1-c6b8-49ac-a0a2-8654ca326391"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DE INTEGRACION ESCOLAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="78" y="0" width="234" height="20" uuid="046b2c1e-019d-4178-9f92-acdce044c2a6"/>
+				<textElement>
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[FICHA DE INGRESO POR ESTUDIANTE CON]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="259" y="0" width="100" height="20" uuid="ed31ea14-e8f8-402b-ad7f-960734283d83"/>
+				<textFieldExpression><![CDATA[$F{nombre_tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="641" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="145" height="20" uuid="d84df804-2de3-4e3f-a7c4-61d8b73ca747"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Numero del Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="145" height="20" uuid="dd035f8c-ec23-4e71-8d1a-ad177ff0409d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apellido Paterno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="145" height="20" uuid="3c4498d9-9ba6-4f31-afa8-e91295e78743"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apellido Materno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="145" height="20" uuid="e41cc599-6071-400f-b5be-bde4b9857297"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nombres Alumno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="145" height="20" uuid="0593b290-46e7-4a9f-ad97-097df631dd27"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="145" height="20" uuid="d21e2b23-2fe2-48aa-975b-33d27b15579f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Rut del Alumno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="145" height="20" uuid="9180215e-794f-441e-9c73-7d0c24a3c114"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="145" height="20" uuid="f60a9374-26e6-476a-9378-e68d27b69321"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="145" height="30" uuid="edaefac9-c438-4f4c-8d00-10c43bbbdbe1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nuevo ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="145" height="20" uuid="2f264422-796f-4f3c-8477-e1dccfe63e31"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Continuidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="145" height="50" uuid="56a1136f-a0d7-4976-b094-ac7557e2ef65"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Diagnostico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="260" width="145" height="20" uuid="c6e3bc0d-a4c0-4900-9f03-d6576411c40e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sindrome asociado al diagnostico P.I.E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="145" height="49" uuid="bae06904-55e2-40ad-9d39-584f9bbc8b16"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Observacion salud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="329" width="145" height="20" uuid="b01b12fc-393c-42bd-8b13-8288ab9e3318"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha emision diagnostico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="349" width="145" height="100" uuid="31b24692-bc26-4b23-9fbb-6e99be40f76e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Profesionales Evaluadores]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="449" width="145" height="100" uuid="c33dbc1b-e44a-4940-8b69-9d8baee505bd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Puntajes y pruebas segun corresponda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="549" width="145" height="80" uuid="7ad298b3-7fbc-4b47-bf38-208d3eded492"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Profesionales de apoyo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="145" y="0" width="410" height="20" uuid="a993a626-5148-4028-84a4-d38ecdc438b1"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numero_estudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="20" width="410" height="20" uuid="ac737c3b-db38-4959-9912-734c2228afb4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellido_paterno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="40" width="410" height="20" uuid="0be22aec-e8fe-401a-beb9-abf9c8bb83e9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellido_materno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="60" width="410" height="20" uuid="4adac507-477e-4d17-952f-db4506eae9b7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres_alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="329" width="410" height="20" uuid="4eebfc88-d8ce-4647-acfa-163c0ecda292"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_emision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="80" width="410" height="20" uuid="8927e62a-2028-4c32-a00a-a92fc2e0da09"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_nacimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="100" width="149" height="20" uuid="b59d23fc-4d68-4357-be49-ec7c4f951a7c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="120" width="410" height="20" uuid="6e251155-772c-4960-927b-636c6ff9b9e3"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexo_alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="140" width="410" height="20" uuid="3387fb80-19a2-46fa-b5c5-e808306035e4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="160" width="410" height="30" uuid="3d570b77-e986-416d-ac05-db9a4660831c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nuevo_ingreso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="190" width="410" height="20" uuid="074f1da9-bc23-445e-957f-30ae257b8318"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{continuidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="210" width="409" height="50" uuid="21b6b848-5c4b-4622-bff8-06a78da59bdb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagnostico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="260" width="409" height="20" uuid="30941eaf-10e0-446c-ac23-4fb3dbe001a5"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sindrome_asociado_diagnostico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="280" width="409" height="49" uuid="b96fe4b8-537d-49b0-8772-327af71810dd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observaciones_salud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="349" width="100" height="20" uuid="bf2c22ec-c5ce-4bd0-ab6b-3f6a6a8e9b3a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_evaluador_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="369" width="100" height="20" uuid="23e5268d-305f-4d36-83fd-43a04125bbe0"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_evaluador_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="389" width="100" height="20" uuid="ef341deb-8d8c-4e34-9c10-bfaec967cadb"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_evaluador_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="409" width="100" height="20" uuid="b7dd1a76-a6ce-4548-b4df-9518384e8804"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_evaluador_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="429" width="100" height="20" uuid="8e830d77-dd76-4081-85ad-fc1c14bf483a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_evaluador_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="449" width="277" height="20" uuid="8502fb9e-9735-4983-b4ce-1ce6880ea122"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prueba_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="469" width="277" height="20" uuid="0efbcf28-942b-4fac-9774-62eb2999f1d6"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prueba_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="489" width="277" height="20" uuid="4a2f21aa-2282-4f0a-bdf1-5dd20b6094aa"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prueba_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="509" width="277" height="20" uuid="aa5037ca-c6f8-4cf9-8adc-819618d40535"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prueba_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="529" width="277" height="20" uuid="6636eb19-61cc-4eae-bd10-f407f52d053e"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prueba_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="549" width="100" height="20" uuid="2e5cf5cf-4659-4eaf-814c-82b01c9822fb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_apoyo_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="569" width="100" height="20" uuid="57ad3abc-c345-4960-81c4-f57814ec7a08"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_apoyo_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="589" width="100" height="20" uuid="446e00e4-5222-4ae6-a292-b6cecf2d0720"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_apoyo_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="609" width="100" height="20" uuid="9d7f5758-34b0-4f1e-afef-b0b4073634d0"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rut_apoyo_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="349" width="178" height="20" uuid="a8d06671-b166-48bd-875e-bca7e817a877"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_evaluador_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="369" width="179" height="20" uuid="1ce7b5fd-3477-4ed9-b472-1bca43f5563a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_evaluador_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="389" width="178" height="20" uuid="c0291957-a036-409e-87ce-352f9c278051"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_evaluador_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="409" width="178" height="20" uuid="4ea084a8-c26a-48b2-881c-7b8a224bc3d4"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_evaluador_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="429" width="178" height="20" uuid="00f06c40-2231-44f8-8c03-c4ef7d68a989"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_evaluador_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="349" width="133" height="20" uuid="c2e7be8b-05d8-4742-964c-612fa4ad1fc6"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion_evaluador_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="369" width="133" height="20" uuid="18bbc338-d53e-4b07-9e00-1ed9a2ecae34"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion_evaluador_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="389" width="133" height="20" uuid="1e3baa5e-8b48-4683-af4e-dc2eb46e7880"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion_evaluador_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="409" width="133" height="20" uuid="66797f97-0e80-4e19-8e33-4885f36c3875"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion_evaluador_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="429" width="133" height="20" uuid="ea3dc899-95b3-4b0c-b311-f127a04a5508"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profesion_evaluador_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="449" width="133" height="20" uuid="5a904bf0-cfa3-471e-8f96-c592098c9c58"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="469" width="133" height="20" uuid="4a9a6d01-d786-4f35-a823-b27f4cad33e6"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="489" width="133" height="20" uuid="0708768b-fb2d-4b14-a4ff-2170496fa2a9"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="509" width="133" height="20" uuid="613dd952-2870-4e2d-a99e-02a7183feb1c"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="529" width="133" height="20" uuid="cf881ec6-08e4-4616-a19f-ef60534c8dbb"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntaje_5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="549" width="311" height="20" uuid="0454121c-549f-42f1-a844-b58fbaa5bfe3"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_apoyo_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="569" width="311" height="20" uuid="2d0f3f35-dff1-4e26-86d7-431ebb0c55c4"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_apoyo_2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="589" width="311" height="20" uuid="b0786038-dead-46e0-99ac-c18ae2e1ca0f"/>
+				<box>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_apoyo_3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="609" width="311" height="20" uuid="6aa6b434-7173-4d5c-85e8-20e2bf35e5c3"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre_apoyo_4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="294" y="100" width="100" height="20" uuid="82d110f7-3548-4426-81d7-0ab0ac2b353e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nacionalidad]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="394" y="100" width="161" height="20" uuid="1c609755-642a-4d66-bf4f-cdd344efbafd"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nacionalidad_alumno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="7" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>
