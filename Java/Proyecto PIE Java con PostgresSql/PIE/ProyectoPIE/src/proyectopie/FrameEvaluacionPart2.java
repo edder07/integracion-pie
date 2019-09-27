@@ -23,19 +23,41 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     public static String frame2_evaluador_3;
     public static String frame2_evaluador_4;
     public static String frame2_evaluador_5;
+    
+    public static String evaluador_activo;
+    public static String evaluador_todo;
     /**
      * Creates new form FrameEvaluacionPart2
      */
     public FrameEvaluacionPart2() {
         initComponents();
          this.setLocationRelativeTo(null);
-         cargar_combo_ev1();
-         cargar_combo_ev2();
-         cargar_combo_ev3();
-         cargar_combo_ev4();
-         cargar_combo_ev5();
+         //cargar_combo_ev1();
+         //cargar_combo_ev2();
+         //cargar_combo_ev3();
+         //cargar_combo_ev4();
+         //cargar_combo_ev5();
+         evaluador_activo_inactivo();
          cargar_datos_combo_frame();
                 
+    }
+    void evaluador_activo_inactivo(){
+        if (evaluador_activo == "activo"){
+            cargar_combo_ev1_activos();
+            cargar_combo_ev2_activos();
+            cargar_combo_ev3_activos();
+            cargar_combo_ev4_activos();
+            cargar_combo_ev5_activos();
+            
+        }
+        if (evaluador_todo == "activo"){
+             cargar_combo_ev1_todos();
+             cargar_combo_ev2_todos();
+             cargar_combo_ev3_todos();
+             cargar_combo_ev4_todos();
+             cargar_combo_ev5_todos();
+            
+        }
     }
     void cargar_datos_combo_frame(){
         comboev1.setSelectedItem(frame2_evaluador_1);
@@ -62,7 +84,102 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
     
     
     
-        void cargar_combo_ev1() {
+     void cargar_combo_ev1_activos() {
+        
+        
+        try {
+            
+            String sql = "select profesional_evaluador.nombre_evaluador from profesional_evaluador where estado = 'activo' ";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboev1.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev1.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+     void cargar_combo_ev2_activos() {
+        
+        
+        try {
+            
+            String sql = "select profesional_evaluador.nombre_evaluador from profesional_evaluador where estado = 'activo' ";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboev2.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev2.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+     void cargar_combo_ev3_activos() {
+        
+        
+        try {
+            
+            String sql = "select profesional_evaluador.nombre_evaluador from profesional_evaluador where estado = 'activo' ";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboev3.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev3.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+     void cargar_combo_ev4_activos() {
+        
+        
+        try {
+            
+            String sql = "select profesional_evaluador.nombre_evaluador from profesional_evaluador where estado = 'activo' ";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboev4.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev4.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+     void cargar_combo_ev5_activos() {
+        
+        
+        try {
+            
+            String sql = "select profesional_evaluador.nombre_evaluador from profesional_evaluador where estado = 'activo' ";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboev5.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboev5.addItem(rs.getString("nombre_evaluador"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                 }
+        
+        }
+        void cargar_combo_ev1_todos() {
         
         
         try {
@@ -82,7 +199,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         
         }
         
-        void cargar_combo_ev2() {
+        void cargar_combo_ev2_todos() {
         
         
         try {
@@ -102,7 +219,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
         
         }
         
-        void cargar_combo_ev3() {
+        void cargar_combo_ev3_todos() {
         
        
         try {
@@ -121,7 +238,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
                  }
         
         }
-        void cargar_combo_ev4() {
+        void cargar_combo_ev4_todos() {
         
         
         try {
@@ -140,7 +257,7 @@ public class FrameEvaluacionPart2 extends javax.swing.JFrame {
                  }
         
         }
-        void cargar_combo_ev5() {
+        void cargar_combo_ev5_todos() {
         
         
         try {

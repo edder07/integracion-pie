@@ -367,6 +367,13 @@ public class FrameCargarDatosCurso extends javax.swing.JFrame {
                 
                 FrameEvaluacionPart4.ingresar_activo = "-";
                 FrameEvaluacionPart4.modificar_activo = "activo";
+                
+                FrameEvaluacionPart4.apoyo_activo = "-";
+                FrameEvaluacionPart4.apoyo_todos = "activo";
+                
+                FrameEvaluacionPart2.evaluador_activo = "-";
+                FrameEvaluacionPart2.evaluador_todo = "activo";
+                
                 FrameEvaluacionParte5 frame = new FrameEvaluacionParte5(); 
                 frame.setVisible(true);                                                                                                                
                 FrameCargarDatosCurso.this.dispose();

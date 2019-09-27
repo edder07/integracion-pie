@@ -7,8 +7,9 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[select citaciones.descripcion_fecha , to_char(fecha_reunion , 'DD-MM-YYYY' ) as "fecha_reunion" , citaciones.autoridad , citaciones.hora from citaciones where citaciones.id_citacion = $P{ParametroIdCitacion}]]>
+		<![CDATA[select encode(logo,'base64') as logo1 , citaciones.descripcion_fecha , to_char(fecha_reunion , 'DD-MM-YYYY' ) as "fecha_reunion" , citaciones.autoridad , citaciones.hora from imagen ,citaciones where citaciones.id_citacion = $P{ParametroIdCitacion} and id_logo = 4]]>
 	</queryString>
+	<field name="logo1" class="java.lang.String"/>
 	<field name="descripcion_fecha" class="java.lang.String"/>
 	<field name="fecha_reunion" class="java.lang.String"/>
 	<field name="autoridad" class="java.lang.String"/>
@@ -17,7 +18,12 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="60" splitType="Stretch"/>
+		<band height="60" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="11" y="10" width="59" height="50" uuid="ffdd306b-56e0-41d8-aba6-c992d795c226"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{logo1}))]]></imageExpression>
+			</image>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="6" splitType="Stretch"/>

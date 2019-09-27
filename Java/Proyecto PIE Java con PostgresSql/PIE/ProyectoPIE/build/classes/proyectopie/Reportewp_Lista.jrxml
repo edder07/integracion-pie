@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[select distinct ficha_diagnostico.rut_alumno "Rut del Alumno" , alumno.nombres_alumno "Nombres del Alumno", alumno.apellido_paterno "Apellido Paterno" , alumno.apellido_materno "Apellido Materno", tipo_ficha.nombre_tipo "Nombre Diagnostico" , curso.nombre "Curso Alumno" from ficha_diagnostico , alumno , curso , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = curso.id_curso and alumno.estado= 'activo']]>
+		<![CDATA[select distinct ficha_diagnostico.rut_alumno "Rut del Alumno" , alumno.nombres_alumno "Nombres del Alumno", alumno.apellido_paterno "Apellido Paterno" , alumno.apellido_materno "Apellido Materno", tipo_ficha.nombre_tipo "Nombre Diagnostico" , curso.nombre "Curso Alumno" , encode(logo,'base64') as logo1 from imagen , ficha_diagnostico , alumno , curso , tipo_ficha where ficha_diagnostico.rut_alumno = alumno.rut_alumno and ficha_diagnostico.id_tipoficha = tipo_ficha.id_tipo and ficha_diagnostico.curso_alumno = curso.id_curso and alumno.estado= 'activo' and id_logo = 4]]>
 	</queryString>
 	<field name="Rut del Alumno" class="java.lang.String"/>
 	<field name="Nombres del Alumno" class="java.lang.String"/>
@@ -12,6 +12,7 @@
 	<field name="Apellido Materno" class="java.lang.String"/>
 	<field name="Nombre Diagnostico" class="java.lang.String"/>
 	<field name="Curso Alumno" class="java.lang.String"/>
+	<field name="logo1" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -31,6 +32,10 @@
 				</textElement>
 				<text><![CDATA[Reporte Alumnos P.I.E]]></text>
 			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="5" width="81" height="61" uuid="a128182e-4337-495d-9b05-4298e0ec5a60"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{logo1}))]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

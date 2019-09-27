@@ -89,6 +89,10 @@ public static String puntaje_5;
 public static String modificar_activo;
 public static String ingresar_activo;
 
+public static String apoyo_activo;
+public static String apoyo_todos;
+
+
 
 
     /**
@@ -97,14 +101,33 @@ public static String ingresar_activo;
     public FrameEvaluacionPart4() {
         initComponents();
          this.setLocationRelativeTo(null);
-         cargar_combo_apoyo1();
-         cargar_combo_apoyo2();
-         cargar_combo_apoyo3();
-         cargar_combo_apoyo4();
+         //cargar_combo_apoyo1();
+         //cargar_combo_apoyo2();
+         //cargar_combo_apoyo3();
+         //cargar_combo_apoyo4();
+         //apoyo_activo_inactivo();
+         apoyo_activo_inactivo();         
          cargar_datos_select ();
          visible_invisible_botones();
          
                 
+    }
+    void apoyo_activo_inactivo(){
+        if (apoyo_activo == "activo"){
+            cargar_combo_apoyo1_activos();
+            cargar_combo_apoyo2_activos();
+            cargar_combo_apoyo3_activos();
+            cargar_combo_apoyo4_activos();
+            
+        }
+        if (apoyo_todos == "activo"){
+            cargar_combo_apoyo1_todos();
+            cargar_combo_apoyo2_todos();
+            cargar_combo_apoyo3_todos();
+            cargar_combo_apoyo4_todos();
+            
+        }
+        
     }
     void visible_invisible_botones(){
         if (ingresar_activo == "activo"){
@@ -139,8 +162,91 @@ public static String ingresar_activo;
          nombre_profesional_apoyo_4 = (String) comboapoyo4.getSelectedItem();
          frame4_fecha_emision = calendaremision.getDate();
     }
+     
+     void cargar_combo_apoyo1_todos() {
+        
+       
+        try {
+            
+            String sql = "select profesional_apoyo.nombre_apoyo from profesional_apoyo";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboapoyo1.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo1.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
+                                   
+                 }
+        
+        }
+     void cargar_combo_apoyo2_todos() {
+        
+       
+        try {
+            
+            String sql = "select profesional_apoyo.nombre_apoyo from profesional_apoyo";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboapoyo2.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo2.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                                   
+                    JOptionPane.showMessageDialog(null, ex);
+                 }
+        
+        }
+     void cargar_combo_apoyo3_todos() {
+        
+       
+        try {
+            
+            String sql = "select profesional_apoyo.nombre_apoyo from profesional_apoyo";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboapoyo3.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo3.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
+                                   
+                 }
+        
+        }
+     void cargar_combo_apoyo4_todos() {
+        
+       
+        try {
+            
+            String sql = "select profesional_apoyo.nombre_apoyo from profesional_apoyo";
+            ResultSet rs = con.ejecutarSQLSelect(sql);
+            comboapoyo4.removeAllItems();
+        
+            while(rs.next()) {
+                
+                comboapoyo4.addItem(rs.getString("nombre_apoyo"));
+                
+                }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
+                                   
+                 }
+        
+        }
     
-    void cargar_combo_apoyo1() {
+     
+     
+    void cargar_combo_apoyo1_activos() {
         
        
         try {
@@ -155,12 +261,13 @@ public static String ingresar_activo;
                 
                 }
                 } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                                    
                  }
         
         }
         
-        void cargar_combo_apoyo2() {
+        void cargar_combo_apoyo2_activos() {
         
         
         try {
@@ -175,12 +282,13 @@ public static String ingresar_activo;
                 
                 }
                 } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                                    
                  }
         
         }
         
-        void cargar_combo_apoyo3() {
+        void cargar_combo_apoyo3_activos() {
         
         
         try {
@@ -195,11 +303,12 @@ public static String ingresar_activo;
                 
                 }
                 } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                                    
                  }
         
         }
-        void cargar_combo_apoyo4() {
+        void cargar_combo_apoyo4_activos() {
         
      
         try {
@@ -214,6 +323,7 @@ public static String ingresar_activo;
                 
                 }
                 } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                                    
                  }
         
@@ -258,25 +368,21 @@ public static String ingresar_activo;
         jLabel2.setText("Profesional Apoyo 1");
 
         comboapoyo1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        comboapoyo1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setText("Profesional Apoyo 2");
 
         comboapoyo2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        comboapoyo2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setText("Profesional Apoyo 3");
 
         comboapoyo3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        comboapoyo3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Profesional Apoyo 4");
 
         comboapoyo4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        comboapoyo4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setText("Profesionales de apoyo");

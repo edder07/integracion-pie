@@ -210,7 +210,7 @@ public class FrameRutYFicha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
- FrameEvaluacionReevaluacion frame = new FrameEvaluacionReevaluacion(); 
+    FrameEvaluacionReevaluacion frame = new FrameEvaluacionReevaluacion(); 
     frame.setVisible(true);                                                                                                                
     FrameRutYFicha.this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
@@ -284,6 +284,10 @@ public class FrameRutYFicha extends javax.swing.JFrame {
         
         FrameEvaluacionPart4.ingresar_activo = "activo";
         FrameEvaluacionPart4.modificar_activo = "_";
+        FrameEvaluacionPart4.apoyo_activo = "activo";
+        FrameEvaluacionPart4.apoyo_todos = "-";
+        FrameEvaluacionPart2.evaluador_activo = "activo";
+        FrameEvaluacionPart2.evaluador_todo = "-";
         FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
         frame.setVisible(true);                                                                                                                
         FrameRutYFicha.this.dispose();
@@ -344,7 +348,10 @@ public class FrameRutYFicha extends javax.swing.JFrame {
              
                  JOptionPane.showMessageDialog(null,  FrameEvaluacionPart4.frame4_fecha_emision);
           
-                
+                FrameEvaluacionPart4.apoyo_activo = "activo";
+                FrameEvaluacionPart4.apoyo_todos = "-";
+                FrameEvaluacionPart2.evaluador_activo = "activo";
+                FrameEvaluacionPart2.evaluador_todo = "-";
                 FrameEvaluacionPart1 frame = new FrameEvaluacionPart1(); 
                 frame.setVisible(true);                                                                                                                
                 FrameRutYFicha.this.dispose();
